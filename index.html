@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsForm – Revolutionize Your WhatsApp Business Workflows</title>
+  <meta name="description" content="Transform chaotic WhatsApp chats into structured, automated workflows. WhatsForm helps you collect data, automate communication, and integrate with your business systems." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Lexend', 'sans-serif'],
+          },
+          colors: {
+            sky: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              950: '#082f49',
+            },
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              950: '#451a03',
+            },
+            violet: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              950: '#2e1065',
+            },
+            green: {
+                950: '#052e16'
+            },
+            pastel: {
+              blue: '#EBF5FF',
+              green: '#E6FFFA',
+              yellow: '#FFFBEB',
+              pink: '#FFF5F7',
+              violet: '#FBF5FF',
+              slate: '#f8fafc',
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .animate-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+    .animate-slide-up {
+        animation: slideUp 0.4s ease-out forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/"
+  }
+}
+</script>
+<script>
+  // Prevents "flash of incorrect theme"
+  (function() {
+    try {
+      // Set light theme as default
+      document.documentElement.classList.remove('dark');
+    } catch (_) {}
+  })();
+</script>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
