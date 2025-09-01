@@ -1,37 +1,59 @@
-
-
-
 import { 
     FormsIcon, InboxIcon, CalendarIcon, UsersIcon, SendMessageIcon, TemplateIcon, SparklesIcon, 
     CodeBracketIcon, ArchitectureIcon, NoCodeIcon, CheckCircleIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon,
     CubeTransparentIcon, ChartBarIcon, MegaphoneIcon
 } from '../icons';
 
+
+
 export const uniqueFeatures = {
-  title: "More Than Forms. A True Conversational Platform.",
-  subtitle: "WhatsForm is fundamentally different. We combine three powerful elements to create a platform that transforms how you do business on WhatsApp.",
+  title: "Beyond Chats. Into Forms, Flows & Automation.",
+  subtitle:
+    "WhatsForm transforms WhatsApp into a complete business platform — every message can capture data, trigger workflows, and deliver AI-powered assistance in real time.",
   pillars: [
-    { 
-        icon: ChatBubbleOvalLeftEllipsisIcon, 
-        title: "Conversational-First Design", 
-        description: "We don't just put forms in a chat. Every feature is designed as a natural, two-way conversation, boosting engagement and completion rates." 
+    {
+      icon: ChatBubbleOvalLeftEllipsisIcon,
+      title: "WhatsApp-Native Workflows",
+      description:
+        "Structured, multi-screen forms built directly inside WhatsApp. Every action becomes a workflow step — enabling data collection, updates, and follow-ups without leaving chat.",
     },
-    { 
-        icon: SparklesIcon, 
-        title: "Integrated AI Core", 
-        description: "Our SmartyAI isn't an add-on; it's the engine. It understands intent, automates complex workflows, and provides intelligence to every interaction." 
+    {
+      icon: SparklesIcon,
+      title: "AI-Powered Conversations",
+      description:
+        "Integrated AI agents validate inputs, adapt flows, summarize interactions, and escalate intelligently. This creates context-aware, human-like conversations that boost satisfaction.",
     },
-    { 
-        icon: ArrowsRightLeftIcon, 
-        title: "Extensible & Open", 
-        description: "Connect to your entire business ecosystem with two-way APIs and native integrations. WhatsForm becomes a seamless part of your existing operations." 
-    }
+    {
+      icon: ArrowsRightLeftIcon,
+      title: "Deep Integrations with 200+ Apps",
+      description:
+        "Through n8n orchestration and APIs, WhatsForm connects seamlessly with CRMs, ERPs, calendars, and databases. Every WhatsApp interaction can trigger multi-step automation in real time.",
+    },
+    {
+      icon: ChatBubbleOvalLeftEllipsisIcon,
+      title: "Enterprise-Grade Architecture",
+      description:
+        "Built on the Frappe framework with dynamic DocTypes, workflow engines, audit trails, and role-based access control. Scalable, secure, and compliant — deployable even on-premises.",
+    },
+    {
+      icon: ArrowsRightLeftIcon,
+      title: "Team Collaboration Tools",
+      description:
+        "Shared team inbox, internal notes, contact groups, and calendar dashboards make collaboration seamless. Assign chats, manage tasks, and track client status — all inside WhatsApp.",
+    },
+    {
+      icon: SparklesIcon,
+      title: "No-Code Business Automation",
+      description:
+        "SMEs and partners can design plug-and-play funnels, compliance reminders, and customer journeys without coding. Democratizing advanced automation for every business.",
+    },
   ],
   cta: {
     text: "Explore All Features",
-    path: "#/features"
-  }
+    path: "#/features",
+  },
 };
+
 
 export const benefits = [
     { icon: CheckCircleIcon, title: "Higher Engagement", description: "Keep customers in their familiar WhatsApp environment, boosting response rates." },
@@ -42,40 +64,46 @@ export const benefits = [
 
 export const useCases = [ "Healthcare", "Education", "Government", "Logistics", "Retail & E-Commerce", "BFSI", "Real Estate", "Professional Services" ];
 
+
 export const testimonialsData = [
-    {
-        quote: "WhatsForm has revolutionized how we handle patient intake. The automation saves our staff countless hours and the conversational forms are so much easier for our patients. Our no-show rate has dropped by 30%!",
-        author: "Dr. Anya Sharma",
-        title: "Clinic Director, HealthFirst Medical",
-        logoUrl: "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg",
-        imageUrl: "https://picsum.photos/seed/person1/100/100",
-        videoId: "zmxHz-hQ32E",
-        videoThumbnail: "https://i.ytimg.com/vi/zmxHz-hQ32E/hqdefault.jpg"
-    },
-    {
-        quote: "We've seen a 2x increase in qualified leads since implementing WhatsForm. The AI bot engages prospects instantly on WhatsApp, gathers all the necessary info, and our sales team only talks to warm leads. It's a game-changer.",
-        author: "Raj Patel",
-        title: "Head of Sales, Innovate Properties",
-        logoUrl: "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
-        imageUrl: "https://picsum.photos/seed/person2/100/100"
-    },
-    {
-        quote: "The ability to connect form submissions directly to our ERP in real-time is incredible. What used to be a manual, error-prone process is now completely automated and seamless. Our operational efficiency has skyrocketed.",
-        author: "Priya Singh",
-        title: "Operations Manager, Global Logistics",
-        logoUrl: "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
-        imageUrl: "https://picsum.photos/seed/person3/100/100",
-        videoId: "20gL7XOlKkQ",
-        videoThumbnail: "https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg"
-    },
-    {
-        quote: "As a marketing agency, managing campaigns for multiple clients on WhatsApp was a nightmare. WhatsForm's platform gives us the structure, automation, and analytics we need to deliver amazing results for our clients.",
-        author: "David Chen",
-        title: "Founder, CreativeSpark Agency",
-        logoUrl: "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
-        imageUrl: "https://picsum.photos/seed/person4/100/100"
-    }
+  {
+    quote:
+      "WhatsForm has completely transformed patient intake at our clinic. Patients love the simple, step-by-step WhatsApp forms, and our staff no longer spends hours chasing details. We've reduced no-shows by 30% and improved overall patient satisfaction dramatically.",
+    author: "Dr. Anya Sharma",
+    title: "Clinic Director, HealthFirst Medical",
+    logoUrl: "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg",
+    imageUrl: "https://picsum.photos/seed/person1/100/100",
+    videoId: "zmxHz-hQ32E",
+    videoThumbnail: "https://i.ytimg.com/vi/zmxHz-hQ32E/hqdefault.jpg",
+  },
+  {
+    quote:
+      "Since implementing WhatsForm, our lead qualification has doubled. The AI bot engages prospects instantly on WhatsApp, collects all the details we need, and passes only serious buyers to our team. Our conversion rates have never been higher.",
+    author: "Raj Patel",
+    title: "Head of Sales, Innovate Properties",
+    logoUrl: "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
+    imageUrl: "https://picsum.photos/seed/person2/100/100",
+  },
+  {
+    quote:
+      "Connecting WhatsApp forms directly to our ERP was a game-changer. Manual data entry and errors are a thing of the past. Today, shipments are logged in real-time, reports are instant, and our operations team is 40% more efficient.",
+    author: "Priya Singh",
+    title: "Operations Manager, Global Logistics",
+    logoUrl: "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
+    imageUrl: "https://picsum.photos/seed/person3/100/100",
+    videoId: "20gL7XOlKkQ",
+    videoThumbnail: "https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg",
+  },
+  {
+    quote:
+      "Managing multiple WhatsApp campaigns for clients used to be chaotic. With WhatsForm’s structured flows, automation, and detailed analytics, we now run campaigns at scale — and prove ROI with real numbers. Our client retention has improved significantly.",
+    author: "David Chen",
+    title: "Founder, CreativeSpark Agency",
+    logoUrl: "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
+    imageUrl: "https://picsum.photos/seed/person4/100/100",
+  },
 ];
+
 
 export const uspData = {
   title: "A Complete Solution for Growth",
@@ -86,61 +114,79 @@ export const uspData = {
       icon: FormsIcon,
       title: "Forms to capture.",
       description: "Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.",
+      path: '#/powerful-forms',
     },
     {
       icon: ArchitectureIcon,
       title: "Workflows to automate.",
       description: "Design and deploy complex, multi-step automated processes that save time and reduce manual effort.",
+      path: '#/features',
     },
     {
       icon: SparklesIcon,
       title: "AI to assist.",
       description: "Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.",
+      path: '#/smarty-ai',
     },
     {
       icon: InboxIcon,
       title: "Inbox to collaborate.",
       description: "Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.",
+      path: '#/team-inbox',
     },
     {
       icon: CalendarIcon,
       title: "Reminders to follow-up.",
       description: "Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.",
+      path: '#/calendar',
     },
     {
       icon: MegaphoneIcon,
       title: "Campaigns to engage.",
       description: "Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.",
+      path: '#/marketing',
     },
     {
       icon: SendMessageIcon,
       title: "Broadcasts to inform.",
       description: "Send important updates, announcements, and promotional messages to a large, segmented audience instantly.",
+      path: '#/marketing',
+    },
+     {
+      icon: NoCodeIcon,
+      title: "Build Flows in Minutes.",
+      description: "Use our powerful template system where interactive messages come with pre-connected nodes, or simply paste JSON from ChatGPT to create complex flows instantly.",
+      path: '#/powerful-forms',
     },
     {
       icon: CodeBracketIcon,
       title: "Integrations to connect.",
       description: "Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.",
+      path: '#/developer-docs',
     },
     {
       icon: ChartBarIcon,
       title: "Reports to analyze.",
       description: "Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.",
+      path: '#/form-responses',
     },
     {
       icon: TemplateIcon,
       title: "Templates to simplify.",
       description: "Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.",
+      path: '#/templates',
     },
     {
       icon: UsersIcon,
       title: "Contacts to organize.",
       description: "Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.",
+      path: '#/contact-management',
     },
     {
       icon: CubeTransparentIcon,
       title: "Flows to scale.",
       description: "Design complex, multi-screen conversational flows that scale your operations and handle any business process.",
+      path: '#/powerful-forms',
     },
   ]
 };
@@ -156,18 +202,18 @@ export const comparisonSectionData = {
         },
         {
             name: "Wati",
-            description: "Focused on a complete, integrated platform experience.",
-            path: "#/"
+            description: "Go beyond basic automation with a complete platform.",
+            path: "#/whatsform-vs-wati"
         },
         {
             name: "Interakt",
-            description: "Advanced automation and AI that goes deeper.",
-            path: "#/"
+            description: "Deeper integrations and superior AI capabilities.",
+            path: "#/whatsform-vs-interakt"
         },
         {
-            name: "Double Tick",
-            description: "Built for scalability and enterprise-grade workflows.",
-            path: "#/"
+            name: "AI Sensy",
+            description: "Built for enterprise-grade workflows and scalability.",
+            path: "#/whatsform-vs-aisensy"
         }
     ]
 };

@@ -1,5 +1,6 @@
 
-import { CubeTransparentIcon } from '../../icons';
+
+import { CubeTransparentIcon, SparklesIcon, TemplateIcon } from '../../icons';
 
 export const powerfulFormsPageData = {
     hero: {
@@ -36,7 +37,17 @@ export const powerfulFormsPageData = {
         },
         {
             type: 'pageFeatureGrid',
-            title: '3. Advanced Response Management',
+            title: '3. Accelerate Your Build with Smart Templating & AI',
+            subtitle: 'Stop building from scratch. Our unique tools for templating and AI integration allow you to deploy sophisticated flows faster than ever.',
+            features: [
+                { icon: TemplateIcon, title: "Templates That Think Ahead", description: "Our templates aren't just for single messages. When you use a template for an interactive list or option message, the connected workflow nodes are included. Adopt entire, multi-step processes with a single click." },
+                { icon: SparklesIcon, title: "AI-Assisted Creation", description: "Use your favorite AI tool like ChatGPT to design a form or flow. Simply paste the generated JSON directly into WhatsForm, and our system builds it for you instantly. From idea to live flow in minutes." }
+            ],
+            image: 'https://picsum.photos/seed/flowbuilder5/500/450'
+        },
+        {
+            type: 'pageFeatureGrid',
+            title: '4. Advanced Response Management',
             subtitle: 'Effectively track, manage, and act on the data collected from your flows.',
             features: [
                 { icon: CubeTransparentIcon, title: "Create & Update Docs for Every Flow", description: "Automatically track user responses for each flow, enabling targeted follow-ups and data-driven decisions." },
@@ -48,7 +59,7 @@ export const powerfulFormsPageData = {
         },
         {
             type: 'pageFeatureGrid',
-            title: '4. Automated Notifications & Integrations',
+            title: '5. Automated Notifications & Integrations',
             subtitle: 'Close the loop with automated acknowledgments and connect your entire business ecosystem.',
             features: [
                 { icon: CubeTransparentIcon, title: "Instant Flow Notifications", description: "Acknowledge every user submission instantly with a text message, a follow-up flow, or interactive menu options." },

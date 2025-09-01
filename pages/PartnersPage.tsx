@@ -11,7 +11,7 @@ const PartnersPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate
                 title={partnersPageData.hero.title} 
                 subtitle={partnersPageData.hero.subtitle} 
             />
-            <section className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <section className="py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-20">
                     <ContentSection 
                         title={partnersPageData.intro.title}
@@ -54,7 +54,7 @@ const PartnersPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate
                     </div>
                 </div>
             </section>
-             <section className="bg-pastel-green dark:bg-green-950/30 py-20">
+             <section className="bg-pastel-green dark:bg-green-950/30 py-20 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={partnersPageData.closing.title} subtitle={partnersPageData.closing.subtitle}>
                         <a href="mailto:partners@whatsform.in" className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">

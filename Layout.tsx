@@ -30,7 +30,7 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; navigate
     }
 
     return (
-        <header className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm">
+        <header className="bg-white/95 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="flex justify-between items-center h-24">
                     <a href="#/" onClick={(e) => { e.preventDefault(); navigate('#/'); }} className="flex items-center">
@@ -104,8 +104,21 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; navigate
                             <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-2 px-5 rounded-lg text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">Book Demo</a>
                             <a href="#/signup" onClick={(e) => { e.preventDefault(); navigate('#/signup'); }} className="bg-green-500 text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-all shadow-sm">Start 14-Day Trial</a>
                         </div>
-                        <button onClick={toggleTheme} className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle theme">
-                            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+                        <button
+                            onClick={toggleTheme}
+                            className="relative flex items-center justify-center w-10 h-10 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                            aria-label="Toggle theme"
+                        >
+                            <SunIcon
+                                className={`absolute transition-all duration-300 ease-in-out transform ${
+                                    theme === 'dark' ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'
+                                }`}
+                            />
+                            <MoonIcon
+                                className={`absolute transition-all duration-300 ease-in-out transform ${
+                                    theme === 'dark' ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'
+                                }`}
+                            />
                         </button>
                         <div className="lg:hidden ml-2">
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">
@@ -162,10 +175,10 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; navigate
 
 export const Footer: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => {
     return (
-        <footer className="bg-slate-900 dark:bg-black text-slate-300">
+        <footer className="bg-slate-900 dark:bg-black text-slate-300 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <div className="col-span-full lg:col-span-2 mb-8 lg:mb-0">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+                    <div className="col-span-full lg:col-span-3 mb-8 lg:mb-0">
                          <a href="https://smartysoft.in/" target="_blank" rel="noopener noreferrer" className="inline-block">
                             <img src="https://smartysoft.in/assets/images/smarty_logo.png" alt="SmartySoft Company Logo" className="h-10 w-auto" />
                         </a>

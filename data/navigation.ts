@@ -1,4 +1,5 @@
 
+
 import { 
     ChartBarIcon, HeadsetIcon, CurrencyDollarIcon, AcademicCapIcon, 
     BuildingStorefrontIcon, MegaphoneIcon, StethoscopeIcon, BuildingOfficeIcon, 
@@ -13,6 +14,7 @@ export const headerData = {
         { name: 'Features', path: '#/features' },
         { name: 'SmartyAI', path: '#/smarty-ai' },
         { name: 'Pricing', path: '#/pricing' },
+        { name: 'Comparisons', path: '#/comparisons' },
     ],
     solutions: {
         teams: [
@@ -57,6 +59,48 @@ export const headerData = {
 export const footerData = {
     columns: [
         {
+            title: 'Product',
+            links: [
+                { name: 'Features', path: '#/features' },
+                { name: 'Powerful Forms', path: '#/powerful-forms' },
+                { name: 'SmartyAI', path: '#/smarty-ai' },
+                { name: 'Team Inbox', path: '#/team-inbox' },
+                { name: 'Calendar', path: '#/calendar' },
+                { name: 'Tasks', path: '#/tasks' },
+                { name: 'Form Responses', path: '#/form-responses' },
+                { name: 'Contact Management', path: '#/contact-management' },
+            ]
+        },
+        {
+            title: 'Solutions',
+            links: [
+                { name: 'For Marketing', path: '#/marketing' },
+                { name: 'For Sales', path: '#/sales' },
+                { name: 'For Support', path: '#/support' },
+                { name: 'Industry Solutions', path: '#/industry-solutions' },
+                { name: 'All Comparisons', path: '#/comparisons' },
+                { name: 'vs Google Forms', path: '#/whatsform-vs-google-forms' },
+                { name: 'vs Wati', path: '#/whatsform-vs-wati' },
+                { name: 'vs Interakt', path: '#/whatsform-vs-interakt' },
+                { name: 'vs AI Sensy', path: '#/whatsform-vs-aisensy' },
+            ]
+        },
+        {
+            title: 'Resources',
+            links: [
+                { name: 'Blog', path: '#/resources' },
+                { name: 'Customer Stories', path: '#/customers' },
+                { name: 'Webinars', path: '#/webinars' },
+                { name: 'Videos', path: '#/videos' },
+                { name: 'Templates', path: '#/templates' },
+                { name: 'Forms Browser', path: '#/forms-browser' },
+                { name: 'Developer Docs', path: '#/developer-docs' },
+                { name: 'Community', path: '#/community' },
+                { name: 'Help Center', path: '#/help-center' },
+                { name: 'FAQ', path: '#/faq' },
+            ]
+        },
+        {
             title: 'Company',
             links: [
                 { name: 'About Us', path: '#/company' },
@@ -68,33 +112,7 @@ export const footerData = {
                 { name: 'Privacy', path: '#/privacy' },
                 { name: 'Shipping Policy', path: '#/shipping-policy' },
                 { name: 'Cancellation Policy', path: '#/cancellation' },
-            ]
-        },
-        {
-            title: 'Customers',
-            links: [
-                { name: 'KneeXpert', path: '#/customers/kneexpert' },
-                { name: 'Eltech', path: '#/customers/eltech' },
-                { name: 'JCAF', path: '#/customers/jcaf' },
-                { name: 'Sahaj Hospital', path: '#/customers/sahaj-hospital' },
-                { name: 'Moon Sez', path: '#/customers/moon-sez' },
-                { name: 'CA B.C.Checahni & Co', path: '#/customers/ca-gmj' },
-                { name: 'See All', path: '#/customers' },
-            ]
-        },
-        {
-            title: 'Resources',
-            links: [
-                { name: 'Blog', path: '#/resources' },
-                { name: 'Webinars', path: '#/webinars' },
-                { name: 'Videos', path: '#/videos' },
-                { name: 'FAQ', path: '#/faq' },
-                { name: 'Ebooks', path: '#/resources' },
-                { name: 'vs Google Forms', path: '#/whatsform-vs-google-forms' },
-                { name: 'WhatsApp Templates', path: '#/templates' },
-                { name: 'Customer Stories', path: '#/customers' },
-                { name: 'Chatbot Library', path: '#/resources' },
-                { name: 'Help Center', path: '#/help-center' },
+                { name: 'Site Index', path: '#/site-index' },
             ]
         }
     ],

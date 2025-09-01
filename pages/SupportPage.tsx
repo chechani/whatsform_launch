@@ -17,7 +17,7 @@ const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = (
         "bg-pastel-pink dark:bg-violet-950/30",
     ];
     const bgColor = bgColors[index % bgColors.length];
-    return <section className={`${bgColor} py-20 lg:py-24`}>{children}</section>;
+    return <section className={`${bgColor} py-20 lg:py-24 transition-colors duration-300`}>{children}</section>;
 };
 
 

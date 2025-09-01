@@ -27,7 +27,7 @@ const Card: React.FC<{ children: React.ReactNode, className?: string, href?: str
 
 
 export const CTA: React.FC<CTAProps> = ({ navigate }) => (
-    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-24 lg:py-28">
+    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-24 lg:py-28 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">Ready to Transform Your WhatsApp Business?</h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>

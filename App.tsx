@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { Header, Footer } from './Layout';
 import HomePage from './pages/HomePage';
@@ -38,6 +36,8 @@ import PowerfulFormsPage from './pages/PowerfulFormsPage';
 import VideosPage from './pages/VideosPage'; 
 import FaqPage from './pages/FaqPage'; 
 import { FloatingWidgets } from './PageBuilder';
+import FormsBrowserPage from './pages/FormsBrowserPage';
+import SiteIndexPage from './pages/SiteIndexPage';
 
 // Import new customer pages
 import KneeXpertPage from './pages/customers/KneeXpertPage';
@@ -64,6 +64,12 @@ import HelpCenterPage from './pages/HelpCenterPage';
 import { seoData } from './data/seo';
 import CancellationPage from './pages/CancellationPage';
 import WebinarsPage from './pages/WebinarsPage';
+
+// Import new comparison pages
+import WatiComparisonPage from './pages/WatiComparisonPage';
+import InteraktComparisonPage from './pages/InteraktComparisonPage';
+import AISensyComparisonPage from './pages/AISensyComparisonPage';
+import ComparisonsLandingPage from './pages/ComparisonsLandingPage';
 
 
 const App: React.FC = () => {
@@ -163,7 +169,8 @@ const App: React.FC = () => {
     }
 
     const renderPage = () => {
-        switch (path) {
+        const pathWithoutQuery = path.split('?')[0];
+        switch (pathWithoutQuery) {
             case '/marketing': return <MarketingPage navigate={navigate} />;
             case '/support': return <SupportPage navigate={navigate} />;
             case '/sales': return <SalesPage navigate={navigate} />;
@@ -185,7 +192,6 @@ const App: React.FC = () => {
             case '/logistics': return <LogisticsPage navigate={navigate} />;
             case '/bfsi': return <BFSI_Page navigate={navigate} />;
             case '/industry-solutions': return <IndustrySolutionsPage navigate={navigate} />;
-            case '/whatsform-vs-google-forms': return <ComparisonPage navigate={navigate} />;
             case '/company': return <CompanyPage navigate={navigate} />;
             case '/customers': return <CustomersPage navigate={navigate} />;
             case '/templates': return <TemplateCenterPage navigate={navigate} />;
@@ -196,7 +202,6 @@ const App: React.FC = () => {
             case '/shipping-policy': return <ShippingPolicyPage />;
             case '/videos': return <VideosPage navigate={navigate} />;
             case '/faq': return <FaqPage navigate={navigate} />;
-            // New Page Routes
             case '/book-demo': return <BookDemoPage navigate={navigate} />;
             case '/careers': return <CareersPage navigate={navigate} />;
             case '/branding': return <BrandingPage navigate={navigate} />;
@@ -208,6 +213,14 @@ const App: React.FC = () => {
             case '/help-center': return <HelpCenterPage navigate={navigate} />;
             case '/signup': return <SignupPage navigate={navigate} />;
             case '/webinars': return <WebinarsPage navigate={navigate} />;
+            case '/forms-browser': return <FormsBrowserPage navigate={navigate} />;
+            case '/site-index': return <SiteIndexPage navigate={navigate} />;
+            // Comparison Routes
+            case '/comparisons': return <ComparisonsLandingPage navigate={navigate} />;
+            case '/whatsform-vs-google-forms': return <ComparisonPage navigate={navigate} />;
+            case '/whatsform-vs-wati': return <WatiComparisonPage navigate={navigate} />;
+            case '/whatsform-vs-interakt': return <InteraktComparisonPage navigate={navigate} />;
+            case '/whatsform-vs-aisensy': return <AISensyComparisonPage navigate={navigate} />;
             // Customer Case Study Routes
             case '/customers/kneexpert': return <KneeXpertPage navigate={navigate} />;
             case '/customers/eltech': return <EltechPage navigate={navigate} />;
@@ -217,7 +230,6 @@ const App: React.FC = () => {
             case '/customers/ca-gmj': return <CaGmjPage navigate={navigate} />;
             case '/developer-docs': return <DeveloperDocsPage navigate={navigate} />;
             // Blog Post Routes
-// FIX: Pass navigate prop to blog pages as they use the CTA component which requires it.
             case '/blog/forms-inside-whatsapp-is-game-changing': return <FormsInsideWhatsappPage navigate={navigate} />;
             case '/blog/unlocking-business-potential-with-smartyai': return <SmartyAIUnlocksPage navigate={navigate} />;
             case '/':
