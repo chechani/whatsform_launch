@@ -37,13 +37,13 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ navigate }) => {
                                             {category.points.map(point => (
                                                 <tr key={point.feature} className="border-b border-slate-200 dark:border-slate-800 last:border-b-0">
                                                     <td className="p-4 font-semibold text-slate-800 dark:text-white align-top">{point.feature}</td>
-                                                    <td className="p-4 text-slate-600 dark:text-slate-400 align-top">
+                                                    <td className="p-4 text-slate-600 dark:text-slate-300 align-top">
                                                         <div className="flex items-start">
                                                             <XIconSolid className="h-5 w-5 text-red-400 flex-shrink-0 mr-2 mt-1" />
                                                             <span>{point.googleForms}</span>
                                                         </div>
                                                     </td>
-                                                    <td className="p-4 text-slate-600 dark:text-slate-400 align-top bg-green-50 dark:bg-green-950/50">
+                                                    <td className="p-4 text-slate-600 dark:text-slate-300 align-top bg-green-50 dark:bg-green-950/50">
                                                         <div className="flex items-start">
                                                             <CheckIconSolid className="h-5 w-5 text-green-500 flex-shrink-0 mr-2 mt-1" />
                                                             <span>{point.whatsform}</span>

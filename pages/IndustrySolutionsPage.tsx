@@ -26,7 +26,7 @@ const IndustrySolutionsPage: React.FC<IndustrySolutionsPageProps> = ({ navigate 
                                 <img src={industry.image} alt={`${industry.name} illustration`} className="w-full h-48 object-cover" />
                                 <div className="p-6 flex-grow flex flex-col">
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">{industry.name}</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{industry.description}</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{industry.description}</p>
                                     <span className="mt-4 inline-block font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
                                         Learn More &rarr;
                                     </span>

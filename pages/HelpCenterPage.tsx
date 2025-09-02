@@ -50,7 +50,7 @@ const HelpCenterPage: React.FC<HelpCenterPageProps> = ({ navigate }) => {
                             filteredCategories.map((category, index) => (
                                 <a href="#/faq" onClick={(e) => { e.preventDefault(); navigate('#/faq'); }} key={index} className="block bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">{category.name}</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400">{category.description}</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300">{category.description}</p>
                                     <span className="mt-4 inline-block font-semibold text-green-600 dark:text-green-400">
                                         View Articles &rarr;
                                     </span>
@@ -59,7 +59,7 @@ const HelpCenterPage: React.FC<HelpCenterPageProps> = ({ navigate }) => {
                         ) : (
                             <div className="col-span-full text-center py-12">
                                 <h3 className="text-2xl font-bold text-slate-800 dark:text-white">No Results Found</h3>
-                                <p className="mt-2 text-slate-600 dark:text-slate-400">Try searching for a different keyword.</p>
+                                <p className="mt-2 text-slate-600 dark:text-slate-300">Try searching for a different keyword.</p>
                             </div>
                         )}
                     </div>

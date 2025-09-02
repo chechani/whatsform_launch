@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '../PageBuilder';
 import { templateCenterData } from '../data/pages/templateCenter';
@@ -31,7 +32,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                                 <span>{templateCenterData.strategyGuide.badge}</span>
                             </div>
                             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">{templateCenterData.strategyGuide.title}</h2>
-                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{templateCenterData.strategyGuide.subtitle}</p>
+                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{templateCenterData.strategyGuide.subtitle}</p>
                         </div>
                         <div className="mt-12 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800">
                             <div className="flex flex-wrap justify-center gap-2 lg:gap-4 border-b border-slate-200 dark:border-slate-700">
@@ -50,7 +51,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                                         <div className="md:col-span-2">
                                             <h3 className="text-2xl font-bold text-slate-800 dark:text-white">{activeTabData.title}</h3>
-                                            <p className="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">{activeTabData.description}</p>
+                                            <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">{activeTabData.description}</p>
                                         </div>
                                         <img src={activeTabData.image} alt={activeTabData.title} className="rounded-lg shadow-md mx-auto" />
                                     </div>
@@ -64,7 +65,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                     <section className="py-20 lg:py-24">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">{templateCenterData.stats.title}</h2>
-                             <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{templateCenterData.stats.subtitle}</p>
+                             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{templateCenterData.stats.subtitle}</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
                             {templateCenterData.stats.cards.map(stat => (
@@ -72,7 +73,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                                     <p className="text-5xl font-extrabold text-green-600 dark:text-green-400">{stat.value}</p>
                                     <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{stat.subtitle}</p>
                                     <h3 className="mt-2 font-semibold text-slate-700 dark:text-slate-300 text-lg">{stat.label}</h3>
-                                    <p className="mt-3 text-sm text-slate-500 dark:text-slate-400 flex-grow">{stat.description}</p>
+                                    <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 flex-grow">{stat.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -91,7 +92,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                      <section className="bg-pastel-violet dark:bg-violet-950/30 py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
                         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{templateCenterData.gameChanger.title}</h2>
-                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">{templateCenterData.gameChanger.subtitle}</p>
+                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{templateCenterData.gameChanger.subtitle}</p>
                             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
                                 {templateCenterData.gameChanger.points.map(point => (
                                     <div key={point.title} className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex items-start space-x-4">
@@ -100,7 +101,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{point.title}</h3>
-                                            <p className="mt-1 text-slate-600 dark:text-slate-400">{point.description}</p>
+                                            <p className="mt-1 text-slate-600 dark:text-slate-300">{point.description}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -114,7 +115,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
                                 {templateCenterData.closingVideo.title}
                             </h2>
-                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                                 {templateCenterData.closingVideo.subtitle}
                             </p>
                         </div>

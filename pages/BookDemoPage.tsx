@@ -187,7 +187,7 @@ const BookDemoPage: React.FC<BookDemoPageProps> = ({ navigate }) => {
             <div className="w-full md:w-1/2 bg-slate-50 dark:bg-slate-950 p-8 lg:p-12 flex flex-col justify-center overflow-y-auto">
                  <div className="w-full max-w-md mx-auto">
                     <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{bookDemoPageData.form.title}</h2>
-                    <p className="text-slate-600 dark:text-slate-400 mt-2">{bookDemoPageData.form.subtitle}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mt-2">{bookDemoPageData.form.subtitle}</p>
 
                      {submissionStatus === 'success' ? (
                         <div className="mt-8 p-6 text-center bg-green-50 dark:bg-green-950/50 border border-green-200 dark:border-green-500/30 rounded-lg">

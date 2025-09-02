@@ -29,7 +29,7 @@ const ResourcesPage: React.FC<ResourcesPageProps> = ({ navigate }) => {
                                     <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                                     <div className="p-6 flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">{post.title}</h3>
-                                        <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{post.description}</p>
+                                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{post.description}</p>
                                         <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 text-sm text-slate-500 dark:text-slate-400">
                                             <span>{post.date} &middot; {post.readTime}</span>
                                         </div>

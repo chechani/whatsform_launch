@@ -1,5 +1,7 @@
 
 
+
+
 import React, { useState, useEffect } from 'react';
 import { 
     MenuIcon, WhatsAppIcon, SunIcon, MoonIcon, ChevronDownIcon, CloseIcon
@@ -34,7 +36,7 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; navigate
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="flex justify-between items-center h-24">
                     <a href="#/" onClick={(e) => { e.preventDefault(); navigate('#/'); }} className="flex items-center">
-                        <img src="https://whatsform.in/assets/images/AIBOTLOGO.png" alt="WhatsForm Logo" className="h-20 w-auto" />
+                        <img src="https://whatsform.in/assets/images/AIBOTLOGO.png" alt="WhatsForm Logo" className="h-20 w-auto dark:brightness-0 dark:invert" />
                     </a>
                     
                     <nav className="hidden lg:flex items-center space-x-8">

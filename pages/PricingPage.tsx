@@ -15,7 +15,7 @@ const PricingPage: React.FC<PricingPageProps> = ({ navigate }) => {
 
     const FeatureItem: React.FC<{ feature: typeof plans[0]['features'][0] }> = ({ feature }) => {
         let icon;
-        let textClass = "text-slate-600 dark:text-slate-400";
+        let textClass = "text-slate-600 dark:text-slate-300";
         switch (feature.type) {
             case 'included':
                 icon = <CheckIconSolid className="h-5 w-5 text-green-500" />;
@@ -72,10 +72,10 @@ const PricingPage: React.FC<PricingPageProps> = ({ navigate }) => {
                                     <h2 className="text-xl font-bold text-slate-900 dark:text-white">{plan.name}</h2>
                                     <div className="mt-4">
                                         <span className="text-4xl font-bold text-slate-900 dark:text-white">₹{plan.price.toLocaleString('en-IN')}</span>
-                                        <span className="text-slate-500 dark:text-slate-400"> / {billingCycle === 'yearly' ? 'Year' : 'Quarter'}</span>
+                                        <span className="text-slate-600 dark:text-slate-300"> / {billingCycle === 'yearly' ? 'Year' : 'Quarter'}</span>
                                     </div>
-                                    <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{pricingData.gstText}</p>
-                                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{pricingData.creditCardText}</p>
+                                    <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{pricingData.gstText}</p>
+                                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{pricingData.creditCardText}</p>
                                     <ul className="mt-6 space-y-2 border-t border-slate-200 dark:border-slate-700 pt-6">
                                         {plan.features.map(feature => <FeatureItem key={feature.text} feature={feature} />)}
                                     </ul>
@@ -97,14 +97,14 @@ const PricingPage: React.FC<PricingPageProps> = ({ navigate }) => {
                     <div className="mt-24 max-w-4xl mx-auto space-y-8">
                          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-left">
                              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{pricingData.apiCharges.title}</h3>
-                             <p className="mt-2 text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: pricingData.apiCharges.description }} />
+                             <p className="mt-2 text-slate-600 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: pricingData.apiCharges.description }} />
                              <a href={pricingData.apiCharges.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold py-2 px-5 rounded-lg text-sm hover:bg-slate-300 dark:hover:bg-slate-600">
                                  {pricingData.apiCharges.cta}
                              </a>
                          </div>
                          <div className="bg-pastel-green dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                               <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{pricingData.customQuote.title}</h3>
-                              <p className="mt-2 text-slate-600 dark:text-slate-400">{pricingData.customQuote.description}</p>
+                              <p className="mt-2 text-slate-600 dark:text-slate-300">{pricingData.customQuote.description}</p>
                               <button onClick={() => setQuoteWizardOpen(true)} className="mt-6 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
                                   {pricingData.customQuote.cta}
                               </button>

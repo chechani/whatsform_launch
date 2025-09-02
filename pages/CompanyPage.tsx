@@ -1,5 +1,7 @@
 
 
+
+
 import React from 'react';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '../PageBuilder';
 import { companyPageData } from '../data/pages/company';
@@ -31,7 +33,7 @@ const CompanyPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                     {React.createElement(value.icon)}
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{value.title}</h3>
-                                <p className="mt-2 text-slate-600 dark:text-slate-400">{value.description}</p>
+                                <p className="mt-2 text-slate-600 dark:text-slate-300">{value.description}</p>
                             </div>
                         ))}
                     </div>

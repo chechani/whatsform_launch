@@ -1,5 +1,4 @@
 
-
 import { 
     ChartBarIcon, HeadsetIcon, CurrencyDollarIcon, AcademicCapIcon, 
     BuildingStorefrontIcon, MegaphoneIcon, StethoscopeIcon, BuildingOfficeIcon, 
@@ -14,7 +13,6 @@ export const headerData = {
         { name: 'Features', path: '#/features' },
         { name: 'SmartyAI', path: '#/smarty-ai' },
         { name: 'Pricing', path: '#/pricing' },
-        { name: 'Comparisons', path: '#/comparisons' },
     ],
     solutions: {
         teams: [
@@ -78,11 +76,7 @@ export const footerData = {
                 { name: 'For Sales', path: '#/sales' },
                 { name: 'For Support', path: '#/support' },
                 { name: 'Industry Solutions', path: '#/industry-solutions' },
-                { name: 'All Comparisons', path: '#/comparisons' },
                 { name: 'vs Google Forms', path: '#/whatsform-vs-google-forms' },
-                { name: 'vs Wati', path: '#/whatsform-vs-wati' },
-                { name: 'vs Interakt', path: '#/whatsform-vs-interakt' },
-                { name: 'vs AI Sensy', path: '#/whatsform-vs-aisensy' },
             ]
         },
         {
@@ -112,7 +106,6 @@ export const footerData = {
                 { name: 'Privacy', path: '#/privacy' },
                 { name: 'Shipping Policy', path: '#/shipping-policy' },
                 { name: 'Cancellation Policy', path: '#/cancellation' },
-                { name: 'Site Index', path: '#/site-index' },
             ]
         }
     ],

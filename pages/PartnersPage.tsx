@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { GenericPageHero, CTA, ContentSection, BenefitsGrid } from '../PageBuilder';
 import { partnersPageData } from '../data/pages/partners';
@@ -30,7 +31,7 @@ const PartnersPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate
                                         {React.createElement(type.icon)}
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{type.title}</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{type.description}</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{type.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -47,7 +48,7 @@ const PartnersPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate
                                         {index + 1}
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{step.title}</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400">{step.description}</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300">{step.description}</p>
                                 </div>
                             ))}
                         </div>

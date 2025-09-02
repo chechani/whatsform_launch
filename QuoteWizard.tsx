@@ -61,22 +61,4 @@ export const QuoteWizard: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         </div>
                     </div>
                      <div className="text-center pt-6 border-t border-slate-200 dark:border-slate-700">
-                        <p className="text-slate-600 dark:text-slate-400">Estimated Monthly Cost</p>
-                        <p className="text-5xl font-bold text-slate-900 dark:text-white mt-2">
-                            ₹{customPrice.toLocaleString('en-IN')}
-                        </p>
-                         <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-                            This is an estimate. Final pricing may vary.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="p-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
-                    <button onClick={onClose} className="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors">
-                        Contact Sales
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
-};
+                        <p className="text-slate-600 dark:text-slate

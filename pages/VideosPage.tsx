@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 import { GenericPageHero, CTA } from '../PageBuilder';
 import { videosPageData } from '../data/pages/videos';
@@ -36,7 +37,7 @@ const VideosPage: React.FC<VideosPageProps> = ({ navigate }) => {
                             </div>
                             <div className="mt-6">
                                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{activeVideo.title}</h2>
-                                <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">{activeVideo.description}</p>
+                                <p className="mt-2 text-lg text-slate-600 dark:text-slate-300">{activeVideo.description}</p>
                             </div>
                         </div>
 

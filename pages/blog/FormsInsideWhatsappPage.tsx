@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 import { CTA } from '../../PageBuilder';
 import { formsInsideWhatsappData as post } from '../../data/pages/blog/formsInsideWhatsapp';
@@ -12,11 +13,11 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
                     case 'heading':
                         return <h2 key={index} className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mt-10 mb-4">{block.text}</h2>;
                     case 'paragraph':
-                        return <p key={index} className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{block.text}</p>;
+                        return <p key={index} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{block.text}</p>;
                     case 'list':
                         return (
                             <ul key={index} className="space-y-2 list-disc list-inside">
-                                {block.items.map((item, i) => <li key={i} className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{item}</li>)}
+                                {block.items.map((item, i) => <li key={i} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{item}</li>)}
                             </ul>
                         );
                     default:

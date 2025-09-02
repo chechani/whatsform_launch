@@ -26,7 +26,7 @@ const CustomersPage: React.FC<CustomersPageProps> = ({ navigate }) => {
                                 <img src={customer.image} alt={`${customer.name} case study`} className="w-full h-48 object-cover" />
                                 <div className="p-6 flex flex-col flex-grow">
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{customer.name}</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{customer.description}</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{customer.description}</p>
                                     <span className="mt-4 inline-block font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
                                         Read Case Study &rarr;
                                     </span>

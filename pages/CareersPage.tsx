@@ -27,7 +27,7 @@ const CareersPage: React.FC<CareersPageProps> = ({ navigate }) => {
                                 <div key={index} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-green-400 dark:hover:border-green-500">
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-800 dark:text-white">{job.title}</h3>
-                                        <p className="mt-1 text-slate-500 dark:text-slate-400">{job.department} &middot; {job.location}</p>
+                                        <p className="mt-1 text-slate-600 dark:text-slate-300">{job.department} &middot; {job.location}</p>
                                     </div>
                                     <a href={`mailto:careers@whatsform.in?subject=Application for ${job.title}`} className="mt-4 md:mt-0 inline-block bg-green-500 text-white font-semibold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-colors">
                                         Apply Now

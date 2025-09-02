@@ -48,12 +48,12 @@ const MarketingPage: React.FC<MarketingPageProps> = ({ navigate }) => {
                                 case 'stats':
                                     return (
                                         <div className="text-center p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 max-w-4xl mx-auto">
-                                            <p className="text-lg text-slate-600 dark:text-slate-400">{section.description}</p>
+                                            <p className="text-lg text-slate-600 dark:text-slate-300">{section.description}</p>
                                             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
                                                 {section.stats.map(stat => (
                                                     <div key={stat.label}>
                                                         <p className="text-5xl font-bold text-green-600 dark:text-green-400">{stat.value}</p>
-                                                        <p className="mt-2 text-slate-500 dark:text-slate-400">{stat.label}</p>
+                                                        <p className="mt-2 text-slate-600 dark:text-slate-300">{stat.label}</p>
                                                     </div>
                                                 ))}
                                             </div>

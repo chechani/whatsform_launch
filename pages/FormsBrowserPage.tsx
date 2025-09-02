@@ -1,5 +1,6 @@
 
 
+
 import React, { useState, useMemo, useEffect } from 'react';
 import { formsData, formCategories, FormTemplate } from '../data/formsData';
 import { formTemplatesHtml } from '../data/formTemplatesHtml';
@@ -15,7 +16,7 @@ const FormCard: React.FC<{ form: FormTemplate; isSelected: boolean; onClick: () 
             <h3 className="font-semibold text-slate-800 dark:text-white">{form.name}</h3>
             <ChevronRightIcon className="h-5 w-5 text-slate-400 dark:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{form.description}</p>
+        <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{form.description}</p>
         <div className="mt-2 flex flex-wrap gap-2">
             {form.tags.map(tag => (
                 <span key={tag} className="text-xs bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full">{tag}</span>
@@ -50,7 +51,7 @@ const FormPreview: React.FC<{ form: FormTemplate | null }> = ({ form }) => {
             <div className="p-6 border-b border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
                     <h2 className="text-2xl font-bold text-slate-800 dark:text-white">{form.name}</h2>
-                    <p className="text-slate-500 dark:text-slate-400 mt-1">Category: {form.category}</p>
+                    <p className="text-slate-600 dark:text-slate-400 mt-1">Category: {form.category}</p>
                 </div>
                 <div className="flex items-center space-x-2 flex-shrink-0">
                     <button onClick={copyLink} className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors" aria-label="Copy link">
@@ -77,7 +78,7 @@ const FormPreview: React.FC<{ form: FormTemplate | null }> = ({ form }) => {
                     <div className="h-full flex items-center justify-center p-8">
                         <div className="text-center bg-white dark:bg-slate-900 p-8 rounded-lg shadow-md">
                             <h3 className="text-xl font-bold text-slate-700 dark:text-slate-200">Web Preview Not Available</h3>
-                            <p className="mt-2 text-slate-500 dark:text-slate-400">
+                            <p className="mt-2 text-slate-600 dark:text-slate-300">
                                 A web preview is not available for this template.
                                 <br />
                                 You can still experience it live on WhatsApp.

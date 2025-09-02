@@ -1,3 +1,5 @@
+
+
 export const seoData: { [key: string]: { title: string; description: string } } = {
     '/': {
         title: 'WhatsForm – Revolutionize Your WhatsApp Business Workflows',
@@ -83,25 +85,9 @@ export const seoData: { [key: string]: { title: string; description: string } } 
         title: 'Industry Solutions | WhatsForm',
         description: 'Discover tailored WhatsApp automation solutions for healthcare, education, retail, real estate, and more industries.',
     },
-    '/comparisons': {
-        title: 'WhatsForm Comparisons | See How We Stack Up',
-        description: 'Compare WhatsForm against Google Forms, Wati, Interakt, and AI Sensy. See why our all-in-one platform is the superior choice for your business.',
-    },
     '/whatsform-vs-google-forms': {
         title: 'WhatsForm vs. Google Forms | A Detailed Comparison',
         description: 'See why conversational forms on WhatsApp are superior to traditional web forms for business data collection, engagement, and automation.',
-    },
-    '/whatsform-vs-wati': {
-        title: 'WhatsForm vs. Wati | In-depth Comparison',
-        description: 'See why WhatsForm is the superior alternative to Wati, with advanced conversational forms, integrated CRM, and lower total cost of ownership.',
-    },
-    '/whatsform-vs-interakt': {
-        title: 'WhatsForm vs. Interakt | A Feature Comparison',
-        description: 'Discover how WhatsForm\'s integrated platform offers more value than Interakt with advanced automation, task management, and superior support.',
-    },
-    '/whatsform-vs-aisensy': {
-        title: 'WhatsForm vs. AI Sensy | Platform Comparison',
-        description: 'Compare WhatsForm\'s enterprise-grade architecture and all-in-one features against AI Sensy for a comprehensive WhatsApp business solution.',
     },
     '/company': {
         title: 'About Us | WhatsForm',
@@ -186,10 +172,6 @@ export const seoData: { [key: string]: { title: string; description: string } } 
     '/forms-browser': {
         title: 'Forms Browser | Explore WhatsApp & Web Form Templates | WhatsForm',
         description: 'Explore our extensive library of form templates for every industry. Preview forms for web and experience live demos directly in WhatsApp.',
-    },
-     '/site-index': {
-        title: 'Site Index | WhatsForm',
-        description: 'A complete guide and index of all pages on the WhatsForm website. Find information on features, solutions, pricing, and resources.'
     },
     '/customers/kneexpert': {
         title: 'KneeXpert Customer Story | WhatsForm',

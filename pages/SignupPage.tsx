@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import { signupPageData } from '../data/pages/signup';
 import { countryCodes, industryCategoryMap } from '../data/formData';
@@ -154,12 +155,12 @@ const SignupPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate }
             <div className="w-full md:w-1/2 bg-slate-50 dark:bg-slate-950 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="w-full max-w-md mx-auto">
                     <div className="text-right mb-8">
-                        <span className="text-slate-600 dark:text-slate-400">{rightColumn.loginPrompt.text}</span>
+                        <span className="text-slate-600 dark:text-slate-300">{rightColumn.loginPrompt.text}</span>
                         <a href={rightColumn.loginPrompt.linkPath} onClick={(e) => { e.preventDefault(); navigate(rightColumn.loginPrompt.linkPath); }} className="font-semibold text-green-600 hover:underline">{rightColumn.loginPrompt.linkText}</a>
                     </div>
 
                     <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{rightColumn.title}</h2>
-                    <p className="text-slate-600 dark:text-slate-400 mt-2">{rightColumn.subtitle}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mt-2">{rightColumn.subtitle}</p>
 
                     <form className="space-y-5 mt-8" onSubmit={handleSubmit} noValidate>
                         {submissionStatus !== 'success' ? (
@@ -239,7 +240,7 @@ const SignupPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate }
                                         <input id="terms" name="terms" type="checkbox" checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} className="focus:ring-green-500 h-4 w-4 text-green-600 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded" />
                                     </div>
                                     <div className="ml-3 text-sm">
-                                        <label htmlFor="terms" className="text-slate-600 dark:text-slate-400">
+                                        <label htmlFor="terms" className="text-slate-600 dark:text-slate-300">
                                             By creating an account, you agree to the WhatsForm <a href='#' className='underline font-medium text-green-600 hover:text-green-700'>Privacy Policy</a> and <a href='#' className='underline font-medium text-green-600 hover:text-green-700'>Terms of Service</a>.
                                         </label>
                                     </div>

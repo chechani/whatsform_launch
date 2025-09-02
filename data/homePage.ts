@@ -1,3 +1,6 @@
+
+
+
 import { 
     FormsIcon, InboxIcon, CalendarIcon, UsersIcon, SendMessageIcon, TemplateIcon, SparklesIcon, 
     CodeBracketIcon, ArchitectureIcon, NoCodeIcon, CheckCircleIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon,
@@ -114,79 +117,61 @@ export const uspData = {
       icon: FormsIcon,
       title: "Forms to capture.",
       description: "Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.",
-      path: '#/powerful-forms',
     },
     {
       icon: ArchitectureIcon,
       title: "Workflows to automate.",
       description: "Design and deploy complex, multi-step automated processes that save time and reduce manual effort.",
-      path: '#/features',
     },
     {
       icon: SparklesIcon,
       title: "AI to assist.",
       description: "Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.",
-      path: '#/smarty-ai',
     },
     {
       icon: InboxIcon,
       title: "Inbox to collaborate.",
       description: "Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.",
-      path: '#/team-inbox',
     },
     {
       icon: CalendarIcon,
       title: "Reminders to follow-up.",
       description: "Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.",
-      path: '#/calendar',
     },
     {
       icon: MegaphoneIcon,
       title: "Campaigns to engage.",
       description: "Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.",
-      path: '#/marketing',
     },
     {
       icon: SendMessageIcon,
       title: "Broadcasts to inform.",
       description: "Send important updates, announcements, and promotional messages to a large, segmented audience instantly.",
-      path: '#/marketing',
-    },
-     {
-      icon: NoCodeIcon,
-      title: "Build Flows in Minutes.",
-      description: "Use our powerful template system where interactive messages come with pre-connected nodes, or simply paste JSON from ChatGPT to create complex flows instantly.",
-      path: '#/powerful-forms',
     },
     {
       icon: CodeBracketIcon,
       title: "Integrations to connect.",
       description: "Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.",
-      path: '#/developer-docs',
     },
     {
       icon: ChartBarIcon,
       title: "Reports to analyze.",
       description: "Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.",
-      path: '#/form-responses',
     },
     {
       icon: TemplateIcon,
       title: "Templates to simplify.",
       description: "Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.",
-      path: '#/templates',
     },
     {
       icon: UsersIcon,
       title: "Contacts to organize.",
       description: "Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.",
-      path: '#/contact-management',
     },
     {
       icon: CubeTransparentIcon,
       title: "Flows to scale.",
       description: "Design complex, multi-screen conversational flows that scale your operations and handle any business process.",
-      path: '#/powerful-forms',
     },
   ]
 };
@@ -202,18 +187,18 @@ export const comparisonSectionData = {
         },
         {
             name: "Wati",
-            description: "Go beyond basic automation with a complete platform.",
-            path: "#/whatsform-vs-wati"
+            description: "Focused on a complete, integrated platform experience.",
+            path: "#/"
         },
         {
             name: "Interakt",
-            description: "Deeper integrations and superior AI capabilities.",
-            path: "#/whatsform-vs-interakt"
+            description: "Advanced automation and AI that goes deeper.",
+            path: "#/"
         },
         {
-            name: "AI Sensy",
-            description: "Built for enterprise-grade workflows and scalability.",
-            path: "#/whatsform-vs-aisensy"
+            name: "Double Tick",
+            description: "Built for scalability and enterprise-grade workflows.",
+            path: "#/"
         }
     ]
 };

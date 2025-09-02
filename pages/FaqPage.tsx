@@ -74,7 +74,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ navigate }) => {
                                             className={`w-full text-left p-3 rounded-lg font-semibold transition-colors duration-200 ${
                                                 currentCategory === category.id 
                                                 ? 'bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-300' 
-                                                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                                                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                                             }`}
                                         >
                                             {category.name}
@@ -105,7 +105,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ navigate }) => {
                                             >
                                                 <div className="overflow-hidden">
                                                     <div className="p-6 bg-white dark:bg-slate-900">
-                                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">{faq.answer}</p>
+                                                        <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">{faq.answer}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,7 +115,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ navigate }) => {
                             ) : (
                                 <div className="text-center py-12 bg-slate-50 dark:bg-slate-900 rounded-lg">
                                     <h3 className="text-2xl font-bold text-slate-800 dark:text-white">No Results Found</h3>
-                                    <p className="mt-2 text-slate-600 dark:text-slate-400">Try searching for a different keyword or select another category.</p>
+                                    <p className="mt-2 text-slate-600 dark:text-slate-300">Try searching for a different keyword or select another category.</p>
                                 </div>
                             )}
                         </div>

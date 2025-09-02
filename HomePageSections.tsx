@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from './icons';
 import { benefits, useCases, uniqueFeatures, testimonialsData, uspData, comparisonSectionData } from './data/homePage';
@@ -59,11 +66,11 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                     <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:h-12 text-green-500" />
                                 </div>
                             </h1>
-                            <p className="mt-2 text-md font-semibold text-slate-500 dark:text-slate-400 tracking-wide">
+                            <p className="mt-2 text-md font-semibold text-slate-600 dark:text-slate-400 tracking-wide">
                                 "Game Changing for Customer Engagement"
                             </p>
                             <div className="mt-6 space-y-5 max-w-xl">
-                                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">
+                                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300">
                                     “95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.”
                                 </p>
                                 <p className="font-semibold text-md text-slate-700 dark:text-slate-300 italic p-4 bg-slate-100 dark:bg-slate-800/50 rounded-lg border-l-4 border-green-500 shadow-sm">
@@ -124,7 +131,7 @@ export const ActionStrip: React.FC<{ navigate: (path: string) => void }> = ({ na
                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
                             Ready to transform your communication?
                         </h2>
-                        <p className="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl">
+                        <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
                             Explore our features, watch a demo, or start your free trial today.
                         </p>
                     </div>
@@ -157,7 +164,7 @@ export const PowerfulFeatures: React.FC<{ navigate: (path: string) => void }> = 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
                     {uniqueFeatures.title}
                 </h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     {uniqueFeatures.subtitle}
                 </p>
             </div>
@@ -168,7 +175,7 @@ export const PowerfulFeatures: React.FC<{ navigate: (path: string) => void }> = 
                             {React.createElement(pillar.icon)}
                         </div>
                         <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{pillar.title}</h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{pillar.description}</p>
+                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{pillar.description}</p>
                     </Card>
                 ))}
             </div>
@@ -191,7 +198,7 @@ export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navig
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
                     Go Beyond Forms: <span className="text-green-500">Build Mini-Apps in WhatsApp</span>
                 </h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     Leverage two-way APIs and AI to create powerful, interactive experiences that solve real business problems, all within the familiar chat interface.
                 </p>
             </div>
@@ -204,7 +211,7 @@ export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navig
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-slate-800 dark:text-white">Real-Time Data Integration</h3>
-                                <p className="mt-1 text-slate-600 dark:text-slate-400">Fetch product details, check inventory, or calculate loan quotes by connecting to your backend systems in real time.</p>
+                                <p className="mt-1 text-slate-600 dark:text-slate-300">Fetch product details, check inventory, or calculate loan quotes by connecting to your backend systems in real time.</p>
                             </div>
                         </div>
                     </Card>
@@ -215,7 +222,7 @@ export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navig
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-slate-800 dark:text-white">AI-Powered Conversations</h3>
-                                <p className="mt-1 text-slate-600 dark:text-slate-400">Our AI agents understand user intent, handle complex queries, and personalize the experience, making your mini-app feel intelligent and human-like.</p>
+                                <p className="mt-1 text-slate-600 dark:text-slate-300">Our AI agents understand user intent, handle complex queries, and personalize the experience, making your mini-app feel intelligent and human-like.</p>
                             </div>
                         </div>
                     </Card>
@@ -241,7 +248,7 @@ export const Benefits: React.FC = () => (
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">The Benefits of a Conversational Approach</h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     Moving from static forms to interactive conversations delivers tangible business outcomes.
                 </p>
             </div>
@@ -252,7 +259,7 @@ export const Benefits: React.FC = () => (
                             {React.createElement(benefit.icon, { className: "h-10 w-10" })}
                         </div>
                         <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{benefit.title}</h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{benefit.description}</p>
+                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{benefit.description}</p>
                     </Card>
                 ))}
             </div>
@@ -265,7 +272,7 @@ export const UseCases: React.FC = () => (
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-12 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Trusted by Every Industry</h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     From patient intake to lead qualification, WhatsForm is versatile enough to power workflows for any business.
                 </p>
             </div>
@@ -313,7 +320,7 @@ export const Testimonials: React.FC = () => {
                                 <img src={activeData.imageUrl} alt={activeData.author} className="h-14 w-14 rounded-full object-cover"/>
                                 <div>
                                     <p className="font-bold text-slate-900 dark:text-white">{activeData.author}</p>
-                                    <p className="text-slate-600 dark:text-slate-400">{activeData.title}</p>
+                                    <p className="text-slate-600 dark:text-slate-300">{activeData.title}</p>
                                 </div>
                             </figcaption>
                         </div>
@@ -328,7 +335,7 @@ export const Testimonials: React.FC = () => {
                                 <img src={testimonial.imageUrl} alt={testimonial.author} className="h-12 w-12 rounded-full object-cover flex-shrink-0" />
                                 <div>
                                     <p className="font-semibold text-slate-800 dark:text-white">{testimonial.author}</p>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">{testimonial.title}</p>
+                                    <p className="text-sm text-slate-600 dark:text-slate-400">{testimonial.title}</p>
                                 </div>
                                 {testimonial.videoId && (
                                     <div className="flex-shrink-0 ml-auto text-green-500 opacity-70" onClick={(e) => { e.stopPropagation(); openVideoModal(testimonial.videoId); }}>
@@ -362,33 +369,20 @@ export const Testimonials: React.FC = () => {
     );
 };
 
-export const UspSection: React.FC<{ navigate: (path: string) => void; }> = ({ navigate }) => (
+export const UspSection: React.FC = () => (
     <section className="py-24 lg:py-28 bg-pastel-yellow dark:bg-amber-950/30 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
              <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{uspData.title}</h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{uspData.intro}</p>
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{uspData.intro}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {uspData.features.map(feature => (
-                    <a
-                        key={feature.title}
-                        href={feature.path}
-                        onClick={(e) => { e.preventDefault(); navigate(feature.path); }}
-                        className="group bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col"
-                    >
-                         <div>
-                            <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
-                            <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">{feature.title}</h3>
-                            <p className="mt-1 text-slate-600 dark:text-slate-400">{feature.description}</p>
-                         </div>
-                         <div className="mt-auto pt-4">
-                            <span className="font-semibold text-green-600 dark:text-green-400 flex items-center">
-                                Learn More
-                                <ArrowRightIcon className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                        </div>
-                    </a>
+                    <div key={feature.title} className="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                         <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
+                         <h3 className="text-lg font-bold text-slate-800 dark:text-white">{feature.title}</h3>
+                         <p className="mt-1 text-slate-600 dark:text-slate-300">{feature.description}</p>
+                    </div>
                 ))}
             </div>
         </div>
@@ -401,7 +395,7 @@ export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> =
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{comparisonSectionData.title}</h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{comparisonSectionData.subtitle}</p>
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{comparisonSectionData.subtitle}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {comparisonSectionData.competitors.map(competitor => (
@@ -414,7 +408,7 @@ export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> =
                         <h3 className="text-xl font-bold text-slate-800 dark:text-white">
                             WhatsForm <span className="text-green-500">vs</span> {competitor.name}
                         </h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{competitor.description}</p>
+                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{competitor.description}</p>
                         <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline">
                             See Comparison &rarr;
                         </span>
@@ -432,7 +426,7 @@ export const FormsBrowserTeaser: React.FC<{ navigate: (path: string) => void }> 
                 <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div className="text-center lg:text-left">
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Explore 200+ Form Templates</h2>
-                        <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+                        <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl">
                             Browse our extensive library of pre-built forms for every industry. Preview them live and see how they work directly on WhatsApp.
                         </p>
                     </div>

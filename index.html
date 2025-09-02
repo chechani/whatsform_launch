@@ -82,8 +82,12 @@
   // Prevents "flash of incorrect theme"
   (function() {
     try {
-      // Set light theme as default
-      document.documentElement.classList.remove('dark');
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     } catch (_) {}
   })();
 </script>

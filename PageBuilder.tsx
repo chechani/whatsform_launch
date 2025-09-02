@@ -30,27 +30,27 @@ export const CTA: React.FC<CTAProps> = ({ navigate }) => (
     <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-24 lg:py-28 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">Ready to Transform Your WhatsApp Business?</h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <a href="https://wa.me/917849945640?text=Demo" className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                     <div className="bg-green-500 p-3 rounded-full text-white"><WhatsAppIcon className="h-6 w-6" /></div>
                     <div>
                         <h3 className="font-bold text-lg text-slate-800 dark:text-white">Live Demo on WhatsApp</h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-sm">Message "Demo" to +91 78499 45640.</p>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">Message "Demo" to +91 78499 45640.</p>
                     </div>
                 </a>
                 <a href="#/videos" onClick={(e) => { e.preventDefault(); navigate('#/videos'); }} className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                     <div className="bg-green-500 p-3 rounded-full text-white"><PlayCircleIcon /></div>
                     <div>
                         <h3 className="font-bold text-lg text-slate-800 dark:text-white">Recorded Walkthrough</h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-sm">Explore features on YouTube.</p>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">Explore features on YouTube.</p>
                     </div>
                 </a>
                 <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                     <div className="bg-green-500 p-3 rounded-full text-white"><CalendarDaysIcon /></div>
                     <div>
                         <h3 className="font-bold text-lg text-slate-800 dark:text-white">Schedule a Meeting</h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-sm">Book a one-on-one call with our team.</p>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">Book a one-on-one call with our team.</p>
                     </div>
                 </a>
             </div>
@@ -66,7 +66,7 @@ export const GenericPageHero: React.FC<{title: string, subtitle: string}> = ({ t
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tighter">
                 {title}
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                 {subtitle}
             </p>
         </div>
@@ -81,8 +81,8 @@ export const ContentSection: React.FC<{
 }> = ({ title, subtitle, text, children }) => (
     <div className="text-center max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{title}</h2>
-        {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">{subtitle}</p>}
-        {text && <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">{text}</p>}
+        {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{subtitle}</p>}
+        {text && <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{text}</p>}
         {children}
     </div>
 );
@@ -104,10 +104,10 @@ export const ContentWithImage: React.FC<{
             {badge && <span className="text-sm font-bold uppercase text-green-600 dark:text-green-400">{badge}</span>}
             {subtitle && <h3 className="text-sm font-bold uppercase text-slate-500 dark:text-slate-400 mt-2">{subtitle}</h3>}
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-2">{title}</h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{text}</p>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{text}</p>
             {features && (
                 <ul className="mt-6 space-y-2">
-                    {features.map(f => <li key={f} className="flex items-center text-slate-600 dark:text-slate-400"><CheckCircleIcon className="h-6 w-6 text-green-500 dark:text-green-400 flex-shrink-0" /> <span className="ml-3">{f}</span></li>)}
+                    {features.map(f => <li key={f} className="flex items-center text-slate-600 dark:text-slate-300"><CheckCircleIcon className="h-6 w-6 text-green-500 dark:text-green-400 flex-shrink-0" /> <span className="ml-3">{f}</span></li>)}
                 </ul>
             )}
             {link && <a href={link.path} className="mt-6 inline-block text-green-600 font-semibold hover:underline">{link.text} &rarr;</a>}
@@ -128,7 +128,7 @@ export const PageFeatureGrid: React.FC<{
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{title}</h2>
-            {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{subtitle}</p>}
+            {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{subtitle}</p>}
             <div className="mt-8 space-y-6">
                 {features.map(f => (
                     <Card key={f.title} className="p-6">
@@ -138,7 +138,7 @@ export const PageFeatureGrid: React.FC<{
                                 <h3 className="font-semibold text-slate-800 dark:text-white">
                                     {f.title} {f.badge && <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">{f.badge}</span>}
                                 </h3>
-                                <p className="text-slate-600 dark:text-slate-400 mt-1 flex-grow">{f.description}</p>
+                                <p className="text-slate-600 dark:text-slate-300 mt-1 flex-grow">{f.description}</p>
                             </div>
                         </div>
                     </Card>
@@ -156,7 +156,7 @@ export const BenefitsGrid: React.FC<{
 }> = ({ title, subtitle, benefits }) => (
     <div className="text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{title}</h2>
-        {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">{subtitle}</p>}
+        {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{subtitle}</p>}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
                 <Card key={index} className="text-center">
@@ -164,7 +164,7 @@ export const BenefitsGrid: React.FC<{
                         {React.createElement(benefit.icon, { className: "h-10 w-10" })}
                     </div>
                     <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{benefit.title}</h3>
-                    <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{benefit.description}</p>
+                    <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{benefit.description}</p>
                 </Card>
             ))}
         </div>

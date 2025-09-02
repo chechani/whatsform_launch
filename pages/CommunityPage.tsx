@@ -29,7 +29,7 @@ const CommunityPage: React.FC<CommunityPageProps> = ({ navigate }) => {
                                     {React.createElement(iconMap[channel.icon as keyof typeof iconMap], { className: "h-12 w-12" })}
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-6">{channel.name}</h3>
-                                <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{channel.description}</p>
+                                <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{channel.description}</p>
                                 <div className="relative mt-6">
                                     <button
                                         disabled

@@ -13,7 +13,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
         <main>
             <Hero navigate={navigate} />
             <ActionStrip navigate={navigate} />
-            <UspSection navigate={navigate} />
+            <UspSection />
             <PowerfulFeatures navigate={navigate} />
             <MiniApps navigate={navigate} />
             <Benefits />

@@ -1,15 +1,16 @@
 
+
 import React from 'react';
 import { GenericPageHero } from '../PageBuilder';
 import { shippingPolicyData } from '../data/pages/shippingPolicy';
 
 const PolicyContentRenderer: React.FC<{ content: typeof shippingPolicyData.content }> = ({ content }) => {
     return (
-        <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+        <div className="prose prose-lg dark:prose-invert max-w-none text-slate-600 dark:text-slate-300">
             {content.map((block, index) => {
                 switch (block.type) {
                     case 'heading':
-                        return <h2 key={index} className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mt-10 mb-4">{block.text}</h2>;
+                        return <h2 key={index}>{block.text}</h2>;
                     case 'paragraph':
                         return <p key={index}>{block.text}</p>;
                     default:
