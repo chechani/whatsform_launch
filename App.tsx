@@ -2,6 +2,8 @@
 
 
 
+
+
 import React, { useState, useEffect } from 'react';
 import { Header, Footer } from './Layout';
 import HomePage from './pages/HomePage';
@@ -67,6 +69,7 @@ import HelpCenterPage from './pages/HelpCenterPage';
 import { seoData } from './data/seo';
 import CancellationPage from './pages/CancellationPage';
 import WebinarsPage from './pages/WebinarsPage';
+import SiteIndexPage from './pages/SiteIndexPage';
 
 
 const App: React.FC = () => {
@@ -226,6 +229,7 @@ const App: React.FC = () => {
             case '/signup': return <SignupPage navigate={navigate} />;
             case '/webinars': return <WebinarsPage navigate={navigate} />;
             case '/forms-browser': return <FormsBrowserPage navigate={navigate} />;
+            case '/site-index': return <SiteIndexPage navigate={navigate} />;
             // Customer Case Study Routes
             case '/customers/kneexpert': return <KneeXpertPage navigate={navigate} />;
             case '/customers/eltech': return <EltechPage navigate={navigate} />;

@@ -7,7 +7,7 @@ const FeaturesGrid: React.FC<{ navigate: (path: string) => void; features: typeo
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
-                <div className="text-green-500 mb-4">{React.createElement(feature.icon)}</div>
+                <div className="text-green-500 mb-4">{React.createElement(feature.icon, { className: 'h-8 w-8' })}</div>
                 <h3 className="text-xl font-bold text-slate-800 dark:text-white">{feature.title}</h3>
                 <p className="mt-2 text-slate-600 dark:text-slate-400 flex-grow">{feature.description}</p>
                 {feature.link && (

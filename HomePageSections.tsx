@@ -6,6 +6,8 @@
 
 
 
+
+
 import React, { useState, useEffect } from 'react';
 import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from './icons';
 import { benefits, useCases, uniqueFeatures, testimonialsData, uspData, comparisonSectionData } from './data/homePage';
@@ -369,7 +371,7 @@ export const Testimonials: React.FC = () => {
     );
 };
 
-export const UspSection: React.FC = () => (
+export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
     <section className="py-24 lg:py-28 bg-pastel-yellow dark:bg-amber-950/30 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
              <div className="text-center mb-16 max-w-4xl mx-auto">
@@ -378,11 +380,19 @@ export const UspSection: React.FC = () => (
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {uspData.features.map(feature => (
-                    <div key={feature.title} className="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <a 
+                        key={feature.title}
+                        href={feature.path}
+                        onClick={(e) => { e.preventDefault(); navigate(feature.path); }}
+                        className="group bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                    >
                          <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
                          <h3 className="text-lg font-bold text-slate-800 dark:text-white">{feature.title}</h3>
-                         <p className="mt-1 text-slate-600 dark:text-slate-300">{feature.description}</p>
-                    </div>
+                         <p className="mt-1 text-slate-600 dark:text-slate-300 flex-grow">{feature.description}</p>
+                         <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
+                            Learn More &rarr;
+                         </span>
+                    </a>
                 ))}
             </div>
         </div>

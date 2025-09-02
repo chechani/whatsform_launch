@@ -124,9 +124,11 @@ export const PageFeatureGrid: React.FC<{
     subtitle?: string;
     features: {icon?: React.FC; title: string; description: string; badge?: string;}[];
     image?: string;
-}> = ({ title, subtitle, features, image }) => (
+    sectionNumber?: string;
+}> = ({ title, subtitle, features, image, sectionNumber }) => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="relative pt-8 pl-4">
+            {sectionNumber && <span className="absolute left-0 top-0 text-8xl font-black text-slate-200 dark:text-slate-700/50 select-none -z-10">{sectionNumber}.</span>}
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{title}</h2>
             {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{subtitle}</p>}
             <div className="mt-8 space-y-6">

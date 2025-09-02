@@ -36,7 +36,8 @@ export const powerfulFormsPageData = {
         },
         {
             type: 'pageFeatureGrid',
-            title: '3. Advanced Response Management',
+            sectionNumber: '3',
+            title: 'Advanced Response Management',
             subtitle: 'Effectively track, manage, and act on the data collected from your flows.',
             features: [
                 { icon: CubeTransparentIcon, title: "Create & Update Docs for Every Flow", description: "Automatically track user responses for each flow, enabling targeted follow-ups and data-driven decisions." },
@@ -48,7 +49,8 @@ export const powerfulFormsPageData = {
         },
         {
             type: 'pageFeatureGrid',
-            title: '4. Automated Notifications & Integrations',
+            sectionNumber: '4',
+            title: 'Automated Notifications & Integrations',
             subtitle: 'Close the loop with automated acknowledgments and connect your entire business ecosystem.',
             features: [
                 { icon: CubeTransparentIcon, title: "Instant Flow Notifications", description: "Acknowledge every user submission instantly with a text message, a follow-up flow, or interactive menu options." },

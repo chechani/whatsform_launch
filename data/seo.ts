@@ -1,5 +1,7 @@
 
 
+
+
 export const seoData: { [key: string]: { title: string; description: string } } = {
     '/': {
         title: 'WhatsForm – Revolutionize Your WhatsApp Business Workflows',
@@ -216,5 +218,9 @@ export const seoData: { [key: string]: { title: string; description: string } } 
     '/signup': {
         title: 'Request a Free 14-Day Trial | WhatsForm',
         description: 'Start your free 14-day trial of WhatsForm and experience the power of building Google Form-like experiences directly inside WhatsApp.',
+    },
+    '/site-index': {
+        title: 'Site Index | Complete Sitemap | WhatsForm',
+        description: 'Explore a complete list of all pages and resources on the WhatsForm website. Our sitemap helps you find exactly what you need.',
     }
 };

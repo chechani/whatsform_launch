@@ -1,4 +1,5 @@
 
+
 import { 
     ChartBarIcon, HeadsetIcon, CurrencyDollarIcon, AcademicCapIcon, 
     BuildingStorefrontIcon, MegaphoneIcon, StethoscopeIcon, BuildingOfficeIcon, 
@@ -92,6 +93,7 @@ export const footerData = {
                 { name: 'Community', path: '#/community' },
                 { name: 'Help Center', path: '#/help-center' },
                 { name: 'FAQ', path: '#/faq' },
+                { name: 'Site Index', path: '#/site-index' },
             ]
         },
         {
