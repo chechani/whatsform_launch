@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import { Header, Footer } from './Layout';
 import HomePage from './pages/HomePage';
@@ -53,10 +48,6 @@ import MoonSezPage from './pages/customers/MoonSezPage';
 import CaGmjPage from './pages/customers/CaGmjPage';
 import DeveloperDocsPage from './pages/DeveloperDocsPage';
 
-// Import blog pages
-import FormsInsideWhatsappPage from './pages/blog/FormsInsideWhatsappPage';
-import SmartyAIUnlocksPage from './pages/blog/SmartyAIUnlocksPage';
-
 // Import newly added pages
 import BookDemoPage from './pages/BookDemoPage';
 import CareersPage from './pages/CareersPage';
@@ -70,6 +61,28 @@ import { seoData } from './data/seo';
 import CancellationPage from './pages/CancellationPage';
 import WebinarsPage from './pages/WebinarsPage';
 import SiteIndexPage from './pages/SiteIndexPage';
+
+// Import blog pages
+import WhatsappFormsVsGoogleFormsPage from './pages/blog/WhatsappFormsVsGoogleFormsPage';
+import AutomatingKycOnWhatsappPage from './pages/blog/AutomatingKycOnWhatsappPage';
+import WhatsappForPatientCarePage from './pages/blog/WhatsappForPatientCarePage';
+import TaskManagementInsideWhatsappPage from './pages/blog/TaskManagementInsideWhatsappPage';
+import WhatsappAiAgentsPage from './pages/blog/WhatsappAiAgentsPage';
+import DripCampaignsOnWhatsappPage from './pages/blog/DripCampaignsOnWhatsappPage';
+import EventRegistrationOnWhatsappPage from './pages/blog/EventRegistrationOnWhatsappPage';
+import WhatsappCrmIntegrationPage from './pages/blog/WhatsappCrmIntegrationPage';
+import ComplianceRemindersOnWhatsappPage from './pages/blog/ComplianceRemindersOnWhatsappPage';
+import WhatsappForRealEstatePage from './pages/blog/WhatsappForRealEstatePage';
+import GovernmentServicesOnWhatsappPage from './pages/blog/GovernmentServicesOnWhatsappPage';
+import CustomerFeedbackOnWhatsappPage from './pages/blog/CustomerFeedbackOnWhatsappPage';
+import WhatsappForEcommercePage from './pages/blog/WhatsappForEcommercePage';
+import WhatsappUserInboxPage from './pages/blog/WhatsappUserInboxPage';
+import DateBasedCampaignsOnWhatsappPage from './pages/blog/DateBasedCampaignsOnWhatsappPage';
+import WhatsappForLogisticsPage from './pages/blog/WhatsappForLogisticsPage';
+import WhatsappAiForEducationPage from './pages/blog/WhatsappAiForEducationPage';
+import SecureWhatsappDataPage from './pages/blog/SecureWhatsappDataPage';
+import NoCodeWhatsappFlowBuilderPage from './pages/blog/NoCodeWhatsappFlowBuilderPage';
+import FutureOfBusinessOnWhatsappPage from './pages/blog/FutureOfBusinessOnWhatsappPage';
 
 
 const App: React.FC = () => {
@@ -129,7 +142,8 @@ const App: React.FC = () => {
 
         // Path will be like '/', '/marketing', etc.
         const path = route.substring(1) || '/';
-        const pageSeo = seoData[path] || seoData['/'];
+        const pathWithoutQuery = path.split('?')[0];
+        const pageSeo = seoData[pathWithoutQuery] || seoData['/'];
         document.title = pageSeo.title;
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
@@ -239,9 +253,26 @@ const App: React.FC = () => {
             case '/customers/ca-gmj': return <CaGmjPage navigate={navigate} />;
             case '/developer-docs': return <DeveloperDocsPage navigate={navigate} />;
             // Blog Post Routes
-// FIX: Pass navigate prop to blog pages as they use the CTA component which requires it.
-            case '/blog/forms-inside-whatsapp-is-game-changing': return <FormsInsideWhatsappPage navigate={navigate} />;
-            case '/blog/unlocking-business-potential-with-smartyai': return <SmartyAIUnlocksPage navigate={navigate} />;
+            case '/blog/whatsapp-forms-vs-google-forms': return <WhatsappFormsVsGoogleFormsPage navigate={navigate} />;
+            case '/blog/automating-kyc-on-whatsapp': return <AutomatingKycOnWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-for-patient-care': return <WhatsappForPatientCarePage navigate={navigate} />;
+            case '/blog/task-management-inside-whatsapp': return <TaskManagementInsideWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-ai-agents': return <WhatsappAiAgentsPage navigate={navigate} />;
+            case '/blog/drip-campaigns-on-whatsapp': return <DripCampaignsOnWhatsappPage navigate={navigate} />;
+            case '/blog/event-registration-on-whatsapp': return <EventRegistrationOnWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-crm-integration': return <WhatsappCrmIntegrationPage navigate={navigate} />;
+            case '/blog/compliance-reminders-on-whatsapp': return <ComplianceRemindersOnWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-for-real-estate': return <WhatsappForRealEstatePage navigate={navigate} />;
+            case '/blog/government-services-on-whatsapp': return <GovernmentServicesOnWhatsappPage navigate={navigate} />;
+            case '/blog/customer-feedback-on-whatsapp': return <CustomerFeedbackOnWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-for-ecommerce': return <WhatsappForEcommercePage navigate={navigate} />;
+            case '/blog/whatsapp-user-inbox': return <WhatsappUserInboxPage navigate={navigate} />;
+            case '/blog/date-based-campaigns-on-whatsapp': return <DateBasedCampaignsOnWhatsappPage navigate={navigate} />;
+            case '/blog/whatsapp-for-logistics': return <WhatsappForLogisticsPage navigate={navigate} />;
+            case '/blog/whatsapp-ai-for-education': return <WhatsappAiForEducationPage navigate={navigate} />;
+            case '/blog/secure-whatsapp-data': return <SecureWhatsappDataPage navigate={navigate} />;
+            case '/blog/no-code-whatsapp-flow-builder': return <NoCodeWhatsappFlowBuilderPage navigate={navigate} />;
+            case '/blog/future-of-business-on-whatsapp': return <FutureOfBusinessOnWhatsappPage navigate={navigate} />;
             case '/':
             default:
                 return <HomePage navigate={navigate} />;

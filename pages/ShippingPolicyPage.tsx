@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 import { GenericPageHero } from '../PageBuilder';
 import { shippingPolicyData } from '../data/pages/shippingPolicy';
@@ -29,7 +30,7 @@ const ShippingPolicyPage: React.FC = () => {
                 title={shippingPolicyData.hero.title} 
                 subtitle={shippingPolicyData.hero.subtitle} 
             />
-            <div className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
                 <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
                    <PolicyContentRenderer content={shippingPolicyData.content} />
                 </div>

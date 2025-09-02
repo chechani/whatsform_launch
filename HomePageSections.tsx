@@ -8,6 +8,8 @@
 
 
 
+
+
 import React, { useState, useEffect } from 'react';
 import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from './icons';
 import { benefits, useCases, uniqueFeatures, testimonialsData, uspData, comparisonSectionData } from './data/homePage';
@@ -41,7 +43,7 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
     
     return (
         <>
-            <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 bg-white dark:bg-slate-950 overflow-hidden transition-colors duration-300">
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white dark:bg-slate-950 overflow-hidden transition-colors duration-300">
                  <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/10 rounded-full blur-3xl" />
                  <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/10 rounded-full blur-3xl" />
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -52,7 +54,7 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                 Empowering WhatsApp Communication
                             </span>
                             <h1 className="font-black text-slate-900 dark:text-white leading-tight tracking-tighter min-h-[8rem] sm:min-h-[10rem] md:min-h-[12rem] flex flex-col justify-start">
-                                <span className={`block text-5xl sm:text-6xl md:text-7xl transition-opacity duration-300 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+                                <span className={`block text-4xl sm:text-6xl lg:text-7xl transition-opacity duration-300 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}>
                                     {cyclingWords[index] === "Multi-steps Forms" ? (
                                         <>
                                             <span style={{ fontSize: '60%', fontWeight: 700 }}>Multi-steps </span>
@@ -63,16 +65,16 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                     )}
                                 </span>
                                 <div className="mt-2 flex items-center justify-start gap-x-2">
-                                    <span className="text-lg sm:text-xl md:text-2xl">Inside</span>
-                                    <span className="text-3xl sm:text-4xl md:text-5xl text-green-500">WhatsApp.</span>
-                                    <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:h-12 text-green-500" />
+                                    <span className="text-lg sm:text-xl">Inside</span>
+                                    <span className="text-3xl sm:text-4xl text-green-500">WhatsApp.</span>
+                                    <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 text-green-500" />
                                 </div>
                             </h1>
                             <p className="mt-2 text-md font-semibold text-slate-600 dark:text-slate-400 tracking-wide">
                                 "Game Changing for Customer Engagement"
                             </p>
                             <div className="mt-6 space-y-5 max-w-xl">
-                                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300">
+                                <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
                                     “95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.”
                                 </p>
                                 <p className="font-semibold text-md text-slate-700 dark:text-slate-300 italic p-4 bg-slate-100 dark:bg-slate-800/50 rounded-lg border-l-4 border-green-500 shadow-sm">
@@ -160,7 +162,7 @@ export const ActionStrip: React.FC<{ navigate: (path: string) => void }> = ({ na
 };
 
 export const PowerfulFeatures: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section id="features" className="py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section id="features" className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
@@ -194,7 +196,7 @@ export const PowerfulFeatures: React.FC<{ navigate: (path: string) => void }> = 
 );
 
 export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section id="mini-apps" className="py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30 transition-colors duration-300">
+    <section id="mini-apps" className="py-16 sm:py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
@@ -246,7 +248,7 @@ export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navig
 );
 
 export const Benefits: React.FC = () => (
-    <section id="benefits" className="py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section id="benefits" className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">The Benefits of a Conversational Approach</h2>
@@ -270,7 +272,7 @@ export const Benefits: React.FC = () => (
 );
 
 export const UseCases: React.FC = () => (
-    <section id="use-cases" className="py-24 lg:py-28 bg-pastel-green dark:bg-green-950/30 transition-colors duration-300">
+    <section id="use-cases" className="py-16 sm:py-24 lg:py-28 bg-pastel-green dark:bg-green-950/30 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-12 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Trusted by Every Industry</h2>
@@ -304,7 +306,7 @@ export const Testimonials: React.FC = () => {
 
     return (
         <>
-        <section className="py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="text-center mb-16 max-w-4xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Loved by Businesses Big and Small</h2>
@@ -372,7 +374,7 @@ export const Testimonials: React.FC = () => {
 };
 
 export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section className="py-24 lg:py-28 bg-pastel-yellow dark:bg-amber-950/30 transition-colors duration-300">
+    <section className="py-16 sm:py-24 lg:py-28 bg-pastel-yellow dark:bg-amber-950/30 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
              <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{uspData.title}</h2>
@@ -401,7 +403,7 @@ export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ nav
 
 
 export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+    <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{comparisonSectionData.title}</h2>
@@ -431,7 +433,7 @@ export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> =
 
 export const FormsBrowserTeaser: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => {
     return (
-        <section className="py-24 lg:py-28 bg-pastel-slate dark:bg-slate-900">
+        <section className="py-16 sm:py-24 lg:py-28 bg-pastel-slate dark:bg-slate-900">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div className="text-center lg:text-left">

@@ -13,7 +13,7 @@ const IndustrySolutionsPage: React.FC<IndustrySolutionsPageProps> = ({ navigate 
                 title={industrySolutionsData.hero.title} 
                 subtitle={industrySolutionsData.hero.subtitle} 
             />
-            <section className="py-24 lg:py-28 bg-slate-50 dark:bg-slate-900">
+            <section className="py-16 sm:py-24 lg:py-28 bg-slate-50 dark:bg-slate-900">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {industrySolutionsData.industries.map(industry => (

@@ -41,7 +41,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ navigate }) => {
                 title={faqPageData.hero.title} 
                 subtitle={faqPageData.hero.subtitle} 
             />
-            <div className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                      <div className="max-w-2xl mx-auto mb-12">
                         <div className="relative">

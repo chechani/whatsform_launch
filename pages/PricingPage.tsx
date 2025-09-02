@@ -39,7 +39,7 @@ const PricingPage: React.FC<PricingPageProps> = ({ navigate }) => {
 
     return (
         <main className="bg-white dark:bg-slate-950 transition-colors duration-300">
-            <div className="pt-32 pb-24 lg:pt-40 lg:pb-32">
+            <div className="pt-32 pb-20 lg:pt-40 lg:pb-28">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
                     <span className="text-lg font-semibold text-green-600 dark:text-green-400">{pricingData.tagline}</span>
                     <h1 className="mt-2 text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{pricingData.title}</h1>

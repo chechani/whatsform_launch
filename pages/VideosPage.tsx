@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import { GenericPageHero, CTA } from '../PageBuilder';
 import { videosPageData } from '../data/pages/videos';
@@ -19,7 +20,7 @@ const VideosPage: React.FC<VideosPageProps> = ({ navigate }) => {
                 title={videosPageData.hero.title} 
                 subtitle={videosPageData.hero.subtitle} 
             />
-            <div className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         {/* Main Video Player */}

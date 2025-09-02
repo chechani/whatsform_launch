@@ -109,7 +109,7 @@ const WorkflowCycleDiagram: React.FC = () => {
 
 
 const WorkflowCycleSection: React.FC = () => (
-    <section className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+    <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
@@ -135,7 +135,7 @@ const FeaturesPage: React.FC<{ navigate: (path: string) => void; }> = ({ navigat
                 subtitle={featuresPageData.hero.subtitle} 
             />
             <WorkflowCycleSection />
-             <section className="py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30">
+             <section className="py-16 sm:py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                      <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Transform Your Operations</h2>
@@ -144,7 +144,7 @@ const FeaturesPage: React.FC<{ navigate: (path: string) => void; }> = ({ navigat
                      <ProblemSolution data={featuresPageData.problemSolution} />
                 </div>
             </section>
-             <section className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+             <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                      <FeaturesGrid navigate={navigate} features={featuresPageData.features} />
                 </div>

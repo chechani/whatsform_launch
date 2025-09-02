@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react';
 import { Hero, ActionStrip, PowerfulFeatures, MiniApps, Benefits, UseCases, Testimonials, UspSection, ComparisonSection, FormsBrowserTeaser } from '../HomePageSections';
 import { CTA } from '../PageBuilder';
@@ -28,5 +30,4 @@ const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
     );
 };
 
-// FIX: Add default export for the HomePage component.
 export default HomePage;

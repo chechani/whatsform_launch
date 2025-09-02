@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid, PageFeatureGrid } from '../PageBuilder';
 import { marketingAgenciesPageData } from '../data/pages/marketingAgencies';
@@ -18,7 +19,7 @@ const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = (
         "bg-pastel-pink dark:bg-violet-950/30",
     ];
     const bgColor = bgColors[index % bgColors.length];
-    return <section className={`${bgColor} py-20 lg:py-24`}>{children}</section>;
+    return <section className={`${bgColor} py-16 sm:py-20 lg:py-24`}>{children}</section>;
 };
 
 const MarketingAgenciesPage: React.FC<MarketingAgenciesPageProps> = ({ navigate }) => {
@@ -50,7 +51,7 @@ const MarketingAgenciesPage: React.FC<MarketingAgenciesPageProps> = ({ navigate 
                     </SectionWrapper>
                 ))}
             </div>
-            <div className="bg-pastel-green dark:bg-green-950/30 py-20">
+            <div className="bg-pastel-green dark:bg-green-950/30 py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={marketingAgenciesPageData.closing.title} subtitle={marketingAgenciesPageData.closing.subtitle}>
                         <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">

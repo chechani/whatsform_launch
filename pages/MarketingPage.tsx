@@ -17,7 +17,7 @@ const SectionWrapper: React.FC<{ index: number; children: React.ReactNode; }> = 
         "bg-pastel-pink dark:bg-violet-950/30",
     ];
     const bgColor = bgColors[index % bgColors.length];
-    return <section className={`${bgColor} py-20 lg:py-24 transition-colors duration-300`}>{children}</section>;
+    return <section className={`${bgColor} py-16 sm:py-20 lg:py-24 transition-colors duration-300`}>{children}</section>;
 };
 
 const MarketingPage: React.FC<MarketingPageProps> = ({ navigate }) => {
@@ -52,7 +52,7 @@ const MarketingPage: React.FC<MarketingPageProps> = ({ navigate }) => {
                                             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
                                                 {section.stats.map(stat => (
                                                     <div key={stat.label}>
-                                                        <p className="text-5xl font-bold text-green-600 dark:text-green-400">{stat.value}</p>
+                                                        <p className="text-4xl sm:text-5xl font-bold text-green-600 dark:text-green-400">{stat.value}</p>
                                                         <p className="mt-2 text-slate-600 dark:text-slate-300">{stat.label}</p>
                                                     </div>
                                                 ))}
@@ -69,7 +69,7 @@ const MarketingPage: React.FC<MarketingPageProps> = ({ navigate }) => {
                 </SectionWrapper>
             ))}
             
-            <div className="bg-pastel-pink dark:bg-violet-950/30 py-20 transition-colors duration-300">
+            <div className="bg-pastel-pink dark:bg-violet-950/30 py-16 sm:py-20 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={marketingPageData.closing.title} subtitle={marketingPageData.closing.subtitle}>
                         <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">

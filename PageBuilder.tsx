@@ -27,7 +27,7 @@ const Card: React.FC<{ children: React.ReactNode, className?: string, href?: str
 
 
 export const CTA: React.FC<CTAProps> = ({ navigate }) => (
-    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-24 lg:py-28 transition-colors duration-300">
+    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-16 sm:py-24 lg:py-28 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">Ready to Transform Your WhatsApp Business?</h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>
@@ -59,7 +59,7 @@ export const CTA: React.FC<CTAProps> = ({ navigate }) => (
 );
 
 export const GenericPageHero: React.FC<{title: string, subtitle: string}> = ({ title, subtitle }) => (
-    <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden">
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden">
         <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
@@ -202,7 +202,7 @@ const ScrollToTopButton: React.FC = () => {
         <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className={`bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform ${
+            className={`bg-green-500 text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform ${
                 isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
             }`}
         >
@@ -223,9 +223,9 @@ export const FloatingWidgets: React.FC = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with us on WhatsApp"
-                className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
+                className="bg-green-500 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
             >
-                <WhatsAppIcon className="h-8 w-8" />
+                <WhatsAppIcon className="h-7 w-7 sm:h-8 sm:h-8" />
             </a>
         </div>
 

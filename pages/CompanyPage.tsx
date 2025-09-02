@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '../PageBuilder';
 import { companyPageData } from '../data/pages/company';
@@ -13,14 +15,14 @@ const CompanyPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                 title={companyPageData.hero.title} 
                 subtitle={companyPageData.hero.subtitle} 
             />
-            <div className="py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-20">
                     <ContentWithImage {...companyPageData.mission as any} />
                     <ContentWithImage {...companyPageData.story as any} />
                 </div>
             </div>
             
-            <section className="py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30 transition-colors duration-300">
+            <section className="py-16 sm:py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection 
                         title={companyPageData.values.title}
@@ -40,7 +42,7 @@ const CompanyPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                 </div>
             </section>
 
-             <div className="bg-white dark:bg-slate-950 py-20 transition-colors duration-300">
+             <div className="bg-white dark:bg-slate-950 py-16 sm:py-20 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={companyPageData.closing.title} subtitle={companyPageData.closing.subtitle}>
                         <a href={companyPageData.closing.path} onClick={(e) => { e.preventDefault(); navigate(companyPageData.closing.path); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">

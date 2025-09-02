@@ -151,7 +151,7 @@ const BookDemoPage: React.FC<BookDemoPageProps> = ({ navigate }) => {
 
 
     return (
-        <main className="flex flex-col md:flex-row pt-20 bg-slate-50 dark:bg-slate-950 min-h-screen">
+        <main className="flex flex-col md:flex-row md:pt-20 bg-slate-50 dark:bg-slate-950 min-h-screen">
             {/* Left Column */}
             <div className="w-full md:w-1/2 bg-green-950 text-white p-8 lg:p-16 flex flex-col justify-between">
                 <div>
@@ -184,47 +184,130 @@ const BookDemoPage: React.FC<BookDemoPageProps> = ({ navigate }) => {
             </div>
 
             {/* Right Column */}
-            <div className="w-full md:w-1/2 bg-slate-50 dark:bg-slate-950 p-8 lg:p-12 flex flex-col justify-center overflow-y-auto">
+            <div className="w-full md:w-1/2 bg-slate-50 dark:bg-slate-950 p-6 md:p-8 lg:p-12 flex flex-col justify-center overflow-y-auto">
                  <div className="w-full max-w-md mx-auto">
                     <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{bookDemoPageData.form.title}</h2>
                     <p className="text-slate-600 dark:text-slate-300 mt-2">{bookDemoPageData.form.subtitle}</p>
+                    
+                    <form className="space-y-5 mt-8" onSubmit={handleSubmit} noValidate>
+                        {submissionStatus !== 'success' ? (
+                            <>
+                                <div>
+                                    <label htmlFor="fullName" className={labelClasses}>Full Name *</label>
+                                    <input type="text" name="fullName" id="fullName" value={formData.fullName} onChange={handleInputChange} required className={inputClasses} />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="email" className={labelClasses}>Email *</label>
+                                    <input type="email" name="email" id="email" value={formData.email} onChange={handleInputChange} required className={inputClasses} />
+                                </div>
 
-                     {submissionStatus === 'success' ? (
-                        <div className="mt-8 p-6 text-center bg-green-50 dark:bg-green-950/50 border border-green-200 dark:border-green-500/30 rounded-lg">
-                            <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">Request Submitted!</h3>
-                            <p className="mt-2 text-green-700 dark:text-green-400">{feedbackMessage}</p>
-                        </div>
-                    ) : (
-                        <form className="mt-8 space-y-5" onSubmit={handleSubmit} noValidate>
-                            <div><label htmlFor="fullName" className={labelClasses}>Full Name *</label><input type="text" name="fullName" id="fullName" className={inputClasses} required onChange={handleInputChange} value={formData.fullName} /></div>
-                            <div><label htmlFor="email" className={labelClasses}>Email *</label><input type="email" name="email" id="email" className={inputClasses} required onChange={handleInputChange} value={formData.email} /></div>
-                            <div><label htmlFor="phone" className={labelClasses}>Phone Number *</label>
-                                <div className="mt-1 flex rounded-lg shadow-sm"><select value={countryCode} onChange={(e) => setCountryCode(e.target.value)} className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 max-w-[150px]">{countryCodes.map(c => <option key={c.name} value={`+${c.code}`}>{c.name} (+{c.code})</option>)}</select><input type="tel" name="phone" id="phone" className="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" required onChange={handleInputChange} value={formData.phone} /></div>
-                            </div>
-                            <div><label htmlFor="companyName" className={labelClasses}>Company Name *</label><input type="text" name="companyName" id="companyName" className={inputClasses} required onChange={handleInputChange} value={formData.companyName} /></div>
-                            <div><label htmlFor="companyWebsite" className={labelClasses}>Company Website</label><input type="url" name="companyWebsite" id="companyWebsite" className={inputClasses} onChange={handleInputChange} value={formData.companyWebsite} placeholder="https://example.com" /></div>
-                            <div><label htmlFor="industry" className={labelClasses}>Industry *</label><select id="industry" value={industry} onChange={handleIndustryChange} required className={selectClasses}><option value="" disabled>Select Industry</option>{industryOptions.map(opt => <option key={opt} value={opt} className="text-black dark:bg-slate-800 dark:text-slate-200">{opt}</option>)}</select></div>
-                            <div><label htmlFor="category" className={labelClasses}>Category *</label><select id="category" value={category} onChange={(e) => setCategory(e.target.value)} disabled={!industry} required className={`${selectClasses} ${!industry ? 'bg-slate-200 dark:bg-slate-700 cursor-not-allowed' : 'bg-white dark:bg-slate-800'}`}><option value="" disabled>{industry ? 'Select Category' : 'Select Industry First'}</option>{availableCategories.map(cat => <option key={cat} value={cat} className="text-black dark:bg-slate-800 dark:text-slate-200">{cat}</option>)}</select></div>
-                            <div><label htmlFor="whatsappNumber" className={labelClasses}>WhatsApp Number (Optional)</label>
-                                <div className="mt-1 flex rounded-lg shadow-sm"><select value={whatsappCountryCode} onChange={(e) => setWhatsappCountryCode(e.target.value)} className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 max-w-[150px]" aria-label="WhatsApp Country Code">{countryCodes.map(c => <option key={c.name} value={`+${c.code}`}>{c.name} (+{c.code})</option>)}</select><input type="tel" name="whatsappNumber" id="whatsappNumber" className="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" onChange={handleInputChange} value={formData.whatsappNumber} /></div>
-                            </div>
-                            <div><label htmlFor="city" className={labelClasses}>City</label><input type="text" name="city" id="city" className={inputClasses} onChange={handleInputChange} value={formData.city} /></div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div><label htmlFor="preferredDemoDate" className={labelClasses}>Preferred Date</label><input type="date" name="preferredDemoDate" id="preferredDemoDate" className={inputClasses} onChange={handleInputChange} value={formData.preferredDemoDate} min={today} /></div>
-                                <div><label htmlFor="preferredDemoTime" className={labelClasses}>Preferred Time</label><select name="preferredDemoTime" id="preferredDemoTime" className={selectClasses} onChange={handleInputChange} value={formData.preferredDemoTime}><option value="" disabled>Select a time</option>{timeSlots.map(time => (<option key={time} value={time}>{new Date(`1970-01-01T${time}:00`).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</option>))}</select></div>
-                            </div>
-                            <div><label htmlFor="useCaseDescription" className={labelClasses}>Use Case / Description</label><textarea name="useCaseDescription" id="useCaseDescription" rows={3} className={inputClasses} onChange={handleInputChange} value={formData.useCaseDescription}></textarea></div>
-                            <div><label htmlFor="notes" className={labelClasses}>Additional Notes</label><textarea name="notes" id="notes" rows={3} className={inputClasses} onChange={handleInputChange} value={formData.notes} placeholder="Let us know what you're looking for..."></textarea></div>
+                                <div>
+                                    <label htmlFor="phone" className={labelClasses}>Phone Number *</label>
+                                    <div className="mt-1 flex rounded-lg shadow-sm">
+                                        <select 
+                                            value={countryCode}
+                                            onChange={(e) => setCountryCode(e.target.value)}
+                                            className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 max-w-[150px]">
+                                            {countryCodes.map(country => (
+                                                <option key={`${country.name}-${country.code}`} value={`+${country.code}`}>
+                                                    {`+${country.code} (${country.name})`}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleInputChange} required className="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+                                    </div>
+                                </div>
 
-                            {feedbackMessage && submissionStatus === 'error' && (
-                                <div className="p-4 text-sm rounded-md bg-red-100 text-red-700" role="alert">{feedbackMessage}</div>
-                            )}
+                                <div>
+                                    <label htmlFor="companyName" className={labelClasses}>Company Name *</label>
+                                    <input type="text" name="companyName" id="companyName" value={formData.companyName} onChange={handleInputChange} required className={inputClasses} />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="whatsappNumber" className={labelClasses}>WhatsApp Number (if different)</label>
+                                    <div className="mt-1 flex rounded-lg shadow-sm">
+                                        <select 
+                                            value={whatsappCountryCode}
+                                            onChange={(e) => setWhatsappCountryCode(e.target.value)}
+                                            className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 max-w-[150px]">
+                                            {countryCodes.map(country => (
+                                                <option key={`${country.name}-${country.code}`} value={`+${country.code}`}>
+                                                    {`+${country.code} (${country.name})`}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <input type="tel" name="whatsappNumber" id="whatsappNumber" value={formData.whatsappNumber} onChange={handleInputChange} className="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="companyWebsite" className={labelClasses}>Company Website</label>
+                                    <input type="url" name="companyWebsite" id="companyWebsite" value={formData.companyWebsite} onChange={handleInputChange} placeholder="https://example.com" className={inputClasses} />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="city" className={labelClasses}>City</label>
+                                    <input type="text" name="city" id="city" value={formData.city} onChange={handleInputChange} className={inputClasses} />
+                                </div>
 
-                            <button type="submit" disabled={isSubmitting} className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:bg-green-400 disabled:cursor-not-allowed">
-                                {isSubmitting ? 'Submitting...' : 'Request Demo'}
-                            </button>
-                        </form>
-                    )}
+                                <div>
+                                    <label htmlFor="industry" className={labelClasses}>Industry</label>
+                                    <select id="industry" value={industry} onChange={handleIndustryChange} required className={selectClasses}>
+                                        <option value="" disabled>Select Industry</option>
+                                        {industryOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="category" className={labelClasses}>Category</label>
+                                    <select id="category" value={category} onChange={(e) => setCategory(e.target.value)} disabled={!industry} required className={selectClasses}>
+                                        <option value="" disabled>{industry ? 'Select a category' : 'Select an industry first'}</option>
+                                        {availableCategories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="preferredDemoDate" className={labelClasses}>Preferred Demo Date</label>
+                                    <input type="date" name="preferredDemoDate" id="preferredDemoDate" value={formData.preferredDemoDate} onChange={handleInputChange} min={today} className={inputClasses} />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="preferredDemoTime" className={labelClasses}>Preferred Demo Time</label>
+                                    <select name="preferredDemoTime" id="preferredDemoTime" value={formData.preferredDemoTime} onChange={handleInputChange} className={selectClasses}>
+                                        <option value="">Select a time</option>
+                                        {timeSlots.map(time => <option key={time} value={time}>{time}</option>)}
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="useCaseDescription" className={labelClasses}>How do you plan to use WhatsForm?</label>
+                                    <textarea name="useCaseDescription" id="useCaseDescription" value={formData.useCaseDescription} onChange={handleInputChange} rows={3} className={inputClasses}></textarea>
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="notes" className={labelClasses}>Additional Notes</label>
+                                    <textarea name="notes" id="notes" value={formData.notes} onChange={handleInputChange} rows={3} className={inputClasses}></textarea>
+                                </div>
+
+                                {feedbackMessage && (
+                                    <div className={`p-4 text-sm rounded-md ${submissionStatus === 'error' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`} role="alert">
+                                        {feedbackMessage}
+                                    </div>
+                                )}
+                                
+                                <button type="submit" disabled={isSubmitting} className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:bg-green-400 disabled:cursor-not-allowed">
+                                    {isSubmitting ? 'Submitting...' : 'Request Demo'}
+                                </button>
+                            </>
+                        ) : (
+                             <div className="p-6 text-center bg-green-50 border border-green-200 rounded-lg">
+                                <h3 className="text-2xl font-bold text-green-800">Request Submitted!</h3>
+                                <p className="mt-2 text-green-700">{feedbackMessage}</p>
+                                <p className="mt-4 text-sm text-slate-600">Our team will get in touch with you shortly.</p>
+                            </div>
+                        )}
+                    </form>
                 </div>
             </div>
         </main>

@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '../PageBuilder';
 import { templateCenterData } from '../data/pages/templateCenter';
@@ -21,10 +22,10 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                 title={templateCenterData.hero.title} 
                 subtitle={templateCenterData.hero.subtitle} 
             />
-            <div className="py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-20">
                     {/* Strategy Guide Section */}
-                     <section className="bg-pastel-blue dark:bg-sky-950/30 py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
+                     <section className="bg-pastel-blue dark:bg-sky-950/30 py-16 sm:py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
                         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                         <div className="text-center max-w-3xl mx-auto">
                             <div className="inline-flex items-center space-x-2 bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-300 font-semibold px-4 py-1 rounded-full mb-4">
@@ -62,7 +63,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                     </section>
 
                     {/* Stats Section */}
-                    <section className="py-20 lg:py-24">
+                    <section className="py-16 sm:py-20 lg:py-24">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">{templateCenterData.stats.title}</h2>
                              <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{templateCenterData.stats.subtitle}</p>
@@ -79,17 +80,17 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                         </div>
                     </section>
                     
-                    <section className="bg-pastel-yellow dark:bg-amber-950/30 py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
+                    <section className="bg-pastel-yellow dark:bg-amber-950/30 py-16 sm:py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
                         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                             <ContentWithImage {...templateCenterData.mediaLibrary} />
                         </div>
                     </section>
-                     <section className="py-20 lg:py-24">
+                     <section className="py-16 sm:py-20 lg:py-24">
                         <ContentWithImage {...templateCenterData.multiLanguage} reverse />
                     </section>
 
                     {/* Game Changer Section */}
-                     <section className="bg-pastel-violet dark:bg-violet-950/30 py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
+                     <section className="bg-pastel-violet dark:bg-violet-950/30 py-16 sm:py-20 lg:py-24 -m-6 sm:-m-8 lg:-m-12 rounded-2xl">
                         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{templateCenterData.gameChanger.title}</h2>
                             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{templateCenterData.gameChanger.subtitle}</p>
@@ -110,7 +111,7 @@ const TemplateCenterPage: React.FC<TemplateCenterPageProps> = ({ navigate }) => 
                      </section>
 
                     {/* Video Section */}
-                    <section className="py-20 lg:py-24">
+                    <section className="py-16 sm:py-20 lg:py-24">
                         <div className="text-center max-w-3xl mx-auto">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
                                 {templateCenterData.closingVideo.title}

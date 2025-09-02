@@ -14,7 +14,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ navigate }) => {
                 title={comparisonPageData.hero.title} 
                 subtitle={comparisonPageData.hero.subtitle} 
             />
-            <section className="py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30">
+            <section className="py-16 sm:py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection 
                         title={comparisonPageData.comparison.title}
@@ -60,7 +60,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ navigate }) => {
                 </div>
             </section>
 
-            <div className="bg-pastel-green dark:bg-green-950/30 py-20">
+            <div className="bg-pastel-green dark:bg-green-950/30 py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection 
                         title={comparisonPageData.summary.title} 

@@ -13,7 +13,6 @@ const ElearningPage: React.FC<ElearningPageProps> = ({ navigate }) => {
                 title="E-Learning Solutions" 
                 subtitle="Engage students and automate communication with our powerful WhatsApp tools for education." 
             />
-            {/* FIX: Pass navigate prop to CTA component. */}
             <CTA navigate={navigate} />
         </main>
     );
