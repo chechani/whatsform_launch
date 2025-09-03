@@ -11,14 +11,14 @@ export const companyPageData = {
         type: 'contentWithImage',
         subtitle: 'OUR MISSION',
         title: 'To Revolutionize Business Communication',
-        text: 'We believe that the future of business is conversational. Our mission is to empower organizations of all sizes to move beyond static, one-way messaging and build meaningful, automated, two-way relationships with their customers on the world\'s most popular chat platform.',
+        text: `We believe that the future of business is conversational. Our mission is to empower organizations of all sizes to move beyond static, one-way messaging and build meaningful, automated, two-way relationships with their customers on the world's most popular chat platform.`,
         image: 'https://picsum.photos/seed/company1/500/400',
     },
     story: {
         type: 'contentWithImage',
         subtitle: 'OUR STORY',
         title: 'From a Simple Problem to a Powerful Platform',
-        text: 'WhatsForm was born out of a simple frustration: managing business on WhatsApp was chaotic. Information was scattered, follow-ups were missed, and scaling was impossible. We started by building a tool to create Google Form-like experiences inside WhatsApp, and quickly realized the potential was much bigger. Today, WhatsForm has evolved into a comprehensive conversational platform, powered by AI and robust automation, serving thousands of businesses worldwide.',
+        text: `WhatsForm was born out of a simple frustration: managing business on WhatsApp was chaotic. Information was scattered, follow-ups were missed, and scaling was impossible. We started by building a tool to create Google Form-like experiences inside WhatsApp, and quickly realized the potential was much bigger. Today, WhatsForm has evolved into a comprehensive conversational platform, powered by AI and robust automation, serving thousands of businesses worldwide.`,
         image: 'https://picsum.photos/seed/company2/500/400',
         reverse: true
     },

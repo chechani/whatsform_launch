@@ -1,4 +1,5 @@
 
+
 import { InboxIcon, UsersIcon, SparklesIcon, CalendarIcon, SendMessageIcon, TemplateIcon, CheckCircleIcon } from '../../icons';
 
 export const teamInboxPageData = {
@@ -10,7 +11,7 @@ export const teamInboxPageData = {
         {
             type: 'centeredText',
             title: "Stop Drowning in a Sea of Scattered Messages",
-            subtitle: "Managing hundreds of daily chats from sales inquiries to customer support can feel overwhelming. It's easy for teams to lose track, miss follow-ups, or get buried. The WhatsForm Team Inbox was built to solve this."
+            subtitle: `Managing hundreds of daily chats from sales inquiries to customer support can feel overwhelming. It's easy for teams to lose track, miss follow-ups, or get buried. The WhatsForm Team Inbox was built to solve this.`
         },
         {
             type: 'contentWithImage',

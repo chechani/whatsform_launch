@@ -10,7 +10,7 @@ export const marketingAgenciesPageData = {
         {
             type: 'centeredText',
             title: "Scale Your Agency with Conversational Marketing",
-            subtitle: "Stop juggling multiple tools and platforms. WhatsForm provides a unified, multi-client solution to help you deliver exceptional results on WhatsApp, streamline your operations, and grow your agency."
+            subtitle: `Stop juggling multiple tools and platforms. WhatsForm provides a unified, multi-client solution to help you deliver exceptional results on WhatsApp, streamline your operations, and grow your agency.`
         },
         {
             type: 'contentWithImage',

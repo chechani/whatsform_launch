@@ -1,4 +1,46 @@
 
+
+import { industrySolutionsPageData } from './industrySolutions';
+import { customersPageData } from './customers';
+
+// Helper for customer stories
+const customerStoryLinks = customersPageData.customers.map(customer => ({
+    name: `  - ${customer.name} Customer Story`,
+    path: customer.path,
+    description: customer.description,
+}));
+
+// Helper to generate the industry links with hierarchy
+const industryLinks = industrySolutionsPageData.industries.flatMap(industry => {
+    // Determine the path for the main industry page from a predefined list
+    const mainIndustryPaths: { [key: string]: string } = {
+        "Marketing & Advertising": "#/marketing-agencies",
+        "Retail": "#/ecommerce",
+        "Education": "#/education",
+        "Finance": "#/bfsi",
+        "Healthcare": "#/healthcare",
+        "Public Utilities & Non Profits": "#/government",
+        "Real Estate & Construction": "#/real-estate",
+        "Manufacturing & IMPEX": "#/logistics",
+        "Professional Services": "#/ca-firms", // Using a relevant existing page as a hub
+    };
+    const mainPath = mainIndustryPaths[industry.name] || '#/industry-solutions';
+
+    const mainIndustryLink = {
+        name: industry.name,
+        path: mainPath,
+        description: industry.description
+    };
+
+    const subCategoryLinks = industry.categories.map(category => ({
+        name: `  - ${category.name}`,
+        path: category.path,
+        description: category.description
+    }));
+
+    return [mainIndustryLink, ...subCategoryLinks];
+});
+
 export const siteIndexData = {
     hero: {
         title: "Site Index",
@@ -39,18 +81,10 @@ export const siteIndexData = {
         },
         {
             title: "Solutions by Industry",
-            description: "Custom-tailored use cases for various sectors.",
+            description: "Custom-tailored use cases for various sectors. Explore our main industry hubs or dive into specific sub-categories.",
             links: [
-                { name: 'All Industry Solutions', path: '#/industry-solutions', description: "An overview of all the industries we serve." },
-                { name: 'Education', path: '#/education', description: "Streamline admissions, student support, and alumni relations." },
-                { name: 'E-commerce', path: '#/ecommerce', description: "Drive sales and loyalty with conversational commerce." },
-                { name: 'Healthcare', path: '#/healthcare', description: "Automate appointments, patient intake, and follow-ups." },
-                { name: 'Government', path: '#/government', description: "Deliver modern, accessible e-governance and citizen services." },
-                { name: 'Logistics', path: '#/logistics', description: "Provide real-time tracking and streamline supply chain communication." },
-                { name: 'BFSI', path: '#/bfsi', description: "Automate banking, finance, and insurance queries securely." },
-                { name: 'Real Estate', path: '#/real-estate', description: "Capture, nurture, and convert property leads on WhatsApp." },
-                { name: 'CA Firms', path: '#/ca-firms', description: "Automate client onboarding, reminders, and document collection." },
-                { name: 'Marketing Agencies', path: '#/marketing-agencies', description: "Manage multiple clients and run high-performance campaigns." },
+                { name: 'All Industry Solutions', path: '#/industry-solutions', description: "An overview of all the industries and categories we serve." },
+                ...industryLinks
             ]
         },
         {
@@ -58,25 +92,28 @@ export const siteIndexData = {
             description: "Expand your knowledge and get inspired.",
             links: [
                 { name: 'Blog', path: '#/resources', description: "Insights and tips on WhatsApp business automation and AI." },
-                { name: 'Customer Stories', path: '#/customers', description: "See how leading businesses succeed with WhatsForm." },
+                { name: 'Customer Stories Hub', path: '#/customers', description: "See how leading businesses succeed with WhatsForm." },
+                ...customerStoryLinks,
                 { name: 'Webinars', path: '#/webinars', description: "Join live sessions or watch recordings to master our platform." },
                 { name: 'Videos', path: '#/videos', description: "Watch tutorials, walkthroughs, and success stories." },
+                { name: 'Templates Center', path: '#/templates', description: "Craft, manage, and deploy high-performance message templates." },
                 { name: 'Forms Browser', path: '#/forms-browser', description: "Explore over 200 pre-built form templates for every industry." },
                 { name: 'Developer Docs', path: '#/developer-docs', description: "Integrate and build on our platform with APIs and webhooks." },
+                { name: 'Community', path: '#/community', description: "Connect with other users, share best practices, and get help." },
                 { name: 'Help Center', path: '#/help-center', description: "Find articles and guides to help you use WhatsForm." },
                 { name: 'FAQ', path: '#/faq', description: "Get answers to frequently asked questions about our service." },
+                { name: 'Site Index', path: '#/site-index', description: "You are here. A complete map of the WhatsForm website." },
             ]
         },
         {
-            title: "Company & Community",
-            description: "Learn more about us and connect with others.",
+            title: "Company",
+            description: "Learn more about us and our ecosystem.",
             links: [
                 { name: 'About Us', path: '#/company', description: "Learn about our mission, story, and the team behind WhatsForm." },
                 { name: 'Careers', path: '#/careers', description: "Explore open positions and join our mission-driven team." },
+                { name: 'Branding', path: '#/branding', description: "Find our official brand assets and usage guidelines." },
                 { name: 'Partners', path: '#/partners', description: "Join our partner ecosystem to grow your business with us." },
                 { name: 'Affiliates', path: '#/affiliates', description: "Earn commissions by introducing your audience to WhatsForm." },
-                { name: 'Community', path: '#/community', description: "Connect with other users, share best practices, and get help." },
-                { name: 'Branding', path: '#/branding', description: "Find our official brand assets and usage guidelines." },
             ]
         },
          {

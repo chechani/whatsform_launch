@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '../../../icons';
 export const eltechPageData = {
     hero: {
         title: "Eltech: Powering B2B Sales with Automated Technical Inquiries",
-        subtitle: "How the leading transformer manufacturer uses WhatsForm to qualify leads, accelerate quotes, and provide superior client support.",
+        subtitle: `How the leading transformer manufacturer uses WhatsForm to qualify leads, accelerate quotes, and provide superior client support.`,
     },
     sections: [
         {

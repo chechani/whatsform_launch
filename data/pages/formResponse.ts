@@ -10,7 +10,7 @@ export const formResponsePageData = {
         {
             type: 'centeredText',
             title: "Stop Drowning in Data. Start Driving Action.",
-            subtitle: "Traditional forms dump data into a spreadsheet, creating more manual work. WhatsForm treats every submission as the beginning of a process, giving you the tools to act instantly and intelligently."
+            subtitle: `Traditional forms dump data into a spreadsheet, creating more manual work. WhatsForm treats every submission as the beginning of a process, giving you the tools to act instantly and intelligently.`
         },
         {
             type: 'contentWithImage',

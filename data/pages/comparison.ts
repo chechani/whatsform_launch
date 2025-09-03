@@ -1,7 +1,7 @@
 export const comparisonPageData = {
     hero: {
         title: "WhatsForm vs. Google Forms",
-        subtitle: "It's more than a form. It's a conversation. See why businesses are moving from static questionnaires to dynamic, AI-powered interactions on WhatsApp.",
+        subtitle: `It's more than a form. It's a conversation. See why businesses are moving from static questionnaires to dynamic, AI-powered interactions on WhatsApp.`,
     },
     comparison: {
         title: "Feature-by-Feature Breakdown",
@@ -66,7 +66,7 @@ export const comparisonPageData = {
     },
     summary: {
         title: "Google Forms collects data. WhatsForm builds relationships.",
-        subtitle: "For organizations looking to not just collect information but also engage and act on it in real time, static forms are inadequate. WhatsForm fills that gap by turning a form into a conversation and a trigger for automation.",
+        subtitle: `For organizations looking to not just collect information but also engage and act on it in real time, static forms are inadequate. WhatsForm fills that gap by turning a form into a conversation and a trigger for automation.`,
         cta: "Start a Conversation"
     }
 };

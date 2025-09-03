@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '../../../icons';
 export const jcafPageData = {
     hero: {
         title: "JCAF: Streamlining Client Compliance with WhatsApp Automation",
-        subtitle: "How the forward-thinking CA firm automated document collection and deadline reminders to enhance efficiency and client satisfaction.",
+        subtitle: `How the forward-thinking CA firm automated document collection and deadline reminders to enhance efficiency and client satisfaction.`,
     },
     sections: [
         {

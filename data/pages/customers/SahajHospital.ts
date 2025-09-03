@@ -1,99 +1,10 @@
 
-// import { CheckCircleIcon } from '../../../icons';
-
-// export const sahajHospitalPageData = {
-//     hero: {
-//         title: "Sahaj Hospital: Enhancing Patient Care with AI-Powered Communication",
-//         subtitle: "How the multi-specialty hospital uses WhatsForm to automate registrations, deliver lab reports instantly, and streamline patient flow.",
-//     },
-//     sections: [
-//         {
-//             type: 'centeredText',
-//             title: "A Healthier Approach to Patient Communication",
-//             subtitle: "Sahaj Hospital aimed to modernize the patient experience, reducing wait times and providing instant access to information, thereby allowing their medical staff to focus on what matters most: patient care."
-//         },
-//         {
-//             type: 'contentWithImage',
-//             subtitle: 'AUTOMATED PATIENT REGISTRATION',
-//             title: 'Skip the Queue, Not the Care',
-//             text: 'New patients can pre-register via a simple WhatsApp conversation before arriving at the hospital. The WhatsForm bot collects all necessary demographic and insurance information, creating a patient record in the HIS/EMR system automatically. This drastically reduces waiting time at the registration desk.',
-//             image: 'https://picsum.photos/seed/sahaj1/500/400',
-//             features: [
-//                 "Conversational pre-registration forms",
-//                 "Reduced patient waiting times by up to 70%",
-//                 "Accurate data capture directly into the HIS",
-//                 "Improved overall patient satisfaction"
-//             ]
-//         },
-//         {
-//             type: 'contentWithImage',
-//             subtitle: 'INSTANT LAB REPORT DELIVERY',
-//             title: 'Secure, Immediate Access to Health Information',
-//             text: 'Once lab results are ready, a SmartyAutomate workflow securely delivers the report as a PDF to the patient\'s WhatsApp after OTP verification. An AI agent can help them understand the next steps, like scheduling a follow-up consultation, directly in the chat.',
-//             image: 'https://picsum.photos/seed/sahaj2/500/400',
-//             reverse: true,
-//             features: [
-//                 "Secure, OTP-verified report delivery",
-//                 "Eliminates the need for patients to physically collect reports",
-//                 "Automated follow-up appointment booking",
-//                 "Increased patient convenience and trust"
-//             ]
-//         },
-//         {
-//             type: 'contentWithImage',
-//             subtitle: 'POST-DISCHARGE FOLLOW-UP & CARE',
-//             title: 'Ensuring Continuous Care Beyond the Hospital',
-//             text: 'Sahaj Hospital uses automated WhatsApp journeys to follow up with discharged patients. The system sends medication reminders and schedules check-ins to monitor recovery. Patients can report any concerns, which are automatically flagged for a nurse to review, ensuring a continuum of care.',
-//             image: 'https://picsum.photos/seed/sahaj3/500/400',
-//             features: [
-//                 "Automated post-discharge care plans",
-//                 "Medication and follow-up reminders",
-//                 "Proactive recovery monitoring",
-//                 "Early detection of potential complications"
-//             ]
-//         },
-//         {
-//             type: 'benefitsGrid',
-//             title: "Tangible Outcomes for Sahaj Hospital",
-//             subtitle: "By integrating WhatsForm, Sahaj Hospital achieved significant improvements in both operational efficiency and patient care.",
-//             benefits: [
-//                 {
-//                     icon: CheckCircleIcon,
-//                     title: "Improved Patient Flow",
-//                     description: "Reduced bottlenecks at registration and report collection, leading to a smoother patient experience."
-//                 },
-//                 {
-//                     icon: CheckCircleIcon,
-//                     title: "Enhanced Patient Engagement",
-//                     description: "Patients felt more connected and informed throughout their care journey, leading to better adherence."
-//                 },
-//                 {
-//                     icon: CheckCircleIcon,
-//                     title: "Increased Staff Efficiency",
-//                     description: "Freed administrative and nursing staff from repetitive communication tasks to focus on direct patient care."
-//                 },
-//                 {
-//                     icon: CheckCircleIcon,
-//                     title: "Strengthened Reputation",
-//                     description: "Positioned the hospital as a modern, patient-centric institution leveraging technology for better care."
-//                 }
-//             ]
-//         }
-//     ],
-//     closing: {
-//         title: "Ready to deliver a seamless and modern healthcare experience?",
-//         subtitle: "Discover how WhatsForm can be customized for your hospital's unique departments and workflows.",
-//         cta: "Book a Healthcare Demo"
-//     }
-// };
-
-
 import { CheckCircleIcon } from '../../../icons';
 
 export const sahajHospitalPageData = {
     hero: {
         title: "Sahaj Hospital: Transforming Patient Care with WhatsForm",
-        subtitle: "How a multi-specialty hospital leverages WhatsForm to simplify registrations, deliver lab reports instantly, and ensure continuous care — all within WhatsApp.",
+        subtitle: `How a multi-specialty hospital leverages WhatsForm to simplify registrations, deliver lab reports instantly, and ensure continuous care — all within WhatsApp.`,
     },
     sections: [
         {

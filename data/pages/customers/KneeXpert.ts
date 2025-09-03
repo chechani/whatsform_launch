@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '../../../icons';
 export const kneeXpertPageData = {
     hero: {
         title: "KneeXpert: Transforming Patient Journeys with Conversational Knee Care",
-        subtitle: "How the specialized orthopedic clinic uses WhatsForm to automate appointments, guide patients through surgery, and improve care outcomes.",
+        subtitle: `How the specialized orthopedic clinic uses WhatsForm to automate appointments, guide patients through surgery, and improve care outcomes.`,
     },
     sections: [
         {

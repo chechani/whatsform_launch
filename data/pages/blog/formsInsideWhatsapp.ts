@@ -1,4 +1,5 @@
 
+
 export const formsInsideWhatsappData = {
     title: 'Why WhatsApp-Native Forms Are a Game-Changer for Business',
     author: 'Jane Doe, Product Evangelist',
@@ -8,7 +9,7 @@ export const formsInsideWhatsappData = {
     content: [
         {
             type: 'paragraph',
-            text: 'For years, businesses have relied on web-based forms to collect customer information. We send links via email, SMS, and social media, asking users to click away, open a browser, and fill out a static questionnaire. The problem? Every click, every app switch, every moment of loading is a point of friction where potential customers drop off. But what if you could bring the form directly to the conversation? That’s the power of WhatsApp-native forms, and it’s fundamentally changing the game.'
+            text: `For years, businesses have relied on web-based forms to collect customer information. We send links via email, SMS, and social media, asking users to click away, open a browser, and fill out a static questionnaire. The problem? Every click, every app switch, every moment of loading is a point of friction where potential customers drop off. But what if you could bring the form directly to the conversation? That’s the power of WhatsApp-native forms, and it’s fundamentally changing the game.`
         },
         {
             type: 'heading',
@@ -16,7 +17,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'The single biggest advantage of WhatsApp forms is the seamless user experience. Customers are already in an app they use daily. There are no new tabs to open, no unfamiliar interfaces to navigate. The form unfolds one question at a time within the chat, feeling less like a chore and more like a natural conversation. This drastically reduces user friction and leads to significantly higher completion rates compared to traditional web forms.'
+            text: `The single biggest advantage of WhatsApp forms is the seamless user experience. Customers are already in an app they use daily. There are no new tabs to open, no unfamiliar interfaces to navigate. The form unfolds one question at a time within the chat, feeling less like a chore and more like a natural conversation. This drastically reduces user friction and leads to significantly higher completion rates compared to traditional web forms.`
         },
         {
             type: 'heading',
@@ -24,7 +25,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'A web form is limited in the type of data it can easily collect, especially on mobile. With WhatsForm, gathering rich media is effortless. A customer can:'
+            text: `A web form is limited in the type of data it can easily collect, especially on mobile. With WhatsForm, gathering rich media is effortless. A customer can:`
         },
         {
             type: 'list',
@@ -37,7 +38,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'This enriches the data you collect, making it more accurate and actionable.'
+            text: `This enriches the data you collect, making it more accurate and actionable.`
         },
         {
             type: 'heading',
@@ -45,7 +46,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'A submitted Google Form response lands in a spreadsheet, where it waits for someone to process it. A submitted WhatsForm can trigger an entire automated workflow instantly. A new lead can be added to your CRM, a support ticket can be created, a meeting can be scheduled, and a confirmation message can be sent back to the customer—all in a matter of seconds. It’s not just data entry; it’s the start of a real-time business process.'
+            text: `A submitted Google Form response lands in a spreadsheet, where it waits for someone to process it. A submitted WhatsForm can trigger an entire automated workflow instantly. A new lead can be added to your CRM, a support ticket can be created, a meeting can be scheduled, and a confirmation message can be sent back to the customer—all in a matter of seconds. It’s not just data entry; it’s the start of a real-time business process.`
         },
         {
             type: 'heading',
@@ -53,7 +54,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'When a user submits information via WhatsApp, you get a verified phone number, not just an anonymous email address. This creates a higher level of trust and accountability. The conversation happens within an end-to-end encrypted environment that users already trust for their personal communications, which can increase their willingness to share information.'
+            text: `When a user submits information via WhatsApp, you get a verified phone number, not just an anonymous email address. This creates a higher level of trust and accountability. The conversation happens within an end-to-end encrypted environment that users already trust for their personal communications, which can increase their willingness to share information.`
         },
         {
             type: 'heading',
@@ -61,7 +62,7 @@ export const formsInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'Moving from web links to in-chat forms is a paradigm shift. It’s about meeting customers on their terms, in their preferred environment. By eliminating friction and connecting data collection directly to your business workflows, WhatsApp-native forms deliver what every business wants: higher engagement, better data, and faster processes.'
+            text: `Moving from web links to in-chat forms is a paradigm shift. It’s about meeting customers on their terms, in their preferred environment. By eliminating friction and connecting data collection directly to your business workflows, WhatsApp-native forms deliver what every business wants: higher engagement, better data, and faster processes.`
         }
     ]
 };

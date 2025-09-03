@@ -11,7 +11,7 @@ export const complianceRemindersOnWhatsappData = {
     content: [
         {
             type: 'paragraph',
-            text: "For professionals like Chartered Accountants and financial consultants, ensuring clients meet their compliance deadlines is a core responsibility. However, the manual process of tracking dates and sending reminders via email is time-consuming and often ineffective. This is where automated WhatsApp reminders become an indispensable tool for modern practices."
+            text: `For professionals like Chartered Accountants and financial consultants, ensuring clients meet their compliance deadlines is a core responsibility. However, the manual process of tracking dates and sending reminders via email is time-consuming and often ineffective. This is where automated WhatsApp reminders become an indispensable tool for modern practices.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const complianceRemindersOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "Emails get lost in overflowing inboxes, but WhatsApp messages have an open rate of over 95%. A timely reminder about an upcoming GST filing or TDS payment sent directly to a client's WhatsApp is almost guaranteed to be seen. This simple shift in communication channel drastically improves client responsiveness."
+            text: `Emails get lost in overflowing inboxes, but WhatsApp messages have an open rate of over 95%. A timely reminder about an upcoming GST filing or TDS payment sent directly to a client's WhatsApp is almost guaranteed to be seen. This simple shift in communication channel drastically improves client responsiveness.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const complianceRemindersOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "With WhatsForm, you can segment your client base by type (e.g., individual, corporate, LLP) and the services they use. This allows you to send highly relevant, personalized reminders. A corporate client receives a reminder about ROC filings, while an individual receives one for their ITR due date. This targeted approach is far more effective than generic email blasts."
+            text: `With WhatsForm, you can segment your client base by type (e.g., individual, corporate, LLP) and the services they use. This allows you to send highly relevant, personalized reminders. A corporate client receives a reminder about ROC filings, while an individual receives one for their ITR due date. This targeted approach is far more effective than generic email blasts.`
         },
         {
             type: 'heading',
@@ -35,19 +35,19 @@ export const complianceRemindersOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "A great reminder doesn't just inform; it enables action. Your automated WhatsApp message can include interactive buttons, such as:"
+            text: `A great reminder doesn't just inform; it enables action. Your automated WhatsApp message can include interactive buttons, such as:`
         },
         {
             type: 'list',
             items: [
-                '\"Upload Documents Now\": Triggers a WhatsApp form to collect necessary files.',
-                '\"Schedule a Call\": Lets the client book a meeting to discuss their filing.',
-                '\"Confirm Submission\": Allows them to confirm they have completed the task.'
+                `"Upload Documents Now": Triggers a WhatsApp form to collect necessary files.`,
+                `"Schedule a Call": Lets the client book a meeting to discuss their filing.`,
+                `"Confirm Submission": Allows them to confirm they have completed the task.`
             ]
         },
         {
             type: 'paragraph',
-            text: 'This turns a passive notification into an active, productive workflow, streamlining the entire compliance process for both you and your client.'
+            text: `This turns a passive notification into an active, productive workflow, streamlining the entire compliance process for both you and your client.`
         },
         {
             type: 'heading',
@@ -55,7 +55,7 @@ export const complianceRemindersOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'Automating compliance reminders on WhatsApp frees up your team from administrative chasing, reduces the risk of missed deadlines, and provides a superior, proactive service to your clients. It positions your firm as a modern, tech-savvy advisor that values your clients\' time and success.'
+            text: `Automating compliance reminders on WhatsApp frees up your team from administrative chasing, reduces the risk of missed deadlines, and provides a superior, proactive service to your clients. It positions your firm as a modern, tech-savvy advisor that values your clients' time and success.`
         }
     ]
 };

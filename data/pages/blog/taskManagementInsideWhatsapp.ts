@@ -11,7 +11,7 @@ export const taskManagementInsideWhatsappData = {
     content: [
         {
             type: 'paragraph',
-            text: 'WhatsApp groups are great for quick communication, but they are terrible for managing work. Important action items get buried in conversation, responsibilities become unclear, and there’s no way to track progress. This is where WhatsForm transforms WhatsApp from a chaotic chat app into a structured and powerful task management tool.'
+            text: `WhatsApp groups are great for quick communication, but they are terrible for managing work. Important action items get buried in conversation, responsibilities become unclear, and there’s no way to track progress. This is where WhatsForm transforms WhatsApp from a chaotic chat app into a structured and powerful task management tool.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const taskManagementInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'Imagine a client sends a request in a WhatsApp chat. Instead of that request getting lost, you can instantly convert it into a formal task directly within the WhatsForm platform. With a couple of clicks, you can assign it to a team member, set a deadline, and add a priority level. The task is now a trackable item, linked directly to the conversation that created it.'
+            text: `Imagine a client sends a request in a WhatsApp chat. Instead of that request getting lost, you can instantly convert it into a formal task directly within the WhatsForm platform. With a couple of clicks, you can assign it to a team member, set a deadline, and add a priority level. The task is now a trackable item, linked directly to the conversation that created it.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const taskManagementInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'The Tasks dashboard in WhatsForm gives you a clear, bird\'s-eye view of everything your team is working on. You can see all tasks that are pending, in progress, or completed. You can filter by assignee, project, or due date to see exactly what needs your attention. This eliminates the need to constantly ask for status updates in group chats.'
+            text: `The Tasks dashboard in WhatsForm gives you a clear, bird's-eye view of everything your team is working on. You can see all tasks that are pending, in progress, or completed. You can filter by assignee, project, or due date to see exactly what needs your attention. This eliminates the need to constantly ask for status updates in group chats.`
         },
         {
             type: 'heading',
@@ -35,7 +35,7 @@ export const taskManagementInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "When a task is assigned, there's no ambiguity about who is responsible. The system can also be configured to send automated reminders to the assignee as the deadline approaches. This builds a culture of accountability and ensures that important work doesn't fall through the cracks."
+            text: `When a task is assigned, there's no ambiguity about who is responsible. The system can also be configured to send automated reminders to the assignee as the deadline approaches. This builds a culture of accountability and ensures that important work doesn't fall through the cracks.`
         },
         {
             type: 'heading',
@@ -43,7 +43,7 @@ export const taskManagementInsideWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'By integrating task management directly with your primary communication channel, you close the gap between discussion and action. Requests no longer get lost, responsibilities are clear, and progress is visible to everyone. This brings much-needed structure to your team\'s workflow, boosting productivity and ensuring nothing gets missed.'
+            text: `By integrating task management directly with your primary communication channel, you close the gap between discussion and action. Requests no longer get lost, responsibilities are clear, and progress is visible to everyone. This brings much-needed structure to your team's workflow, boosting productivity and ensuring nothing gets missed.`
         }
     ]
 };

@@ -9,7 +9,7 @@ export const healthcarePageData = {
         {
             type: 'centeredText',
             title: "A New Era of Patient Engagement",
-            subtitle: "In healthcare, timely communication and accurate information collection can be life-saving. WhatsForm, enhanced with AI and SmartyAutomate integration, offers a powerful, interactive, and efficient tool for patient engagement that goes far beyond traditional methods."
+            subtitle: `In healthcare, timely communication and accurate information collection can be life-saving. WhatsForm, enhanced with AI and SmartyAutomate integration, offers a powerful, interactive, and efficient tool for patient engagement that goes far beyond traditional methods.`
         },
         {
             type: 'contentWithImage',

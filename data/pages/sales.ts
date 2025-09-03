@@ -1,14 +1,14 @@
 export const salesPageData = {
     hero: {
         title: "From one deal to thousands-sell at scale on WhatsApp",
-        subtitle: "Stop losing revenue due to slower response times, inconsistent manual follow ups & no visibility into your customer conversations. We've cracked the code on building scalable communication & clocking more revenue on WhatsApp.",
+        subtitle: `Stop losing revenue due to slower response times, inconsistent manual follow ups & no visibility into your customer conversations. We've cracked the code on building scalable communication & clocking more revenue on WhatsApp.`,
         cta: "See use cases"
     },
     sections: [
         {
             type: 'centeredText',
             title: "Designed for high-growth sales teams",
-            subtitle: "Keep track of your customer conversations, follow up on leads, and move deals along - all right from WhatsApp. Connect your favourite CRM, so everything stays in sync."
+            subtitle: `Keep track of your customer conversations, follow up on leads, and move deals along - all right from WhatsApp. Connect your favourite CRM, so everything stays in sync.`
         },
         {
             type: 'contentWithImage',

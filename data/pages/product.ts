@@ -11,7 +11,7 @@ export const miniAppsPageData = {
         {
             type: 'centeredText',
             title: "The Evolution of Business Messaging",
-            subtitle: "One-way data collection is a dead end. The future is interactive, stateful 'Mini-Apps' that turn WhatsApp into a true application platform. Stop just collecting information—start building solutions."
+            subtitle: `One-way data collection is a dead end. The future is interactive, stateful 'Mini-Apps' that turn WhatsApp into a true application platform. Stop just collecting information—start building solutions.`
         },
         {
             type: 'contentWithImage',

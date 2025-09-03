@@ -1,4 +1,5 @@
 
+
 export const shippingPolicyData = {
     hero: {
         title: "Shipping Policy",
@@ -31,7 +32,7 @@ export const shippingPolicyData = {
         },
         {
             type: 'paragraph',
-            text: "We will send the confirmation on your mail id or what's app."
+            text: `We will send the confirmation on your mail id or what's app.`
         },
         {
             type: 'heading',

@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '../../../icons';
 export const moonSezPageData = {
     hero: {
         title: "Moon Sez: Facilitating Business Growth with Conversational Operations",
-        subtitle: "How the Special Economic Zone uses WhatsForm to manage inquiries, streamline applications, and support businesses.",
+        subtitle: `How the Special Economic Zone uses WhatsForm to manage inquiries, streamline applications, and support businesses.`,
     },
     sections: [
         {

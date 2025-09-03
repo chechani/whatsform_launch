@@ -9,7 +9,7 @@ export const logisticsPageData = {
         {
             type: 'centeredText',
             title: "Clarity and Speed in Motion",
-            subtitle: "In logistics, timely updates and efficient coordination are paramount. WhatsForm transforms your communication, making operations leaner, more transparent, and highly responsive."
+            subtitle: `In logistics, timely updates and efficient coordination are paramount. WhatsForm transforms your communication, making operations leaner, more transparent, and highly responsive.`
         },
         {
             type: 'contentWithImage',

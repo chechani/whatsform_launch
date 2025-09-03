@@ -10,7 +10,7 @@ export const smartyAiPageData = {
         {
             type: 'centeredText',
             title: "The Right Agent for Every Job",
-            subtitle: "Generic, rule-based chatbots are a thing of the past. SmartyAI allows you to build and deploy a team of digital specialists within your WhatsApp flows. Each agent is designed to excel at its specific task, leading to smarter conversations and more efficient outcomes."
+            subtitle: `Generic, rule-based chatbots are a thing of the past. SmartyAI allows you to build and deploy a team of digital specialists within your WhatsApp flows. Each agent is designed to excel at its specific task, leading to smarter conversations and more efficient outcomes.`
         },
         {
             type: 'contentWithImage',

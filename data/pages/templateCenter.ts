@@ -1,4 +1,5 @@
 
+
 import { TemplateIcon, CheckCircleIcon } from '../../icons';
 
 export const templateCenterData = {
@@ -10,7 +11,7 @@ export const templateCenterData = {
         badge: "Template Strategy Guide",
         icon: TemplateIcon,
         title: "Craft Effective WhatsApp Flows",
-        subtitle: "As soon as you land in the Template Centre, you’ll notice the Template Strategy Guide right at the top. Think of this as your content playbook — especially helpful if you're just getting started or want to bring more structure to your messaging flow. It’s broken down into five key tabs, each representing a different type of content you’ll use in your WhatsApp campaigns. From media files to quick replies to forms — everything is neatly organized, with built-in guidance on how and when to use each type. So even if you're unsure where to start, you’re never stuck guessing.",
+        subtitle: `As soon as you land in the Template Centre, you’ll notice the Template Strategy Guide right at the top. Think of this as your content playbook — especially helpful if you're just getting started or want to bring more structure to your messaging flow. It’s broken down into five key tabs, each representing a different type of content you’ll use in your WhatsApp campaigns. From media files to quick replies to forms — everything is neatly organized, with built-in guidance on how and when to use each type. So even if you're unsure where to start, you’re never stuck guessing.`,
         tabs: [
             {
                 id: 'media',
@@ -51,7 +52,7 @@ export const templateCenterData = {
     },
     stats: {
         title: "The Live Metrics Cards",
-        subtitle: "Just below the strategy section, you’ll find five live metric cards that give you a real-time snapshot of how much content you already have in place.",
+        subtitle: `Just below the strategy section, you’ll find five live metric cards that give you a real-time snapshot of how much content you already have in place.`,
         cards: [
             { value: "49", subtitle: "active templates", label: "Templates", description: "The total number of pre-approved WhatsApp message templates available in your system." },
             { value: "12", subtitle: "form templates", label: "Form Templates", description: "This shows how many interactive forms you’ve created — for lead capture, feedback, registration, and more." },
@@ -63,7 +64,7 @@ export const templateCenterData = {
     mediaLibrary: {
         title: "Centralized Media Library",
         subtitle: "Why use it?",
-        text: "Your central repository to upload and manage images, videos, and documents used across WhatsForm. It supports inserting media into headers and is used to build carousel templates. A media library streamlines content creation, ensures brand consistency, and accelerates access to approved assets.",
+        text: `Your central repository to upload and manage images, videos, and documents used across WhatsForm. It supports inserting media into headers and is used to build carousel templates. A media library streamlines content creation, ensures brand consistency, and accelerates access to approved assets.`,
         image: "https://picsum.photos/seed/template-library/500/400",
         features: [
             "Store all assets in one place",
@@ -75,7 +76,7 @@ export const templateCenterData = {
     multiLanguage: {
         title: "Speak Your Customer's Language",
         subtitle: "Global Reach",
-        text: "Effortlessly manage your templates in multiple languages. Create a template once, then add translations for different languages. WhatsForm will automatically use the correct version based on the user's locale, enabling you to scale your communications globally with a personal touch.",
+        text: `Effortlessly manage your templates in multiple languages. Create a template once, then add translations for different languages. WhatsForm will automatically use the correct version based on the user's locale, enabling you to scale your communications globally with a personal touch.`,
         image: "https://picsum.photos/seed/template-language/500/400",
         features: [
             "Manage all translations in one interface",
@@ -86,7 +87,7 @@ export const templateCenterData = {
     },
     gameChanger: {
         title: "Why This Setup Is So Useful",
-        subtitle: "Whether you're running campaigns, replying to leads, or following up with customers — the Template Strategy Guide and Live Metrics Cards together give you clarity, speed, and control.",
+        subtitle: `Whether you're running campaigns, replying to leads, or following up with customers — the Template Strategy Guide and Live Metrics Cards together give you clarity, speed, and control.`,
         points: [
             {
                 icon: CheckCircleIcon,

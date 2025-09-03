@@ -11,7 +11,7 @@ export const dateBasedCampaignsOnWhatsappData = {
     content: [
         {
             type: 'paragraph',
-            text: "In the age of impersonal mass marketing, a small personal touch can make a huge difference in building customer loyalty. Remembering a customer's birthday or the anniversary of their first purchase shows that you value their relationship beyond just the transaction. With WhatsForm, you can automate these thoughtful gestures to delight customers and drive repeat business."
+            text: `In the age of impersonal mass marketing, a small personal touch can make a huge difference in building customer loyalty. Remembering a customer's birthday or the anniversary of their first purchase shows that you value their relationship beyond just the transaction. With WhatsForm, you can automate these thoughtful gestures to delight customers and drive repeat business.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const dateBasedCampaignsOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "The magic of date-based campaigns is that they run on autopilot. Once you've collected key dates from your customers (like their date of birth or a sign-up date), you can create a workflow that automatically triggers a personalized WhatsApp message on that specific day each year. It’s a simple, scalable way to maintain a personal connection with your entire customer base."
+            text: `The magic of date-based campaigns is that they run on autopilot. Once you've collected key dates from your customers (like their date of birth or a sign-up date), you can create a workflow that automatically triggers a personalized WhatsApp message on that specific day each year. It’s a simple, scalable way to maintain a personal connection with your entire customer base.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const dateBasedCampaignsOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: "A great anniversary message doesn't just say 'Happy Birthday.' It includes a special offer to make the customer feel valued. Your automated message can include:"
+            text: `A great anniversary message doesn't just say 'Happy Birthday.' It includes a special offer to make the customer feel valued. Your automated message can include:`
         },
         {
             type: 'list',
@@ -40,7 +40,7 @@ export const dateBasedCampaignsOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'This turns a simple greeting into a powerful, revenue-generating touchpoint.'
+            text: `This turns a simple greeting into a powerful, revenue-generating touchpoint.`
         },
         {
             type: 'heading',
@@ -48,7 +48,7 @@ export const dateBasedCampaignsOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'Consistent, personalized communication is the cornerstone of customer loyalty. By regularly acknowledging key moments in your customer\'s journey, you reinforce their decision to do business with you. These small, automated gestures build an emotional connection that transactional marketing can never achieve, turning one-time buyers into lifelong brand advocates.'
+            text: `Consistent, personalized communication is the cornerstone of customer loyalty. By regularly acknowledging key moments in your customer's journey, you reinforce their decision to do business with you. These small, automated gestures build an emotional connection that transactional marketing can never achieve, turning one-time buyers into lifelong brand advocates.`
         },
         {
             type: 'heading',
@@ -56,7 +56,7 @@ export const dateBasedCampaignsOnWhatsappData = {
         },
         {
             type: 'paragraph',
-            text: 'Automated, date-based campaigns are one of the easiest and most effective ways to personalize your marketing. With WhatsForm, you can effortlessly implement this strategy to strengthen customer relationships, increase loyalty, and drive measurable results, all while your team focuses on other priorities.'
+            text: `Automated, date-based campaigns are one of the easiest and most effective ways to personalize your marketing. With WhatsForm, you can effortlessly implement this strategy to strengthen customer relationships, increase loyalty, and drive measurable results, all while your team focuses on other priorities.`
         }
     ]
 };

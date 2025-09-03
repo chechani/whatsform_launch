@@ -8,7 +8,7 @@ export const partnersPageData = {
     },
     intro: {
         title: "Grow Together with WhatsForm",
-        subtitle: "Our partner program is designed to create mutually beneficial relationships. Whether you're a marketing agency, a systems integrator, or a technology provider, we have a partnership model that can help you succeed."
+        subtitle: `Our partner program is designed to create mutually beneficial relationships. Whether you're a marketing agency, a systems integrator, or a technology provider, we have a partnership model that can help you succeed.`
     },
     partnerTypes: {
         title: "Find Your Perfect Partnership",

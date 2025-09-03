@@ -11,7 +11,7 @@ export const whatsappForEcommerceData = {
     content: [
         {
             type: 'paragraph',
-            text: "In the competitive world of e-commerce, a smooth customer journey is everything. While a great website is essential, the real opportunity for differentiation lies in conversational commerce. By using WhatsApp, retailers can create personalized, guided shopping experiences that reduce friction, build trust, and drive sales."
+            text: `In the competitive world of e-commerce, a smooth customer journey is everything. While a great website is essential, the real opportunity for differentiation lies in conversational commerce. By using WhatsApp, retailers can create personalized, guided shopping experiences that reduce friction, build trust, and drive sales.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const whatsappForEcommerceData = {
         },
         {
             type: 'paragraph',
-            text: "Imagine a customer has a question about a product. Instead of navigating a complex website FAQ, they can simply ask on WhatsApp. A WhatsForm AI agent can act as a personal shopper, answering questions, checking stock availability in real-time, and even offering personalized recommendations based on the customer's query. This instant, expert assistance can be the difference between a sale and an abandoned cart."
+            text: `Imagine a customer has a question about a product. Instead of navigating a complex website FAQ, they can simply ask on WhatsApp. A WhatsForm AI agent can act as a personal shopper, answering questions, checking stock availability in real-time, and even offering personalized recommendations based on the customer's query. This instant, expert assistance can be the difference between a sale and an abandoned cart.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const whatsappForEcommerceData = {
         },
         {
             type: 'paragraph',
-            text: "Once a customer has decided on a product, the journey shouldn't stop. A conversational flow can guide them through the entire checkout process within WhatsApp. They can select variations like size and color, confirm their shipping address, and even complete the payment through integrated payment gateways, all without ever leaving the chat. This frictionless process dramatically increases conversion rates."
+            text: `Once a customer has decided on a product, the journey shouldn't stop. A conversational flow can guide them through the entire checkout process within WhatsApp. They can select variations like size and color, confirm their shipping address, and even complete the payment through integrated payment gateways, all without ever leaving the chat. This frictionless process dramatically increases conversion rates.`
         },
         {
             type: 'heading',
@@ -35,7 +35,7 @@ export const whatsappForEcommerceData = {
         },
         {
             type: 'paragraph',
-            text: 'The relationship doesn\'t end at checkout. WhatsForm can automate the entire post-purchase experience. Send automated order confirmations, shipping notifications with tracking links, and delivery updates. If a customer has an issue, like a damaged item, a conversational flow can guide them through the return process, collecting photos and details to create a support ticket instantly. This proactive support builds immense trust and loyalty.'
+            text: `The relationship doesn't end at checkout. WhatsForm can automate the entire post-purchase experience. Send automated order confirmations, shipping notifications with tracking links, and delivery updates. If a customer has an issue, like a damaged item, a conversational flow can guide them through the return process, collecting photos and details to create a support ticket instantly. This proactive support builds immense trust and loyalty.`
         },
         {
             type: 'heading',
@@ -43,7 +43,7 @@ export const whatsappForEcommerceData = {
         },
         {
             type: 'paragraph',
-            text: 'By moving key parts of the shopping journey into WhatsApp, e-commerce businesses can create a more personal, convenient, and supportive experience for their customers. This conversational approach not only boosts sales and reduces support costs but also builds the kind of long-term customer relationships that are the foundation of a successful brand.'
+            text: `By moving key parts of the shopping journey into WhatsApp, e-commerce businesses can create a more personal, convenient, and supportive experience for their customers. This conversational approach not only boosts sales and reduces support costs but also builds the kind of long-term customer relationships that are the foundation of a successful brand.`
         }
     ]
 };

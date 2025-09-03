@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '../../../icons';
 export const caGmjPageData = {
     hero: {
         title: "CA GMJ & Co: Boosting Practice Efficiency with Automated Workflows",
-        subtitle: "How the established CA firm leverages WhatsForm to manage compliance, streamline communication, and deliver exceptional client service.",
+        subtitle: `How the established CA firm leverages WhatsForm to manage compliance, streamline communication, and deliver exceptional client service.`,
     },
     sections: [
         {

@@ -13,10 +13,9 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
                     case 'paragraph':
                         return <p key={index} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{block.text}</p>;
                     case 'list':
-                        // FIX: Type assertion to inform TypeScript about the 'items' property for list-type blocks, as it may not be inferred correctly if the specific post's data doesn't contain a list.
                         return (
                             <ul key={index} className="space-y-2 list-disc list-inside">
-                                {(block as { items: string[] }).items.map((item, i) => <li key={i} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{item}</li>)}
+                                {(block as unknown as { items: string[] }).items.map((item, i) => <li key={i} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{item}</li>)}
                             </ul>
                         );
                     default:

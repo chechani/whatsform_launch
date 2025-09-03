@@ -9,7 +9,7 @@ export const governmentPageData = {
         {
             type: 'centeredText',
             title: "Citizen Services, Simplified",
-            subtitle: "Align with 'Digital India' initiatives by overcoming the traditional barriers of public service delivery. WhatsForm turns complex paperwork and long queues into simple, accessible WhatsApp conversations."
+            subtitle: `Align with 'Digital India' initiatives by overcoming the traditional barriers of public service delivery. WhatsForm turns complex paperwork and long queues into simple, accessible WhatsApp conversations.`
         },
         {
             type: 'contentWithImage',

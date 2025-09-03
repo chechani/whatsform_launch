@@ -1,0 +1,15 @@
+
+import React from 'react';
+import { CategoryPageLayout } from '../CategoryPageLayout';
+import { streamingServiceData } from '../../../data/pages/industries/entertainment-social-media-gaming/streamingService';
+
+const StreamingServicePage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
+    return (
+        <CategoryPageLayout 
+            navigate={navigate} 
+            data={streamingServiceData}
+        />
+    );
+};
+
+export default StreamingServicePage;

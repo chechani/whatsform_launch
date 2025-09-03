@@ -211,13 +211,13 @@ export const pricingData: PricingData = {
     },
     apiCharges: {
         title: 'Whatsapp Cloud API Charges',
-        description: 'WhatsApp charges a per-conversation fee to send & receive messages using their <b>Official Cloud API</b>. Billing is settled <b>directly with WhatsApp</b> so you save markup that other providers charge.',
+        description: `WhatsApp charges a per-conversation fee to send & receive messages using their <b>Official Cloud API</b>. Billing is settled <b>directly with WhatsApp</b> so you save markup that other providers charge.`,
         cta: 'Country Wise WhatsApp Conversation Pricing',
         link: 'https://developers.facebook.com/docs/whatsapp/pricing/',
     },
     customQuote: {
         title: 'Customized Enterprise Solutions',
-        description: 'Require a tailor-made pricing plan that reflects the exact needs of your business? We support your enterprise needs, ensuring you get the best value without compromising on quality.',
+        description: `Require a tailor-made pricing plan that reflects the exact needs of your business? We support your enterprise needs, ensuring you get the best value without compromising on quality.`,
         cta: 'Custom Quote'
     }
 };

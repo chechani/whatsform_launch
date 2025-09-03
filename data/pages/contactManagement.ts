@@ -10,7 +10,7 @@ export const contactManagementPageData = {
         {
             type: 'centeredText',
             title: "Beyond Form Responses: Building Your Business Ecosystem",
-            subtitle: "If you're running campaigns, handling relationships, or building structured outreach funnels — it's not enough to just collect form responses. You need a way to organize your contacts, track which company they belong to, and even group them for targeting or reporting. That’s where our Connection management system comes in."
+            subtitle: `If you're running campaigns, handling relationships, or building structured outreach funnels — it's not enough to just collect form responses. You need a way to organize your contacts, track which company they belong to, and even group them for targeting or reporting. That’s where our Connection management system comes in.`
         },
         {
             type: 'contentWithImage',

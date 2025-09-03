@@ -9,7 +9,7 @@ export const realEstatePageData = {
         {
             type: 'centeredText',
             title: "Engage Buyers the Moment They Show Interest",
-            subtitle: "In real estate, timing is everything. Our platform ensures you never miss an opportunity by engaging prospective buyers with an intelligent, 24/7 AI assistant that provides instant information and captures high-intent leads."
+            subtitle: `In real estate, timing is everything. Our platform ensures you never miss an opportunity by engaging prospective buyers with an intelligent, 24/7 AI assistant that provides instant information and captures high-intent leads.`
         },
         {
             type: 'contentWithImage',

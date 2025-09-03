@@ -4,19 +4,19 @@ import { InboxIcon, TemplateIcon, SparklesIcon } from '../../icons';
 export const supportPageData = {
     hero: {
         title: "Turn WhatsApp into your #1 Support Channel with AI that scales effortlessly",
-        subtitle: "WhatsForm's AI support agent & automations are a force multiplier for service organization that are looking to automate the busywork, while keeping the human touch where it matters",
+        subtitle: `WhatsForm's AI support agent & automations are a force multiplier for service organization that are looking to automate the busywork, while keeping the human touch where it matters`,
         cta: "Explore Automation"
     },
     sections: [
         {
             type: 'centeredText',
             title: "12,000+ businesses trust WhatsForm to scale support without scaling costs",
-            subtitle: "Make WhatsApp your go-to support channel—stay connected with your customers 24*7. Drive customers from different channels to WhatsApp & manage ticket volumes smartly & efficiently. Save up to 50% on your support costs."
+            subtitle: `Make WhatsApp your go-to support channel—stay connected with your customers 24*7. Drive customers from different channels to WhatsApp & manage ticket volumes smartly & efficiently. Save up to 50% on your support costs.`
         },
         {
             type: 'contentWithImage',
             title: 'Balancing AI with human touch',
-            text: "AI should enhance speed & efficiency of service organizations, not replace human connection. WhatsForm’s AI-support agent is trained to be empathetic, multilingual, and context-aware—without losing the human touch. It balances automation and human touch by: Instantly resolving FAQs and closing tickets, routing complex queries to the right agents, connecting customers to agents on request, and distributing queries evenly across agents.",
+            text: `AI should enhance speed & efficiency of service organizations, not replace human connection. WhatsForm’s AI-support agent is trained to be empathetic, multilingual, and context-aware—without losing the human touch. It balances automation and human touch by: Instantly resolving FAQs and closing tickets, routing complex queries to the right agents, connecting customers to agents on request, and distributing queries evenly across agents.`,
             image: 'https://picsum.photos/seed/support1/500/400',
             link: { text: "Learn more about our AI-support Agent", path: "#/smarty-ai" }
         },

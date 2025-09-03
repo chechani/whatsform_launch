@@ -9,7 +9,7 @@ export const bfsiPageData = {
         {
             type: 'centeredText',
             title: "The Future of Financial Conversations",
-            subtitle: "The BFSI sector demands security, compliance, and convenience. WhatsForm delivers on all fronts, turning complex financial processes into simple, secure, and user-friendly WhatsApp interactions."
+            subtitle: `The BFSI sector demands security, compliance, and convenience. WhatsForm delivers on all fronts, turning complex financial processes into simple, secure, and user-friendly WhatsApp interactions.`
         },
         {
             type: 'contentWithImage',

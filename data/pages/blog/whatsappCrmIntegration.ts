@@ -11,7 +11,7 @@ export const whatsappCrmIntegrationData = {
     content: [
         {
             type: 'paragraph',
-            text: 'You\'ve successfully captured a new lead through a WhatsApp form. Now what? Manually copying and pasting that information into your CRM is slow, error-prone, and a waste of valuable time. The real power of conversational data collection is unlocked when it is seamlessly integrated with your core business systems. This is where real-time CRM integration comes in.'
+            text: `You've successfully captured a new lead through a WhatsApp form. Now what? Manually copying and pasting that information into your CRM is slow, error-prone, and a waste of valuable time. The real power of conversational data collection is unlocked when it is seamlessly integrated with your core business systems. This is where real-time CRM integration comes in.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const whatsappCrmIntegrationData = {
         },
         {
             type: 'paragraph',
-            text: 'With WhatsForm\'s integration capabilities, the moment a user submits a form on WhatsApp, that data can be instantly and automatically pushed to your CRM. A new lead can be created in Salesforce, a new contact added to HubSpot, or a new record created in your ERP. This eliminates manual data entry, ensures your CRM is always up-to-date, and allows for immediate follow-up.'
+            text: `With WhatsForm's integration capabilities, the moment a user submits a form on WhatsApp, that data can be instantly and automatically pushed to your CRM. A new lead can be created in Salesforce, a new contact added to HubSpot, or a new record created in your ERP. This eliminates manual data entry, ensures your CRM is always up-to-date, and allows for immediate follow-up.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const whatsappCrmIntegrationData = {
         },
         {
             type: 'paragraph',
-            text: "Integration isn't just about pushing data; it's also about pulling it. A powerful WhatsApp workflow can fetch information from your CRM to personalize the conversation. For example:"
+            text: `Integration isn't just about pushing data; it's also about pulling it. A powerful WhatsApp workflow can fetch information from your CRM to personalize the conversation. For example:`
         },
         {
             type: 'list',
@@ -39,7 +39,7 @@ export const whatsappCrmIntegrationData = {
         },
         {
             type: 'paragraph',
-            text: 'This two-way data flow creates a truly intelligent and context-aware experience for the user.'
+            text: `This two-way data flow creates a truly intelligent and context-aware experience for the user.`
         },
         {
             type: 'heading',
@@ -47,7 +47,7 @@ export const whatsappCrmIntegrationData = {
         },
         {
             type: 'paragraph',
-            text: 'By integrating WhatsApp with your CRM, you ensure that your CRM remains the single source of truth for all customer information. Every conversation, every form submission, every interaction can be logged against the customer\'s record. This gives your entire team a complete, 360-degree view of the customer relationship, breaking down data silos and enabling more effective collaboration.'
+            text: `By integrating WhatsApp with your CRM, you ensure that your CRM remains the single source of truth for all customer information. Every conversation, every form submission, every interaction can be logged against the customer's record. This gives your entire team a complete, 360-degree view of the customer relationship, breaking down data silos and enabling more effective collaboration.`
         },
         {
             type: 'heading',
@@ -55,7 +55,7 @@ export const whatsappCrmIntegrationData = {
         },
         {
             type: 'paragraph',
-            text: 'Connecting your WhatsApp conversations to your CRM transforms your workflows. It eliminates manual work, reduces errors, and enables a level of real-time, personalized interaction that was previously impossible. It closes the loop between communication and action, turning every WhatsApp message into a valuable, integrated part of your business process.'
+            text: `Connecting your WhatsApp conversations to your CRM transforms your workflows. It eliminates manual work, reduces errors, and enables a level of real-time, personalized interaction that was previously impossible. It closes the loop between communication and action, turning every WhatsApp message into a valuable, integrated part of your business process.`
         }
     ]
 };

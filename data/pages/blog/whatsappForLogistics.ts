@@ -11,7 +11,7 @@ export const whatsappForLogisticsData = {
     content: [
         {
             type: 'paragraph',
-            text: 'In the logistics industry, timely and accurate communication is not just good service—it\'s a core operational necessity. Customers constantly ask, "Where is my package?" and coordinating with drivers and warehouses can be a challenge. WhatsApp automation provides a powerful solution to streamline communication, improve transparency, and increase efficiency across the supply chain.'
+            text: `In the logistics industry, timely and accurate communication is not just good service—it's a core operational necessity. Customers constantly ask, "Where is my package?" and coordinating with drivers and warehouses can be a challenge. WhatsApp automation provides a powerful solution to streamline communication, improve transparency, and increase efficiency across the supply chain.`
         },
         {
             type: 'heading',
@@ -19,7 +19,7 @@ export const whatsappForLogisticsData = {
         },
         {
             type: 'paragraph',
-            text: 'The most common customer query can be completely automated. With WhatsForm, a customer can simply send their tracking number to your WhatsApp number. An AI agent, integrated with your logistics backend, can instantly fetch and provide the real-time status of their shipment. This deflects a massive volume of support queries and provides customers with the instant gratification they expect.'
+            text: `The most common customer query can be completely automated. With WhatsForm, a customer can simply send their tracking number to your WhatsApp number. An AI agent, integrated with your logistics backend, can instantly fetch and provide the real-time status of their shipment. This deflects a massive volume of support queries and provides customers with the instant gratification they expect.`
         },
         {
             type: 'heading',
@@ -27,7 +27,7 @@ export const whatsappForLogisticsData = {
         },
         {
             type: 'paragraph',
-            text: 'When a delivery fails, proactive communication is key. Instead of waiting for an angry customer to call, your system can automatically trigger a WhatsApp message informing them of the issue. This message can include interactive buttons allowing them to reschedule the delivery, change the address, or request a pickup, turning a potential problem into a smooth, self-service resolution.'
+            text: `When a delivery fails, proactive communication is key. Instead of waiting for an angry customer to call, your system can automatically trigger a WhatsApp message informing them of the issue. This message can include interactive buttons allowing them to reschedule the delivery, change the address, or request a pickup, turning a potential problem into a smooth, self-service resolution.`
         },
         {
             type: 'heading',
@@ -35,7 +35,7 @@ export const whatsappForLogisticsData = {
         },
         {
             type: 'paragraph',
-            text: 'Communication isn\'t just for customers. Drivers can use simple WhatsApp forms to update their status, report a vehicle issue, or confirm a delivery with a photo of the proof of delivery (POD). This information can be instantly updated in your central system, providing managers with a real-time view of operations without a flood of phone calls.'
+            text: `Communication isn't just for customers. Drivers can use simple WhatsApp forms to update their status, report a vehicle issue, or confirm a delivery with a photo of the proof of delivery (POD). This information can be instantly updated in your central system, providing managers with a real-time view of operations without a flood of phone calls.`
         },
         {
             type: 'heading',
@@ -43,7 +43,7 @@ export const whatsappForLogisticsData = {
         },
         {
             type: 'paragraph',
-            text: 'By using WhatsApp as a central communication hub, logistics companies can create a more transparent, efficient, and responsive supply chain. It closes the information gap between customers, drivers, and operations, leading to lower costs, higher customer satisfaction, and a significant competitive advantage.'
+            text: `By using WhatsApp as a central communication hub, logistics companies can create a more transparent, efficient, and responsive supply chain. It closes the information gap between customers, drivers, and operations, leading to lower costs, higher customer satisfaction, and a significant competitive advantage.`
         }
     ]
 };

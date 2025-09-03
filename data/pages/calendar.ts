@@ -10,7 +10,7 @@ export const calendarPageData = {
         {
             type: 'centeredText',
             title: "From a Fast-Moving Feed to a Clear Timeline",
-            subtitle: "WhatsApp moves fast. You schedule calls and meetings, only to see important follow-ups get lost in the chat feed. The WhatsForm Calendar brings order to this dynamic workflow, providing a clear, organized view of all scheduled activities so nothing gets missed. WhatsApp is where conversations start—the WhatsForm Calendar is where they stay on track."
+            subtitle: `WhatsApp moves fast. You schedule calls and meetings, only to see important follow-ups get lost in the chat feed. The WhatsForm Calendar brings order to this dynamic workflow, providing a clear, organized view of all scheduled activities so nothing gets missed. WhatsApp is where conversations start—the WhatsForm Calendar is where they stay on track.`
         },
         {
             type: 'contentWithImage',

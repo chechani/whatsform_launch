@@ -11,7 +11,7 @@ export const powerfulFormsPageData = {
             type: 'contentWithImage',
             subtitle: '1. SIMPLIFIED FLOW BUILDING',
             title: 'Design and Manage Flows with Ease and Flexibility',
-            text: 'Our powerful tools streamline the entire flow-building process. You can start by selecting or designing screens using the Screen Builder, utilize Flow Templates for a quick setup, and configure complex processes using Excel Sheets.',
+            text: `Our powerful tools streamline the entire flow-building process. You can start by selecting or designing screens using the Screen Builder, utilize Flow Templates for a quick setup, and configure complex processes using Excel Sheets.`,
             image: 'https://picsum.photos/seed/flowbuilder1/500/400',
             features: [
                 "Design screens from scratch or use pre-built templates.",
@@ -24,7 +24,7 @@ export const powerfulFormsPageData = {
             type: 'contentWithImage',
             subtitle: '2. DYNAMIC DATA MAPPING',
             title: 'Integrate Real-Time Data into Your Flows',
-            text: 'Seamlessly integrate dynamic data into WhatsApp Flows to enhance flexibility and interactivity. Define, map, and manage the data required for your flows, facilitating robust backend integration.',
+            text: `Seamlessly integrate dynamic data into WhatsApp Flows to enhance flexibility and interactivity. Define, map, and manage the data required for your flows, facilitating robust backend integration.`,
             image: 'https://picsum.photos/seed/flowbuilder2/500/400',
             reverse: true,
             features: [

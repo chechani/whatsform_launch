@@ -10,7 +10,7 @@ export const tasksPageData = {
         {
             type: 'centeredText',
             title: "Is Your Team Drowning in Disorganized Work?",
-            subtitle: "When tasks are scattered across chats, emails, and sticky notes, it leads to missed deadlines, unclear responsibilities, and wasted time. WhatsForm Tasks brings structure and clarity to your team's workflow."
+            subtitle: `When tasks are scattered across chats, emails, and sticky notes, it leads to missed deadlines, unclear responsibilities, and wasted time. WhatsForm Tasks brings structure and clarity to your team's workflow.`
         },
         {
             type: 'contentWithImage',

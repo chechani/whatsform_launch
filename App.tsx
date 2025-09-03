@@ -84,6 +84,9 @@ import SecureWhatsappDataPage from './pages/blog/SecureWhatsappDataPage';
 import NoCodeWhatsappFlowBuilderPage from './pages/blog/NoCodeWhatsappFlowBuilderPage';
 import FutureOfBusinessOnWhatsappPage from './pages/blog/FutureOfBusinessOnWhatsappPage';
 
+// Import all industry category pages
+import { industryCategoryPages } from './pages/industries/pageRegistry';
+
 
 const App: React.FC = () => {
     // --- STATE MANAGEMENT ---
@@ -197,6 +200,13 @@ const App: React.FC = () => {
 
     const renderPage = () => {
         const pathWithoutQuery = path.split('?')[0];
+
+        // Check for industry category pages first
+        if (industryCategoryPages[pathWithoutQuery]) {
+            const PageComponent = industryCategoryPages[pathWithoutQuery];
+            return <PageComponent navigate={navigate} />;
+        }
+        
         switch (pathWithoutQuery) {
             case '/marketing': return <MarketingPage navigate={navigate} />;
             case '/support': return <SupportPage navigate={navigate} />;
@@ -252,6 +262,7 @@ const App: React.FC = () => {
             case '/customers/moon-sez': return <MoonSezPage navigate={navigate} />;
             case '/customers/ca-gmj': return <CaGmjPage navigate={navigate} />;
             case '/developer-docs': return <DeveloperDocsPage navigate={navigate} />;
+
             // Blog Post Routes
             case '/blog/whatsapp-forms-vs-google-forms': return <WhatsappFormsVsGoogleFormsPage navigate={navigate} />;
             case '/blog/automating-kyc-on-whatsapp': return <AutomatingKycOnWhatsappPage navigate={navigate} />;

@@ -1,4 +1,5 @@
 
+
 export const cancellationPageData = {
     hero: {
         title: "Refund & Cancellation Policy",

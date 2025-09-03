@@ -9,7 +9,7 @@ export const educationPageData = {
         {
             type: 'centeredText',
             title: "Meet Students Where They Are",
-            subtitle: "In today's competitive landscape, educational institutions must offer instant, accessible, and personalized communication. WhatsForm turns WhatsApp into a powerful channel for student acquisition and support, powered by intelligent automation."
+            subtitle: `In today's competitive landscape, educational institutions must offer instant, accessible, and personalized communication. WhatsForm turns WhatsApp into a powerful channel for student acquisition and support, powered by intelligent automation.`
         },
         {
             type: 'contentWithImage',
