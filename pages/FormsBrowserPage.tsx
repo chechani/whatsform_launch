@@ -50,8 +50,10 @@ const FormPreview: React.FC<{ form: FormTemplate | null }> = ({ form }) => {
     // Effect to reset iframe height when the selected form changes
     useEffect(() => {
         if (iframeRef.current) {
+            const webPreviewContent = form && formTemplatesHtml[form.keyword];
+            const isUrl = webPreviewContent && (webPreviewContent.startsWith('http://') || webPreviewContent.startsWith('https://'));
             // Reset to a sensible default to avoid layout jumps while new content loads
-            iframeRef.current.style.height = '600px';
+            iframeRef.current.style.height = isUrl ? 'calc(100vh - 18rem)' : '600px';
         }
     }, [form]);
 
@@ -64,7 +66,8 @@ const FormPreview: React.FC<{ form: FormTemplate | null }> = ({ form }) => {
     }
     
     const whatsappLink = `https://wa.me/917849945640?text=${encodeURIComponent(form.keyword)}`;
-    const webPreviewHtml = formTemplatesHtml[form.keyword] || null;
+    const webPreviewContent = formTemplatesHtml[form.keyword] || null;
+    const isUrl = webPreviewContent && (webPreviewContent.startsWith('http://') || webPreviewContent.startsWith('https://'));
 
     const copyLink = () => {
         navigator.clipboard.writeText(whatsappLink);
@@ -114,16 +117,17 @@ const FormPreview: React.FC<{ form: FormTemplate | null }> = ({ form }) => {
             
             {/* Body */}
             <div className="bg-slate-100 dark:bg-slate-800/50 overflow-hidden rounded-b-2xl flex-grow">
-                {webPreviewHtml ? (
+                {webPreviewContent ? (
                     <iframe
                         ref={iframeRef}
                         key={form.keyword}
-                        srcDoc={webPreviewHtml}
+                        src={isUrl ? webPreviewContent : undefined}
+                        srcDoc={!isUrl ? webPreviewContent : undefined}
                         title={`${form.name} Web Preview`}
-                        className="w-full border-0 transition-[height] duration-300 ease-in-out"
-                        style={{ height: '600px' }} // Initial height, will be adjusted by JS
-                        sandbox="allow-scripts allow-forms allow-same-origin"
-                        onLoad={adjustIframeHeight}
+                        className={`w-full border-0 ${!isUrl ? 'transition-[height] duration-300 ease-in-out' : ''}`}
+                        style={{ height: isUrl ? 'calc(100vh - 18rem)' : '600px' }} // Taller for external sites
+                        sandbox={!isUrl ? "allow-scripts allow-forms allow-same-origin" : undefined}
+                        onLoad={!isUrl ? adjustIframeHeight : undefined}
                     />
                 ) : (
                     <div className="h-full min-h-[400px] flex items-center justify-center p-8">
