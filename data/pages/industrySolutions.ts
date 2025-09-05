@@ -92,9 +92,10 @@ export const industrySolutionsPageData = {
         const industryInfo = industryDescriptions[industryName] || { description: 'No description available', image: 'https://picsum.photos/seed/default-industry/400/300' };
         
         return {
-            name: industryName,
+            title: industryName,
             description: industryInfo.description,
             image: industryInfo.image,
+            link: `#/industry/${industrySlug}`,
             categories: categories.map(categoryName => {
                 const categorySlug = slugify(categoryName);
                 return {

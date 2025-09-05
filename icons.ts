@@ -94,35 +94,45 @@ export const CalendarDaysIcon = ({ className = "h-6 w-6" }: { className?: string
     )
 );
 
-export { default as ChartBarIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ChartBarIcon.js';
-export { default as HeadsetIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/UserGroupIcon.js';
-export { default as CurrencyDollarIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CurrencyDollarIcon.js';
-export { default as AcademicCapIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/AcademicCapIcon.js';
-export { default as BuildingStorefrontIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/BuildingStorefrontIcon.js';
-export { default as MegaphoneIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/MegaphoneIcon.js';
-export { default as StethoscopeIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/HeartIcon.js';
-export { default as BuildingOfficeIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/BuildingOfficeIcon.js';
-export { default as CalculatorIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CalculatorIcon.js';
-export { default as BuildingLibraryIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/BuildingLibraryIcon.js';
-export { default as TruckIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/TruckIcon.js';
-export { default as BanknotesIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/BanknotesIcon.js';
-export { default as CodeBracketIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CodeBracketIcon.js';
-export { default as SparklesIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/SparklesIcon.js';
-export { default as DeviceIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/DevicePhoneMobileIcon.js';
-export { default as ChatBubbleOvalLeftEllipsisIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ChatBubbleOvalLeftEllipsisIcon.js';
-export { default as ArrowsRightLeftIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ArrowsRightLeftIcon.js';
-export { default as CubeTransparentIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CubeTransparentIcon.js';
-export { default as FormsIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ClipboardDocumentListIcon.js';
-export { default as InboxIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/InboxIcon.js';
-export { default as CalendarIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CalendarIcon.js';
-export { default as UsersIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/UsersIcon.js';
-export { default as SendMessageIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/PaperAirplaneIcon.js';
-export { default as TemplateIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/NewspaperIcon.js';
-export { default as ArchitectureIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/RectangleGroupIcon.js';
-export { default as NoCodeIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/WrenchScrewdriverIcon.js';
-export { default as BotIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CpuChipIcon.js';
-export { default as UserPlusIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/UserPlusIcon.js';
-export { default as ArrowTrendingDownIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ArrowTrendingDownIcon.js';
+export { 
+    ChartBarIcon,
+    UserGroupIcon as HeadsetIcon,
+    CurrencyDollarIcon,
+    AcademicCapIcon,
+    BuildingStorefrontIcon,
+    MegaphoneIcon,
+    HeartIcon as StethoscopeIcon,
+    BuildingOfficeIcon,
+    CalculatorIcon,
+    BuildingLibraryIcon,
+    TruckIcon,
+    BanknotesIcon,
+    CodeBracketIcon,
+    SparklesIcon,
+    DevicePhoneMobileIcon as DeviceIcon,
+    ChatBubbleOvalLeftEllipsisIcon,
+    ArrowsRightLeftIcon,
+    CubeTransparentIcon,
+    ClipboardDocumentListIcon as FormsIcon,
+    InboxIcon,
+    CalendarIcon,
+    UsersIcon,
+    PaperAirplaneIcon as SendMessageIcon,
+    NewspaperIcon as TemplateIcon,
+    RectangleGroupIcon as ArchitectureIcon,
+    WrenchScrewdriverIcon as NoCodeIcon,
+    CpuChipIcon as BotIcon,
+    UserPlusIcon,
+    ArrowTrendingDownIcon,
+    DocumentMinusIcon,
+    ShieldCheckIcon,
+    EyeSlashIcon as EyeOffIcon,
+    CheckBadgeIcon,
+    ArrowLongRightIcon as ArrowRightIcon,
+    ArrowLongDownIcon as ArrowDownIcon,
+    GiftIcon
+} from '@heroicons/react/24/outline';
+
 
 export const FacebookIcon = ({ className = "h-6 w-6" }: { className?: string }) => (
     React.createElement('svg', { xmlns: "http://www.w3.org/2000/svg", className, viewBox: "0 0 24 24", fill: "currentColor" },
@@ -159,11 +169,3 @@ export const WhatsAppBusinessIcon = ({ className = "h-6 w-6" }: { className?: st
         React.createElement('path', { d: "M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" })
     )
 );
-
-export { default as DocumentMinusIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/DocumentMinusIcon.js';
-export { default as ShieldCheckIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ShieldCheckIcon.js';
-export { default as EyeOffIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/EyeSlashIcon.js';
-export { default as CheckBadgeIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/CheckBadgeIcon.js';
-export { default as ArrowRightIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ArrowLongRightIcon.js';
-export { default as ArrowDownIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/ArrowLongDownIcon.js';
-export { default as GiftIcon } from 'https://esm.sh/v135/@heroicons/react/24/outline/GiftIcon.js';

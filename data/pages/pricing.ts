@@ -1,223 +1,96 @@
-type Feature = {
-    text: string;
-    type: 'included' | 'excluded' | 'limited';
-};
 
 type Plan = {
     name: string;
-    price: number;
-    popular: boolean;
-    features: Feature[];
-    formAssist?: string;
+    price: string;
+    isPopular: boolean;
+    features: string[];
+    frequency: string;
+    cta: string;
 };
-
-type PricingData = {
-    tagline: string;
-    title: string;
-    gstText: string;
-    creditCardText: string;
-    plans: {
-        yearly: Plan[];
-        quarterly: Plan[];
-    };
-    apiCharges: {
-        title: string;
-        description: string;
-        cta: string;
-        link: string;
-    };
-    customQuote: {
-        title: string;
-        description: string;
-        cta: string;
-    };
-};
-
-const commonFeatures: Omit<Feature, 'type'>[] = [
-    { text: "Messaging + Broadcast: {MESSAGES} / Month" },
-    { text: "Active WhatsApp Forms: {FORMS}" },
-    { text: "No Document Upload" },
-    { text: "Form Response: {RESPONSES} / Month" },
-    { text: "Contacts: {CONTACTS}" },
-    { text: "Users: {USERS}" },
-    { text: "Team Inbox" },
-    { text: "WhatsApp Broadcasting" },
-    { text: "Drip Campaign (Sequential)" },
-    { text: "Automation Messaging" },
-];
 
 const yearlyPlans: Plan[] = [
     {
         name: 'Starter',
-        price: 9000,
-        popular: false,
+        price: '₹9,000',
+        isPopular: false,
         features: [
-            { text: 'Messaging + Broadcast: 5000 / Month', type: 'included' },
-            { text: 'Active WhatsApp Forms', type: 'excluded' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 500 / Month', type: 'included' },
-            { text: 'Contacts: 2500', type: 'included' },
-            { text: 'Users: 2', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
+            'Messaging + Broadcast: 5000 / Month',
+            'Active WhatsApp Forms: Not included',
+            'No Document Upload',
+            'Form Response: 500 / Month',
+            'Contacts: 2500',
+            'Users: 2',
+            'Team Inbox',
+            'WhatsApp Broadcasting',
+            'Drip Campaign (Sequential)',
+            'Automation Messaging',
         ],
-        formAssist: 'Assist in WhatsApp Form Building: 5',
+        frequency: 'per year',
+        cta: 'Choose Plan'
     },
     {
         name: 'Standard',
-        price: 15000,
-        popular: false,
+        price: '₹15,000',
+        isPopular: false,
         features: [
-            { text: 'Messaging + Broadcast: 10,000 / Month', type: 'included' },
-            { text: 'Active WhatsApp Forms', type: 'included' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 10,000 / Month', type: 'included' },
-            { text: 'Contacts: 2500', type: 'included' },
-            { text: 'Users: 5', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
+            'Messaging + Broadcast: 10,000 / Month',
+            'Active WhatsApp Forms',
+            'No Document Upload',
+            'Form Response: 10,000 / Month',
+            'Contacts: 2500',
+            'Users: 5',
+            'Team Inbox',
+            'WhatsApp Broadcasting',
+            'Drip Campaign (Sequential)',
+            'Automation Messaging',
         ],
-        formAssist: 'Assist in WhatsApp Form Building: 10',
+        frequency: 'per year',
+        cta: 'Choose Plan'
     },
     {
         name: 'Premium',
-        price: 24000,
-        popular: true,
+        price: '₹24,000',
+        isPopular: true,
         features: [
-            { text: 'Messaging + Broadcast: 20000 / Month', type: 'included' },
-            { text: 'Active WhatsApp Forms', type: 'included' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 10,000 / Month', type: 'included' },
-            { text: 'Contacts: 30,000', type: 'included' },
-            { text: 'Users: 10', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
+            'Messaging + Broadcast: 20000 / Month',
+            'Active WhatsApp Forms',
+            'No Document Upload',
+            'Form Response: 10,000 / Month',
+            'Contacts: 30,000',
+            'Users: 10',
+            'Team Inbox',
+            'WhatsApp Broadcasting',
+            'Drip Campaign (Sequential)',
+            'Automation Messaging',
         ],
-        formAssist: 'Assist in WhatsApp Form Building: 25',
+        frequency: 'per year',
+        cta: 'Choose Plan'
     },
     {
         name: 'Enterprise',
-        price: 50000,
-        popular: false,
+        price: '₹50,000',
+        isPopular: false,
         features: [
-            { text: 'Messaging + Broadcast: 30,000 / Month', type: 'included' },
-            { text: 'Active WhatsApp Forms', type: 'included' },
-            { text: 'Includes Document Upload', type: 'included' },
-            { text: 'Form Response: 2500 / Month', type: 'included' },
-            { text: 'Contacts: 50000', type: 'included' },
-            { text: 'Users: 15', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
+            'Messaging + Broadcast: 30,000 / Month',
+            'Active WhatsApp Forms',
+            'Includes Document Upload',
+            'Form Response: 2500 / Month',
+            'Contacts: 50000',
+            'Users: 15',
+            'Team Inbox',
+            'WhatsApp Broadcasting',
+            'Drip Campaign (Sequential)',
+            'Automation Messaging',
         ],
-        formAssist: 'Assist in WhatsApp Form Building: 50',
+        frequency: 'per year',
+        cta: 'Choose Plan'
     },
 ];
 
-const quarterlyPlans: Plan[] = [
-    {
-        name: 'Starter',
-        price: 3000,
-        popular: false,
-        features: [
-            { text: 'Messaging + Broadcast: 5000 / Month', type: 'included' },
-            { text: 'Up to 5 Static Forms', type: 'limited' },
-            { text: 'No Dynamic Forms', type: 'excluded' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 500 / Month', type: 'included' },
-            { text: 'Contacts: 2500', type: 'included' },
-            { text: 'Users: 2', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
-        ],
-        formAssist: 'Assist in WhatsApp Form Building: 5',
+export const pricingPageData = {
+    hero: {
+        title: "Flexible Pricing for Every Business",
+        subtitle: "Choose the plan that's right for you and start automating your WhatsApp communication today."
     },
-    {
-        name: 'Standard',
-        price: 5000,
-        popular: false,
-        features: [
-            { text: 'Messaging + Broadcast: 10,000 / Month', type: 'included' },
-            { text: 'Up to 10 Static Forms', type: 'limited' },
-            { text: 'No Dynamic Forms', type: 'excluded' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 10,000 / Month', type: 'included' },
-            { text: 'Contacts: 2500', type: 'included' },
-            { text: 'Users: 5', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
-        ],
-        formAssist: 'Assist in WhatsApp Form Building: 10',
-    },
-    {
-        name: 'Premium',
-        price: 8000,
-        popular: true,
-        features: [
-            { text: 'Messaging + Broadcast: 20000 / Month', type: 'included' },
-            { text: 'Up to 15 Static Forms', type: 'limited' },
-            { text: '5 Dynamic Forms', type: 'limited' },
-            { text: 'No Document Upload', type: 'excluded' },
-            { text: 'Form Response: 10,000 / Month', type: 'included' },
-            { text: 'Contacts: 30,000', type: 'included' },
-            { text: 'Users: 10', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
-        ],
-        formAssist: 'Assist in WhatsApp Form Building: 25',
-    },
-    {
-        name: 'Enterprise',
-        price: 16000,
-        popular: false,
-        features: [
-            { text: 'Messaging + Broadcast: 50,000 / Month', type: 'included' },
-            { text: 'Up to 50 Static & Dynamic Forms', type: 'limited' },
-            { text: 'Includes Document Upload', type: 'included' },
-            { text: 'Form Response: 2500 / Month', type: 'included' },
-            { text: 'Contacts: 50000', type: 'included' },
-            { text: 'Users: 15', type: 'included' },
-            { text: 'Team Inbox', type: 'included' },
-            { text: 'WhatsApp Broadcasting', type: 'included' },
-            { text: 'Drip Campaign (Sequential)', type: 'included' },
-            { text: 'Automation Messaging', type: 'included' },
-        ],
-        formAssist: 'Assist in WhatsApp Form Building: 50',
-    },
-];
-
-
-export const pricingData: PricingData = {
-    tagline: 'Flexible Pricing Plans',
-    title: 'Perfect for Small & Large Brands',
-    gstText: '+ GST @ 18%',
-    creditCardText: 'No Credit Card Required',
-    plans: {
-        yearly: yearlyPlans,
-        quarterly: quarterlyPlans,
-    },
-    apiCharges: {
-        title: 'Whatsapp Cloud API Charges',
-        description: `WhatsApp charges a per-conversation fee to send & receive messages using their <b>Official Cloud API</b>. Billing is settled <b>directly with WhatsApp</b> so you save markup that other providers charge.`,
-        cta: 'Country Wise WhatsApp Conversation Pricing',
-        link: 'https://developers.facebook.com/docs/whatsapp/pricing/',
-    },
-    customQuote: {
-        title: 'Customized Enterprise Solutions',
-        description: `Require a tailor-made pricing plan that reflects the exact needs of your business? We support your enterprise needs, ensuring you get the best value without compromising on quality.`,
-        cta: 'Custom Quote'
-    }
+    plans: yearlyPlans
 };
