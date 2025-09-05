@@ -11,13 +11,14 @@
 
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from '../icons';
 import { benefits, useCases, uniqueFeatures, testimonialsData, uspData, comparisonSectionData } from '../data/homePage';
 
 const cyclingWords = ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
 
 const Card: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className = '' }) => (
-    <div className={`bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`}>
+    <div className={`bg-white dark:bg-gray-800 p-8 rounded-2xl border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`}>
         {children}
     </div>
 );
@@ -43,9 +44,9 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
     
     return (
         <>
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white dark:bg-slate-950 overflow-hidden transition-colors duration-300">
-                 <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/10 rounded-full blur-3xl" />
-                 <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/10 rounded-full blur-3xl" />
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300">
+                 <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/20 rounded-full blur-3xl" />
+                 <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/20 rounded-full blur-3xl" />
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         {/* Left Side: Text Content */}
@@ -140,20 +141,16 @@ export const ActionStrip: React.FC<{ navigate: (path: string) => void }> = ({ na
                         </p>
                     </div>
                     <div className="flex-shrink-0 mt-4 sm:mt-0 flex items-center space-x-4">
-                        <a
-                            href="#/videos"
-                            onClick={(e) => { e.preventDefault(); navigate('#/videos'); }}
-                            className="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-3 px-8 rounded-lg text-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700"
-                        >
-                            Watch Demo
-                        </a>
-                        <a
-                            href="#/evaluation"
-                            onClick={(e) => { e.preventDefault(); navigate('#/evaluation'); }}
-                            className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-all shadow-md shadow-green-500/20"
-                        >
-                            Evaluate
-                        </a>
+                        <Link href="/videos" legacyBehavior>
+                            <a className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all border border-gray-300 dark:border-gray-700">
+                                Watch Demo
+                            </a>
+                        </Link>
+                        <Link href="/evaluation" legacyBehavior>
+                            <a className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-all shadow-md shadow-green-500/20">
+                                Evaluate
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -374,7 +371,7 @@ export const Testimonials: React.FC = () => {
 };
 
 export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section className="py-16 sm:py-24 lg:py-28 bg-pastel-yellow dark:bg-amber-950/30 transition-colors duration-300">
+    <section className="py-16 sm:py-24 lg:py-28 bg-yellow-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
              <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{uspData.title}</h2>
@@ -382,19 +379,20 @@ export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ nav
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {uspData.features.map(feature => (
-                    <a 
+                    <Link 
                         key={feature.title}
                         href={feature.path}
-                        onClick={(e) => { e.preventDefault(); navigate(feature.path); }}
-                        className="group bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                        legacyBehavior
                     >
-                         <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
-                         <h3 className="text-lg font-bold text-slate-800 dark:text-white">{feature.title}</h3>
-                         <p className="mt-1 text-slate-600 dark:text-slate-300 flex-grow">{feature.description}</p>
-                         <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
-                            Learn More &rarr;
-                         </span>
-                    </a>
+                        <a className="group bg-white dark:bg-gray-700 p-6 rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+                             <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
+                             <h3 className="text-lg font-bold text-gray-800 dark:text-white">{feature.title}</h3>
+                             <p className="mt-1 text-gray-600 dark:text-gray-300 flex-grow">{feature.description}</p>
+                             <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
+                                Learn More &rarr;
+                             </span>
+                        </a>
+                    </Link>
                 ))}
             </div>
         </div>
@@ -403,7 +401,7 @@ export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ nav
 
 
 export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
+    <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16 max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{comparisonSectionData.title}</h2>
@@ -411,20 +409,21 @@ export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> =
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {comparisonSectionData.competitors.map(competitor => (
-                    <a 
+                    <Link 
                         key={competitor.name} 
                         href={competitor.path} 
-                        onClick={(e) => { e.preventDefault(); navigate(competitor.path); }}
-                        className="group bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col text-center"
+                        legacyBehavior
                     >
-                        <h3 className="text-xl font-bold text-slate-800 dark:text-white">
-                            WhatsForm <span className="text-green-500">vs</span> {competitor.name}
-                        </h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{competitor.description}</p>
-                        <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline">
-                            See Comparison &rarr;
-                        </span>
-                    </a>
+                        <a className="group bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col text-center">
+                            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                                WhatsForm <span className="text-green-500">vs</span> {competitor.name}
+                            </h3>
+                            <p className="mt-2 text-gray-600 dark:text-gray-300 flex-grow">{competitor.description}</p>
+                            <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline">
+                                See Comparison &rarr;
+                            </span>
+                        </a>
+                    </Link>
                 ))}
             </div>
         </div>

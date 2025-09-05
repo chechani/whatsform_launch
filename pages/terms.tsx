@@ -11,10 +11,13 @@ const TermsPage: React.FC = () => {
             />
             <section className="py-20">
                 <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 prose dark:prose-invert">
-                    {termsPageData.sections.map((section, index) => (
+                    {termsPageData.content.map((item, index) => (
                         <div key={index}>
-                            <h2>{section.title}</h2>
-                            <p>{section.content}</p>
+                            {item.type === 'heading' ? (
+                                <h2>{item.text}</h2>
+                            ) : (
+                                <p>{item.text}</p>
+                            )}
                         </div>
                     ))}
                 </div>

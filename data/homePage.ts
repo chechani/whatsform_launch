@@ -51,7 +51,7 @@ export const uniqueFeatures = {
   ],
   cta: {
     text: "Explore All Features",
-    path: "#/features",
+    path: "/features",
   },
 };
 
@@ -115,73 +115,73 @@ export const uspData = {
       icon: FormsIcon,
       title: "Forms to capture.",
       description: `Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.`,
-      path: "#/powerful-forms",
+      path: "/powerful-forms",
     },
     {
       icon: ArchitectureIcon,
       title: "Workflows to automate.",
       description: `Design and deploy complex, multi-step automated processes that save time and reduce manual effort.`,
-      path: "#/powerful-forms",
+      path: "/powerful-forms",
     },
     {
       icon: SparklesIcon,
       title: "AI to assist.",
       description: `Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.`,
-      path: "#/smarty-ai",
+      path: "/smarty-ai",
     },
     {
       icon: InboxIcon,
       title: "Inbox to collaborate.",
       description: `Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.`,
-      path: "#/team-inbox",
+      path: "/team-inbox",
     },
     {
       icon: CalendarIcon,
       title: "Reminders to follow-up.",
       description: `Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.`,
-      path: "#/calendar",
+      path: "/calendar",
     },
     {
       icon: MegaphoneIcon,
       title: "Campaigns to engage.",
       description: `Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.`,
-      path: "#/marketing",
+      path: "/marketing",
     },
     {
       icon: SendMessageIcon,
       title: "Broadcasts to inform.",
       description: `Send important updates, announcements, and promotional messages to a large, segmented audience instantly.`,
-      path: "#/marketing",
+      path: "/marketing",
     },
     {
       icon: CodeBracketIcon,
       title: "Integrations to connect.",
       description: `Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.`,
-      path: "#/developer-docs",
+      path: "/developer-docs",
     },
     {
       icon: ChartBarIcon,
       title: "Reports to analyze.",
       description: `Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.`,
-      path: "#/form-responses",
+      path: "/form-responses",
     },
     {
       icon: TemplateIcon,
       title: "Templates to simplify.",
       description: `Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.`,
-      path: "#/templates",
+      path: "/templates",
     },
     {
       icon: UsersIcon,
       title: "Contacts to organize.",
       description: `Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.`,
-      path: "#/contact-management",
+      path: "/contact-management",
     },
     {
       icon: CubeTransparentIcon,
       title: "Flows to scale.",
       description: `Design complex, multi-screen conversational flows that scale your operations and handle any business process.`,
-      path: "#/powerful-forms",
+      path: "/powerful-forms",
     },
   ]
 };
@@ -193,22 +193,22 @@ export const comparisonSectionData = {
         {
             name: "Google Forms",
             description: "From static web forms to dynamic conversations.",
-            path: "#/whatsform-vs-google-forms"
+            path: "/whatsform-vs-google-forms"
         },
         {
             name: "Wati",
             description: "Focused on a complete, integrated platform experience.",
-            path: "#/"
+            path: "/pricing"
         },
         {
             name: "Interakt",
             description: "Advanced automation and AI that goes deeper.",
-            path: "#/"
+            path: "/pricing"
         },
         {
             name: "Double Tick",
             description: "Built for scalability and enterprise-grade workflows.",
-            path: "#/"
+            path: "/pricing"
         }
     ]
 };

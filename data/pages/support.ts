@@ -18,7 +18,7 @@ export const supportPageData = {
             title: 'Balancing AI with human touch',
             text: `AI should enhance speed & efficiency of service organizations, not replace human connection. WhatsForm’s AI-support agent is trained to be empathetic, multilingual, and context-aware—without losing the human touch. It balances automation and human touch by: Instantly resolving FAQs and closing tickets, routing complex queries to the right agents, connecting customers to agents on request, and distributing queries evenly across agents.`,
             image: 'https://picsum.photos/seed/support1/500/400',
-            link: { text: "Learn more about our AI-support Agent", path: "#/smarty-ai" }
+            link: { text: "Learn more about our AI-support Agent", path: "/smarty-ai" }
         },
         {
             type: 'featureGrid',

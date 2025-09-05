@@ -95,13 +95,13 @@ export const industrySolutionsPageData = {
             title: industryName,
             description: industryInfo.description,
             image: industryInfo.image,
-            link: `#/industry/${industrySlug}`,
+            link: `/industry/${industrySlug}`,
             categories: categories.map(categoryName => {
                 const categorySlug = slugify(categoryName);
                 return {
                     name: categoryName,
                     description: getCategoryDescription(categoryName),
-                    path: `#/industry/${industrySlug}/${categorySlug}`
+                    path: `/industry/${industrySlug}/${categorySlug}`
                 };
             })
         };

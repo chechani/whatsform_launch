@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
     CheckCircleIcon, WhatsAppIcon, PlayCircleIcon, CalendarDaysIcon 
-} from '@/icons';
+} from '../icons';
 
 const Card: React.FC<{ children: React.ReactNode, className?: string, href?: string, onClick?: (e: React.MouseEvent) => void, isLink?: boolean }> = ({ children, className = '', href, onClick, isLink = false }) => {
-    const commonClasses = `bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`;
+    const commonClasses = `bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`;
     
     if (isLink && href) {
         return (
@@ -27,33 +27,33 @@ const Card: React.FC<{ children: React.ReactNode, className?: string, href?: str
 
 
 export const CTA: React.FC = () => (
-    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-slate-800 dark:text-slate-200 py-16 sm:py-24 lg:py-28 transition-colors duration-300">
+    <section id="cta" className="bg-pastel-violet dark:bg-violet-950/30 text-gray-800 dark:text-gray-200 py-16 sm:py-24 lg:py-28 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">Ready to Transform Your WhatsApp Business?</h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">Ready to Transform Your WhatsApp Business?</h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Connect today for a personalized demonstration and see how WhatsForm can enhance your business communication.</p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <a href="https://wa.me/917849945640?text=Demo" target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
+                <a href="https://wa.me/917849945640?text=Demo" target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                     <div className="bg-green-500 p-3 rounded-full text-white"><WhatsAppIcon className="h-6 w-6" /></div>
                     <div>
-                        <h3 className="font-bold text-lg text-slate-800 dark:text-white">Live Demo on WhatsApp</h3>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm">Message "Demo" to +91 78499 45640.</p>
+                        <h3 className="font-bold text-lg text-gray-800 dark:text-white">Live Demo on WhatsApp</h3>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm">Message "Demo" to +91 78499 45640.</p>
                     </div>
                 </a>
                 <Link href="/videos" legacyBehavior>
-                    <a className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
+                    <a className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                         <div className="bg-green-500 p-3 rounded-full text-white"><PlayCircleIcon /></div>
                         <div>
-                            <h3 className="font-bold text-lg text-slate-800 dark:text-white">Recorded Walkthrough</h3>
-                            <p className="text-slate-600 dark:text-slate-300 text-sm">Explore features on YouTube.</p>
+                            <h3 className="font-bold text-lg text-gray-800 dark:text-white">Recorded Walkthrough</h3>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm">Explore features on YouTube.</p>
                         </div>
                     </a>
                 </Link>
                 <Link href="/book-demo" legacyBehavior>
-                    <a className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
+                    <a className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 text-left flex items-center space-x-4 group">
                         <div className="bg-green-500 p-3 rounded-full text-white"><CalendarDaysIcon /></div>
                         <div>
-                            <h3 className="font-bold text-lg text-slate-800 dark:text-white">Schedule a Meeting</h3>
-                            <p className="text-slate-600 dark:text-slate-300 text-sm">Book a one-on-one call with our team.</p>
+                            <h3 className="font-bold text-lg text-gray-800 dark:text-white">Schedule a Meeting</h3>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm">Book a one-on-one call with our team.</p>
                         </div>
                     </a>
                 </Link>
@@ -63,11 +63,11 @@ export const CTA: React.FC = () => (
 );
 
 export const GenericPageHero: React.FC<{title: string, subtitle: string}> = ({ title, subtitle }) => (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden">
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900 overflow-hidden">
         <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter">
                 {title}
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">

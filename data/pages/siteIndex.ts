@@ -14,20 +14,20 @@ const customerStoryLinks = customersPageData.customers.map(customer => ({
 const industryLinks = industrySolutionsPageData.industries.flatMap(industry => {
     // Determine the path for the main industry page from a predefined list
     const mainIndustryPaths: { [key: string]: string } = {
-        "Marketing & Advertising": "#/marketing-agencies",
-        "Retail": "#/ecommerce",
-        "Education": "#/education",
-        "Finance": "#/bfsi",
-        "Healthcare": "#/healthcare",
-        "Public Utilities & Non Profits": "#/government",
-        "Real Estate & Construction": "#/real-estate",
-        "Manufacturing & IMPEX": "#/logistics",
-        "Professional Services": "#/ca-firms", // Using a relevant existing page as a hub
+        "Marketing & Advertising": "/marketing-agencies",
+        "Retail": "/ecommerce",
+        "Education": "/education",
+        "Finance": "/bfsi",
+        "Healthcare": "/healthcare",
+        "Public Utilities & Non Profits": "/government",
+        "Real Estate & Construction": "/real-estate",
+        "Manufacturing & IMPEX": "/logistics",
+        "Professional Services": "/ca-firms", // Using a relevant existing page as a hub
     };
-    const mainPath = mainIndustryPaths[industry.name] || '#/industry-solutions';
+    const mainPath = mainIndustryPaths[industry.title] || '/industry-solutions';
 
     const mainIndustryLink = {
-        name: industry.name,
+        name: industry.title,
         path: mainPath,
         description: industry.description
     };

@@ -3,13 +3,20 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
     MenuIcon, WhatsAppIcon, SunIcon, MoonIcon, ChevronDownIcon, CloseIcon
-} from '@/icons';
+} from '../icons';
 import { headerData, footerData } from '@/data/navigation';
 
 export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ theme, toggleTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSolutionsOpen, setSolutionsOpen] = useState(false);
     const [isMobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+
+    const handleThemeToggle = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Theme button clicked! Current theme:', theme);
+        toggleTheme();
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -115,21 +122,22 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                                 <a className="bg-green-500 text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-all shadow-sm">Start 14-Day Trial</a>
                             </Link>
                         </div>
+                        
+                        {/* Theme Toggle Buttons */}
                         <button
-                            onClick={toggleTheme}
-                            className="relative flex items-center justify-center w-10 h-10 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                            aria-label="Toggle theme"
+                            onClick={handleThemeToggle}
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm mr-2 font-bold"
                         >
-                            <SunIcon
-                                className={`absolute transition-all duration-300 ease-in-out transform ${
-                                    theme === 'dark' ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'
-                                }`}
-                            />
-                            <MoonIcon
-                                className={`absolute transition-all duration-300 ease-in-out transform ${
-                                    theme === 'dark' ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'
-                                }`}
-                            />
+                            {theme} → {theme === 'dark' ? 'light' : 'dark'}
+                        </button>
+                        
+                        <button
+                            type="button"
+                            onClick={handleThemeToggle}
+                            className="relative flex items-center justify-center w-12 h-12 rounded-full text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 border-2 border-slate-300 dark:border-slate-600"
+                            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                        >
+                            {theme === 'dark' ? '🌞' : '🌙'}
                         </button>
                         <div className="lg:hidden ml-2">
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">

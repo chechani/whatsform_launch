@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../components/PageBuilder';
 import { teamInboxPageData } from '../data/pages/teamInbox';
 
@@ -47,14 +48,16 @@ const TeamInboxPage: React.FC<TeamInboxPageProps> = ({ navigate }) => {
             <div className="bg-pastel-yellow dark:bg-amber-950/30 py-16 sm:py-20 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={teamInboxPageData.closing.title} subtitle={teamInboxPageData.closing.subtitle}>
-                        <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
-                            {teamInboxPageData.closing.cta}
-                        </a>
+                        <Link href="/book-demo" legacyBehavior>
+                            <a className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                                {teamInboxPageData.closing.cta}
+                            </a>
+                        </Link>
                     </ContentSection>
                 </div>
             </div>
             
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };

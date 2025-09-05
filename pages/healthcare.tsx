@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../components/PageBuilder';
 import { healthcarePageData } from '../data/pages/healthcare';
 
@@ -49,14 +50,16 @@ const HealthcarePage: React.FC<HealthcarePageProps> = ({ navigate }) => {
             <div className="bg-pastel-green dark:bg-green-950/30 py-16 sm:py-20">
                  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={healthcarePageData.closing.title} subtitle={healthcarePageData.closing.subtitle}>
-                        <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
-                            {healthcarePageData.closing.cta}
-                        </a>
+                        <Link href="/book-demo" legacyBehavior>
+                            <a className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                                {healthcarePageData.closing.cta}
+                            </a>
+                        </Link>
                     </ContentSection>
                 </div>
             </div>
             
-            <CTA />
+                        <CTA />
         </main>
     );
 };

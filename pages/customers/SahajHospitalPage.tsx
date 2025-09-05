@@ -1,7 +1,8 @@
 
 
 import React from 'react';
-import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../../PageBuilder';
+import Link from 'next/link';
+import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../../components/PageBuilder';
 import { sahajHospitalPageData } from '../../data/pages/customers/SahajHospital';
 
 // FIX: Add props interface to accept the navigate function.
@@ -32,15 +33,17 @@ const SahajHospitalPage: React.FC<SahajHospitalPageProps> = ({ navigate }) => {
 
             <div className="bg-slate-50 dark:bg-slate-900 py-20">
                 <ContentSection title={sahajHospitalPageData.closing.title} subtitle={sahajHospitalPageData.closing.subtitle}>
-                     {/* FIX: Use navigate function for the call-to-action button. */}
-                     <a href="#/book-demo" onClick={(e) => { e.preventDefault(); navigate('#/book-demo'); }} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
-                        {sahajHospitalPageData.closing.cta}
-                    </a>
+                     {/* FIX: Use Next.js Link for the call-to-action button. */}
+                     <Link href="/book-demo" legacyBehavior>
+                        <a className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                            {sahajHospitalPageData.closing.cta}
+                        </a>
+                     </Link>
                 </ContentSection>
             </div>
             
             {/* FIX: Pass navigate prop to CTA component. */}
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };

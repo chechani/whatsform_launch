@@ -52,6 +52,6 @@ export const companyPageData = {
         title: "Join Us on Our Journey",
         subtitle: "We're always looking for talented and passionate people to join our team.",
         cta: "Explore Open Positions",
-        path: "#/careers"
+        path: "/careers"
     }
 };

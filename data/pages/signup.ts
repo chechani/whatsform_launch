@@ -33,7 +33,7 @@ export const signupPageData = {
         loginPrompt: {
             text: "Already a member? ",
             linkText: "Log in",
-            linkPath: "#/"
+            linkPath: "/"
         },
         title: "Request a Free 14 Days Trial Account",
         subtitle: "Fill in the details below to get started with your 14-day free trial."

@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { GenericPageHero, CTA } from '@/components/PageBuilder';
 import { communityPageData } from '@/data/pages/community';
-import { ChatBubbleOvalLeftEllipsisIcon, UsersIcon, CalendarIcon } from '@/components/icons';
+import { ChatBubbleOvalLeftEllipsisIcon, UsersIcon, CalendarIcon } from '../icons';
 
 const iconMap = {
     ChatBubbleOvalLeftEllipsisIcon,
