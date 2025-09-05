@@ -89,7 +89,7 @@ const SignupPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate }
             // This sends a POST request to the Frappe API endpoint.
             // The `fetch` function is a standard web API for making network requests
             // and is correctly configured here to use the 'POST' method.
-            const response = await fetch('/api/resource/Trial%20Request', {
+            const response = await fetch('https://web.waflow.in/api/resource/Trial%20Request', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
