@@ -106,7 +106,7 @@ const PricingPage: React.FC = () => {
                                 
                                 <div className="mt-4 text-center">
                                     <p className="text-xs text-gray-500">
-                                        Assist in WhatsApp Form Building: <span className="font-semibold">₹{index === 0 ? '5' : index === 1 ? '10' : index === 2 ? '25' : '50'}</span>
+                                        Assist in WhatsApp Form Building: <span className="font-semibold">{index === 0 ? '5' : index === 1 ? '10' : index === 2 ? '25' : '50'}</span>
                                     </p>
                                 </div>
                             </div>
