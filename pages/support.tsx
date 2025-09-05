@@ -47,7 +47,7 @@ const SupportPage: React.FC<SupportPageProps> = ({ navigate }) => {
                      );
                 })}
             </div>
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };

@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { CTA } from '../../PageBuilder';
+import { CTA } from '@/components/PageBuilder';
 import { smartyAiUnlocksData as post } from '../../data/pages/blog/smartyAiUnlocks';
 
 const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ content }) => {
@@ -29,11 +29,7 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
 };
 
 // FIX: Add props interface to accept the navigate function.
-interface SmartyAIUnlocksPageProps {
-    navigate: (path: string) => void;
-}
-
-const SmartyAIUnlocksPage: React.FC<SmartyAIUnlocksPageProps> = ({ navigate }) => {
+const SmartyAIUnlocksPage: React.FC = () => {
     return (
         <main>
             <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-white dark:bg-slate-950">
@@ -51,9 +47,11 @@ const SmartyAIUnlocksPage: React.FC<SmartyAIUnlocksPageProps> = ({ navigate }) =
                 </div>
             </div>
             {/* FIX: Pass navigate prop to CTA component. */}
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };
 
 export default SmartyAIUnlocksPage;
+
+

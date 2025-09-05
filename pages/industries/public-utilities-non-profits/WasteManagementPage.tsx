@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { wasteManagementData } from '../../../data/pages/industries/public-utilities-non-profits/wasteManagement';
 
 const WasteManagementPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const WasteManagementPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default WasteManagementPage;
+
+
+

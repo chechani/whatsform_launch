@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { eventManagementData } from '../../../data/pages/industries/entertainment-social-media-gaming/eventManagement';
 
 const EventManagementPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const EventManagementPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default EventManagementPage;
+
+
+

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { itServicesData } from '../../../data/pages/industries/professional-services/itServices';
 
 const ItServicesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const ItServicesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate
 };
 
 export default ItServicesPage;
+
+
+

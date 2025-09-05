@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CTA } from '../../PageBuilder';
+import { CTA } from '@/components/PageBuilder';
 import { whatsappAiAgentsData as post } from '../../data/pages/blog/whatsappAiAgents';
 
 const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ content }) => {
@@ -26,11 +26,7 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
     );
 };
 
-interface WhatsappAiAgentsPageProps {
-    navigate: (path: string) => void;
-}
-
-const WhatsappAiAgentsPage: React.FC<WhatsappAiAgentsPageProps> = ({ navigate }) => {
+const WhatsappAiAgentsPage: React.FC = () => {
     return (
         <main>
             <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-white dark:bg-slate-950">
@@ -47,9 +43,11 @@ const WhatsappAiAgentsPage: React.FC<WhatsappAiAgentsPageProps> = ({ navigate })
                     </article>
                 </div>
             </div>
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };
 
 export default WhatsappAiAgentsPage;
+
+

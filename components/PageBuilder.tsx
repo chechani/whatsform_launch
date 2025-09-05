@@ -251,3 +251,60 @@ export const FloatingWidgets: React.FC = () => (
         </div>
     </>
 );
+
+export const ContactForm: React.FC<{formTitle: string, formSubtitle: string}> = ({ formTitle, formSubtitle }) => (
+    <section className="py-20 bg-white dark:bg-slate-950">
+        <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{formTitle}</h2>
+                <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">{formSubtitle}</p>
+            </div>
+            <form className="space-y-6">
+                <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:text-white" />
+                </div>
+                <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:text-white" />
+                </div>
+                <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Company</label>
+                    <input type="text" id="company" name="company" className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:text-white" />
+                </div>
+                <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                    <textarea id="message" name="message" rows={5} className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:text-white"></textarea>
+                </div>
+                <div className="text-center">
+                    <button type="submit" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+);
+
+export const VideoGallery: React.FC<{videos: {id: string, title: string, description: string, thumbnail: string}[]}> = ({ videos }) => (
+    <section className="py-20 bg-white dark:bg-slate-950">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {videos.map((video, index) => (
+                    <div key={index} className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                        <div className="relative">
+                            <img src={video.thumbnail} alt={video.title} className="w-full h-48 object-cover" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 transition-colors">
+                                    <PlayCircleIcon className="w-8 h-8" />
+                                </a>
+                            </div>
+                        </div>
+                        <div className="p-6">
+                            <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-2">{video.title}</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-sm">{video.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+);

@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const socialMediaPlatformData: CategoryPageData = {
     hero: {
@@ -79,3 +79,4 @@ export const socialMediaPlatformData: CategoryPageData = {
         cta: "Book a Demo"
     }
 };
+

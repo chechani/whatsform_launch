@@ -34,9 +34,11 @@ const EltechPage: React.FC<EltechPageProps> = ({ navigate }) => {
             <div className="bg-slate-50 dark:bg-slate-900 py-20">
                 <ContentSection title={eltechPageData.closing.title} subtitle={eltechPageData.closing.subtitle}>
                      {/* FIX: Use navigate function for the call-to-action button. */}
-                     <a href="/book-demo"} className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
-                        {eltechPageData.closing.cta}
-                    </a></Link>
+                     <Link href="/book-demo" legacyBehavior>
+                        <a className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                            {eltechPageData.closing.cta}
+                        </a>
+                     </Link>
                 </ContentSection>
             </div>
             

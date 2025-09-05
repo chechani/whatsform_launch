@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { electronicsData } from '../../../data/pages/industries/manufacturing-impex/electronics';
 
 const ElectronicsPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const ElectronicsPage: React.FC<{navigate: (path: string) => void}> = ({ navigat
 };
 
 export default ElectronicsPage;
+
+
+

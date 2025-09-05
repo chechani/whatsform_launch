@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { finTechData } from '../../../data/pages/industries/finance/finTech';
 
 const FinTechPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const FinTechPage: React.FC<{navigate: (path: string) => void}> = ({ navigate })
 };
 
 export default FinTechPage;
+
+
+

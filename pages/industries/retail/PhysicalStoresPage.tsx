@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { physicalStoresData } from '../../../data/pages/industries/retail/physicalStores';
 
 const PhysicalStoresPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const PhysicalStoresPage: React.FC<{navigate: (path: string) => void}> = ({ navi
 };
 
 export default PhysicalStoresPage;
+
+
+

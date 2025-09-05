@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CTA } from '../../PageBuilder';
+import { CTA } from '@/components/PageBuilder';
 import { whatsappForRealEstateData as post } from '../../data/pages/blog/whatsappForRealEstate';
 
 const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ content }) => {
@@ -29,11 +29,7 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
     );
 };
 
-interface WhatsappForRealEstatePageProps {
-    navigate: (path: string) => void;
-}
-
-const WhatsappForRealEstatePage: React.FC<WhatsappForRealEstatePageProps> = ({ navigate }) => {
+const WhatsappForRealEstatePage: React.FC = () => {
     return (
         <main>
             <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-white dark:bg-slate-950">
@@ -50,9 +46,11 @@ const WhatsappForRealEstatePage: React.FC<WhatsappForRealEstatePageProps> = ({ n
                     </article>
                 </div>
             </div>
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };
 
 export default WhatsappForRealEstatePage;
+
+

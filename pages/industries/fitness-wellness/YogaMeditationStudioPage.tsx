@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { yogaMeditationStudioData } from '../../../data/pages/industries/fitness-wellness/yogaMeditationStudio';
 
 const YogaMeditationStudioPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const YogaMeditationStudioPage: React.FC<{navigate: (path: string) => void}> = (
 };
 
 export default YogaMeditationStudioPage;
+
+
+

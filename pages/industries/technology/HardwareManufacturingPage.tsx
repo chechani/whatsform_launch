@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { hardwareManufacturingData } from '../../../data/pages/industries/technology/hardwareManufacturing';
 
 const HardwareManufacturingPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const HardwareManufacturingPage: React.FC<{navigate: (path: string) => void}> = 
 };
 
 export default HardwareManufacturingPage;
+
+
+

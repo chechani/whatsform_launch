@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { investmentWealthManagementData } from '../../../data/pages/industries/finance/investmentWealthManagement';
 
 const InvestmentWealthManagementPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const InvestmentWealthManagementPage: React.FC<{navigate: (path: string) => void
 };
 
 export default InvestmentWealthManagementPage;
+
+
+

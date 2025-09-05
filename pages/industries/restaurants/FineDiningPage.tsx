@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { fineDiningData } from '../../../data/pages/industries/restaurants/fineDining';
 
 const FineDiningPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const FineDiningPage: React.FC<{navigate: (path: string) => void}> = ({ navigate
 };
 
 export default FineDiningPage;
+
+
+

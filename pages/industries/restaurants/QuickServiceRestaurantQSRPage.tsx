@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { quickServiceRestaurantQSRData } from '../../../data/pages/industries/restaurants/quickServiceRestaurant-qsr';
 
 const QuickServiceRestaurantQSRPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const QuickServiceRestaurantQSRPage: React.FC<{navigate: (path: string) => void}
 };
 
 export default QuickServiceRestaurantQSRPage;
+
+
+

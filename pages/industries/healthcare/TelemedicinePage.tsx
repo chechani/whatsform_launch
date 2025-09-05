@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { telemedicineData } from '../../../data/pages/industries/healthcare/telemedicine';
 
 const TelemedicinePage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const TelemedicinePage: React.FC<{navigate: (path: string) => void}> = ({ naviga
 };
 
 export default TelemedicinePage;
+
+
+

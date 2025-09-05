@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { constructionCompanyData } from '../../../data/pages/industries/real-estate-construction/constructionCompany';
 
 const ConstructionCompanyPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const ConstructionCompanyPage: React.FC<{navigate: (path: string) => void}> = ({
 };
 
 export default ConstructionCompanyPage;
+
+
+

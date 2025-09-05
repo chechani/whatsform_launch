@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '@/components/PageBuilder';
-import { productPageData } from '@/data/pages/product';
+import { miniAppsPageData as productPageData } from '@/data/pages/product';
 
 const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = ({ index, children }) => {
     const bgColors = [

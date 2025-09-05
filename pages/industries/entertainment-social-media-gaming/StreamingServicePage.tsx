@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { streamingServiceData } from '../../../data/pages/industries/entertainment-social-media-gaming/streamingService';
 
 const StreamingServicePage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const StreamingServicePage: React.FC<{navigate: (path: string) => void}> = ({ na
 };
 
 export default StreamingServicePage;
+
+
+

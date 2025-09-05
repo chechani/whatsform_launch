@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { publicTransportData } from '../../../data/pages/industries/public-utilities-non-profits/publicTransport';
 
 const PublicTransportPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const PublicTransportPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default PublicTransportPage;
+
+
+

@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const finTechData: CategoryPageData = {
     hero: {
@@ -80,3 +80,4 @@ export const finTechData: CategoryPageData = {
         cta: "Book a FinTech Demo"
     }
 };
+

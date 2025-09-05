@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { gamingStudioData } from '../../../data/pages/industries/entertainment-social-media-gaming/gamingStudio';
 
 const GamingStudioPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const GamingStudioPage: React.FC<{navigate: (path: string) => void}> = ({ naviga
 };
 
 export default GamingStudioPage;
+
+
+

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { k12SchoolData } from '../../../data/pages/industries/education/k12School';
 
 const K12SchoolPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const K12SchoolPage: React.FC<{navigate: (path: string) => void}> = ({ navigate 
 };
 
 export default K12SchoolPage;
+
+
+

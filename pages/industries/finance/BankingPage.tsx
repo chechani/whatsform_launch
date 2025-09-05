@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { bankingData } from '../../../data/pages/industries/finance/banking';
 
 const BankingPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const BankingPage: React.FC<{navigate: (path: string) => void}> = ({ navigate })
 };
 
 export default BankingPage;
+
+
+

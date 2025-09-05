@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { cloudHostingData } from '../../../data/pages/industries/technology/cloudHosting';
 
 const CloudHostingPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const CloudHostingPage: React.FC<{navigate: (path: string) => void}> = ({ naviga
 };
 
 export default CloudHostingPage;
+
+
+

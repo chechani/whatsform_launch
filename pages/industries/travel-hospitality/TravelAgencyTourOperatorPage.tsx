@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { travelAgencyTourOperatorData } from '../../../data/pages/industries/travel-hospitality/travelAgency-tourOperator';
 
 const TravelAgencyTourOperatorPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const TravelAgencyTourOperatorPage: React.FC<{navigate: (path: string) => void}>
 };
 
 export default TravelAgencyTourOperatorPage;
+
+
+

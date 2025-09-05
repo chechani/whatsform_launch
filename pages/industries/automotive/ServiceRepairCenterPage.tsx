@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { serviceRepairCenterData } from '../../../data/pages/industries/automotive/serviceRepairCenter';
 
 const ServiceRepairCenterPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const ServiceRepairCenterPage: React.FC<{navigate: (path: string) => void}> = ({
 };
 
 export default ServiceRepairCenterPage;
+
+
+

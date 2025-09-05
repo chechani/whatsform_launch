@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { spaSalonData } from '../../../data/pages/industries/fitness-wellness/spaSalon';
 
 const SpaSalonPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const SpaSalonPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }
 };
 
 export default SpaSalonPage;
+
+
+

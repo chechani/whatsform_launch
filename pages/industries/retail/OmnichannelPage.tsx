@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { omnichannelData } from '../../../data/pages/industries/retail/omnichannel';
 
 const OmnichannelPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const OmnichannelPage: React.FC<{navigate: (path: string) => void}> = ({ navigat
 };
 
 export default OmnichannelPage;
+
+
+

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { seoSemServicesData } from '../../../data/pages/industries/marketing-advertising/seoSemServices';
 
 const SeoSemServicesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const SeoSemServicesPage: React.FC<{navigate: (path: string) => void}> = ({ navi
 };
 
 export default SeoSemServicesPage;
+
+
+

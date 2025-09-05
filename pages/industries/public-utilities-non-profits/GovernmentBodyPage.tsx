@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { governmentBodyData } from '../../../data/pages/industries/public-utilities-non-profits/governmentBody';
 
 const GovernmentBodyPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const GovernmentBodyPage: React.FC<{navigate: (path: string) => void}> = ({ navi
 };
 
 export default GovernmentBodyPage;
+
+
+

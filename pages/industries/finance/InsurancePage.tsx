@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { insuranceData } from '../../../data/pages/industries/finance/insurance';
 
 const InsurancePage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const InsurancePage: React.FC<{navigate: (path: string) => void}> = ({ navigate 
 };
 
 export default InsurancePage;
+
+
+

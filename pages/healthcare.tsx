@@ -3,10 +3,6 @@ import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../components/PageBuilder';
 import { healthcarePageData } from '../data/pages/healthcare';
 
-interface HealthcarePageProps {
-    navigate: (path: string) => void;
-}
-
 const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = ({ index, children }) => {
     const bgColors = [
         "bg-pastel-blue dark:bg-sky-950/30",
@@ -22,7 +18,7 @@ const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = (
 };
 
 
-const HealthcarePage: React.FC<HealthcarePageProps> = ({ navigate }) => {
+const HealthcarePage: React.FC = () => {
     return (
         <main>
             <GenericPageHero title={healthcarePageData.hero.title} subtitle={healthcarePageData.hero.subtitle} />

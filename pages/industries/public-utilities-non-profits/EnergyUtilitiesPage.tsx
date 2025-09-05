@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { energyUtilitiesData } from '../../../data/pages/industries/public-utilities-non-profits/energyUtilities';
 
 const EnergyUtilitiesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const EnergyUtilitiesPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default EnergyUtilitiesPage;
+
+
+

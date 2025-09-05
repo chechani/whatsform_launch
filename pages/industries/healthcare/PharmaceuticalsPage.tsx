@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { pharmaceuticalsData } from '../../../data/pages/industries/healthcare/pharmaceuticals';
 
 const PharmaceuticalsPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const PharmaceuticalsPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default PharmaceuticalsPage;
+
+
+

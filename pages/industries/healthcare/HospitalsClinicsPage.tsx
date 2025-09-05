@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { hospitalsClinicsData } from '../../../data/pages/industries/healthcare/hospitalsClinics';
 
 const HospitalsClinicsPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const HospitalsClinicsPage: React.FC<{navigate: (path: string) => void}> = ({ na
 };
 
 export default HospitalsClinicsPage;
+
+
+

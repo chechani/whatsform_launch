@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { contentCreatorInfluencerData } from '../../../data/pages/industries/entertainment-social-media-gaming/contentCreatorInfluencer';
 
 const ContentCreatorInfluencerPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const ContentCreatorInfluencerPage: React.FC<{navigate: (path: string) => void}>
 };
 
 export default ContentCreatorInfluencerPage;
+
+
+

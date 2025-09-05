@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { edTechPlatformData } from '../../../data/pages/industries/education/edTechPlatform';
 
 const EdTechPlatformPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const EdTechPlatformPage: React.FC<{navigate: (path: string) => void}> = ({ navi
 };
 
 export default EdTechPlatformPage;
+
+
+

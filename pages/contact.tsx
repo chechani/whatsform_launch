@@ -1,5 +1,5 @@
 import React from 'react';
-import { GenericPageHero, CTA, ContactForm } from '../components/PageBuilder.tsx';
+import { GenericPageHero, CTA, ContactForm } from '../components/PageBuilder';
 import { contactPageData } from '../data/pages/contact';
 
 const ContactPage: React.FC = () => {

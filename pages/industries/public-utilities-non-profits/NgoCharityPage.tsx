@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { ngoCharityData } from '../../../data/pages/industries/public-utilities-non-profits/ngo-charity';
 
 const NgoCharityPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const NgoCharityPage: React.FC<{navigate: (path: string) => void}> = ({ navigate
 };
 
 export default NgoCharityPage;
+
+
+

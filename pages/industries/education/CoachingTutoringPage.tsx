@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { coachingTutoringData } from '../../../data/pages/industries/education/coachingTutoring';
 
 const CoachingTutoringPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const CoachingTutoringPage: React.FC<{navigate: (path: string) => void}> = ({ na
 };
 
 export default CoachingTutoringPage;
+
+
+

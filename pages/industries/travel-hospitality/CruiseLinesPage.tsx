@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { cruiseLinesData } from '../../../data/pages/industries/travel-hospitality/cruiseLines';
 
 const CruiseLinesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const CruiseLinesPage: React.FC<{navigate: (path: string) => void}> = ({ navigat
 };
 
 export default CruiseLinesPage;
+
+
+

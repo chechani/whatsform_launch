@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { propertyManagementData } from '../../../data/pages/industries/real-estate-construction/propertyManagement';
 
 const PropertyManagementPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const PropertyManagementPage: React.FC<{navigate: (path: string) => void}> = ({ 
 };
 
 export default PropertyManagementPage;
+
+
+

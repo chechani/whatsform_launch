@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const hotelResortsData: CategoryPageData = {
     hero: {
@@ -79,3 +79,4 @@ export const hotelResortsData: CategoryPageData = {
         cta: "Book a Hospitality Demo"
     }
 };
+

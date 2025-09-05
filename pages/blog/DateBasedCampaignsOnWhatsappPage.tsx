@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CTA } from '../../PageBuilder';
+import { CTA } from '@/components/PageBuilder';
 import { dateBasedCampaignsOnWhatsappData as post } from '../../data/pages/blog/dateBasedCampaignsOnWhatsapp';
 
 const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ content }) => {
@@ -26,11 +26,7 @@ const BlogContentRenderer: React.FC<{ content: typeof post.content }> = ({ conte
     );
 };
 
-interface DateBasedCampaignsOnWhatsappPageProps {
-    navigate: (path: string) => void;
-}
-
-const DateBasedCampaignsOnWhatsappPage: React.FC<DateBasedCampaignsOnWhatsappPageProps> = ({ navigate }) => {
+const DateBasedCampaignsOnWhatsappPage: React.FC = () => {
     return (
         <main>
             <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-white dark:bg-slate-950">
@@ -47,9 +43,11 @@ const DateBasedCampaignsOnWhatsappPage: React.FC<DateBasedCampaignsOnWhatsappPag
                     </article>
                 </div>
             </div>
-            <CTA navigate={navigate} />
+            <CTA />
         </main>
     );
 };
 
 export default DateBasedCampaignsOnWhatsappPage;
+
+

@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const k12SchoolData: CategoryPageData = {
     hero: {
@@ -81,3 +81,4 @@ export const k12SchoolData: CategoryPageData = {
         cta: "Book a Demo for Schools"
     }
 };
+

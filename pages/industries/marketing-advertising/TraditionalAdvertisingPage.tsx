@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { traditionalAdvertisingData } from '../../../data/pages/industries/marketing-advertising/traditionalAdvertising';
 
 const TraditionalAdvertisingPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const TraditionalAdvertisingPage: React.FC<{navigate: (path: string) => void}> =
 };
 
 export default TraditionalAdvertisingPage;
+
+
+

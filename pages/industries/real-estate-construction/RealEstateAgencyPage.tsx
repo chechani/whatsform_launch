@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { realEstateAgencyData } from '../../../data/pages/industries/real-estate-construction/realEstateAgency';
 
 const RealEstateAgencyPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const RealEstateAgencyPage: React.FC<{navigate: (path: string) => void}> = ({ na
 };
 
 export default RealEstateAgencyPage;
+
+
+

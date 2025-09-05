@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { cybersecurityData } from '../../../data/pages/industries/technology/cybersecurity';
 
 const CybersecurityPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const CybersecurityPage: React.FC<{navigate: (path: string) => void}> = ({ navig
 };
 
 export default CybersecurityPage;
+
+
+

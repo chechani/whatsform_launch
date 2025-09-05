@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { humanResourcesData } from '../../../data/pages/industries/professional-services/humanResources';
 
 const HumanResourcesPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -13,3 +13,6 @@ const HumanResourcesPage: React.FC<{navigate: (path: string) => void}> = ({ navi
 };
 
 export default HumanResourcesPage;
+
+
+

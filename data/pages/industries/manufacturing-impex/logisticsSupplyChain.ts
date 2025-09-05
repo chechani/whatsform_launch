@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const logisticsSupplyChainData: CategoryPageData = {
     hero: {
@@ -82,3 +82,4 @@ export const logisticsSupplyChainData: CategoryPageData = {
         cta: "Request a Demo"
     }
 };
+

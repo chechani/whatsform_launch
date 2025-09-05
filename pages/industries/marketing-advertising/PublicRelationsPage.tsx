@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CategoryPageLayout } from '../CategoryPageLayout';
+import { CategoryPageLayout } from '../../../components/_CategoryPageLayout';
 import { publicRelationsData } from '../../../data/pages/industries/marketing-advertising/publicRelations';
 
 const PublicRelationsPage: React.FC<{navigate: (path: string) => void}> = ({ navigate }) => {
@@ -15,3 +15,6 @@ const PublicRelationsPage: React.FC<{navigate: (path: string) => void}> = ({ nav
 };
 
 export default PublicRelationsPage;
+
+
+

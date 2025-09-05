@@ -1,6 +1,6 @@
 
 import { CheckCircleIcon } from '../../../../icons';
-import type { CategoryPageData } from '../../../../pages/industries/CategoryPageLayout';
+import type { CategoryPageData } from '../../../../components/_CategoryPageLayout';
 
 export const eCommerceOnlineStoresData: CategoryPageData = {
     hero: {
@@ -81,3 +81,4 @@ export const eCommerceOnlineStoresData: CategoryPageData = {
         cta: "Book an eCommerce Demo"
     }
 };
+

@@ -13,15 +13,15 @@ const CareersPage: React.FC = () => {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection 
-                        title={careersPageData.openings.title} 
-                        subtitle={careersPageData.openings.subtitle}
+                        title={careersPageData.culture.title} 
+                        subtitle={careersPageData.culture.text}
                     />
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {careersPageData.openings.jobs.map((job, index) => (
+                        {careersPageData.positions.map((position, index) => (
                             <div key={index} className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <h3 className="text-xl font-bold text-slate-800 dark:text-white">{job.title}</h3>
-                                <p className="mt-2 text-slate-600 dark:text-slate-400">{job.location} - {job.type}</p>
-                                <Link href={job.applyLink} legacyBehavior>
+                                <h3 className="text-xl font-bold text-slate-800 dark:text-white">{position.title}</h3>
+                                <p className="mt-2 text-slate-600 dark:text-slate-400">{position.location} - {position.department}</p>
+                                <Link href="/contact" legacyBehavior>
                                     <a className="mt-4 inline-block text-green-600 font-semibold hover:underline">Apply Now &rarr;</a>
                                 </Link>
                             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner } from '../components/HomePageSections.tsx';
-import { CTA, FAQ } from '../components/PageBuilder.tsx';
+import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner } from '../components/HomePageSections';
+import { CTA, FAQ } from '../components/PageBuilder';
 import { uniqueFeatures, uspData, testimonialsData } from '../data/homePage';
 import { faqPageData } from '../data/pages/faq';
 
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
             <Feature navigate={navigate} />
             <SecondaryFeatures navigate={navigate} />
             <Testimonials />
-            <FAQ {...homePageData.faq} />
+            <FAQ faqs={homePageData.faq.categories.flatMap(category => category.faqs.slice(0, 6))} />
             <CTA />
             <Banner navigate={navigate} />
         </main>
