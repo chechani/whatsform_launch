@@ -25,7 +25,7 @@ export const signupPageData = {
             ]
         },
         trustedBy: {
-            title: "Trusted by 70000+ Brands",
+            title: "Desinsed for Excellence in Communication",
             brands: ["JCAF", "KneeXpert", "Eltech", "Sahaj Hospital"]
         }
     },

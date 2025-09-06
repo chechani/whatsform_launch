@@ -15,8 +15,8 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
     const [index, setIndex] = useState(0);
     const [isFading, setIsFading] = useState(false);
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-    const videoId = 'zmxHz-hQ32E'; // Intro video ID
-    const videoThumbnail = 'https://i.ytimg.com/vi/zmxHz-hQ32E/hqdefault.jpg';
+    const videoId = '20gL7XOlKkQ'; // Intro video ID
+    const videoThumbnail = 'https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg';
 
     useEffect(() => {
         const timer = setInterval(() => {
