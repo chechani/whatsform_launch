@@ -77,6 +77,7 @@ export const siteIndexData = {
                 { name: 'For Marketing', path: '#/marketing', description: "Capture leads, automate engagement, and drive revenue on WhatsApp." },
                 { name: 'For Sales', path: '#/sales', description: "Qualify leads, book appointments, and close deals faster." },
                 { name: 'For Support', path: '#/support', description: "Scale your customer support with AI agents and a unified inbox." },
+                { name: 'For Operations', path: '#/operations', description: "Streamline business operations with automated WhatsApp workflows." },
             ]
         },
         {
@@ -84,25 +85,51 @@ export const siteIndexData = {
             description: "Custom-tailored use cases for various sectors. Explore our main industry hubs or dive into specific sub-categories.",
             links: [
                 { name: 'All Industry Solutions', path: '#/industry-solutions', description: "An overview of all the industries and categories we serve." },
-                ...industryLinks
+                { name: 'Banking & Financial Services', path: '#/bfsi', description: "Secure WhatsApp solutions for banks and financial institutions." },
+                { name: 'Healthcare & Medical', path: '#/healthcare', description: "HIPAA-compliant communication for healthcare providers." },
+                { name: 'Education & E-Learning', path: '#/education', description: "Enhance student engagement and administrative processes." },
+                { name: 'E-Learning Platforms', path: '#/elearning', description: "Interactive learning experiences through WhatsApp." },
+                { name: 'E-commerce & Retail', path: '#/ecommerce', description: "Boost sales with conversational commerce on WhatsApp." },
+                { name: 'Real Estate & Construction', path: '#/real-estate', description: "Connect with prospects and streamline property sales." },
+                { name: 'Government & Public Sector', path: '#/government', description: "Citizen services and public communication solutions." },
+                { name: 'Logistics & Supply Chain', path: '#/logistics', description: "Track shipments and coordinate logistics through WhatsApp." },
+                { name: 'Marketing Agencies', path: '#/marketing-agencies', description: "WhatsApp marketing solutions for agencies and consultants." },
+                { name: 'CA Firms & Professional Services', path: '#/ca-firms', description: "Client management and document collection for professionals." },
+                { name: 'Automotive Industry', path: '#/automotive', description: "Vehicle sales, service bookings, and customer support." },
+                { name: 'Restaurants & Food Service', path: '#/restaurants', description: "Order management and customer engagement for restaurants." },
+                { name: 'Travel & Hospitality', path: '#/travel-hospitality', description: "Booking management and guest services for travel businesses." },
+                { name: 'Fitness & Wellness', path: '#/fitness-wellness', description: "Client engagement and appointment scheduling for fitness centers." },
+                { name: 'Entertainment & Media', path: '#/entertainment', description: "Audience engagement and event management for entertainment." },
+                ...industryLinks.filter(link => !link.name.includes('  -')) // Only main industry pages, not sub-categories
             ]
         },
         {
             title: "Resources & Learning",
             description: "Expand your knowledge and get inspired.",
             links: [
-                { name: 'Blog', path: '#/resources', description: "Insights and tips on WhatsApp business automation and AI." },
+                { name: 'Resources Hub', path: '#/resources', description: "Complete learning center with guides, tools, templates, and case studies." },
+                { name: 'Blog & Insights', path: '#/blog', description: "Latest insights, updates, and best practices for WhatsApp Business automation." },
                 { name: 'Customer Stories Hub', path: '#/customers', description: "See how leading businesses succeed with WhatsForm." },
                 ...customerStoryLinks,
-                { name: 'Webinars', path: '#/webinars', description: "Join live sessions or watch recordings to master our platform." },
-                { name: 'Videos', path: '#/videos', description: "Watch tutorials, walkthroughs, and success stories." },
+                { name: 'Video Tutorials', path: '#/videos', description: "Watch step-by-step walkthroughs, product demos, and success stories." },
+                { name: 'Webinars & Events', path: '#/webinars', description: "Join live sessions or watch recordings to master our platform." },
                 { name: 'Templates Center', path: '#/templates', description: "Craft, manage, and deploy high-performance message templates." },
                 { name: 'Forms Browser', path: '#/forms-browser', description: "Explore over 200 pre-built form templates for every industry." },
                 { name: 'Developer Docs', path: '#/developer-docs', description: "Integrate and build on our platform with APIs and webhooks." },
-                { name: 'Community', path: '#/community', description: "Connect with other users, share best practices, and get help." },
+                { name: 'API Collection', path: '#/api-collection', description: "Comprehensive API documentation and testing tools for developers." },
+                { name: 'Community Forum', path: '#/community', description: "Connect with other users, share best practices, and get help." },
                 { name: 'Help Center', path: '#/help-center', description: "Find articles and guides to help you use WhatsForm." },
-                { name: 'FAQ', path: '#/faq', description: "Get answers to frequently asked questions about our service." },
-                { name: 'Site Index', path: '#/site-index', description: "You are here. A complete map of the WhatsForm website." },
+                { name: 'FAQ Database', path: '#/faq', description: "Get answers to frequently asked questions about our service." },
+            ]
+        },
+        {
+            title: "Comparisons",
+            description: "See how WhatsForm stacks up against the competition.",
+            links: [
+                { name: 'WhatsForm vs Google Forms', path: '#/whatsform-vs-google-forms', description: "Compare our WhatsApp forms with traditional Google Forms." },
+                { name: 'WhatsForm vs Wati', path: '#/whatsform-vs-wati', description: "See how we compare to Wati for WhatsApp Business automation." },
+                { name: 'WhatsForm vs Interakt', path: '#/whatsform-vs-interakt', description: "Compare our platform with Interakt's WhatsApp solutions." },
+                { name: 'WhatsForm vs Double Tick', path: '#/whatsform-vs-double-tick', description: "How WhatsForm outperforms Double Tick for business automation." },
             ]
         },
         {
@@ -113,7 +140,9 @@ export const siteIndexData = {
                 { name: 'Careers', path: '#/careers', description: "Explore open positions and join our mission-driven team." },
                 { name: 'Branding', path: '#/branding', description: "Find our official brand assets and usage guidelines." },
                 { name: 'Partners', path: '#/partners', description: "Join our partner ecosystem to grow your business with us." },
+                { name: 'Partner Application', path: '#/partners-request', description: "Apply to become a WhatsForm partner." },
                 { name: 'Affiliates', path: '#/affiliates', description: "Earn commissions by introducing your audience to WhatsForm." },
+                { name: 'Affiliate Application', path: '#/affiliates-request', description: "Apply to join our affiliate program." },
             ]
         },
          {
@@ -133,6 +162,14 @@ export const siteIndexData = {
                 { name: 'Privacy Policy', path: '#/privacy', description: "Understand how we collect, use, and protect your data." },
                 { name: 'Shipping Policy', path: '#/shipping-policy', description: "Review our policy regarding service delivery." },
                 { name: 'Refund & Cancellation Policy', path: '#/cancellation', description: "Understand our policies on refunds and cancellations." },
+            ]
+        },
+        {
+            title: "Navigation",
+            description: "Site navigation and utility pages.",
+            links: [
+                { name: 'Site Index', path: '#/site-index', description: "You are here. A complete map of the WhatsForm website." },
+                { name: 'Contact Us', path: '#/contact', description: "Get in touch with our team for support and inquiries." },
             ]
         }
     ]

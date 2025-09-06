@@ -77,20 +77,68 @@ export const GenericPageHero: React.FC<{title: string, subtitle: string}> = ({ t
     </section>
 );
 
-export const FAQ: React.FC<{faqs?: {question: string, answer: string}[]}> = ({ faqs = [] }) => (
-    <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                    <div key={index} className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6">
-                        <h3 className="font-bold text-lg text-slate-800 dark:text-white">{faq.question}</h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-300">{faq.answer}</p>
-                    </div>
-                ))}
+export const FAQ: React.FC<{
+    faqs?: {
+        id: string;
+        name: string;
+        description: string;
+        faqs: {
+            question: string;
+            answer: string;
+        }[];
+    }[];
+}> = ({ faqs = [] }) => {
+    const [openIndex, setOpenIndex] = useState<string | null>(null);
+
+    const toggleFAQ = (id: string) => {
+        setOpenIndex(openIndex === id ? null : id);
+    };
+
+    return (
+        <section className="py-20">
+            <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+                <div className="space-y-8">
+                    {faqs.map((category) => (
+                        <div key={category.id}>
+                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{category.name}</h2>
+                            <p className="text-slate-600 dark:text-slate-300 mb-6">{category.description}</p>
+                            <div className="space-y-4">
+                                {category.faqs.map((faq, index) => (
+                                    <div key={index} className="bg-slate-100 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+                                        <button
+                                            onClick={() => toggleFAQ(`${category.id}-${index}`)}
+                                            className="w-full text-left p-6 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200 flex items-center justify-between"
+                                            aria-expanded={openIndex === `${category.id}-${index}`}
+                                        >
+                                            <h3 className="font-bold text-lg text-slate-800 dark:text-white pr-4">{faq.question}</h3>
+                                            <svg
+                                                className={`w-5 h-5 text-slate-600 dark:text-slate-400 transform transition-transform duration-200 flex-shrink-0 ${
+                                                    openIndex === `${category.id}-${index}` ? 'rotate-180' : ''
+                                                }`}
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div className={`transition-all duration-300 ease-in-out ${
+                                            openIndex === `${category.id}-${index}` ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                                        } overflow-hidden`}>
+                                            <div className="px-6 pb-6">
+                                                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{faq.answer}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export const ContentSection: React.FC<{
     title: string;

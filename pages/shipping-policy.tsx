@@ -2,39 +2,79 @@
 
 
 import React from 'react';
-import { GenericPageHero } from '../components/PageBuilder';
+import { GenericPageHero, CTA } from '../components/PageBuilder';
 import { shippingPolicyData } from '../data/pages/shippingPolicy';
-
-const PolicyContentRenderer: React.FC<{ content: typeof shippingPolicyData.content }> = ({ content }) => {
-    return (
-        <div className="prose prose-lg dark:prose-invert max-w-none text-slate-600 dark:text-slate-400">
-            {content.map((block, index) => {
-                switch (block.type) {
-                    case 'heading':
-                        return <h2 key={index}>{block.text}</h2>;
-                    case 'paragraph':
-                        return <p key={index}>{block.text}</p>;
-                    default:
-                        return null;
-                }
-            })}
-        </div>
-    );
-};
-
 
 const ShippingPolicyPage: React.FC = () => {
     return (
         <main>
             <GenericPageHero 
                 title={shippingPolicyData.hero.title} 
-                subtitle={shippingPolicyData.hero.subtitle} 
+                subtitle={shippingPolicyData.hero.subtitle}
             />
-            <div className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950">
+            <section className="py-20">
                 <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-                   <PolicyContentRenderer content={shippingPolicyData.content} />
+                    <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 md:p-12 border border-slate-200 dark:border-slate-700">
+                        <div className="prose prose-lg dark:prose-invert max-w-none">
+                            <div className="mb-8 text-center border-b border-slate-200 dark:border-slate-600 pb-8">
+                                <p className="text-slate-600 dark:text-slate-300 text-lg">
+                                    Information about service delivery and account setup for WhatsForm platform.
+                                </p>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                    Last updated: {new Date().toLocaleDateString('en-US', { 
+                                        year: 'numeric', 
+                                        month: 'long', 
+                                        day: 'numeric' 
+                                    })}
+                                </p>
+                            </div>
+                            
+                            {shippingPolicyData.content.map((item, index) => {
+                                if (item.type === 'heading') {
+                                    return (
+                                        <div key={index} className="mt-12 first:mt-0">
+                                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 pb-3 border-b border-slate-200 dark:border-slate-600">
+                                                {item.text}
+                                            </h2>
+                                        </div>
+                                    );
+                                } else {
+                                    return (
+                                        <div key={index} className="mb-6">
+                                            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-base">
+                                                {item.text}
+                                            </p>
+                                        </div>
+                                    );
+                                }
+                            })}
+                            
+                            <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-600">
+                                <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-6">
+                                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                                        Need Help Getting Started?
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-300 mb-3">
+                                        If you have questions about account setup or service delivery, contact us:
+                                    </p>
+                                    <div className="space-y-1">
+                                        <p className="text-slate-700 dark:text-slate-200 font-medium">
+                                            Email: support@whatsform.com
+                                        </p>
+                                        <p className="text-slate-700 dark:text-slate-200 font-medium">
+                                            Phone: +91 78499 45640
+                                        </p>
+                                        <p className="text-slate-700 dark:text-slate-200 font-medium">
+                                            WhatsApp: Message "Support" to +91 78499 45640
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <CTA />
         </main>
     );
 };

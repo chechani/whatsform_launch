@@ -121,6 +121,7 @@ export {
     NewspaperIcon as TemplateIcon,
     RectangleGroupIcon as ArchitectureIcon,
     WrenchScrewdriverIcon as NoCodeIcon,
+    WrenchScrewdriverIcon as OperationsIcon,
     CpuChipIcon as BotIcon,
     UserPlusIcon,
     ArrowTrendingDownIcon,

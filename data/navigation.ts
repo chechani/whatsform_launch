@@ -3,7 +3,7 @@
 import { 
     ChartBarIcon, HeadsetIcon, CurrencyDollarIcon, AcademicCapIcon, 
     BuildingStorefrontIcon, MegaphoneIcon, StethoscopeIcon, BuildingOfficeIcon, 
-    CalculatorIcon, BuildingLibraryIcon, TruckIcon, BanknotesIcon,
+    CalculatorIcon, BuildingLibraryIcon, TruckIcon, BanknotesIcon, OperationsIcon,
     FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon, YouTubeIcon
 } from '../icons';
 
@@ -34,6 +34,12 @@ export const headerData = {
                 name: 'WhatsForm for Support', 
                 description: 'AI-powered query resolution and automation', 
                 path: '/support' 
+            },
+            { 
+                icon: OperationsIcon, 
+                name: 'WhatsForm for Operations', 
+                description: 'Streamline workflows, automate processes and boost efficiency', 
+                path: '/operations' 
             },
           
         ],
@@ -76,6 +82,7 @@ export const footerData = {
                 { name: 'For Marketing', path: '/marketing' },
                 { name: 'For Sales', path: '/sales' },
                 { name: 'For Support', path: '/support' },
+                { name: 'For Operations', path: '/operations' },
                 { name: 'Industry Solutions', path: '/industry-solutions' },
                 { name: 'vs Google Forms', path: '/whatsform-vs-google-forms' },
             ]

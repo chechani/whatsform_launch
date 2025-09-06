@@ -8,65 +8,80 @@ import { seoData } from '../data/seo';
 import '../styles.css';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
-    const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
-    const [isClient, setIsClient] = React.useState(false);
+    const [theme, setTheme] = React.useState<'light' | 'dark'>('light');
+    const [mounted, setMounted] = React.useState(false);
 
-    // Initialize theme on client side
+    // Initialize theme only once when component mounts
     React.useEffect(() => {
-        const initializeTheme = () => {
-            setIsClient(true);
-            
-            const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-            const initialTheme = savedTheme || 'dark';
-            
-            // Only update state if it's different
-            if (theme !== initialTheme) {
-                setTheme(initialTheme);
-            }
-            
-            // Apply theme to DOM only if needed
-            const isDarkMode = document.documentElement.classList.contains('dark');
-            const shouldBeDark = initialTheme === 'dark';
-            
-            if (isDarkMode !== shouldBeDark) {
-                if (shouldBeDark) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-                localStorage.setItem('theme', initialTheme);
-            }
-        };
+        const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+        const initialTheme = savedTheme || 'light';
         
-        initializeTheme();
-    }, []); // Empty dependency array to run only once
-
-    // Function to apply theme to DOM
-    const applyTheme = (newTheme: 'light' | 'dark') => {
-        const root = document.documentElement;
+        console.log('App - One-time theme initialization:', { savedTheme, initialTheme });
         
-        if (newTheme === 'dark') {
-            root.classList.add('dark');
+        setTheme(initialTheme);
+        setMounted(true);
+        
+        // Apply theme to DOM
+        if (initialTheme === 'dark') {
+            document.documentElement.classList.add('dark');
         } else {
-            root.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
         }
-        localStorage.setItem('theme', newTheme);
-    };
+    }, []); // Empty dependency array - runs only once
 
-    // Toggle theme function
-    const toggleTheme = React.useCallback(() => {
-        if (!isClient) return;
+    // Log theme state changes
+    React.useEffect(() => {
+        console.log('App - Theme state changed to:', theme);
+    }, [theme]);
+
+    // Simple toggle function
+    const toggleTheme = () => {
+        if (!mounted) {
+            console.log('App - Not mounted, skipping theme toggle');
+            return;
+        }
         
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        console.log('Toggling theme from', theme, 'to', newTheme);
+        const currentTheme = theme;
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        console.log('App - Toggling theme:', { currentTheme, newTheme, mounted });
         
+        // Update state first
         setTheme(newTheme);
-        applyTheme(newTheme);
-    }, [theme, isClient]);
+        
+        // Apply to DOM immediately  
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            console.log('App - Added dark class');
+        } else {
+            document.documentElement.classList.remove('dark');
+            console.log('App - Removed dark class');
+        }
+        
+        // Save to localStorage
+        localStorage.setItem('theme', newTheme);
+        
+        // Verify DOM change
+        setTimeout(() => {
+            const hasClass = document.documentElement.classList.contains('dark');
+            console.log('App - DOM verification: dark class present =', hasClass, 'expected =', newTheme === 'dark');
+        }, 100);
+    };
     
     const path = router.pathname;
     const pageSeo = seoData[path] || seoData['/'];
 
+    // Don't render until mounted to prevent hydration mismatch
+    if (!mounted) {
+        return (
+            <div className="overflow-x-hidden bg-white min-h-screen">
+                <Head>
+                    <title>{pageSeo.title}</title>
+                    <meta name="description" content={pageSeo.description} />
+                </Head>
+                <div>Loading...</div>
+            </div>
+        );
+    }
 
     return (
         <div className="overflow-x-hidden bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
@@ -74,7 +89,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
                 <title>{pageSeo.title}</title>
                 <meta name="description" content={pageSeo.description} />
             </Head>
-            {isClient && <Header theme={theme} toggleTheme={toggleTheme} />}
+            <Header theme={theme} toggleTheme={toggleTheme} />
             <Component {...pageProps} />
             <Footer />
             <FloatingWidgets />

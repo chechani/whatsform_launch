@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from '../icons';
@@ -45,16 +33,21 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
     return (
         <>
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300">
-                 <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-green-200/30 dark:bg-green-500/20 rounded-full blur-3xl" />
-                 <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-sky-200/30 dark:bg-sky-500/20 rounded-full blur-3xl" />
+                {/* Original decorative elements */}
+                <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-slate-200/30 dark:bg-slate-500/10 rounded-full blur-3xl"></div>
+                
+                {/* Floating WhatsApp-style bubbles */}
+                <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-white/05 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-green-600/15 rounded-full blur-3xl" />
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         {/* Left Side: Text Content */}
                         <div className="text-left animate-fade-in">
-                            <span className="inline-block bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-300 font-semibold px-4 py-1 rounded-full mb-4 text-sm uppercase tracking-wider">
+                            <span className="inline-block bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 font-semibold px-4 py-1 rounded-full mb-4 text-sm uppercase tracking-wider backdrop-blur-sm border border-blue-200 dark:border-slate-700">
                                 Empowering WhatsApp Communication
                             </span>
-                            <h1 className="font-black text-slate-900 dark:text-white leading-tight tracking-tighter min-h-[8rem] sm:min-h-[10rem] md:min-h-[12rem] flex flex-col justify-start">
+                            <h1 className="font-black text-gray-900 dark:text-white leading-tight tracking-tighter min-h-[8rem] sm:min-h-[10rem] md:min-h-[12rem] flex flex-col justify-start">
                                 <span className={`block text-4xl sm:text-6xl lg:text-7xl transition-opacity duration-300 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}>
                                     {cyclingWords[index] === "Multi-steps Forms" ? (
                                         <>
@@ -66,8 +59,8 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                     )}
                                 </span>
                                 <div className="mt-2 flex items-center justify-start gap-x-2">
-                                    <span className="text-lg sm:text-xl">Inside</span>
-                                    <span className="text-3xl sm:text-4xl text-green-500">WhatsApp.</span>
+                                    <span className="text-lg sm:text-xl text-slate-600 dark:text-slate-300">Inside</span>
+                                    <span className="text-3xl sm:text-4xl text-green-500 dark:text-green-400">WhatsApp</span>
                                     <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 text-green-500" />
                                 </div>
                             </h1>
@@ -75,10 +68,10 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                                 "Game Changing for Customer Engagement"
                             </p>
                             <div className="mt-6 space-y-5 max-w-xl">
-                                <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+                                <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 content-text">
                                     “95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.”
                                 </p>
-                                <p className="font-semibold text-md text-slate-700 dark:text-slate-300 italic p-4 bg-slate-100 dark:bg-slate-800/50 rounded-lg border-l-4 border-green-500 shadow-sm">
+                                <p className="font-semibold text-md text-white italic p-4 bg-green-900/40 rounded-lg border-l-4 border-green-300 shadow-sm backdrop-blur-sm">
                                     “No more scattered chats, endless reminders, or missed follow-ups. WhatsForm transforms WhatsApp into your business engine.”
                                 </p>
                             </div>

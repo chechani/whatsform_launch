@@ -11,10 +11,15 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
     const [isSolutionsOpen, setSolutionsOpen] = useState(false);
     const [isMobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
 
+    // Debug theme changes
+    useEffect(() => {
+        console.log('Header - Received theme prop:', theme);
+    }, [theme]);
+
     const handleThemeToggle = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Theme button clicked! Current theme:', theme);
+        console.log('Header - Button clicked, current theme prop:', theme);
         toggleTheme();
     };
 
@@ -123,22 +128,26 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                             </Link>
                         </div>
                         
-                        {/* Theme Toggle Buttons */}
-                        <button
-                            onClick={handleThemeToggle}
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm mr-2 font-bold"
-                        >
-                            {theme} → {theme === 'dark' ? 'light' : 'dark'}
-                        </button>
-                        
-                        <button
-                            type="button"
-                            onClick={handleThemeToggle}
-                            className="relative flex items-center justify-center w-12 h-12 rounded-full text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 border-2 border-slate-300 dark:border-slate-600"
-                            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                        >
-                            {theme === 'dark' ? '🌞' : '🌙'}
-                        </button>
+                        {/* Theme Toggle Button */}
+                        <div className="flex items-center space-x-2">
+                            <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                                {theme}
+                            </span>
+                            <button
+                                type="button"
+                                onClick={handleThemeToggle}
+                                className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 border group ${
+                                    theme === 'dark' 
+                                        ? 'text-yellow-400 bg-slate-800 hover:bg-slate-700 border-slate-600' 
+                                        : 'text-slate-700 bg-yellow-100 hover:bg-yellow-200 border-yellow-300'
+                                }`}
+                                aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                            >
+                                <div className="transition-transform duration-300 group-hover:scale-110">
+                                    {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+                                </div>
+                            </button>
+                        </div>
                         <div className="lg:hidden ml-2">
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">
                                 {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -197,6 +206,21 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                         <Link href="/signup" legacyBehavior>
                             <a onClick={handleMobileNavClick} className="flex-1 text-center bg-green-500 text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-all">Start 14-Day Trial</a>
                         </Link>
+                    </div>
+                    
+                    {/* Theme Toggle for Mobile */}
+                    <div className="flex justify-center mt-4 px-4">
+                        <button
+                            type="button"
+                            onClick={handleThemeToggle}
+                            className="flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all duration-300 border border-slate-300 dark:border-slate-600"
+                            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                        >
+                            {theme === 'dark' ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
+                            <span className="text-sm font-medium">
+                                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -185,17 +185,6 @@ const FormsBrowserPage: React.FC<{ navigate: (path: string) => void }> = ({ navi
     return (
         <div className="pt-24 bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
              <div className="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12">
-                 {/* Theme Test Section */}
-                 <div className="mb-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 transition-colors duration-300">
-                     <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Theme Test</h2>
-                     <p className="text-gray-700 dark:text-gray-300">This section should change colors based on the current theme.</p>
-                     <div className="mt-2 flex space-x-2">
-                         <div className="w-4 h-4 bg-red-500 dark:bg-red-400 rounded"></div>
-                         <div className="w-4 h-4 bg-green-500 dark:bg-green-400 rounded"></div>
-                         <div className="w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded"></div>
-                     </div>
-                 </div>
-                 
                  <div className="sticky top-24 z-30 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-lg -mx-6 sm:-mx-8 lg:-mx-12 px-6 sm:px-8 lg:px-12 py-4 mb-4 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
                     <div className="flex items-center justify-between">
                          <div className="relative w-full max-w-lg">

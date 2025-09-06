@@ -1,4 +1,3 @@
-
 import { 
     FormsIcon, InboxIcon, CalendarIcon, UsersIcon, SendMessageIcon, TemplateIcon, SparklesIcon, 
     CodeBracketIcon, ArchitectureIcon, NoCodeIcon, CheckCircleIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon,
@@ -198,17 +197,62 @@ export const comparisonSectionData = {
         {
             name: "Wati",
             description: "Focused on a complete, integrated platform experience.",
-            path: "/pricing"
+            path: "/whatsform-vs-wati"
         },
         {
             name: "Interakt",
             description: "Advanced automation and AI that goes deeper.",
-            path: "/pricing"
+            path: "/whatsform-vs-interakt"
         },
         {
             name: "Double Tick",
             description: "Built for scalability and enterprise-grade workflows.",
-            path: "/pricing"
+            path: "/whatsform-vs-double-tick"
         }
+    ]
+};
+
+export const faq = {
+    title: "Frequently Asked Questions",
+    subtitle: "Find answers to common questions about our platform, features, and pricing.",
+    categories: [
+        {
+            id: 'getting-started',
+            name: "General & Getting Started",
+            description: "The basics of what WhatsForm is and how to begin.",
+            faqs: [
+                {
+                    question: "What is WhatsForm?",
+                    answer: `WhatsForm is a comprehensive platform that transforms WhatsApp into a powerful tool for business. It allows you to create interactive forms, automate workflows, manage team conversations in a shared inbox, and deploy AI agents to handle sales, support, and operational tasks.`
+                },
+                {
+                    question: "How is WhatsForm different from the regular WhatsApp Business App?",
+                    answer: `The standard WhatsApp Business App is great for small-scale, one-on-one communication. WhatsForm is built on the WhatsApp Business API, designed for scale. It offers advanced features like multi-agent access (Team Inbox), AI-powered chatbots, no-code workflow automation, CRM integrations, and the ability to handle thousands of conversations simultaneously.`
+                },
+                {
+                    question: "Do I need a WhatsApp Business API account?",
+                    answer: `Yes, WhatsForm is built on the official WhatsApp Business API for reliability and scale. If you don't have one, our team will guide you through the quick and easy setup process with Meta.`
+                },
+            ]
+        },
+        {
+            id: 'features',
+            name: "Platform Features",
+            description: "A deeper dive into our core capabilities.",
+            faqs: [
+                {
+                    question: "What are 'conversational forms' or 'WhatsApp Flows'?",
+                    answer: `Unlike static web forms (like Google Forms), conversational forms present questions one by one inside a WhatsApp chat. This feels like a natural dialogue, leading to much higher completion rates. They can include buttons, lists, and collect rich media like photos and documents.`
+                },
+                {
+                    question: "What is the Team Inbox?",
+                    answer: `The Team Inbox is a centralized dashboard where your entire team can view, manage, and respond to all WhatsApp conversations. You can assign chats, add private notes for internal collaboration, and track conversation status to ensure seamless customer service.`
+                },
+                {
+                    question: "How does the 'no-code' automation builder work?",
+                    answer: `Our visual flow builder allows you to design complex, multi-step conversations and workflows using a drag-and-drop interface or even a simple Excel sheet. You can create interactive forms, set up conditional logic, and trigger actions without writing a single line of code.`
+                },
+            ]
+        },
     ]
 };
