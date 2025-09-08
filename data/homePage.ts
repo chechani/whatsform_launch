@@ -12,37 +12,37 @@ export const uniqueFeatures = {
     `WhatsForm transforms WhatsApp into a complete business platform — every message can capture data, trigger workflows, and deliver AI-powered assistance in real time.`,
   pillars: [
     {
-      icon: ChatBubbleOvalLeftEllipsisIcon,
+  icon: "ChatBubbleOvalLeftEllipsisIcon",
       title: "WhatsApp-Native Workflows",
       description:
         `Structured, multi-screen forms built directly inside WhatsApp. Every action becomes a workflow step — enabling data collection, updates, and follow-ups without leaving chat.`,
     },
     {
-      icon: SparklesIcon,
+  icon: "SparklesIcon",
       title: "AI-Powered Conversations",
       description:
         `Integrated AI agents validate inputs, adapt flows, summarize interactions, and escalate intelligently. This creates context-aware, human-like conversations that boost satisfaction.`,
     },
     {
-      icon: ArrowsRightLeftIcon,
+  icon: "ArrowsRightLeftIcon",
       title: "Deep Integrations with 200+ Apps",
       description:
         `Through n8n orchestration and APIs, WhatsForm connects seamlessly with CRMs, ERPs, calendars, and databases. Every WhatsApp interaction can trigger multi-step automation in real time.`,
     },
     {
-      icon: ChatBubbleOvalLeftEllipsisIcon,
+  icon: "ChatBubbleOvalLeftEllipsisIcon",
       title: "Enterprise-Grade Architecture",
       description:
         `Built on the Frappe framework with dynamic DocTypes, workflow engines, audit trails, and role-based access control. Scalable, secure, and compliant — deployable even on-premises.`,
     },
     {
-      icon: ArrowsRightLeftIcon,
+  icon: "ArrowsRightLeftIcon",
       title: "Team Collaboration Tools",
       description:
         `Shared team inbox, internal notes, contact groups, and calendar dashboards make collaboration seamless. Assign chats, manage tasks, and track client status — all inside WhatsApp.`,
     },
     {
-      icon: SparklesIcon,
+  icon: "SparklesIcon",
       title: "No-Code Business Automation",
       description:
         `SMEs and partners can design plug-and-play funnels, compliance reminders, and customer journeys without coding. Democratizing advanced automation for every business.`,
@@ -56,10 +56,10 @@ export const uniqueFeatures = {
 
 
 export const benefits = [
-    { icon: CheckCircleIcon, title: "Higher Engagement", description: `Keep customers in their familiar WhatsApp environment, boosting response rates.` },
-    { icon: CheckCircleIcon, title: "Reduced Overhead", description: `Automate routine queries and data entry, freeing up your team for high-value tasks.` },
-    { icon: CheckCircleIcon, title: "Enhanced CX", description: `Provide personalized, 24/7 assistance and seamless interactions.` },
-    { icon: CheckCircleIcon, title: "Improved Compliance", description: `Maintain audit logs of all form submissions and agent interactions.` },
+  { icon: "CheckCircleIcon", title: "Higher Engagement", description: `Keep customers in their familiar WhatsApp environment, boosting response rates.` },
+  { icon: "CheckCircleIcon", title: "Reduced Overhead", description: `Automate routine queries and data entry, freeing up your team for high-value tasks.` },
+  { icon: "CheckCircleIcon", title: "Enhanced CX", description: `Provide personalized, 24/7 assistance and seamless interactions.` },
+  { icon: "CheckCircleIcon", title: "Improved Compliance", description: `Maintain audit logs of all form submissions and agent interactions.` },
 ];
 
 export const useCases = [ "Healthcare", "Education", "Government", "Logistics", "Retail & E-Commerce", "BFSI", "Real Estate", "Professional Services" ];
@@ -91,99 +91,83 @@ export const testimonialsData = [
     title: "Eltech",
     logoUrl: "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
     imageUrl: "https://picsum.photos/seed/person3/100/100",
-    videoId: "20gL7XOlKkQ",
-    videoThumbnail: "https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg",
-  },
-  {
-    quote:
-      `Managing multiple WhatsApp campaigns for clients used to be chaotic. With WhatsForm’s structured flows, automation, and detailed analytics, we now run campaigns at scale — and prove ROI with real numbers. Our client retention has improved significantly.`,
-    author: "David Chen",
-    title: "Founder, CreativeSpark Agency",
-    logoUrl: "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
-    imageUrl: "https://picsum.photos/seed/person4/100/100",
   },
 ];
 
-
-export const uspData = {
-  title: "A Complete Solution for Growth",
-  subtitle: "Your All-in-One Solution for WhatsApp Success.",
-  intro: `From initial contact to long-term engagement, our platform provides the tools to build, automate, and scale your business communications.`,
-  features: [
-    {
-      icon: FormsIcon,
-      title: "Forms to Capture.",
-      description: `Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.`,
-      path: "/powerful-forms",
-    },
-    {
-      icon: ArchitectureIcon,
-      title: "Workflows to utomate.",
-      description: `Design and deploy complex, multi-step automated processes that save time and reduce manual effort.`,
-      path: "/powerful-forms",
-    },
-    {
-      icon: SparklesIcon,
-      title: "AI to Assist.",
-      description: `Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.`,
-      path: "/smarty-ai",
-    },
-    {
-      icon: InboxIcon,
-      title: "Inbox to Collaborate.",
-      description: `Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.`,
-      path: "/team-inbox",
-    },
-    {
-      icon: CalendarIcon,
-      title: "Reminders to Follow-up.",
-      description: `Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.`,
-      path: "/calendar",
-    },
-    {
-      icon: MegaphoneIcon,
-      title: "Campaigns to Engage.",
-      description: `Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.`,
-      path: "/marketing",
-    },
-    {
-      icon: SendMessageIcon,
-      title: "Broadcasts to Inform.",
-      description: `Send important updates, announcements, and promotional messages to a large, segmented audience instantly.`,
-      path: "/marketing",
-    },
-    {
-      icon: CodeBracketIcon,
-      title: "Integrations to Connect.",
-      description: `Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.`,
-      path: "/developer-docs",
-    },
-    {
-      icon: ChartBarIcon,
-      title: "Reports to Analyze.",
-      description: `Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.`,
-      path: "/form-responses",
-    },
-    {
-      icon: TemplateIcon,
-      title: "Templates to Simplify.",
-      description: `Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.`,
-      path: "/templates",
-    },
-    {
-      icon: UsersIcon,
-      title: "Contacts to Organize.",
-      description: `Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.`,
-      path: "/contact-management",
-    },
-    {
-      icon: CubeTransparentIcon,
-      title: "Flows to Scale.",
-      description: `Design complex, multi-screen conversational flows that scale your operations and handle any business process.`,
-      path: "/powerful-forms",
-    },
-  ]
-};
+export const features = [
+  {
+    icon: "FormsIcon",
+    title: "Forms to capture.",
+    description: `Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.`,
+    path: "/powerful-forms",
+  },
+  {
+    icon: "ArchitectureIcon",
+    title: "Workflows to automate.",
+    description: `Design and deploy complex, multi-step automated processes that save time and reduce manual effort.`,
+    path: "/powerful-forms",
+  },
+  {
+    icon: "SparklesIcon",
+    title: "AI to assist.",
+    description: `Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.`,
+    path: "/smarty-ai",
+  },
+  {
+    icon: "InboxIcon",
+    title: "Inbox to collaborate.",
+    description: `Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.`,
+    path: "/team-inbox",
+  },
+  {
+    icon: "CalendarIcon",
+    title: "Reminders to follow-up.",
+    description: `Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.`,
+    path: "/calendar",
+  },
+  {
+    icon: "MegaphoneIcon",
+    title: "Campaigns to engage.",
+    description: `Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.`,
+    path: "/marketing",
+  },
+  {
+    icon: "SendMessageIcon",
+    title: "Broadcasts to inform.",
+    description: `Send important updates, announcements, and promotional messages to a large, segmented audience instantly.`,
+    path: "/marketing",
+  },
+  {
+    icon: "CodeBracketIcon",
+    title: "Integrations to connect.",
+    description: `Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.`,
+    path: "/developer-docs",
+  },
+  {
+    icon: "ChartBarIcon",
+    title: "Reports to analyze.",
+    description: `Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.`,
+    path: "/form-responses",
+  },
+  {
+    icon: "TemplateIcon",
+    title: "Templates to simplify.",
+    description: `Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.`,
+    path: "/templates",
+  },
+  {
+    icon: "UsersIcon",
+    title: "Contacts to organize.",
+    description: `Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.`,
+    path: "/contact-management",
+  },
+  {
+    icon: "CubeTransparentIcon",
+    title: "Flows to scale.",
+    description: `Design complex, multi-screen conversational flows that scale your operations and handle any business process.`,
+    path: "/powerful-forms",
+  },
+];
 
 export const comparisonSectionData = {
     title: "How WhatsForm Stacks Up",

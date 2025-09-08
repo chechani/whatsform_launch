@@ -13,81 +13,64 @@ const ThemeTestPage: React.FC = () => {
         setStorageValue(localStorage.getItem('theme') || 'null');
     };
 
+
     // Initialize theme on client side
     React.useEffect(() => {
         setIsClient(true);
-        
         const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const systemPrefersDark = typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-        
-        console.log('Theme Test - Initializing:', { savedTheme, systemPrefersDark, initialTheme });
-        
         setTheme(initialTheme);
-        
         const root = document.documentElement;
         if (initialTheme === 'dark') {
             root.classList.add('dark');
         } else {
             root.classList.remove('dark');
         }
-        
         localStorage.setItem('theme', initialTheme);
         updateDisplayValues();
     }, []);
 
     const toggleTheme = () => {
         if (!isClient) return;
-        
         const newTheme = theme === 'light' ? 'dark' : 'light';
-        console.log('Theme Test - Toggling from', theme, 'to', newTheme);
-        
         setTheme(newTheme);
-        
         const root = document.documentElement;
         if (newTheme === 'dark') {
             root.classList.add('dark');
-            console.log('Theme Test - Added dark class');
         } else {
             root.classList.remove('dark');
-            console.log('Theme Test - Removed dark class');
         }
-        
         localStorage.setItem('theme', newTheme);
-        
-        // Update display values after DOM changes
         setTimeout(() => {
             updateDisplayValues();
         }, 50);
     };
 
+
     const resetTheme = () => {
+        if (!isClient) return;
         localStorage.removeItem('theme');
         document.documentElement.classList.remove('dark');
         setTheme('light');
         updateDisplayValues();
-        console.log('Theme Test - Reset to light mode');
     };
 
     const forceLight = () => {
+        if (!isClient) return;
         setTheme('light');
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
         updateDisplayValues();
-        console.log('Theme Test - Forced to light mode');
     };
 
     const forceDark = () => {
+        if (!isClient) return;
         setTheme('dark');
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
         updateDisplayValues();
-        console.log('Theme Test - Forced to dark mode');
     };
-
-    if (!isClient) {
-        return <div className="p-8">Loading...</div>;
-    }
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
@@ -99,9 +82,9 @@ const ThemeTestPage: React.FC = () => {
                         <h2 className="text-xl font-semibold mb-4">Current Theme Info</h2>
                         <p>Theme State: <strong>{theme}</strong></p>
                         <p>Is Client: <strong>{isClient.toString()}</strong></p>
-                        <p>HTML Class: <strong>{domClass}</strong></p>
-                        <p>LocalStorage: <strong>{storageValue}</strong></p>
-                        <p>Classes on HTML: <strong>{document.documentElement.className}</strong></p>
+                        <p>HTML Class: <strong>{isClient ? domClass : 'n/a (server)'}</strong></p>
+                        <p>LocalStorage: <strong>{isClient ? storageValue : 'n/a (server)'}</strong></p>
+                        <p>Classes on HTML: <strong>{isClient ? domClass : 'n/a (server)'}</strong></p>
                     </div>
 
                     <div className="p-6 bg-blue-100 dark:bg-blue-900 rounded-lg">

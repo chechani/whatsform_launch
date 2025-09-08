@@ -75,4 +75,8 @@ const EducationPage: React.FC = () => {
     );
 };
 
+export function getStaticProps() {
+    return { props: {} };
+}
+
 export default EducationPage;
