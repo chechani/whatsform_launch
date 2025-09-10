@@ -70,18 +70,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     const path = router.pathname;
     const pageSeo = seoData[path] || seoData['/'];
 
-    // Don't render until mounted to prevent hydration mismatch
-    if (!mounted) {
-        return (
-            <div className="overflow-x-hidden bg-white min-h-screen">
-                <Head>
-                    <title>{pageSeo.title}</title>
-                    <meta name="description" content={pageSeo.description} />
-                </Head>
-                <div>Loading...</div>
-            </div>
-        );
-    }
+    // Only delay theme toggling until mounted, but always render the app for static export
 
     return (
         <div className="overflow-x-hidden bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">

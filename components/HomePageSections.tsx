@@ -1,7 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon } from '../icons';
-import { benefits, useCases, uniqueFeatures, testimonialsData, uspData, comparisonSectionData } from '../data/homePage';
+import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon, ArchitectureIcon, NoCodeIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon, CubeTransparentIcon, ChartBarIcon, MegaphoneIcon, CalendarIcon, InboxIcon, UsersIcon, SendMessageIcon, TemplateIcon } from '../icons';
+// Map icon string names to actual icon components
+const iconMap: Record<string, React.ComponentType<any>> = {
+    CheckCircleIcon,
+    CodeBracketIcon,
+    SparklesIcon,
+    DeviceIcon,
+    PlayCircleIcon,
+    CloseIcon,
+    WhatsAppIcon,
+    FormsIcon,
+    ArrowRightIcon,
+    ArchitectureIcon,
+    NoCodeIcon,
+    ChatBubbleOvalLeftEllipsisIcon,
+    ArrowsRightLeftIcon,
+    CubeTransparentIcon,
+    ChartBarIcon,
+    MegaphoneIcon,
+    CalendarIcon,
+    InboxIcon,
+    UsersIcon,
+    SendMessageIcon,
+    TemplateIcon,
+};
+import { benefits, useCases, comparisonSectionData } from '../data/homePage';
 
 const cyclingWords = ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
 
@@ -11,33 +35,36 @@ const Card: React.FC<{ children: React.ReactNode, className?: string }> = ({ chi
     </div>
 );
 
-export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => {
+export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = ({ data, navigate }) => {
     const [index, setIndex] = useState(0);
     const [isFading, setIsFading] = useState(false);
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-    const videoId = '20gL7XOlKkQ'; // Intro video ID
-    const videoThumbnail = 'https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg';
+    const videoId = data?.videoId || '20gL7XOlKkQ';
+    const videoThumbnail = data?.videoThumbnail || 'https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg';
+    const cyclingWords = data?.cyclingWords || ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
+    const heroTitle = data?.title || 'WhatsForm – Revolutionize Your WhatsApp Business Workflows';
+    const heroSubtitle = data?.subtitle || 'Empowering WhatsApp Communication';
+    const heroDescription = data?.description || "95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.";
+    const heroHighlight = data?.highlight || "No more scattered chats, endless reminders, or missed follow-ups. WhatsForm transforms WhatsApp into your business engine.";
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setIsFading(true); // Start fading out
+            setIsFading(true);
             setTimeout(() => {
                 setIndex((prevIndex) => (prevIndex + 1) % cyclingWords.length);
-                setIsFading(false); // Start fading in
-            }, 300); // This should be less than the interval time and aligned with CSS transition
-        }, 2500); // Time each word is displayed + transition time
-
+                setIsFading(false);
+            }, 300);
+        }, 2500);
         return () => clearInterval(timer);
-    }, []);
-    
+    }, [cyclingWords.length]);
+
     return (
         <>
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300">
-                {/* Original decorative elements */}
+                <h1 className="sr-only">{heroTitle}</h1>
+                {/* Decorative elements */}
                 <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-slate-200/30 dark:bg-slate-500/10 rounded-full blur-3xl"></div>
-                
-                {/* Floating WhatsApp-style bubbles */}
                 <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-96 h-96 bg-white/05 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-green-600/15 rounded-full blur-3xl" />
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -45,7 +72,7 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                         {/* Left Side: Text Content */}
                         <div className="text-left animate-fade-in">
                             <span className="inline-block bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 font-semibold px-4 py-1 rounded-full mb-4 text-sm uppercase tracking-wider backdrop-blur-sm border border-blue-200 dark:border-slate-700">
-                                Empowering WhatsApp Communication
+                                {heroSubtitle}
                             </span>
                             <h1 className="font-black text-gray-900 dark:text-white leading-tight tracking-tighter min-h-[8rem] sm:min-h-[10rem] md:min-h-[12rem] flex flex-col justify-start">
                                 <span className={`block text-4xl sm:text-6xl lg:text-7xl transition-opacity duration-300 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}>
@@ -69,10 +96,10 @@ export const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate 
                             </p>
                             <div className="mt-6 space-y-5 max-w-xl">
                                 <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 content-text">
-                                    “95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.”
+                                    {heroDescription}
                                 </p>
                                 <p className="font-semibold text-md text-white italic p-4 bg-green-900/40 rounded-lg border-l-4 border-green-300 shadow-sm backdrop-blur-sm">
-                                    “No more scattered chats, endless reminders, or missed follow-ups. WhatsForm transforms WhatsApp into your business engine.”
+                                    {heroHighlight}
                                 </p>
                             </div>
                         </div>
@@ -151,39 +178,44 @@ export const ActionStrip: React.FC<{ navigate: (path: string) => void }> = ({ na
     );
 };
 
-export const PowerfulFeatures: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section id="features" className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center mb-16 max-w-4xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
-                    {uniqueFeatures.title}
-                </h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
-                    {uniqueFeatures.subtitle}
-                </p>
+export const PowerfulFeatures: React.FC<{ data: any; navigate: (path: string) => void }> = ({ data, navigate }) => {
+    if (!data || !Array.isArray(data.pillars) || data.pillars.length === 0) {
+        return null;
+    }
+    return (
+        <section id="features" className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <div className="text-center mb-16 max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
+                        {data.title}
+                    </h2>
+                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                        {data.subtitle}
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {data.pillars.map((pillar: any) => (
+                        <Card key={pillar.title} className="text-center">
+                            <div className="flex justify-center items-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 mx-auto">
+                                {iconMap[pillar.icon] && React.createElement(iconMap[pillar.icon])}
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{pillar.title}</h3>
+                            <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{pillar.description}</p>
+                        </Card>
+                    ))}
+                </div>
+                <div className="mt-12 text-center">
+                    <button
+                        onClick={() => navigate(data.cta.path)}
+                        className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg"
+                    >
+                        {data.cta.text}
+                    </button>
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {uniqueFeatures.pillars.map(pillar => (
-                     <Card key={pillar.title} className="text-center">
-                        <div className="flex justify-center items-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 mx-auto">
-                            {React.createElement(pillar.icon)}
-                        </div>
-                        <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-5">{pillar.title}</h3>
-                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{pillar.description}</p>
-                    </Card>
-                ))}
-            </div>
-            <div className="mt-12 text-center">
-                <button
-                    onClick={() => navigate(uniqueFeatures.cta.path)}
-                    className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg"
-                >
-                    {uniqueFeatures.cta.text}
-                </button>
-            </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
     <section id="mini-apps" className="py-16 sm:py-24 lg:py-28 bg-pastel-blue dark:bg-sky-950/30 transition-colors duration-300">
@@ -250,7 +282,7 @@ export const Benefits: React.FC = () => (
                 {benefits.map((benefit, index) => (
                     <Card key={index} className="text-center">
                         <div className="text-green-500 dark:text-green-400 mx-auto h-10 w-10 flex items-center justify-center">
-                            {React.createElement(benefit.icon, { className: "h-10 w-10" })}
+                            {iconMap[benefit.icon] && React.createElement(iconMap[benefit.icon], { className: "h-10 w-10" })}
                         </div>
                         <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{benefit.title}</h3>
                         <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{benefit.description}</p>
@@ -282,7 +314,10 @@ export const UseCases: React.FC = () => (
 );
 
 
-export const Testimonials: React.FC = () => {
+export const Testimonials: React.FC<{ testimonials: any[] }> = ({ testimonials }) => {
+    if (!Array.isArray(testimonials) || testimonials.length === 0) {
+        return null;
+    }
     const [activeTestimonial, setActiveTestimonial] = useState(0);
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
     const [currentVideoId, setCurrentVideoId] = useState('');
@@ -292,7 +327,7 @@ export const Testimonials: React.FC = () => {
         setIsVideoModalOpen(true);
     };
     
-    const activeData = testimonialsData[activeTestimonial];
+    const activeData = testimonials[activeTestimonial];
 
     return (
         <>
@@ -320,7 +355,7 @@ export const Testimonials: React.FC = () => {
                         </div>
                     </div>
                     <div className="space-y-4">
-                        {testimonialsData.map((testimonial, index) => (
+                        {testimonials.map((testimonial, index) => (
                              <button
                                 key={index}
                                 onClick={() => setActiveTestimonial(index)}
@@ -363,34 +398,40 @@ export const Testimonials: React.FC = () => {
     );
 };
 
-export const UspSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
-    <section className="py-16 sm:py-24 lg:py-28 bg-yellow-50 dark:bg-gray-800 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-             <div className="text-center mb-16 max-w-4xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{uspData.title}</h2>
-                <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{uspData.intro}</p>
+export const UspSection: React.FC<{ data?: any; navigate: (path: string) => void }> = ({ data = {}, navigate }) => {
+    const features = Array.isArray(data.features) ? data.features : [];
+    if (!features.length) {
+        return null; // Or render a fallback message/component
+    }
+    return (
+        <section className="py-16 sm:py-24 lg:py-28 bg-yellow-50 dark:bg-gray-800 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <div className="text-center mb-16 max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{data.title || ""}</h2>
+                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{data.intro || ""}</p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {features.map((feature: any) => (
+                        <Link 
+                            key={feature.title}
+                            href={feature.path}
+                            legacyBehavior
+                        >
+                            <a className="group bg-white dark:bg-gray-700 p-6 rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+                                <div className="text-green-600 dark:text-green-400 mb-3">{iconMap[feature.icon] && React.createElement(iconMap[feature.icon], { className: "h-8 w-8" })}</div>
+                                <h3 className="text-lg font-bold text-gray-800 dark:text-white">{feature.title}</h3>
+                                <p className="mt-1 text-gray-600 dark:text-gray-300 flex-grow">{feature.description}</p>
+                                <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
+                                    Learn More &rarr;
+                                </span>
+                            </a>
+                        </Link>
+                    ))}
+                </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {uspData.features.map(feature => (
-                    <Link 
-                        key={feature.title}
-                        href={feature.path}
-                        legacyBehavior
-                    >
-                        <a className="group bg-white dark:bg-gray-700 p-6 rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-                             <div className="text-green-600 dark:text-green-400 mb-3">{React.createElement(feature.icon, { className: "h-8 w-8" })}</div>
-                             <h3 className="text-lg font-bold text-gray-800 dark:text-white">{feature.title}</h3>
-                             <p className="mt-1 text-gray-600 dark:text-gray-300 flex-grow">{feature.description}</p>
-                             <span className="mt-4 font-semibold text-green-600 dark:text-green-400 group-hover:underline self-start">
-                                Learn More &rarr;
-                             </span>
-                        </a>
-                    </Link>
-                ))}
-            </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 
 export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
