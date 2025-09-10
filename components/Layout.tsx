@@ -129,7 +129,7 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                         </div>
                         
                         {/* Theme Toggle Button */}
-                        <div className="flex items-center space-x-2">
+                        {/* <div className="flex items-center space-x-2">
                             <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
                                 {theme}
                             </span>
@@ -147,7 +147,7 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                                     {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
                                 </div>
                             </button>
-                        </div>
+                        </div> */}
                         <div className="lg:hidden ml-2">
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">
                                 {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
