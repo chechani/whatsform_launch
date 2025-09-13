@@ -9,7 +9,7 @@ import {
 export const uniqueFeatures = {
   title: "Beyond Chats. Into Forms, Flows & Automation.",
   subtitle:
-    `WhatsForm transforms WhatsApp into a complete business platform — every message can capture data, trigger workflows, and deliver AI-powered assistance in real time.`,
+    `Automate. Engage. Scale.`,
   pillars: [
     {
   icon: "ChatBubbleOvalLeftEllipsisIcon",

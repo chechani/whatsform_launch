@@ -91,10 +91,10 @@ export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = (
                                     <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 text-green-500" />
                                 </div>
                             </h1>
-                            <p className="mt-2 text-md font-semibold text-slate-600 dark:text-slate-400 tracking-wide">
+                            <p className="mt-2 text-md font-bold text-yellow-500 dark:text-yellow-300 tracking-wide">
                                 "Game Changing for Customer Engagement"
                             </p>
-                            <div className="mt-6 space-y-5 max-w-xl">
+                            <div className="mt-3 space-y-5 max-w-xl">
                                 <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 content-text">
                                     {heroDescription}
                                 </p>
@@ -257,9 +257,9 @@ export const MiniApps: React.FC<{ navigate: (path: string) => void }> = ({ navig
                     <img src="https://picsum.photos/seed/mini-app-hero/600/500" alt="Mini-app concept illustration" className="rounded-xl" />
                 </div>
             </div>
-             <div className="mt-12 text-center">
-                <button
-                    onClick={() => navigate('#/product')}
+                <div className="mt-12 text-center">
+                    <button
+                        onClick={() => navigate('/product')}
                     className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg"
                 >
                     Learn About Mini-Apps
@@ -477,7 +477,7 @@ export const FormsBrowserTeaser: React.FC<{ navigate: (path: string) => void }> 
                     </div>
                     <div className="flex-shrink-0">
                         <button
-                            onClick={() => navigate('#/forms-browser')}
+                            onClick={() => navigate('/forms-browser')}
                             className="flex items-center justify-center space-x-3 bg-green-500 text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg shadow-green-500/30"
                         >
                             <span>Explore Forms Now</span>

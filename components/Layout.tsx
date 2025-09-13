@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
@@ -44,9 +43,9 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="flex justify-between items-center h-20">
                     <Link href="/" legacyBehavior>
-                        <a className="flex items-center">
-                            <img src="https://whatsform.in/assets/images/AIBOTLOGO.png" alt="WhatsForm Logo" className="h-16 w-auto dark:brightness-0 dark:invert" />
-                        </a>
+                      <a className="flex items-center">
+                        <img src="/logo/whatsform.png" alt="WhatsForm Logo" className="h-10 w-auto" />
+                      </a>
                     </Link>
                     
                     <nav className="hidden lg:flex items-center space-x-8">
@@ -119,41 +118,41 @@ export const Header: React.FC<{ theme: string; toggleTheme: () => void; }> = ({ 
                     </nav>
 
                     <div className="flex items-center space-x-2">
-                         <div className="hidden sm:flex items-center space-x-2">
-                            <Link href="/book-demo" legacyBehavior>
-                                <a className="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-2 px-5 rounded-lg text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">Book Demo</a>
-                            </Link>
-                            <Link href="/signup" legacyBehavior>
-                                <a className="bg-green-500 text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-all shadow-sm">Start 14-Day Trial</a>
-                            </Link>
-                        </div>
-                        
-                        {/* Theme Toggle Button */}
-                        {/* <div className="flex items-center space-x-2">
-                            <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
-                                {theme}
-                            </span>
-                            <button
-                                type="button"
-                                onClick={handleThemeToggle}
-                                className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 border group ${
-                                    theme === 'dark' 
-                                        ? 'text-yellow-400 bg-slate-800 hover:bg-slate-700 border-slate-600' 
-                                        : 'text-slate-700 bg-yellow-100 hover:bg-yellow-200 border-yellow-300'
-                                }`}
-                                aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                            >
-                                <div className="transition-transform duration-300 group-hover:scale-110">
-                                    {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-                                </div>
-                            </button>
-                        </div> */}
-                        <div className="lg:hidden ml-2">
-                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">
-                                {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-                            </button>
-                        </div>
-                    </div>
+                        <div className="hidden sm:flex items-center space-x-2">
+                           <Link href="/book-demo" legacyBehavior>
+                               <a className="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-2 px-5 rounded-lg text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">Book Demo</a>
+                           </Link>
+                           <Link href="/signup" legacyBehavior>
+                               <a className="bg-green-500 text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-green-600 transition-all shadow-sm">Start 14-Day Trial</a>
+                           </Link>
+                       </div>
+                       
+                       {/* Theme Toggle Button */}
+                       <div className="flex items-center space-x-2">
+                           <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                               {theme}
+                           </span>
+                           <button
+                               type="button"
+                               onClick={handleThemeToggle}
+                               className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 border group ${
+                                   theme === 'dark' 
+                                       ? 'text-yellow-400 bg-slate-800 hover:bg-slate-700 border-slate-600' 
+                                       : 'text-slate-700 bg-yellow-100 hover:bg-yellow-200 border-yellow-300'
+                               }`}
+                               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                           >
+                               <div className="transition-transform duration-300 group-hover:scale-110">
+                                   {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+                               </div>
+                           </button>
+                       </div>
+                       <div className="lg:hidden ml-2">
+                           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-700 dark:text-slate-300 z-50 relative">
+                               {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+                           </button>
+                       </div>
+                   </div>
                 </div>
             </div>
             

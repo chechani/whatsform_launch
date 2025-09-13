@@ -106,7 +106,7 @@ export const footerData = {
         {
             title: 'Company',
             links: [
-                { name: 'About Us', path: '/company' },
+                { name: 'About Us', path: '/about' },
                 { name: 'Careers', path: '/careers' },
                 { name: 'Branding', path: '/branding' },
                 { name: 'Partners', path: '/partners' },

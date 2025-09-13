@@ -4,6 +4,10 @@ export const seoData: { [key: string]: { title: string; description: string } } 
         title: 'WhatsForm – Revolutionize Your WhatsApp Business Workflows',
         description: `Transform chaotic WhatsApp chats into structured, automated workflows. WhatsForm helps you collect data, automate communication, and integrate with your business systems.`,
     },
+    '/about': {
+        title: 'About Us | WhatsForm',
+        description: `Learn about our mission to revolutionize business communication and the team dedicated to building the future of customer engagement.`,
+    },
     '/marketing': {
         title: 'WhatsApp Marketing Automation | WhatsForm',
         description: `Capture leads, automate engagement, and drive revenue with WhatsForm's powerful WhatsApp marketing tools. Turn conversations into conversions.`,
