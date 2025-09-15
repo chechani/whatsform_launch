@@ -168,6 +168,50 @@ export const seoData: { [key: string]: { title: string; description: string } } 
         title: 'Help Center | WhatsForm Support',
         description: `Welcome to our support hub. Find articles, guides, and tutorials to help you master the WhatsForm platform.`,
     },
+    '/help-center/getting-started': {
+        title: 'Help Center: Getting Started | WhatsForm',
+        description: `Set up your workspace, connect WhatsApp, and publish your first flow in minutes.`,
+    },
+    '/help-center/form-building': {
+        title: 'Help Center: Form Building | WhatsForm',
+        description: `Create WhatsApp-native forms with fields, validation, branching, and UX best practices.`,
+    },
+    '/help-center/flow-building': {
+        title: 'Help Center: Flow Building | WhatsForm',
+        description: `Design end-to-end WhatsApp flows with triggers, branching, and integrations. Learn patterns and best practices.`,
+    },
+    '/help-center/ai-agents-planning': {
+        title: 'Help Center: AI Agents Planning | WhatsForm',
+        description: `Plan AI agent scope, guardrails, knowledge sources, and human handoff to ship trustworthy assistants.`,
+    },
+    '/help-center/integrations': {
+        title: 'Help Center: Integrations | WhatsForm',
+        description: `Connect WhatsForm to Google Sheets, Salesforce, HubSpot, ERPNext, Zapier, and custom webhooks.`,
+    },
+    '/help-center/integrations/google-sheets': {
+        title: 'Help Center: Google Sheets Integration | WhatsForm',
+        description: `Sync form submissions to Google Sheets with field mapping and tips for organized data.`,
+    },
+    '/help-center/integrations/webhooks': {
+        title: 'Help Center: Webhooks Integration | WhatsForm',
+        description: `Send JSON payloads to your backend with secure headers and request signing.`,
+    },
+    '/help-center/integrations/salesforce': {
+        title: 'Help Center: Salesforce Integration | WhatsForm',
+        description: `Create leads/contacts and log activities using OAuth and flexible mappings.`,
+    },
+    '/help-center/integrations/hubspot': {
+        title: 'Help Center: HubSpot Integration | WhatsForm',
+        description: `Map WhatsApp leads to HubSpot CRM objects and trigger workflows.`,
+    },
+    '/help-center/integrations/zapier': {
+        title: 'Help Center: Zapier Integration | WhatsForm',
+        description: `Automate tasks with 5,000+ apps using Zapier triggers and actions.`,
+    },
+    '/help-center/integrations/erpnext': {
+        title: 'Help Center: ERPNext Integration | WhatsForm',
+        description: `Create and update ERPNext records from WhatsApp with API key/secret auth.`,
+    },
     '/webinars': {
         title: 'Webinars | WhatsForm',
         description: `Join our live webinars to master WhatsApp automation or watch recordings of past events. Learn how to build forms, automate tasks, and grow your business.`

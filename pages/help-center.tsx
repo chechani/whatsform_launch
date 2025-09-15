@@ -7,6 +7,8 @@ const HelpCenterPage: React.FC = () => {
         { title: 'Getting Started', description: 'Learn the basics of WhatsForm.', link: '/help-center/getting-started' },
         { title: 'Form Building', description: 'Create and customize your forms.', link: '/help-center/form-building' },
         { title: 'Integrations', description: 'Connect WhatsForm to other apps.', link: '/help-center/integrations' },
+    { title: 'Flow Building', description: 'Design end-to-end WhatsApp flows that automate work.', link: '/help-center/flow-building' },
+    { title: 'AI Agents Planning', description: 'Plan, scope, and launch AI agents that work with your team.', link: '/help-center/ai-agents-planning' },
     ];
 
     return (
