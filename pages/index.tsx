@@ -3,9 +3,9 @@ import React from 'react';
 import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner, ComparisonSection } from '../components/HomePageSections';
 import { CTA, FAQ } from '../components/PageBuilder';
 import { uniqueFeatures, features, testimonialsData, faq as homePageFaq } from '../data/homePage';
-import type { GetServerSideProps } from 'next';
+import type { GetStaticProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             hero: uniqueFeatures,

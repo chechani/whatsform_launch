@@ -65,5 +65,5 @@ const CalendarPage: React.FC = () => {
 };
 
 export default CalendarPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

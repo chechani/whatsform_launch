@@ -51,5 +51,5 @@ const CommunityPage: React.FC = () => {
 };
 
 export default CommunityPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

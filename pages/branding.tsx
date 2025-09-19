@@ -47,5 +47,5 @@ const BrandingPage: React.FC = () => {
 };
 
 export default BrandingPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

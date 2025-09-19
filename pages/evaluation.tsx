@@ -141,5 +141,5 @@ const EvaluationPage: React.FC<EvaluationPageProps> = ({ navigate }) => {
 };
 
 export default EvaluationPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -135,5 +135,5 @@ const ApiCollectionPage: React.FC = () => {
 
 export default ApiCollectionPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -168,5 +168,5 @@ const HotelsResortsPage: React.FC = () => {
 
 export default HotelsResortsPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

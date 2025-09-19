@@ -17,5 +17,5 @@ const GettingStarted: React.FC = () => (
 
 export default GettingStarted;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

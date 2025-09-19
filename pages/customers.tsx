@@ -45,5 +45,5 @@ const CustomersPage: React.FC = () => {
 };
 
 export default CustomersPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

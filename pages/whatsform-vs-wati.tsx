@@ -94,5 +94,5 @@ const WatiComparisonPage: React.FC = () => {
 
 export default WatiComparisonPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

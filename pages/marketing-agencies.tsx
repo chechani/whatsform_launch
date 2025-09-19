@@ -69,5 +69,5 @@ const MarketingAgenciesPage: React.FC<MarketingAgenciesPageProps> = ({ navigate 
 };
 
 export default MarketingAgenciesPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -313,5 +313,5 @@ const BookDemoPage: React.FC = () => {
 
 export default BookDemoPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

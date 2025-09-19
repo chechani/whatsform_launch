@@ -270,5 +270,5 @@ const SignupPage: React.FC<{ navigate: (path: string) => void }> = ({ navigate }
 
 export default SignupPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

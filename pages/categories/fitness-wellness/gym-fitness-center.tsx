@@ -168,5 +168,5 @@ const GymFitnessCenterPage: React.FC = () => {
 
 export default GymFitnessCenterPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

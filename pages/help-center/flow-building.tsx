@@ -39,5 +39,5 @@ const FlowBuildingHelp: React.FC = () => {
 
 export default FlowBuildingHelp;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

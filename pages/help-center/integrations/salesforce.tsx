@@ -17,5 +17,5 @@ const SalesforceIntegration: React.FC = () => (
 
 export default SalesforceIntegration;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -41,5 +41,5 @@ const FeaturesPage: React.FC = () => {
 
 export default FeaturesPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

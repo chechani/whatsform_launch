@@ -53,5 +53,5 @@ const SupportPage: React.FC<SupportPageProps> = ({ navigate }) => {
 };
 
 export default SupportPage;
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

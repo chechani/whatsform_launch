@@ -183,5 +183,5 @@ const EntertainmentPage: React.FC = () => {
 
 export default EntertainmentPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -19,5 +19,5 @@ export default PhysicalStoresPage;
 
 
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

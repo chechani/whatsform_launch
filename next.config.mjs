@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ enable static export
+  // ✅ conditionally enable static export for distribution
+  ...(process.env.NEXT_EXPORT === 'true' && { output: 'export' }),
+  
   // ✅ required if you use next/image (there's no Image Optimization server in static export)
   images: { unoptimized: true },
 
-  // ✅ set output directory to 'out'
+  // ✅ static files will be exported to 'out' directory for distribution
   distDir: 'out',
 
   // keep your custom page extensions

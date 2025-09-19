@@ -28,5 +28,5 @@ export default RedirectPage;
 
 
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -286,5 +286,5 @@ const AffiliatesPage: React.FC = () => {
 
 export default AffiliatesPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

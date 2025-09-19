@@ -31,5 +31,5 @@ const AIAgentsPlanningHelp: React.FC = () => {
 
 export default AIAgentsPlanningHelp;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

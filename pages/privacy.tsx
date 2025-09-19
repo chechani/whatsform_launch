@@ -78,5 +78,5 @@ const PrivacyPage: React.FC = () => {
 
 export default PrivacyPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

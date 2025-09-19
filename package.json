@@ -7,7 +7,9 @@
     "dev": "next dev --port 3000 --hostname 0.0.0.0",
     "prebuild": "node scripts/generate-sitemap.cjs",
     "build": "npm run prebuild && next build",
+    "build:static": "npm run prebuild && set NEXT_EXPORT=true&& next build",
     "start": "next start",
+    "start:static": "npx serve out -p 3000",
     "lint": "next lint"
   },
   "dependencies": {

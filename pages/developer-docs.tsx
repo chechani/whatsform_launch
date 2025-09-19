@@ -41,5 +41,5 @@ const DeveloperDocsPage: React.FC = () => {
 
 export default DeveloperDocsPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

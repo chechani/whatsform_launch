@@ -94,5 +94,5 @@ const DoubleTickComparisonPage: React.FC = () => {
 
 export default DoubleTickComparisonPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

@@ -53,5 +53,5 @@ const SahajHospitalPage: React.FC = () => {
 
 export default SahajHospitalPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 

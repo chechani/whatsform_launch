@@ -49,5 +49,5 @@ const CompanyPage: React.FC = () => {
 
 export default CompanyPage;
 
-export { getServerSideProps } from '@/lib/ssr';
+export { getStaticProps } from '@/lib/ssr';
 
