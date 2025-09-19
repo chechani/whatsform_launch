@@ -18,3 +18,6 @@ export default FinTechPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

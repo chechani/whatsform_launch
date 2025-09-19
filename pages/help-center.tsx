@@ -42,3 +42,6 @@ const HelpCenterPage: React.FC = () => {
 };
 
 export default HelpCenterPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

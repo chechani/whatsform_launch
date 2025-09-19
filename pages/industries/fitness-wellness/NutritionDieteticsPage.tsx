@@ -16,3 +16,6 @@ export default NutritionDieteticsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

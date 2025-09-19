@@ -218,3 +218,6 @@ const WebinarsPage: React.FC = () => {
 };
 
 export default WebinarsPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

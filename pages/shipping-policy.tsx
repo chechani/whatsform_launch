@@ -80,3 +80,5 @@ const ShippingPolicyPage: React.FC = () => {
 };
 
 export default ShippingPolicyPage;
+export { getServerSideProps } from '@/lib/ssr';
+

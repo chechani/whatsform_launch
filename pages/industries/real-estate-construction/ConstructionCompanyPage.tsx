@@ -16,3 +16,6 @@ export default ConstructionCompanyPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import React from "react";
 
 type Props = {
@@ -12,7 +12,7 @@ const CategoryPageLayout: React.FC<Props> = ({ time }) => (
 	</div>
 );
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	return {
 		props: {
 			time: new Date().toISOString(),

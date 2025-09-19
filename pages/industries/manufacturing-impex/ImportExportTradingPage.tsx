@@ -16,3 +16,6 @@ export default ImportExportTradingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -74,3 +74,5 @@ const SalesPage: React.FC<SalesPageProps> = ({ navigate }) => {
 };
 
 export default SalesPage;
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default YogaMeditationStudioPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

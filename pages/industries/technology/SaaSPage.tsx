@@ -16,3 +16,6 @@ export default SaaSPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

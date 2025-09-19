@@ -16,3 +16,6 @@ export default GamingStudioPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

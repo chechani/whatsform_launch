@@ -111,8 +111,6 @@ const SiteIndexPage: React.FC = () => {
     );
 };
 
-export function getStaticProps() {
-    return { props: {} };
-}
+export { getServerSideProps } from '@/lib/ssr';
 
 export default SiteIndexPage;

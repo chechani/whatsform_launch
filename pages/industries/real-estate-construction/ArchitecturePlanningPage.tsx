@@ -16,3 +16,6 @@ export default ArchitecturePlanningPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

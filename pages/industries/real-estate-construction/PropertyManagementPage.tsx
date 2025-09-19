@@ -16,3 +16,6 @@ export default PropertyManagementPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

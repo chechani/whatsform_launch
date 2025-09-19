@@ -18,3 +18,6 @@ export default ECommerceOnlineStoresPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

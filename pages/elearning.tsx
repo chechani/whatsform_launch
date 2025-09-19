@@ -17,3 +17,5 @@ const ElearningPage: React.FC = () => {
 };
 
 export default ElearningPage;
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default LogisticsSupplyChainPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

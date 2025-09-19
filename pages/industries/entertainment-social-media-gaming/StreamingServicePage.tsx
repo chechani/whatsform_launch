@@ -16,3 +16,6 @@ export default StreamingServicePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

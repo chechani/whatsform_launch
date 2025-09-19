@@ -16,3 +16,6 @@ const ZapierIntegration: React.FC = () => (
 );
 
 export default ZapierIntegration;
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ const GoogleSheetsIntegration: React.FC = () => (
 );
 
 export default GoogleSheetsIntegration;
+
+export { getServerSideProps } from '@/lib/ssr';
+

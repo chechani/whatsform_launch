@@ -16,3 +16,6 @@ export default FoodDeliveryServicePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

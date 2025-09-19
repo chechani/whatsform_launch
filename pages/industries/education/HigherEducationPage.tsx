@@ -18,3 +18,6 @@ export default HigherEducationPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -35,3 +35,6 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

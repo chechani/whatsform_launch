@@ -16,3 +16,6 @@ export default WellnessRetreatsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

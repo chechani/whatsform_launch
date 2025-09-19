@@ -3,9 +3,9 @@ import React from 'react';
 import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner, ComparisonSection } from '../components/HomePageSections';
 import { CTA, FAQ } from '../components/PageBuilder';
 import { uniqueFeatures, features, testimonialsData, faq as homePageFaq } from '../data/homePage';
+import type { GetServerSideProps } from 'next';
 
-export async function getStaticProps() {
-    // All homepage data is imported statically, but you could fetch from API here if needed
+export const getServerSideProps: GetServerSideProps = async () => {
     return {
         props: {
             hero: uniqueFeatures,
@@ -19,7 +19,7 @@ export async function getStaticProps() {
             faq: homePageFaq,
         },
     };
-}
+};
 
 const HomePage = ({ hero, feature, secondaryFeatures, testimonials, faq }: any) => {
     const navigate = (path: string) => {

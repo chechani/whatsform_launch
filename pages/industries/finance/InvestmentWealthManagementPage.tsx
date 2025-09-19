@@ -18,3 +18,6 @@ export default InvestmentWealthManagementPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

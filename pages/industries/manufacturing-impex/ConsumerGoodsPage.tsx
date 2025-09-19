@@ -16,3 +16,6 @@ export default ConsumerGoodsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

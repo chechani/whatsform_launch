@@ -18,3 +18,6 @@ export default CorporateTrainingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

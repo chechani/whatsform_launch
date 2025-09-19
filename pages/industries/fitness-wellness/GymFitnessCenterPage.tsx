@@ -16,3 +16,6 @@ export default GymFitnessCenterPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

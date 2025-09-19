@@ -65,3 +65,5 @@ const FormResponsePage: React.FC = () => {
 };
 
 export default FormResponsePage;
+export { getServerSideProps } from '@/lib/ssr';
+

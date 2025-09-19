@@ -16,3 +16,6 @@ export default CybersecurityPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

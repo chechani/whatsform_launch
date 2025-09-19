@@ -16,3 +16,6 @@ export default PublicTransportPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

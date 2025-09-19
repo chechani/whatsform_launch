@@ -52,3 +52,6 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

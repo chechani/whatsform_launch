@@ -84,3 +84,6 @@ const ResourcesPage: React.FC = () => {
 };
 
 export default ResourcesPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ const ERPNextIntegration: React.FC = () => (
 );
 
 export default ERPNextIntegration;
+
+export { getServerSideProps } from '@/lib/ssr';
+

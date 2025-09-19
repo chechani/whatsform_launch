@@ -64,3 +64,5 @@ const LogisticsPage: React.FC<LogisticsPageProps> = ({ navigate }) => {
 };
 
 export default LogisticsPage;
+export { getServerSideProps } from '@/lib/ssr';
+

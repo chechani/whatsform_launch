@@ -52,3 +52,6 @@ const EltechPage: React.FC = () => {
 };
 
 export default EltechPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

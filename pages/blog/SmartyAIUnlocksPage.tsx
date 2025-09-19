@@ -31,3 +31,6 @@ const RedirectPage: React.FC = () => {
 export default RedirectPage;
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

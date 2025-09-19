@@ -16,3 +16,6 @@ export default WasteManagementPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default RentalServicesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

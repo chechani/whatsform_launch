@@ -16,3 +16,6 @@ export default CarDealershipPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

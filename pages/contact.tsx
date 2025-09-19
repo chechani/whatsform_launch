@@ -19,3 +19,6 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

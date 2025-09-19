@@ -93,3 +93,6 @@ const InteraktComparisonPage: React.FC = () => {
 };
 
 export default InteraktComparisonPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

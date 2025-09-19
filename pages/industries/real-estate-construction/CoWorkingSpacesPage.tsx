@@ -16,3 +16,6 @@ export default CoWorkingSpacesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

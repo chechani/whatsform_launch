@@ -16,3 +16,6 @@ export default EnergyUtilitiesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default RealEstateAgencyPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

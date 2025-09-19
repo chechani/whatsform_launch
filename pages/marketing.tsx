@@ -87,3 +87,5 @@ const MarketingPage: React.FC<MarketingPageProps> = ({ navigate }) => {
 };
 
 export default MarketingPage;
+export { getServerSideProps } from '@/lib/ssr';
+

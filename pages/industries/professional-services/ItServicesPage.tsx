@@ -16,3 +16,6 @@ export default ItServicesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

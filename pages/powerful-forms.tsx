@@ -46,3 +46,6 @@ const PowerfulFormsPage: React.FC = () => {
 };
 
 export default PowerfulFormsPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

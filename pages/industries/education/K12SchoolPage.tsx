@@ -18,3 +18,6 @@ export default K12SchoolPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

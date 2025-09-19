@@ -16,3 +16,6 @@ export default OnlineTravelAggregatorOTAPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

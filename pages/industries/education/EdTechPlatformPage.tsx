@@ -18,3 +18,6 @@ export default EdTechPlatformPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

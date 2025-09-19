@@ -18,3 +18,6 @@ export default TelemedicinePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

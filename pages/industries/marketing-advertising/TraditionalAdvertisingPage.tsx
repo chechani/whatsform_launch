@@ -18,3 +18,6 @@ export default TraditionalAdvertisingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

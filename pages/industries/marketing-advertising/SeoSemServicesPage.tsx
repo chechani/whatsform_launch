@@ -18,3 +18,6 @@ export default SeoSemServicesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

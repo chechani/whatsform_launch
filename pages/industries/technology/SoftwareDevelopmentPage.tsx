@@ -16,3 +16,6 @@ export default SoftwareDevelopmentPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

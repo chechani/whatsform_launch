@@ -18,3 +18,6 @@ export default InsurancePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

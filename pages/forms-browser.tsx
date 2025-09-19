@@ -95,3 +95,5 @@ const FormsBrowserPage: React.FC = () => {
 };
 
 export default FormsBrowserPage;
+export { getServerSideProps } from '@/lib/ssr';
+

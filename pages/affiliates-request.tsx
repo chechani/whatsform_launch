@@ -379,3 +379,6 @@ const AffiliatesRequestPage: React.FC = () => {
 };
 
 export default AffiliatesRequestPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default NgoCharityPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

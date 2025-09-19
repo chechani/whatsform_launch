@@ -18,3 +18,6 @@ export default HospitalsClinicsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

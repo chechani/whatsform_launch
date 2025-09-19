@@ -74,3 +74,6 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

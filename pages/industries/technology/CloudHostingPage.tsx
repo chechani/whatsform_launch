@@ -16,3 +16,6 @@ export default CloudHostingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default AirlinesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ const VideosPage: React.FC = () => {
 };
 
 export default VideosPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

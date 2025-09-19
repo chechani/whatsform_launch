@@ -116,3 +116,6 @@ const CancellationPage: React.FC = () => {
 };
 
 export default CancellationPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

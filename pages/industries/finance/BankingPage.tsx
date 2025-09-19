@@ -18,3 +18,6 @@ export default BankingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

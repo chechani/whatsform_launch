@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import type { GetServerSideProps } from 'next';
 import { GenericPageHero, CTA, ContentSection } from '../../components/PageBuilder';
 import { blogPosts } from '../../data/pages/blog';
 import Image from 'next/image';
@@ -130,23 +130,14 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, relatedPosts }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = blogPosts.map((post) => ({
-    params: { slug: post.slug.replace('/blog/', '') }
-  }));
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const slug = `/blog/${params?.slug}`;
   const post = blogPosts.find((p) => p.slug === slug);
-  
+
   if (!post) {
     return { notFound: true };
   }
 
-  // Get 3 random related posts
   const otherPosts = blogPosts.filter((p) => p.slug !== slug);
   const relatedPosts = otherPosts
     .sort(() => Math.random() - 0.5)

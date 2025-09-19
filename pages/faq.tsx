@@ -16,3 +16,6 @@ const FAQPage: React.FC = () => {
 };
 
 export default FAQPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

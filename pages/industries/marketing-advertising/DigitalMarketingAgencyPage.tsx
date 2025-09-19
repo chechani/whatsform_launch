@@ -18,3 +18,6 @@ export default DigitalMarketingAgencyPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

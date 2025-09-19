@@ -18,3 +18,6 @@ export default CoachingTutoringPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default ServiceRepairCenterPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

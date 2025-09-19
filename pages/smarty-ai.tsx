@@ -65,3 +65,5 @@ const SmartyAIPage: React.FC<SmartyAIPageProps> = ({ navigate }) => {
 };
 
 export default SmartyAIPage;
+export { getServerSideProps } from '@/lib/ssr';
+

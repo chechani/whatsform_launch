@@ -63,3 +63,5 @@ const TeamInboxPage: React.FC<TeamInboxPageProps> = ({ navigate }) => {
 };
 
 export default TeamInboxPage;
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -18,3 +18,6 @@ export default PublicRelationsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -18,3 +18,6 @@ export default WellnessDiagnosticsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

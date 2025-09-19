@@ -16,3 +16,6 @@ export default LegalServicesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

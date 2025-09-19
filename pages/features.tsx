@@ -40,3 +40,6 @@ const FeaturesPage: React.FC = () => {
 };
 
 export default FeaturesPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

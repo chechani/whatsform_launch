@@ -167,3 +167,6 @@ const QuickServiceRestaurantPage: React.FC = () => {
 };
 
 export default QuickServiceRestaurantPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

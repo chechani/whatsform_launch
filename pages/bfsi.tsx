@@ -63,3 +63,6 @@ const BFSIPage: React.FC = () => {
 };
 
 export default BFSIPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

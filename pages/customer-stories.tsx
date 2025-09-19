@@ -38,3 +38,6 @@ const CustomerStoriesPage: React.FC = () => {
 };
 
 export default CustomerStoriesPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

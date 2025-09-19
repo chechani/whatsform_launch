@@ -220,3 +220,6 @@ const OperationsPage: React.FC = () => {
 };
 
 export default OperationsPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

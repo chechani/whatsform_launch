@@ -16,3 +16,6 @@ export default GovernmentBodyPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

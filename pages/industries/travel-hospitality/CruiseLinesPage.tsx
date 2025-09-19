@@ -16,3 +16,6 @@ export default CruiseLinesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

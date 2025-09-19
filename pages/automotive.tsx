@@ -182,3 +182,6 @@ const AutomotivePage: React.FC = () => {
 };
 
 export default AutomotivePage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

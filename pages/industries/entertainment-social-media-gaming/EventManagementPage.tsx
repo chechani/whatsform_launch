@@ -16,3 +16,6 @@ export default EventManagementPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default HotelResortsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

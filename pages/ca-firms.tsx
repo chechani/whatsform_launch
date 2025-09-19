@@ -79,3 +79,4 @@ const CAFirmsPage: React.FC = () => {
 };
 
 export default CAFirmsPage;
+export { getServerSideProps } from '@/lib/ssr';

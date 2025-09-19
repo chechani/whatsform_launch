@@ -182,3 +182,6 @@ const RestaurantsPage: React.FC = () => {
 };
 
 export default RestaurantsPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

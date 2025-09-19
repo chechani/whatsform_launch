@@ -243,3 +243,6 @@ const PartnersRequestPage: React.FC = () => {
 };
 
 export default PartnersRequestPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

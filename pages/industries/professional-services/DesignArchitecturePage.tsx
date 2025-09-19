@@ -16,3 +16,6 @@ export default DesignArchitecturePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

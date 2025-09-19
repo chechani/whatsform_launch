@@ -52,3 +52,6 @@ const MoonSezPage: React.FC = () => {
 };
 
 export default MoonSezPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

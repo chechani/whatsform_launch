@@ -67,3 +67,5 @@ const ProductPage: React.FC = () => {
 };
 
 export default ProductPage;
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -16,3 +16,6 @@ export default HardwareManufacturingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

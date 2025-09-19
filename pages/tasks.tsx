@@ -64,3 +64,5 @@ const TasksPage: React.FC<TasksPageProps> = ({ navigate }) => {
 };
 
 export default TasksPage;
+export { getServerSideProps } from '@/lib/ssr';
+

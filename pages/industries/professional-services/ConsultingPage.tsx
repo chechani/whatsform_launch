@@ -16,3 +16,6 @@ export default ConsultingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

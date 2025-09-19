@@ -16,3 +16,6 @@ export default ContentCreatorInfluencerPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

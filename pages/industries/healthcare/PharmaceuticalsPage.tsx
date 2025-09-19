@@ -18,3 +18,6 @@ export default PharmaceuticalsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

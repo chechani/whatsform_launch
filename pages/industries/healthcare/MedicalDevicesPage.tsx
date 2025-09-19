@@ -18,3 +18,6 @@ export default MedicalDevicesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

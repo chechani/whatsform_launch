@@ -57,3 +57,6 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

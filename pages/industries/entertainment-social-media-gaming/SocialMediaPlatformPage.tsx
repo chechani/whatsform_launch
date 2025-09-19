@@ -16,3 +16,6 @@ export default SocialMediaPlatformPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

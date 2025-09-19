@@ -16,3 +16,6 @@ const WebhooksIntegration: React.FC = () => (
 );
 
 export default WebhooksIntegration;
+
+export { getServerSideProps } from '@/lib/ssr';
+

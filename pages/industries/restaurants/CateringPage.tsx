@@ -16,3 +16,6 @@ export default CateringPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

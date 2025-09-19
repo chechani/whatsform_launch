@@ -52,3 +52,6 @@ const JcafPage: React.FC = () => {
 };
 
 export default JcafPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

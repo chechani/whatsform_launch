@@ -16,3 +16,6 @@ export default FineDiningPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

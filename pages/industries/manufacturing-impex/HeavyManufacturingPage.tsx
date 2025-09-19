@@ -16,3 +16,6 @@ export default HeavyManufacturingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

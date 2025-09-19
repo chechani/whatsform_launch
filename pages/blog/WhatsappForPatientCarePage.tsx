@@ -22,3 +22,6 @@ const RedirectPage: React.FC = () => {
 export default RedirectPage;
 // Legacy page replaced with a redirect component above.
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

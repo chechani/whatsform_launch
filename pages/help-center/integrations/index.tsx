@@ -43,3 +43,6 @@ const IntegrationsHub: React.FC = () => {
 };
 
 export default IntegrationsHub;
+
+export { getServerSideProps } from '@/lib/ssr';
+

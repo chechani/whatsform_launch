@@ -182,3 +182,6 @@ const TravelHospitalityPage: React.FC = () => {
 };
 
 export default TravelHospitalityPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

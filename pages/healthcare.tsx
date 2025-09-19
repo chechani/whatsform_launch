@@ -61,3 +61,5 @@ const HealthcarePage: React.FC = () => {
 };
 
 export default HealthcarePage;
+export { getServerSideProps } from '@/lib/ssr';
+

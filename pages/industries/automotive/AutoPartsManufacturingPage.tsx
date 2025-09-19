@@ -16,3 +16,6 @@ export default AutoPartsManufacturingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

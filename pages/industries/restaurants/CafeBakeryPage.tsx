@@ -16,3 +16,6 @@ export default CafeBakeryPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

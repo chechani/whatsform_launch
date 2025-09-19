@@ -182,3 +182,6 @@ const FitnessWellnessPage: React.FC = () => {
 };
 
 export default FitnessWellnessPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+

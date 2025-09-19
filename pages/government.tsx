@@ -64,3 +64,5 @@ const GovernmentPage: React.FC<GovernmentPageProps> = ({ navigate }) => {
 };
 
 export default GovernmentPage;
+export { getServerSideProps } from '@/lib/ssr';
+

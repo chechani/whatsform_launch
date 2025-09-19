@@ -16,3 +16,6 @@ export default ElectronicsPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

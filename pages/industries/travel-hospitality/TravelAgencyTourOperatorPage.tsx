@@ -16,3 +16,6 @@ export default TravelAgencyTourOperatorPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

@@ -65,3 +65,5 @@ const RealEstatePage: React.FC<RealEstatePageProps> = ({ navigate }) => {
 };
 
 export default RealEstatePage;
+export { getServerSideProps } from '@/lib/ssr';
+

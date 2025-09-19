@@ -16,3 +16,6 @@ const HubSpotIntegration: React.FC = () => (
 );
 
 export default HubSpotIntegration;
+
+export { getServerSideProps } from '@/lib/ssr';
+

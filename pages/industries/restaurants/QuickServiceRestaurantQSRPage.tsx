@@ -16,3 +16,6 @@ export default QuickServiceRestaurantQSRPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

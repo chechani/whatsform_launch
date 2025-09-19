@@ -18,3 +18,6 @@ export default AccountingAuditingPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

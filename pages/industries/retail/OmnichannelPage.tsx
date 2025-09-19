@@ -18,3 +18,6 @@ export default OmnichannelPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

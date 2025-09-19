@@ -75,8 +75,6 @@ const EducationPage: React.FC = () => {
     );
 };
 
-export function getStaticProps() {
-    return { props: {} };
-}
+export { getServerSideProps } from '@/lib/ssr';
 
 export default EducationPage;

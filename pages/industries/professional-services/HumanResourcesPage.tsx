@@ -16,3 +16,6 @@ export default HumanResourcesPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

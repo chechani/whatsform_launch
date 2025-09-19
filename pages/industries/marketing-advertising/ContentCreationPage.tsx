@@ -18,3 +18,6 @@ export default ContentCreationPage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

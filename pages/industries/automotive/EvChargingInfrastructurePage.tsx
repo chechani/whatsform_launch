@@ -16,3 +16,6 @@ export default EvChargingInfrastructurePage;
 
 
 
+
+export { getServerSideProps } from '@/lib/ssr';
+

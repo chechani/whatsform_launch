@@ -148,3 +148,6 @@ const PricingPage: React.FC = () => {
 };
 
 export default PricingPage;
+
+export { getServerSideProps } from '@/lib/ssr';
+
