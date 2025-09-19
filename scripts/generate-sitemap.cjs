@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Config
-const siteUrl = process.env.SITE_URL || 'https://www.whatsform.io';
+const siteUrl = process.env.SITE_URL || 'https://www.whatsform.in';
 const pagesDir = path.join(__dirname, '..', 'pages');
 const publicDir = path.join(__dirname, '..', 'public');
 const blogDataFile = path.join(__dirname, '..', 'data', 'pages', 'blog.ts');
@@ -24,7 +24,14 @@ function collectRoutes(dir, base = '') {
     const noExt = rel.replace(/\.(tsx|ts|jsx|js)$/i, '');
     if (noExt.includes('[')) continue; // dynamic route
     // map index files
-    const route = noExt.endsWith('index') ? `/${noExt.replace(/index$/, '')}` : `/${noExt}`;
+    let route;
+    if (noExt === 'index') {
+      route = '/';
+    } else if (noExt.endsWith('/index')) {
+      route = `/${noExt.replace(/\/index$/, '')}`;
+    } else {
+      route = `/${noExt}`;
+    }
     // normalize
     const normalized = route.replace(/\\/g, '/').replace(/\/+$/, '');
     routes.push(normalized === '' ? '/' : normalized);
