@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // ✅ enable static export
-  // ✅ required if you use next/image (there’s no Image Optimization server in static export)
+  // ✅ required if you use next/image (there's no Image Optimization server in static export)
   images: { unoptimized: true },
+
+  // ✅ set output directory to 'out'
+  distDir: 'out',
 
   // keep your custom page extensions
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -26,24 +29,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-//   devIndicators: {
-//     allowedDevOrigins: ["https://3004-firebase-whatsform-1757034527872.cluster-va5f6x3wzzh4stde63ddr3qgge.cloudworkstations.dev"],
-//   },
-//   async rewrites() {
-//     return [
-//       {
-//         source: '/api/:path*',
-//         destination: 'https://web.waflow.in/api/:path*',
-//       },
-//     ]
-//   },
-// };
-
-// export default nextConfig;
-
-
