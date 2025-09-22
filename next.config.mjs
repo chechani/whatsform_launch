@@ -9,6 +9,9 @@ const nextConfig = {
   // keep your custom page extensions
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
+  // Add trailing slash to all URLs
+  trailingSlash: true,
+
   // dev-only; safe to keep
   devIndicators: {
     allowedDevOrigins: [

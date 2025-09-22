@@ -20,15 +20,10 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/marketing-agencies/digital-marketing-agency": [
+    "/marketing-agencies/seo-sem-services": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/marketing-agencies/digital-marketing-agency.js"
-    ],
-    "/site-index": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/site-index.js"
+      "static/chunks/pages/marketing-agencies/seo-sem-services.js"
     ]
   },
   "ampFirstPages": []
