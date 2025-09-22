@@ -68,31 +68,31 @@ const EntertainmentPage: React.FC = () => {
             {
                 title: "Social Media Platform",
                 description: "Enhance user engagement and provide automated customer support.",
-                link: "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Social%20Media%20Platform",
+                link: "/entertainment/SocialMediaPlatformPage",
                 icon: "📱"
             },
             {
                 title: "Gaming Studio",
                 description: "Manage player communications, updates, and community engagement.",
-                link: "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Gaming%20Studio",
+                link: "/entertainment/GamingStudioPage",
                 icon: "🎮"
             },
             {
                 title: "Streaming Service",
                 description: "Handle subscription management and content recommendations.",
-                link: "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Streaming%20Service",
+                link: "/entertainment/StreamingServicePage",
                 icon: "📺"
             },
             {
                 title: "Event Management",
                 description: "Coordinate event logistics, attendee communication, and feedback collection.",
-                link: "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Event%20Management",
+                link: "/entertainment/EventManagementPage",
                 icon: "🎪"
             },
             {
                 title: "Content Creator/Influencer",
                 description: "Manage brand partnerships, audience engagement, and campaign coordination.",
-                link: "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Content%20Creator",
+                link: "/entertainment/ContentCreatorInfluencerPage",
                 icon: "⭐"
             }
         ],

@@ -68,31 +68,31 @@ const FitnessWellnessPage: React.FC = () => {
             {
                 title: "Gym & Fitness Center",
                 description: "Automate class bookings, membership management, and workout reminders.",
-                link: "/fitness-wellness/gym-fitness-center",
+                link: "/fitness-wellness/GymFitnessCenterPage",
                 icon: "🏋️"
             },
             {
                 title: "Yoga & Meditation Studio",
                 description: "Handle class scheduling, payment reminders, and wellness tips.",
-                link: "/fitness-wellness/yoga-meditation-studio",
+                link: "/fitness-wellness/YogaMeditationStudioPage",
                 icon: "🧘"
             },
             {
                 title: "Wellness Retreats",
                 description: "Manage bookings, pre-arrival communication, and guest services.",
-                link: "/fitness-wellness/wellness-retreats",
+                link: "/fitness-wellness/WellnessRetreatsPage",
                 icon: "🌿"
             },
             {
                 title: "Nutrition & Dietetics",
                 description: "Provide meal planning, appointment scheduling, and progress tracking.",
-                link: "/fitness-wellness/nutrition-dietetics",
+                link: "/fitness-wellness/NutritionDieteticsPage",
                 icon: "🥗"
             },
             {
                 title: "Spa & Salon",
                 description: "Automate appointment bookings, service reminders, and promotional offers.",
-                link: "/fitness-wellness/spa-salon",
+                link: "/fitness-wellness/SpaSalonPage",
                 icon: "💆"
             }
         ],

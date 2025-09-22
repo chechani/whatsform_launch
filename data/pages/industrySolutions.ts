@@ -178,46 +178,107 @@ export const industrySolutionsPageData = {
         const getCategoryPageUrl = (industryName: string, categoryName: string) => {
             const categoryPageMap: { [key: string]: { [key: string]: string } } = {
                 "Marketing & Advertising": {
-                    "Digital Marketing Agency": "/marketing-agencies/digital-marketing-agency",
-                    "Traditional Advertising": "/contact?industry=Marketing%20%26%20Advertising&category=Traditional%20Advertising",
-                    "Public Relations": "/marketing-agencies/public-relations",
-                    "Content Creation": "/marketing-agencies/content-creation",
-                    "SEO/SEM Services": "/marketing-agencies/seo-sem-services"
+                    "Digital Marketing Agency": "/marketing-advertising/DigitalMarketingAgencyPage",
+                    "Traditional Advertising": "/marketing-advertising/TraditionalAdvertisingPage",
+                    "Public Relations": "/marketing-advertising/PublicRelationsPage",
+                    "Content Creation": "/marketing-advertising/ContentCreationPage",
+                    "SEO/SEM Services": "/marketing-advertising/SeoSemServicesPage"
+                },
+                "Retail": {
+                    "eCommerce (Online Stores)": "/retail/ECommerceOnlineStoresPage",
+                    "Physical Stores (Brick and Mortar Stores)": "/retail/PhysicalStoresPage", 
+                    "Omnichannel (eCommerce and Physical Stores)": "/retail/OmnichannelPage"
+                },
+                "Education": {
+                    "K-12 School": "/education/K12SchoolPage",
+                    "Higher Education": "/education/HigherEducationPage",
+                    "EdTech Platform": "/education/EdTechPlatformPage",
+                    "Coaching & Tutoring": "/education/CoachingTutoringPage",
+                    "Corporate Training": "/education/CorporateTrainingPage"
+                },
+                "Finance": {
+                    "Banking": "/finance/BankingPage",
+                    "Insurance": "/finance/InsurancePage", 
+                    "Investment & Wealth Management": "/finance/InvestmentWealthManagementPage",
+                    "FinTech": "/finance/FinTechPage",
+                    "Accounting & Auditing": "/finance/AccountingAuditingPage"
+                },
+                "Healthcare": {
+                    "Hospital/Clinic": "/healthcare/HospitalsClinicsPage",
+                    "Pharmaceuticals": "/healthcare/PharmaceuticalsPage",
+                    "Medical Devices": "/healthcare/MedicalDevicesPage", 
+                    "Telemedicine": "/healthcare/TelemedicinePage",
+                    "Wellness & Diagnostics": "/healthcare/WellnessDiagnosticsPage"
                 },
                 "Travel & Hospitality": {
-                    "Hotel & Resorts": "/categories/travel-hospitality/hotels-resorts",
-                    "Airlines": "/categories/travel-hospitality/airlines",
-                    "Travel Agency/Tour Operator": "/contact?industry=Travel%20%26%20Hospitality&category=Travel%20Agency",
-                    "Online Travel Aggregator (OTA)": "/contact?industry=Travel%20%26%20Hospitality&category=OTA",
-                    "Cruise Lines": "/contact?industry=Travel%20%26%20Hospitality&category=Cruise%20Lines"
+                    "Hotel & Resorts": "/travel-hospitality/hotel-resorts",
+                    "Airlines": "/travel-hospitality/airlines",
+                    "Travel Agency/Tour Operator": "/travel-hospitality/travel-agency-tour-operator",
+                    "Online Travel Aggregator (OTA)": "/travel-hospitality/online-travel-aggregator-ota",
+                    "Cruise Lines": "/travel-hospitality/cruise-lines"
                 },
                 "Automotive": {
-                    "Car Dealership": "/categories/automotive/car-dealership",
-                    "Service & Repair Center": "/contact?industry=Automotive&category=Service%20Center",
-                    "Auto Parts Manufacturing": "/contact?industry=Automotive&category=Auto%20Parts",
-                    "Rental Services": "/contact?industry=Automotive&category=Rental%20Services",
-                    "EV & Charging Infrastructure": "/contact?industry=Automotive&category=EV%20Charging"
+                    "Car Dealership": "/automotive/car-dealership",
+                    "Service & Repair Center": "/automotive/service-repair-center",
+                    "Auto Parts Manufacturing": "/automotive/auto-parts-manufacturing",
+                    "Rental Services": "/automotive/rental-services",
+                    "EV & Charging Infrastructure": "/automotive/ev-charging-infrastructure"
                 },
                 "Restaurants": {
-                    "Fine Dining": "/categories/restaurants/fine-dining",
-                    "Quick Service Restaurant (QSR)": "/categories/restaurants/qsr",
-                    "Cafe & Bakery": "/contact?industry=Restaurants&category=Cafe%20Bakery",
-                    "Food Delivery Service": "/contact?industry=Restaurants&category=Food%20Delivery",
-                    "Catering": "/contact?industry=Restaurants&category=Catering"
+                    "Fine Dining": "/restaurants-food-outlets/fine-dining",
+                    "Quick Service Restaurant (QSR)": "/restaurants-food-outlets/quick-service-restaurant-qsr",
+                    "Cafe & Bakery": "/restaurants-food-outlets/cafe-bakery",
+                    "Food Delivery Service": "/restaurants-food-outlets/food-delivery-service",
+                    "Catering": "/restaurants-food-outlets/catering"
                 },
                 "Fitness & Wellness": {
-                    "Gym & Fitness Center": "/categories/fitness-wellness/gym-fitness-center",
-                    "Yoga & Meditation Studio": "/contact?industry=Fitness%20%26%20Wellness&category=Yoga%20Studio",
-                    "Wellness Retreats": "/contact?industry=Fitness%20%26%20Wellness&category=Wellness%20Retreats",
-                    "Nutrition & Dietetics": "/contact?industry=Fitness%20%26%20Wellness&category=Nutrition",
-                    "Spa & Salon": "/contact?industry=Fitness%20%26%20Wellness&category=Spa%20Salon"
+                    "Gym & Fitness Center": "/fitness-wellness/GymFitnessCenterPage",
+                    "Yoga & Meditation Studio": "/fitness-wellness/YogaMeditationStudioPage",
+                    "Wellness Retreats": "/fitness-wellness/WellnessRetreatsPage",
+                    "Nutrition & Dietetics": "/fitness-wellness/NutritionDieteticsPage",
+                    "Spa & Salon": "/fitness-wellness/SpaSalonPage"
                 },
                 "Entertainment, Social Media & Gaming": {
-                    "Social Media Platform": "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Social%20Media%20Platform",
-                    "Gaming Studio": "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Gaming%20Studio",
-                    "Streaming Service": "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Streaming%20Service",
-                    "Event Management": "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Event%20Management",
-                    "Content Creator/Influencer": "/contact?industry=Entertainment%2C%20Social%20Media%20%26%20Gaming&category=Content%20Creator"
+                    "Social Media Platform": "/entertainment/SocialMediaPlatformPage",
+                    "Gaming Studio": "/entertainment/GamingStudioPage",
+                    "Streaming Service": "/entertainment/StreamingServicePage",
+                    "Event Management": "/entertainment/EventManagementPage",
+                    "Content Creator/Influencer": "/entertainment/ContentCreatorInfluencerPage"
+                },
+                "Manufacturing & IMPEX": {
+                    "Heavy Manufacturing": "/manufacturing-impex/HeavyManufacturingPage",
+                    "Consumer Goods": "/manufacturing-impex/ConsumerGoodsPage",
+                    "Electronics": "/manufacturing-impex/ElectronicsPage",
+                    "Import/Export Trading": "/manufacturing-impex/ImportExportTradingPage",
+                    "Logistics & Supply Chain": "/manufacturing-impex/LogisticsSupplyChainPage"
+                },
+                "Real Estate & Construction": {
+                    "Real Estate Agency": "/real-estate-construction/RealEstateAgencyPage",
+                    "Construction Company": "/real-estate-construction/ConstructionCompanyPage",
+                    "Property Management": "/real-estate-construction/PropertyManagementPage",
+                    "Architecture & Planning": "/real-estate-construction/ArchitecturePlanningPage",
+                    "Co-working Spaces": "/real-estate-construction/CoWorkingSpacesPage"
+                },
+                "Professional Services": {
+                    "Consulting": "/professional-services/ConsultingPage",
+                    "Legal Services": "/professional-services/LegalServicesPage",
+                    "Human Resources": "/professional-services/HumanResourcesPage",
+                    "Design & Architecture": "/professional-services/DesignArchitecturePage",
+                    "IT Services": "/professional-services/ItServicesPage"
+                },
+                "Technology": {
+                    "SaaS": "/technology/SaaSPage",
+                    "Hardware Manufacturing": "/technology/HardwareManufacturingPage",
+                    "Software Development": "/technology/SoftwareDevelopmentPage",
+                    "Cloud & Hosting": "/technology/CloudHostingPage",
+                    "Cybersecurity": "/technology/CybersecurityPage"
+                },
+                "Public Utilities & Non Profits": {
+                    "NGO/Charity": "/public-utilities-non-profits/NgoCharityPage",
+                    "Government Body": "/public-utilities-non-profits/GovernmentBodyPage",
+                    "Energy & Utilities": "/public-utilities-non-profits/EnergyUtilitiesPage",
+                    "Waste Management": "/public-utilities-non-profits/WasteManagementPage",
+                    "Public Transport": "/public-utilities-non-profits/PublicTransportPage"
                 }
             };
             
