@@ -1,9 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/marketing-agencies/seo-sem-services": "pages/marketing-agencies/seo-sem-services.js",
-  "/sales": "pages/sales.js",
-  "/site-index": "pages/site-index.js"
-}
