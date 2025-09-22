@@ -264,7 +264,8 @@ export const industrySolutionsPageData = {
                     "Legal Services": "/professional-services/LegalServicesPage",
                     "Human Resources": "/professional-services/HumanResourcesPage",
                     "Design & Architecture": "/professional-services/DesignArchitecturePage",
-                    "IT Services": "/professional-services/ItServicesPage"
+                    "IT Services": "/professional-services/ItServicesPage",
+                    "CA Firms": "/professional-services/ca-firms"
                 },
                 "Technology": {
                     "SaaS": "/technology/SaaSPage",

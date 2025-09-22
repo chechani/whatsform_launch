@@ -250,7 +250,7 @@ export const industryCategoryMap: { [key: string]: string[] } = {
     "Finance": ["Banking", "Insurance", "Investment & Wealth Management", "FinTech", "Accounting & Auditing"],
     "Healthcare": ["Hospital/Clinic", "Pharmaceuticals", "Medical Devices", "Telemedicine", "Wellness & Diagnostics"],
     "Public Utilities & Non Profits": ["NGO/Charity", "Government Body", "Energy & Utilities", "Waste Management", "Public Transport"],
-    "Professional Services": ["Consulting", "Legal Services", "Human Resources", "Design & Architecture", "IT Services"],
+    "Professional Services": ["Consulting", "Legal Services", "Human Resources", "Design & Architecture", "IT Services", "CA Firms"],
     "Technology": ["SaaS", "Hardware Manufacturing", "Software Development", "Cloud & Hosting", "Cybersecurity"],
     "Travel & Hospitality": ["Hotel & Resorts", "Airlines", "Travel Agency/Tour Operator", "Online Travel Aggregator (OTA)", "Cruise Lines"],
     "Automotive": ["Car Dealership", "Service & Repair Center", "Auto Parts Manufacturing", "Rental Services", "EV & Charging Infrastructure"],

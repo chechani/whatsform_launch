@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '../../components/PageBuilder';
-import { caFirmsPageData } from '../../data/pages/caFirms';
+import { caFirmsPageData } from '@/data/pages/caFirms';
 
 const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = ({ index, children }) => {
     const bgColors = [
@@ -79,4 +79,5 @@ const CAFirmsPage: React.FC = () => {
 };
 
 export default CAFirmsPage;
+
 export { getStaticProps } from '@/lib/ssr';
