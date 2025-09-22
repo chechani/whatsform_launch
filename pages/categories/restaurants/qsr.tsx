@@ -28,22 +28,22 @@ const QuickServiceRestaurantPage: React.FC = () => {
                 title: "Key Benefits for QSR",
                 benefits: [
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "Faster Service",
                         description: "Reduce order processing time and eliminate queues with automated WhatsApp ordering systems."
                     },
                     {
-                        icon: ShoppingCartIcon,
+                        icon: "ShoppingCartIcon",
                         title: "Easy Ordering",
                         description: "Allow customers to browse menus, customize orders, and pay directly through WhatsApp conversations."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Increased Sales",
                         description: "Boost revenue with automated upselling suggestions, combo deals, and promotional campaigns."
                     },
                     {
-                        icon: TruckIcon,
+                        icon: "TruckIcon",
                         title: "Delivery Coordination",
                         description: "Streamline delivery logistics with automated dispatch, tracking, and customer notifications."
                     }

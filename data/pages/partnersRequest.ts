@@ -1,4 +1,3 @@
-import { CheckCircleIcon, BuildingOfficeIcon, UsersIcon } from '../../icons';
 
 export const partnersRequestPageData = {
     hero: {
@@ -9,22 +8,22 @@ export const partnersRequestPageData = {
 
     benefits: [
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Revenue Growth",
             description: "Earn competitive commissions and recurring revenue through our partner program."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Technical Support",
             description: "Get dedicated technical support and training to help you implement WhatsForm solutions."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Marketing Resources",
             description: "Access co-marketing opportunities, sales materials, and joint go-to-market strategies."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Priority Access",
             description: "Get early access to new features and participate in our product roadmap discussions."
         }
@@ -32,19 +31,19 @@ export const partnersRequestPageData = {
 
     partnerTypes: [
         {
-            icon: BuildingOfficeIcon,
+            icon: "BuildingOfficeIcon",
             title: "Technology Partners",
             description: "Integrate WhatsForm with your existing platforms and solutions",
             features: ["API Integration Support", "Technical Documentation", "Joint Development", "Co-branded Solutions"]
         },
         {
-            icon: UsersIcon,
+            icon: "UsersIcon",
             title: "Solution Partners",
             description: "Resell and implement WhatsForm for your clients",
             features: ["Sales Training", "Implementation Support", "Account Management", "Marketing Collateral"]
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Consulting Partners",
             description: "Offer WhatsForm consulting and professional services",
             features: ["Certification Program", "Best Practice Sharing", "Client Referrals", "Revenue Sharing"]

@@ -1,9 +1,37 @@
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
-    CheckCircleIcon, WhatsAppIcon, PlayCircleIcon, CalendarDaysIcon 
+    CheckCircleIcon, WhatsAppIcon, PlayCircleIcon, CalendarDaysIcon,
+    InboxIcon, UsersIcon, SparklesIcon, CalendarIcon, SendMessageIcon, TemplateIcon
 } from '../icons';
+import { TruckIcon, WrenchScrewdriverIcon, CurrencyDollarIcon, ClockIcon, HeartIcon, UserGroupIcon, BuildingStorefrontIcon, ShoppingCartIcon, PaperAirplaneIcon, ExclamationTriangleIcon, BuildingOfficeIcon, DevicePhoneMobileIcon, StarIcon, PlayIcon, MegaphoneIcon, ChartBarIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+
+const iconMap: { [key: string]: React.FC<{className?: string}> } = {
+    InboxIcon,
+    UsersIcon,
+    SparklesIcon,
+    CalendarIcon,
+    SendMessageIcon,
+    TemplateIcon,
+    CheckCircleIcon,
+    TruckIcon,
+    WrenchScrewdriverIcon,
+    CurrencyDollarIcon,
+    ClockIcon,
+    HeartIcon,
+    UserGroupIcon,
+    BuildingStorefrontIcon,
+    ShoppingCartIcon,
+    PaperAirplaneIcon,
+    ExclamationTriangleIcon,
+    BuildingOfficeIcon,
+    DevicePhoneMobileIcon,
+    StarIcon,
+    PlayIcon,
+    MegaphoneIcon,
+    ChartBarIcon,
+    GlobeAltIcon,
+};
 
 const Card: React.FC<{ children: React.ReactNode, className?: string, href?: string, onClick?: (e: React.MouseEvent) => void, isLink?: boolean }> = ({ children, className = '', href, onClick, isLink = false }) => {
     const commonClasses = `bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`;
@@ -221,21 +249,24 @@ export const PageFeatureGrid: React.FC<{
 export const BenefitsGrid: React.FC<{
     title: string;
     subtitle?: string;
-    benefits: { icon: React.FC<{className?: string}>; title: string; description: string }[];
+    benefits: { icon: string; title: string; description: string }[];
 }> = ({ title, subtitle, benefits }) => (
     <div className="text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">{title}</h2>
         {subtitle && <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{subtitle}</p>}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-                <Card key={index} className="text-center">
-                    <div className="text-green-500 dark:text-green-400 mx-auto h-10 w-10 flex items-center justify-center">
-                        {React.createElement(benefit.icon, { className: "h-10 w-10" })}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{benefit.title}</h3>
-                    <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{benefit.description}</p>
-                </Card>
-            ))}
+            {benefits.map((benefit, index) => {
+                const IconComponent = iconMap[benefit.icon];
+                return (
+                    <Card key={index} className="text-center">
+                        <div className="text-green-500 dark:text-green-400 mx-auto h-10 w-10 flex items-center justify-center">
+                            {IconComponent && React.createElement(IconComponent, { className: "h-10 w-10" })}
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{benefit.title}</h3>
+                        <p className="mt-2 text-slate-600 dark:text-slate-300 flex-grow">{benefit.description}</p>
+                    </Card>
+                );
+            })}
         </div>
     </div>
 );

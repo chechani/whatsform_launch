@@ -1,6 +1,4 @@
 
-import { CheckCircleIcon } from '../../icons';
-
 export const contactManagementPageData = {
     hero: {
         title: "Connects: Your Centralized Relationship Hub",
@@ -58,22 +56,22 @@ export const contactManagementPageData = {
             subtitle: "Our contact management system brings structure and clarity to your communications, helping your team to:",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Stay Organized",
                     description: "Track every individual, company, and group in a single, structured workspace. No more scattered data."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Stay Informed",
                     description: "Access complete interaction histories and company profiles to understand the full context of every relationship."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Stay Ready",
                     description: "Easily take the next step by logging calls, setting meetings, or launching targeted campaigns from one place."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Stay Aligned",
                     description: "Ensure your entire team has access to the same up-to-date information, eliminating silos and confusion."
                 }

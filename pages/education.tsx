@@ -1,80 +1,74 @@
 import React from 'react';
-import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '@/components/PageBuilder';
-import { educationPageData } from '@/data/pages/education';
 import Link from 'next/link';
-
-const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = ({ index, children }) => {
-    const bgColors = [
-        "bg-pastel-blue dark:bg-sky-950/30",
-        "bg-white dark:bg-slate-950",
-        "bg-pastel-green dark:bg-green-950/30",
-        "bg-white dark:bg-slate-950",
-        "bg-pastel-yellow dark:bg-amber-950/30",
-        "bg-white dark:bg-slate-950",
-        "bg-pastel-pink dark:bg-violet-950/30",
-    ];
-    const bgColor = bgColors[index % bgColors.length];
-    return <section className={`${bgColor} py-20 lg:py-24`}>{children}</section>;
-};
-
+import { GenericPageHero, CTA, ContentSection, ContentWithImage } from '@/components/PageBuilder';
+import { educationPageData } from '@/data/pages/education';
 
 const EducationPage: React.FC = () => {
+
     return (
         <main>
             <GenericPageHero title={educationPageData.hero.title} subtitle={educationPageData.hero.subtitle} />
+            
             <div className="divide-y divide-slate-200/50 dark:divide-slate-800/50">
                 {educationPageData.sections.map((section, index) => {
+                    const subCategory = educationPageData.subCategories.find(sc => sc.id === (section as any).id);
+                    const bgColors = [
+                        "bg-white dark:bg-slate-950",
+                        "bg-slate-50 dark:bg-slate-900",
+                        "bg-white dark:bg-slate-950"
+                    ];
+                    const bgColor = bgColors[index % bgColors.length];
+                    
                     return (
-                        <SectionWrapper key={index} index={index}>
-                           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                        <section key={index} className={`${bgColor} py-16 sm:py-20 lg:py-24`}>
+                            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                                 {(() => {
                                     switch (section.type) {
-                                        case 'centeredText':
-                                            return <ContentSection title={section.title} subtitle={section.subtitle} />;
                                         case 'contentWithImage':
-                                            return <ContentWithImage {...section as any} />;
-                                        case 'benefitsGrid':
-                                            return <BenefitsGrid {...section as any} />;
+                                            return (
+                                                <div>
+                                                    <ContentWithImage {...section as any} />
+                                                    {subCategory && (
+                                                        <div className="mt-8 text-center">
+                                                            <Link href={`/education/${subCategory.slug}`} legacyBehavior>
+                                                                <a className="text-green-500 hover:text-green-600 font-semibold">
+                                                                    Learn more &rarr;
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
                                         default:
                                             return null;
                                     }
                                 })()}
                             </div>
-                        </SectionWrapper>
-                    )
+                        </section>
+                    );
                 })}
-
-                <section className="bg-pastel-yellow dark:bg-amber-950/30 py-20 lg:py-24">
-                    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-                        <ContentSection title={educationPageData.useCaseGrid.title} />
-                        <div className="mt-8 flex flex-wrap justify-center gap-3">
-                            {educationPageData.useCaseGrid.items.map(item => (
-                                <span key={item} className="bg-green-100 dark:bg-green-500/10 text-green-800 dark:text-green-300 text-md font-semibold px-4 py-2 rounded-full">
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </section>
             </div>
 
-            <div className="bg-pastel-green dark:bg-green-950/30 py-20">
+            <section className="bg-green-50 dark:bg-green-950/30 py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <ContentSection title={educationPageData.closing.title} subtitle={educationPageData.closing.subtitle}>
-                        <Link href="/book-demo" legacyBehavior>
-                            <a className="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link href="/book-demo" className="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg text-center">
                                 {educationPageData.closing.cta}
-                            </a>
-                        </Link>
+                            </Link>
+                            <Link href="/contact" className="inline-block bg-transparent border-2 border-green-500 text-green-600 dark:text-green-400 font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-500 hover:text-white transition-all duration-200 shadow-lg text-center">
+                                Contact Sales
+                            </Link>
+                        </div>
                     </ContentSection>
                 </div>
-            </div>
+            </section>
             
             <CTA />
         </main>
     );
 };
 
-export { getStaticProps } from '@/lib/ssr';
-
 export default EducationPage;
+
+export { getStaticProps } from '@/lib/ssr';

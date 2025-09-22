@@ -1,7 +1,4 @@
 
-
-import { TemplateIcon, CheckCircleIcon } from '../../icons';
-
 export const templateCenterData = {
     hero: {
         title: "Template Center: Your Communication Command Centre",
@@ -9,7 +6,7 @@ export const templateCenterData = {
     },
     strategyGuide: {
         badge: "Template Strategy Guide",
-        icon: TemplateIcon,
+        icon: "TemplateIcon",
         title: "Craft Effective WhatsApp Flows",
         subtitle: `As soon as you land in the Template Centre, you’ll notice the Template Strategy Guide right at the top. Think of this as your content playbook — especially helpful if you're just getting started or want to bring more structure to your messaging flow. It’s broken down into five key tabs, each representing a different type of content you’ll use in your WhatsApp campaigns. From media files to quick replies to forms — everything is neatly organized, with built-in guidance on how and when to use each type. So even if you're unsure where to start, you’re never stuck guessing.`,
         tabs: [
@@ -90,17 +87,17 @@ export const templateCenterData = {
         subtitle: `Whether you're running campaigns, replying to leads, or following up with customers — the Template Strategy Guide and Live Metrics Cards together give you clarity, speed, and control.`,
         points: [
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Build from a Strong Foundation",
                 description: "You’re not starting from scratch every time — just pick what you need from your ready-to-use content."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Save Time & Ensure Consistency",
                 description: "It saves your team tons of time and keeps everything consistent — no typos, no broken formats."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Keep Everyone Aligned",
                 description: "Everyone stays on the same page — using the same templates, replies, and media files across your marketing or support teams."
             }

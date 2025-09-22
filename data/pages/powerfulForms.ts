@@ -1,6 +1,4 @@
 
-import { CubeTransparentIcon } from '../../icons';
-
 export const powerfulFormsPageData = {
     hero: {
         title: "Build Powerful, Conversational Forms Inside WhatsApp",
@@ -40,10 +38,10 @@ export const powerfulFormsPageData = {
             title: 'Advanced Response Management',
             subtitle: 'Effectively track, manage, and act on the data collected from your flows.',
             features: [
-                { icon: CubeTransparentIcon, title: "Create & Update Docs for Every Flow", description: "Automatically track user responses for each flow, enabling targeted follow-ups and data-driven decisions." },
-                { icon: CubeTransparentIcon, title: "View or Download Responses", description: "Monitor submissions in real-time or export responses to an Excel sheet for deeper analysis and reporting." },
-                { icon: CubeTransparentIcon, title: "Screen Response Management", description: "Build complex, dynamic flows that respond to user inputs in real time, fetching data from backend systems as users navigate between screens." },
-                { icon: CubeTransparentIcon, title: "Automated Data Handling", description: "The system automatically identifies which screens require data responses based on your configuration, simplifying development." }
+                { icon: "CubeTransparentIcon", title: "Create & Update Docs for Every Flow", description: "Automatically track user responses for each flow, enabling targeted follow-ups and data-driven decisions." },
+                { icon: "CubeTransparentIcon", title: "View or Download Responses", description: "Monitor submissions in real-time or export responses to an Excel sheet for deeper analysis and reporting." },
+                { icon: "CubeTransparentIcon", title: "Screen Response Management", description: "Build complex, dynamic flows that respond to user inputs in real time, fetching data from backend systems as users navigate between screens." },
+                { icon: "CubeTransparentIcon", title: "Automated Data Handling", description: "The system automatically identifies which screens require data responses based on your configuration, simplifying development." }
             ],
             image: 'https://picsum.photos/seed/flowbuilder3/500/450'
         },
@@ -53,10 +51,10 @@ export const powerfulFormsPageData = {
             title: 'Automated Notifications & Integrations',
             subtitle: 'Close the loop with automated acknowledgments and connect your entire business ecosystem.',
             features: [
-                { icon: CubeTransparentIcon, title: "Instant Flow Notifications", description: "Acknowledge every user submission instantly with a text message, a follow-up flow, or interactive menu options." },
-                { icon: CubeTransparentIcon, title: "Internal Team Alerts", description: "Notify your internal teams about new submissions to ensure prompt action and follow-up." },
-                { icon: CubeTransparentIcon, title: "Webhooks & API Integration", description: "Use APIs to fetch data from or push data to external systems like your CRM or ERP in real-time." },
-                { icon: CubeTransparentIcon, title: "Centralized Endpoint Management", description: "Maintain a list of all your API endpoints within WhatsForm for easy access and simplified integration processes." }
+                { icon: "CubeTransparentIcon", title: "Instant Flow Notifications", description: "Acknowledge every user submission instantly with a text message, a follow-up flow, or interactive menu options." },
+                { icon: "CubeTransparentIcon", title: "Internal Team Alerts", description: "Notify your internal teams about new submissions to ensure prompt action and follow-up." },
+                { icon: "CubeTransparentIcon", title: "Webhooks & API Integration", description: "Use APIs to fetch data from or push data to external systems like your CRM or ERP in real-time." },
+                { icon: "CubeTransparentIcon", title: "Centralized Endpoint Management", description: "Maintain a list of all your API endpoints within WhatsForm for easy access and simplified integration processes." }
             ],
             image: 'https://picsum.photos/seed/flowbuilder4/500/450'
         }

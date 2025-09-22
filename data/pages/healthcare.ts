@@ -1,10 +1,40 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const healthcarePageData = {
     hero: {
         title: "Revolutionizing Patient Care with AI-Powered WhatsApp Automation",
         subtitle: "From automated appointment booking to proactive follow-ups, discover how WhatsForm, SmartyAutomate, and AI agents transform the patient experience.",
     },
+    subCategories: [
+        {
+            id: 'hospitals-clinics',
+            slug: 'hospitals-clinics',
+            title: 'Hospitals & Clinics',
+            description: 'Streamline patient communication and appointment management.'
+        },
+        {
+            id: 'telemedicine',
+            slug: 'telemedicine',
+            title: 'Telemedicine',
+            description: 'Enhance virtual consultations and remote patient monitoring.'
+        },
+        {
+            id: 'pharmaceuticals',
+            slug: 'pharmaceuticals',
+            title: 'Pharmaceuticals',
+            description: 'Improve patient support programs and medication adherence.'
+        },
+        {
+            id: 'medical-devices',
+            slug: 'medical-devices',
+            title: 'Medical Devices',
+            description: 'Provide better customer support and product training.'
+        },
+        {
+            id: 'wellness-diagnostics',
+            slug: 'wellness-diagnostics',
+            title: 'Wellness & Diagnostics',
+            description: 'Automate lab report delivery and health check-up reminders.'
+        }
+    ],
     sections: [
         {
             type: 'centeredText',
@@ -12,6 +42,7 @@ export const healthcarePageData = {
             subtitle: `In healthcare, timely communication and accurate information collection can be life-saving. WhatsForm, enhanced with AI and SmartyAutomate integration, offers a powerful, interactive, and efficient tool for patient engagement that goes far beyond traditional methods.`
         },
         {
+            id: 'hospitals-clinics',
             type: 'contentWithImage',
             subtitle: 'APPOINTMENT BOOKING & REMINDERS',
             title: '24/7 Scheduling, Zero Phone Calls',
@@ -26,6 +57,7 @@ export const healthcarePageData = {
             specialText: 'Campaign Idea: “📅 Book Your Visit via WhatsApp! Skip the calls and waiting. Just send “Hi” to our WhatsApp and our AI assistant will schedule your appointment in seconds!”'
         },
         {
+            id: 'telemedicine',
             type: 'contentWithImage',
             subtitle: 'EMERGENCY HELPLINE TRIAGE',
             title: 'Instant Guidance When It Matters Most',
@@ -40,6 +72,7 @@ export const healthcarePageData = {
             ]
         },
         {
+            id: 'pharmaceuticals',
             type: 'contentWithImage',
             subtitle: 'PATIENT INTAKE & MEDICAL HISTORY',
             title: 'Accurate Data Collection, Before the Visit',
@@ -53,6 +86,7 @@ export const healthcarePageData = {
             ]
         },
         {
+            id: 'wellness-diagnostics',
             type: 'contentWithImage',
             subtitle: 'LAB REPORTS & PROACTIVE FOLLOW-UPS',
             title: 'Deliver Results and Ensure Adherence',
@@ -72,22 +106,22 @@ export const healthcarePageData = {
             subtitle: "Implementing an AI-driven WhatsApp strategy delivers significant benefits for both patients and providers.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Higher Patient Satisfaction",
                     description: "Provide easy access and quick, 24/7 answers, leading to a more responsive healthcare experience."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Reduced No-Shows",
                     description: "Automated reminders and simple rescheduling drastically improve appointment attendance rates."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "More Efficient Operations",
                     description: "Free up staff from repetitive phone calls and manual data entry to focus on quality patient care."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Improved Patient Adherence",
                     description: "Proactive follow-ups encourage patients to stick to treatment plans and help catch issues early."
                 }

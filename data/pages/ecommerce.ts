@@ -1,5 +1,3 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const ecommercePageData = {
     hero: {
         title: "Conversational Commerce for Retail & E-commerce",
@@ -71,22 +69,22 @@ export const ecommercePageData = {
             subtitle: "Adopting conversational commerce on WhatsApp delivers a powerful return on investment.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Conversion",
                     description: "Personalized, instant assistance boosts conversion rates and average basket sizes."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Higher Engagement",
                     description: "Promotional campaigns see dramatically higher open and interaction rates compared to traditional channels."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Enhanced Loyalty",
                     description: "A frictionless, supportive post-purchase experience builds trust and encourages repeat business."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Lower Support Costs",
                     description: "AI and automation handle the bulk of routine queries, freeing up your human agents for high-value tasks."
                 }

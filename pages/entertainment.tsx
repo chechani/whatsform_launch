@@ -28,22 +28,22 @@ const EntertainmentPage: React.FC = () => {
                 title: "Key Benefits for Entertainment & Media",
                 benefits: [
                     {
-                        icon: PlayIcon,
+                        icon: "PlayIcon",
                         title: "Enhanced Content Distribution",
                         description: "Distribute content, updates, and exclusive releases directly to your audience through personalized WhatsApp channels."
                     },
                     {
-                        icon: UserGroupIcon,
+                        icon: "UserGroupIcon",
                         title: "Community Management",
                         description: "Build and manage engaged communities with automated moderation, events, and interactive experiences."
                     },
                     {
-                        icon: MegaphoneIcon,
+                        icon: "MegaphoneIcon",
                         title: "Audience Engagement",
                         description: "Drive higher engagement rates with interactive polls, contests, and real-time audience participation."
                     },
                     {
-                        icon: ChartBarIcon,
+                        icon: "ChartBarIcon",
                         title: "Performance Analytics",
                         description: "Track engagement metrics, audience preferences, and campaign performance to optimize content strategy."
                     }

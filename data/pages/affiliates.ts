@@ -1,5 +1,3 @@
-import { CheckCircleIcon, CurrencyDollarIcon, UsersIcon, ChartBarIcon, AcademicCapIcon, BuildingOfficeIcon, MegaphoneIcon } from '../../icons';
-
 export const affiliatesPageData = {
     hero: {
         title: "Become a WhatsForm Affiliate",
@@ -22,7 +20,7 @@ export const affiliatesPageData = {
         subtitle: "Perfect for professionals who work with businesses and understand their communication needs.",
         categories: [
             {
-                icon: AcademicCapIcon,
+                icon: "AcademicCapIcon",
                 title: "Chartered Accountants & Tax Professionals",
                 description: "CA firms handle multiple clients who need efficient communication systems for follow-ups, document collection, and client updates.",
                 benefits: [
@@ -34,7 +32,7 @@ export const affiliatesPageData = {
                 earning: "First year earning: ₹40,000 - ₹1,20,000 + ongoing renewals"
             },
             {
-                icon: BuildingOfficeIcon,
+                icon: "BuildingOfficeIcon",
                 title: "Business Consultants & Advisors",
                 description: "Consultants who advise businesses on operations, marketing, and digital transformation.",
                 benefits: [
@@ -46,7 +44,7 @@ export const affiliatesPageData = {
                 earning: "First year earning: ₹30,000 - ₹90,000 + ongoing renewals"
             },
             {
-                icon: MegaphoneIcon,
+                icon: "MegaphoneIcon",
                 title: "Digital Marketing Agencies",
                 description: "Marketing agencies looking to expand their service offerings with WhatsApp automation.",
                 benefits: [
@@ -58,7 +56,7 @@ export const affiliatesPageData = {
                 earning: "First year earning: ₹60,000 - ₹2,00,000 + ongoing renewals"
             },
             {
-                icon: CurrencyDollarIcon,
+                icon: "CurrencyDollarIcon",
                 title: "Software Resellers & IT Consultants",
                 description: "Technology professionals who recommend and implement business software solutions.",
                 benefits: [
@@ -77,22 +75,22 @@ export const affiliatesPageData = {
         subtitle: "Our affiliate program is designed for your success with industry-leading benefits.",
         benefits: [
             {
-                icon: CurrencyDollarIcon,
+                icon: "CurrencyDollarIcon",
                 title: "Competitive Commission Rates",
                 description: "Earn 20% commission in the first year and 10% ongoing commission for every renewal with no earning caps."
             },
             {
-                icon: ChartBarIcon,
+                icon: "ChartBarIcon",
                 title: "Real-time Analytics",
                 description: "Track your performance with detailed analytics showing clicks, conversions, and earnings."
             },
             {
-                icon: UsersIcon,
+                icon: "UsersIcon",
                 title: "Complete Marketing Support",
                 description: "Get access to professional marketing materials, training, and dedicated support team."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Monthly Guaranteed Payouts",
                 description: "Receive guaranteed monthly payouts with multiple payment options and no minimum threshold."
             }

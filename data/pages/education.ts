@@ -1,108 +1,63 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const educationPageData = {
     hero: {
-        title: "Transforming Education with Conversational AI on WhatsApp",
-        subtitle: "Engage prospective students, automate admissions, and provide instant support to create a seamless, modern educational experience.",
+        title: "WhatsApp Automation for Education",
+        subtitle: "Transform communication and engagement for educational institutions with intelligent WhatsApp automation. From admissions to alumni relations, we support the entire student lifecycle."
     },
+    subCategories: [
+        { id: 'k12-school', slug: 'k12-school', name: 'K-12 School' },
+        { id: 'higher-education', slug: 'higher-education', name: 'Higher Education' },
+        { id: 'edtech-platform', slug: 'edtech-platform', name: 'EdTech Platform' },
+        { id: 'coaching-tutoring', slug: 'coaching-tutoring', name: 'Coaching & Tutoring' },
+        { id: 'corporate-training', slug: 'corporate-training', name: 'Corporate Training' }
+    ],
     sections: [
         {
-            type: 'centeredText',
-            title: "Meet Students Where They Are",
-            subtitle: `In today's competitive landscape, educational institutions must offer instant, accessible, and personalized communication. WhatsForm turns WhatsApp into a powerful channel for student acquisition and support, powered by intelligent automation.`
-        },
-        {
+            id: 'k12-school',
             type: 'contentWithImage',
-            subtitle: 'COURSE INQUIRY & FAQS',
-            title: 'Your 24/7 AI-Powered Admissions Counselor',
-            text: 'Prospective students have questions at all hours. Our AI agent, trained on your course catalog and admission criteria, fields inquiries instantly. It can provide detailed program information, eligibility requirements, and fee structures, keeping prospects engaged and informed.',
-            image: 'https://picsum.photos/seed/education1/500/400',
+            title: "Engage Parents and Students in K-12 Schools",
+            subtitle: "Seamless Communication",
+            text: "Keep parents informed and students engaged with automated updates, fee reminders, and event notifications.",
             features: [
-                "Instant, 24/7 responses to course queries",
-                "Automated brochure delivery via SmartyAutomate",
-                "Seamless handover to human counselors for complex questions",
-                "Automatic lead capture in your CRM"
-            ]
+                "Automated admission inquiries and application status updates",
+                "Instant fee reminders and payment confirmations",
+                "Broadcast important announcements, events, and holidays",
+                "Parent-teacher communication and progress report delivery"
+            ],
+            image: "https://images.unsplash.com/photo-1580582932707-520aed93a94d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
+            id: 'higher-education',
             type: 'contentWithImage',
-            subtitle: 'APPLICATION FORMS & STATUS UPDATES',
-            title: 'A Frictionless, Chat-Driven Application Process',
-            text: 'Move beyond cumbersome web forms. WhatsForm turns the application process into a simple conversation. Collect data, receive document uploads like transcripts and IDs, and process applications—all within WhatsApp. Applicants can check their status anytime with a simple message.',
-            image: 'https://picsum.photos/seed/education2/500/400',
-            reverse: true,
+            title: "Enhance Student Experience in Higher Education",
+            subtitle: "Student Lifecycle Management",
+            text: "Streamline communication from admissions to alumni relations, providing a modern and efficient experience for students.",
             features: [
-                "Conversational application forms",
-                "In-chat document collection and validation",
-                "Real-time application status updates on demand",
-                "Integration with your school's ERP or database"
-            ]
+                "Personalized admission counseling and application support",
+                "Course registration, reminders, and schedule updates",
+                "Campus event notifications and student service announcements",
+                "Alumni engagement and networking opportunities"
+            ],
+            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            reverse: true
         },
         {
+            id: 'edtech-platform',
             type: 'contentWithImage',
-            subtitle: 'STUDENT SUPPORT & CAMPUS INFO',
-            title: 'An Intelligent Helpdesk for Your Students',
-            text: 'For current students, the AI agent acts as a virtual campus guide. It can answer questions about library hours, hostel accommodation, or fee deadlines. For more complex requests, like applying for a leave of absence, it can trigger the appropriate workflow, collect information, and route it for approval.',
-            image: 'https://picsum.photos/seed/education3/500/400',
+            title: "Scale Your EdTech Platform",
+            subtitle: "User Engagement & Support",
+            text: "Boost user adoption and retention with automated onboarding, course recommendations, and 24/7 support.",
             features: [
-                "Instant answers to common campus-related questions",
-                "Workflow automation for administrative tasks",
-                "Sensitive request detection and escalation to human staff",
-                "Reduces the burden on administrative staff"
-            ]
-        },
-        {
-            type: 'contentWithImage',
-            subtitle: 'ALUMNI & EVENT ENGAGEMENT',
-            title: 'Build and Nurture Your Community',
-            text: 'Keep your students and alumni connected and engaged. Use WhatsForm to send targeted broadcasts for webinars, alumni meet-ups, and campus events. Collect RSVPs and even process registration fees through interactive forms, ensuring high participation and strong community ties.',
-            image: 'https://picsum.photos/seed/education4/500/400',
-            reverse: true,
-            features: [
-                "Segmented broadcasts for targeted communication",
-                "Interactive event registration and payment collection",
-                "Automated event reminders and follow-ups",
-                "Drip campaigns for orientation or fee reminders"
-            ]
-        },
-        {
-            type: 'benefitsGrid',
-            title: "Tangible Outcomes for Your Institution",
-            subtitle: "Adopting a conversational AI strategy on WhatsApp delivers measurable results.",
-            benefits: [
-                {
-                    icon: CheckCircleIcon,
-                    title: "Higher Conversions",
-                    description: "Increase inquiry-to-enrollment rates by providing instant answers and a frictionless application process."
-                },
-                {
-                    icon: CheckCircleIcon,
-                    title: "Reduced Admin Load",
-                    description: "Automate data entry and routine queries, freeing up your staff to focus on high-value student interactions."
-                },
-                {
-                    icon: CheckCircleIcon,
-                    title: "Enhanced Student Experience",
-                    description: "Offer modern, responsive support that meets the expectations of today's tech-savvy students."
-                },
-                {
-                    icon: CheckCircleIcon,
-                    title: "Competitive Advantage",
-                    description: "Position your institution as a tech-forward leader with a unique, AI-driven communication strategy."
-                }
-            ]
+                "Automated user onboarding and feature tutorials",
+                "Personalized course recommendations and learning paths",
+                "Progress tracking, reminders, and motivational messages",
+                "Instant support for technical and content-related queries"
+            ],
+            image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         }
     ],
-    useCaseGrid: {
-        title: "How can WhatsForm empower your institution?",
-        items: [
-            "Lead Generation", "Automated Admissions", "Fee Reminders", "Course Counseling", "Document Collection", "Campus Helpdesk",
-            "Event Registrations", "Alumni Engagement", "Student Feedback", "Application Tracking", "Onboarding Workflows"
-        ]
-    },
     closing: {
-        title: "Ready to build the future of education communication?",
-        subtitle: "Discover how WhatsForm can be customized to meet the unique needs of your institution.",
+        title: "Ready to Revolutionize Education Communication?",
+        subtitle: "Join leading educational institutions and EdTech companies using WhatsForm to enhance engagement and streamline operations.",
         cta: "Book a Demo"
     }
 };

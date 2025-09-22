@@ -24,6 +24,7 @@ const BFSIPage: React.FC = () => {
             <GenericPageHero title={bfsiPageData.hero.title} subtitle={bfsiPageData.hero.subtitle} />
             <div className="divide-y divide-slate-200/50 dark:divide-slate-800/50">
                 {bfsiPageData.sections.map((section, index) => {
+                    const subCategory = bfsiPageData.subCategories.find(sc => sc.id === (section as any).id);
                     return (
                         <SectionWrapper key={index} index={index}>
                            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -34,7 +35,20 @@ const BFSIPage: React.FC = () => {
                                         case 'contentWithImage':
                                             return <ContentWithImage {...section as any} />;
                                         case 'benefitsGrid':
-                                            return <BenefitsGrid {...section as any} />;
+                                            return (
+                                                <div>
+                                                    <BenefitsGrid {...section as any} />
+                                                    {subCategory && (
+                                                        <div className="mt-8 text-center">
+                                                            <Link href={`/finance/${subCategory.slug}`} legacyBehavior>
+                                                                <a className="text-green-500 hover:text-green-600 font-semibold">
+                                                                    Learn more &rarr;
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
                                         default:
                                             return null;
                                     }

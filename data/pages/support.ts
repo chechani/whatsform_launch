@@ -1,6 +1,3 @@
-
-import { InboxIcon, TemplateIcon, SparklesIcon } from '../../icons';
-
 export const supportPageData = {
     hero: {
         title: "Turn WhatsApp into your #1 Support Channel with AI that scales effortlessly",
@@ -24,9 +21,9 @@ export const supportPageData = {
             type: 'featureGrid',
             title: "Boost efficiency with dual power of WhatsForm’s AI-support agent and custom chatbots working together seamlessly",
             features: [
-                { icon: InboxIcon, title: "Unified Inbox", description: "Get a consolidated view of your customer interactions on WhatsApp, Facebook and Instagram messages effortlessly from one unified inbox." },
-                { icon: TemplateIcon, title: "Organized Conversations", description: "Stay organized with conversation filters. Assign chats to specific teams or members. Say goodbye to ignored inquiries and frustrated customers!" },
-                { icon: SparklesIcon, title: "Improved Response Time", description: "Improve response time with Welcome messages & Out-of-Office workflows." }
+                { icon: "InboxIcon", title: "Unified Inbox", description: "Get a consolidated view of your customer interactions on WhatsApp, Facebook and Instagram messages effortlessly from one unified inbox." },
+                { icon: "TemplateIcon", title: "Organized Conversations", description: "Stay organized with conversation filters. Assign chats to specific teams or members. Say goodbye to ignored inquiries and frustrated customers!" },
+                { icon: "SparklesIcon", title: "Improved Response Time", description: "Improve response time with Welcome messages & Out-of-Office workflows." }
             ],
             image: 'https://picsum.photos/seed/support2/600/400'
         }

@@ -1,10 +1,40 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const logisticsPageData = {
     hero: {
         title: "Streamlining Logistics with Real-Time WhatsApp Communication",
         subtitle: "From package tracking to exception handling, keep customers and internal teams perfectly in sync with intelligent automation.",
     },
+    subCategories: [
+        {
+            id: 'logistics-supply-chain',
+            slug: 'logistics-supply-chain',
+            title: 'Logistics & Supply Chain',
+            description: 'Real-time tracking and exception handling for your shipments.'
+        },
+        {
+            id: 'import-export-trading',
+            slug: 'import-export-trading',
+            title: 'Import/Export Trading',
+            description: 'Streamline communication with international partners and clients.'
+        },
+        {
+            id: 'heavy-manufacturing',
+            slug: 'heavy-manufacturing',
+            title: 'Heavy Manufacturing',
+            description: 'Coordinate production schedules and supply chain updates.'
+        },
+        {
+            id: 'consumer-goods',
+            slug: 'consumer-goods',
+            title: 'Consumer Goods',
+            description: 'Manage inventory and distribution with real-time alerts.'
+        },
+        {
+            id: 'electronics',
+            slug: 'electronics',
+            title: 'Electronics',
+            description: 'Handle warranty claims and product support efficiently.'
+        }
+    ],
     sections: [
         {
             type: 'centeredText',
@@ -12,6 +42,7 @@ export const logisticsPageData = {
             subtitle: `In logistics, timely updates and efficient coordination are paramount. WhatsForm transforms your communication, making operations leaner, more transparent, and highly responsive.`
         },
         {
+            id: 'logistics-supply-chain',
             type: 'contentWithImage',
             subtitle: 'REAL-TIME PACKAGE TRACKING',
             title: 'Instant Updates, Zero Effort',
@@ -25,6 +56,7 @@ export const logisticsPageData = {
             ]
         },
         {
+            id: 'import-export-trading',
             type: 'contentWithImage',
             subtitle: 'DELIVERY EXCEPTION HANDLING',
             title: 'Turn Problems into Solutions, Instantly',
@@ -39,6 +71,7 @@ export const logisticsPageData = {
             ]
         },
         {
+            id: 'heavy-manufacturing',
             type: 'contentWithImage',
             subtitle: 'SUPPLIER & DRIVER COORDINATION',
             title: 'A Command Center in Every Pocket',
@@ -52,6 +85,7 @@ export const logisticsPageData = {
             ]
         },
         {
+            id: 'consumer-goods',
             type: 'contentWithImage',
             subtitle: 'INVENTORY & ORDER ALERTS',
             title: 'Keep Your Internal Teams in Sync',
@@ -71,22 +105,22 @@ export const logisticsPageData = {
             subtitle: "A responsive, user-centric communication strategy delivers a competitive edge in the logistics industry.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Boosted Customer Satisfaction",
                     description: "Proactive, real-time updates build trust and reduce customer anxiety, leading to repeat business."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Efficiency",
                     description: "Automate routine tracking queries and exception handling, allowing your team to focus on complex logistical challenges."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Improved Transparency",
                     description: "Close communication gaps between customers, drivers, and internal teams for a more visible supply chain."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Faster Problem Resolution",
                     description: "Issues are reported and handled with less latency, minimizing delays and operational disruptions."
                 }

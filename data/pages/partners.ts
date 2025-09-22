@@ -1,6 +1,4 @@
 
-import { CheckCircleIcon, GiftIcon, BotIcon, CodeBracketIcon } from '../../icons';
-
 export const partnersPageData = {
     hero: {
         title: "Partner with Us",
@@ -15,17 +13,17 @@ export const partnersPageData = {
         subtitle: "We offer different ways to partner, tailored to your business model.",
         types: [
             {
-                icon: BotIcon,
+                icon: "BotIcon",
                 title: "Solution Partners",
                 description: "For agencies, consultants, and developers who design and implement custom solutions for clients using the WhatsForm platform."
             },
             {
-                icon: GiftIcon,
+                icon: "GiftIcon",
                 title: "Resellers",
                 description: "For businesses that want to sell WhatsForm licenses directly to their customers, bundling it with their own services."
             },
             {
-                icon: CodeBracketIcon,
+                icon: "CodeBracketIcon",
                 title: "Technology Partners",
                 description: "For SaaS companies and technology providers who want to build integrations and connect their platforms with WhatsForm."
             }
@@ -36,22 +34,22 @@ export const partnersPageData = {
         subtitle: "We're invested in your success. Our partners get access to a range of benefits.",
         benefits: [
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Generous Revenue Share",
                 description: "Earn competitive recurring commissions and referral fees for the customers you bring to WhatsForm."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Dedicated Partner Support",
                 description: "Get access to a dedicated partner manager, technical support, and training resources."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Co-Marketing Opportunities",
                 description: "Collaborate with us on webinars, case studies, and other marketing initiatives to grow your brand."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Early Access to Features",
                 description: "Stay ahead of the curve with early access to new features and product roadmap insights."
             }

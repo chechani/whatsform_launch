@@ -1,6 +1,3 @@
-
-import { CheckCircleIcon } from '../../icons';
-
 export const formResponsePageData = {
     hero: {
         title: "Beyond Submissions: Your Command Center for Form Responses",
@@ -72,22 +69,22 @@ export const formResponsePageData = {
             subtitle: "An integrated response management system delivers powerful improvements across your organization.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Never Miss a Lead",
                     description: "Instant visibility and built-in action tools ensure every submission is handled promptly and effectively."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Boost Team Productivity",
                     description: "A unified workspace reduces context switching and manual data entry, freeing your team to focus on high-value work."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Enhance Customer Experience",
                     description: "Fast, contextual follow-ups and a complete interaction history create a seamless and professional customer journey."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Optimize Your Funnel",
                     description: "Powerful analytics reveal bottlenecks and opportunities, helping you refine your forms and workflows for maximum conversion."
                 }

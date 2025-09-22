@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../../../components/PageBuilder';
-import { HeartIcon, ClockIcon, CurrencyDollarIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 const GymFitnessCenterPage: React.FC = () => {
     const pageData = {
@@ -28,22 +27,22 @@ const GymFitnessCenterPage: React.FC = () => {
                 title: "Key Benefits for Fitness Centers",
                 benefits: [
                     {
-                        icon: HeartIcon,
+                        icon: "HeartIcon",
                         title: "Member Engagement",
                         description: "Keep members motivated with personalized workout tips, progress updates, and achievement celebrations."
                     },
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "Efficient Scheduling",
                         description: "Automate class bookings, trainer appointments, and facility reservations to reduce administrative work."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Revenue Growth",
                         description: "Promote personal training, supplements, and premium services through targeted WhatsApp campaigns."
                     },
                     {
-                        icon: UserGroupIcon,
+                        icon: "UserGroupIcon",
                         title: "Community Building",
                         description: "Create fitness challenges, group activities, and member support networks through WhatsApp groups."
                     }

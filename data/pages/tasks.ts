@@ -1,6 +1,4 @@
 
-import { CheckCircleIcon } from '../../icons';
-
 export const tasksPageData = {
     hero: {
         title: "Streamline Your Workflow with Integrated Task Management",
@@ -58,22 +56,22 @@ export const tasksPageData = {
             subtitle: "An integrated task management system delivers powerful improvements to your team's performance.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Total Accountability",
                     description: "Clear assignments and deadlines ensure everyone knows exactly what they are responsible for."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Efficiency",
                     description: "Less time spent searching for information and clarifying work means more time for execution."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Never Miss a Deadline",
                     description: "Centralized tracking and status views keep every project on schedule and highlight what needs attention."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Seamless Collaboration",
                     description: "With all communication and files in one place, teamwork becomes smoother and more effective."
                 }

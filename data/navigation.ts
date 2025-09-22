@@ -51,7 +51,7 @@ export const headerData = {
             { icon: TruckIcon, name: 'Logistics', path: '/logistics' },
             { icon: BanknotesIcon, name: 'BFSI', path: '/bfsi' },
             { icon: BuildingOfficeIcon, name: 'Real Estate', path: '/real-estate' },
-            { icon: CalculatorIcon, name: 'CA Firms', path: '/ca-firms' },
+            { icon: CalculatorIcon, name: 'CA Firms', path: '/professional-services/ca-firms' },
             { icon: MegaphoneIcon, name: 'Marketing Agencies', path: '/marketing-agencies' },
         ],
         viewAll: {

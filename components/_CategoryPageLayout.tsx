@@ -10,20 +10,19 @@ export interface CategoryPageData {
     sections: (
         | { type: 'centeredText'; title: string; subtitle?: string; }
         | { type: 'contentWithImage'; subtitle: string; title: string; text: string; image: string; features: string[]; reverse?: boolean; }
-        | { type: 'benefitsGrid'; title: string; subtitle?: string; benefits: { icon: React.FC<{className?: string}>; title: string; description: string }[]; }
+        | { type: 'benefitsGrid'; title: string; subtitle?: string; benefits: { icon: string; title: string; description: string }[]; }
     )[];
     relevantForms: string[];
     closing: { title: string; subtitle: string; cta: string; };
 }
 
 interface CategoryPageLayoutProps {
-    navigate: (path: string) => void;
     data: CategoryPageData;
     currentIndustry?: string;
     currentCategory?: string;
 }
 
-const RelevantForms: React.FC<{ navigate: (path: string) => void; formKeywords: string[] }> = ({ navigate, formKeywords }) => {
+const RelevantForms: React.FC<{ formKeywords: string[] }> = ({ formKeywords }) => {
     const relevantForms = formsData.filter(form => formKeywords.includes(form.keyword));
 
     if (relevantForms.length === 0) {
@@ -56,19 +55,18 @@ const RelevantForms: React.FC<{ navigate: (path: string) => void; formKeywords: 
                     ))}
                 </div>
                  <div className="text-center mt-12">
-                    <button
-                        onClick={() => navigate('/forms-browser')}
-                        className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg"
-                    >
-                        Explore All Templates
-                    </button>
+                    <Link href="/forms-browser" legacyBehavior>
+                        <a className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-transform hover:scale-105 shadow-lg">
+                            Explore All Templates
+                        </a>
+                    </Link>
                 </div>
             </div>
         </section>
     );
 };
 
-export const CategoryPageLayout: React.FC<CategoryPageLayoutProps> = ({ navigate, data }) => {
+export const CategoryPageLayout: React.FC<CategoryPageLayoutProps> = ({ data }) => {
     const { hero, sections, relevantForms, closing } = data;
 
     const SectionWrapper: React.FC<{ index: number; children: React.ReactNode }> = ({ index, children }) => {
@@ -109,7 +107,7 @@ export const CategoryPageLayout: React.FC<CategoryPageLayoutProps> = ({ navigate
                 ))}
             </div>
             
-            {relevantForms.length > 0 && <RelevantForms navigate={navigate} formKeywords={relevantForms} />}
+            {relevantForms.length > 0 && <RelevantForms formKeywords={relevantForms} />}
 
             <div className="bg-pastel-yellow dark:bg-amber-950/30 py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">

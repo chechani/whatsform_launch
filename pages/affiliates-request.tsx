@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { GenericPageHero, CTA } from '../components/PageBuilder';
 import { affiliatesRequestPageData } from '../data/pages/affiliatesRequest';
+import { AcademicCapIcon, BuildingOfficeIcon, MegaphoneIcon, CurrencyDollarIcon, ChartBarIcon, UsersIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+
+const iconMap: { [key: string]: React.FC<{className?: string}> } = {
+    AcademicCapIcon,
+    BuildingOfficeIcon,
+    MegaphoneIcon,
+    CurrencyDollarIcon,
+    ChartBarIcon,
+    UsersIcon,
+    CheckCircleIcon,
+};
 
 const AffiliatesRequestPage: React.FC = () => {
     const [formData, setFormData] = useState<Record<string, string | boolean>>({});
@@ -109,27 +120,30 @@ const AffiliatesRequestPage: React.FC = () => {
                         </h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        {idealCandidates.candidates.map((candidate, index) => (
-                            <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg">
-                                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mb-6 w-fit">
-                                    <candidate.icon className="h-8 w-8 text-green-600 dark:text-green-400" />
+                        {idealCandidates.candidates.map((candidate, index) => {
+                            const IconComponent = iconMap[candidate.icon as keyof typeof iconMap];
+                            return (
+                                <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg">
+                                    <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mb-6 w-fit">
+                                        {IconComponent && <IconComponent className="h-8 w-8 text-green-600 dark:text-green-400" />}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                        {candidate.title}
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-300 mb-6">
+                                        {candidate.description}
+                                    </p>
+                                    <div className="space-y-2">
+                                        {candidate.examples.map((example, idx) => (
+                                            <div key={idx} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
+                                                <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3"></div>
+                                                {example}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                                    {candidate.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-300 mb-6">
-                                    {candidate.description}
-                                </p>
-                                <div className="space-y-2">
-                                    {candidate.examples.map((example, idx) => (
-                                        <div key={idx} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3"></div>
-                                            {example}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -143,29 +157,32 @@ const AffiliatesRequestPage: React.FC = () => {
                         </h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
-                        {benefits.map((benefit, index) => (
-                            <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-xl p-8">
-                                <div className="flex items-center mb-6">
-                                    <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
-                                        <benefit.icon className="h-8 w-8 text-green-600 dark:text-green-400" />
+                        {benefits.map((benefit, index) => {
+                            const IconComponent = iconMap[benefit.icon as keyof typeof iconMap];
+                            return (
+                                <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-xl p-8">
+                                    <div className="flex items-center mb-6">
+                                        <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
+                                            {IconComponent && <IconComponent className="h-8 w-8 text-green-600 dark:text-green-400" />}
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                                            {benefit.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                                        {benefit.title}
-                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-300 mb-6">
+                                        {benefit.description}
+                                    </p>
+                                    <ul className="space-y-2">
+                                        {benefit.details.map((detail, idx) => (
+                                            <li key={idx} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
+                                                <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3"></div>
+                                                {detail}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <p className="text-slate-600 dark:text-slate-300 mb-6">
-                                    {benefit.description}
-                                </p>
-                                <ul className="space-y-2">
-                                    {benefit.details.map((detail, idx) => (
-                                        <li key={idx} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3"></div>
-                                            {detail}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

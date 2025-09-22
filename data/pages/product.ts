@@ -1,7 +1,3 @@
-import { 
-    BuildingStorefrontIcon, CalculatorIcon, StethoscopeIcon, CalendarIcon
-} from '../../icons';
-
 export const miniAppsPageData = {
     hero: {
         title: "Go Beyond Forms: Build Mini-Apps Inside WhatsApp",
@@ -59,22 +55,22 @@ export const miniAppsPageData = {
             subtitle: "The possibilities are endless. Here are a few ideas to get you started.",
             benefits: [
                 {
-                    icon: BuildingStorefrontIcon,
+                    icon: "BuildingStorefrontIcon",
                     title: "Interactive Catalog",
                     description: "Users can browse products, check real-time stock, and get AI-powered recommendations."
                 },
                 {
-                    icon: CalculatorIcon,
+                    icon: "CalculatorIcon",
                     title: "Loan/EMI Calculator",
                     description: "Provide instant, personalized financial calculations based on user inputs."
                 },
                 {
-                    icon: CalendarIcon,
+                    icon: "CalendarIcon",
                     title: "Dynamic Appointment Booker",
                     description: "Check real-time calendar availability across your team and book a slot instantly."
                 },
                 {
-                    icon: StethoscopeIcon,
+                    icon: "StethoscopeIcon",
                     title: "Symptom Checker",
                     description: "A guided diagnostic tool that asks questions and provides initial recommendations."
                 }

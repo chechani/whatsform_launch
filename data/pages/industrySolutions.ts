@@ -1,4 +1,3 @@
-
 import { industryCategoryMap } from '../formData';
 
 // Helper to create a URL-friendly slug from a string
@@ -178,6 +177,13 @@ export const industrySolutionsPageData = {
         // Map specific categories to their dedicated pages
         const getCategoryPageUrl = (industryName: string, categoryName: string) => {
             const categoryPageMap: { [key: string]: { [key: string]: string } } = {
+                "Marketing & Advertising": {
+                    "Digital Marketing Agency": "/marketing-agencies/digital-marketing-agency",
+                    "Traditional Advertising": "/contact?industry=Marketing%20%26%20Advertising&category=Traditional%20Advertising",
+                    "Public Relations": "/marketing-agencies/public-relations",
+                    "Content Creation": "/marketing-agencies/content-creation",
+                    "SEO/SEM Services": "/marketing-agencies/seo-sem-services"
+                },
                 "Travel & Hospitality": {
                     "Hotel & Resorts": "/categories/travel-hospitality/hotels-resorts",
                     "Airlines": "/categories/travel-hospitality/airlines",
@@ -234,6 +240,9 @@ export const industrySolutionsPageData = {
                 if (dedicatedCategoryUrl) {
                     // Use dedicated category page
                     categoryPath = dedicatedCategoryUrl;
+                } else if (industryPageUrl !== "/contact" && !industryPageUrl.startsWith('/categories')) {
+                    // If the industry has a specific page, and it's not a categories page, link to its sub-page
+                    categoryPath = `${industryPageUrl}/${categorySlug}`;
                 } else if (industryPageUrl !== "/contact") {
                     // If the industry has a specific page, link to it with anchor
                     categoryPath = `${industryPageUrl}#${categorySlug}`;

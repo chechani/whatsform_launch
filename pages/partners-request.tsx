@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { GenericPageHero, CTA } from '../components/PageBuilder';
 import { partnersRequestPageData } from '../data/pages/partnersRequest';
+import { CheckCircleIcon, BuildingOfficeIcon, UsersIcon } from '../icons';
+
+const iconMap: { [key: string]: React.FC<{className?: string}> } = {
+    CheckCircleIcon,
+    BuildingOfficeIcon,
+    UsersIcon,
+};
 
 const PartnersRequestPage: React.FC = () => {
     const [formData, setFormData] = useState<Record<string, string>>({});
@@ -93,44 +100,50 @@ const PartnersRequestPage: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                        {partnersRequestPageData.benefits.map((benefit, index) => (
-                            <div key={index} className="text-center p-6 bg-slate-50 dark:bg-slate-900/50 rounded-2xl">
-                                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <benefit.icon className="w-6 h-6 text-green-600 dark:text-green-400" />
+                        {partnersRequestPageData.benefits.map((benefit, index) => {
+                            const IconComponent = iconMap[benefit.icon];
+                            return (
+                                <div key={index} className="text-center p-6 bg-slate-50 dark:bg-slate-900/50 rounded-2xl">
+                                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                        {IconComponent && <IconComponent className="w-6 h-6 text-green-600 dark:text-green-400" />}
+                                    </div>
+                                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm">
+                                        {benefit.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm">
-                                    {benefit.description}
-                                </p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     {/* Partner Types */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {partnersRequestPageData.partnerTypes.map((type, index) => (
-                            <div key={index} className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-lg">
-                                <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
-                                    <type.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+                        {partnersRequestPageData.partnerTypes.map((type, index) => {
+                            const IconComponent = iconMap[type.icon];
+                            return (
+                                <div key={index} className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-lg">
+                                    <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
+                                        {IconComponent && <IconComponent className="w-7 h-7 text-blue-600 dark:text-blue-400" />}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                        {type.title}
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-6">
+                                        {type.description}
+                                    </p>
+                                    <ul className="space-y-2">
+                                        {type.features.map((feature, featureIndex) => (
+                                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+                                                <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                                    {type.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6">
-                                    {type.description}
-                                </p>
-                                <ul className="space-y-2">
-                                    {type.features.map((feature, featureIndex) => (
-                                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
-                                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                                            <span>{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

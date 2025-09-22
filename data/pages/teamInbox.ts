@@ -46,22 +46,22 @@ export const teamInboxPageData = {
             subtitle: "The Team Inbox isn't just a chat tool; it's a productivity hub designed to turn conversations into conversions.",
             benefits: [
                 {
-                    icon: InboxIcon,
+                    icon: 'InboxIcon',
                     title: "Manage in One Place",
                     description: "Consolidate all chats, which you can easily categorize and filter to stay organized."
                 },
                 {
-                    icon: SendMessageIcon,
+                    icon: 'SendMessageIcon',
                     title: "Automate Follow-ups",
                     description: "Schedule reminders and tasks so leads and opportunities never fall through the cracks."
                 },
                 {
-                    icon: CalendarIcon,
+                    icon: 'CalendarIcon',
                     title: "Streamline Workflows",
                     description: "Schedule calls and manage contacts with built-in calendar and CRM functionality."
                 },
                 {
-                    icon: UsersIcon,
+                    icon: 'UsersIcon',
                     title: "Collaborate Seamlessly",
                     description: "Keep everyone on the same page with assignments, notes, and status tracking."
                 }

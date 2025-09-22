@@ -28,22 +28,22 @@ const HotelsResortsPage: React.FC = () => {
                 title: "Key Benefits for Hotels & Resorts",
                 benefits: [
                     {
-                        icon: BuildingOfficeIcon,
+                        icon: "BuildingOfficeIcon",
                         title: "Enhanced Guest Experience",
                         description: "Provide 24/7 concierge services and instant responses to guest requests through WhatsApp automation."
                     },
                     {
-                        icon: DevicePhoneMobileIcon,
+                        icon: "DevicePhoneMobileIcon",
                         title: "Streamlined Operations",
                         description: "Reduce front desk workload by automating common inquiries, bookings, and service requests."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Increased Revenue",
                         description: "Upsell spa services, dining, and activities through personalized WhatsApp campaigns."
                     },
                     {
-                        icon: StarIcon,
+                        icon: "StarIcon",
                         title: "Improved Reviews",
                         description: "Proactive communication and quick issue resolution lead to better guest satisfaction and reviews."
                     }

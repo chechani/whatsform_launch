@@ -2,6 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import { GenericPageHero, CTA } from '../components/PageBuilder';
 import { operationsPageData } from '../data/pages/operations';
+import { UsersIcon, OperationsIcon, CalendarIcon, CheckCircleIcon, InboxIcon } from '../icons';
+
+const iconMap: { [key: string]: React.FC<{className?: string}> } = {
+    UsersIcon,
+    OperationsIcon,
+    CalendarIcon,
+    CheckCircleIcon,
+    InboxIcon,
+};
 
 const OperationsPage: React.FC = () => {
     return (
@@ -55,75 +64,78 @@ const OperationsPage: React.FC = () => {
                     </div>
 
                     <div className="space-y-20">
-                        {operationsPageData.useCases.map((useCase, index) => (
-                            <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                                {/* Content */}
-                                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                                    <div className="flex items-center space-x-4 mb-6">
-                                        <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
-                                            <useCase.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+                        {operationsPageData.useCases.map((useCase, index) => {
+                            const IconComponent = iconMap[useCase.icon];
+                            return (
+                                <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                                    {/* Content */}
+                                    <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                                        <div className="flex items-center space-x-4 mb-6">
+                                            <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
+                                                {IconComponent && <IconComponent className="w-7 h-7 text-blue-600 dark:text-blue-400" />}
+                                            </div>
+                                            <div>
+                                                <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                                                    {useCase.category}
+                                                </span>
+                                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                                                    {useCase.title}
+                                                </h3>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                                                {useCase.category}
-                                            </span>
-                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                                                {useCase.title}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    
-                                    <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-                                        {useCase.description}
-                                    </p>
+                                        
+                                        <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+                                            {useCase.description}
+                                        </p>
 
-                                    {/* Features */}
-                                    <div className="mb-8">
-                                        <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Key Features:</h4>
-                                        <div className="grid sm:grid-cols-2 gap-3">
-                                            {useCase.features.map((feature, featureIndex) => (
-                                                <div key={featureIndex} className="flex items-start space-x-3">
-                                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                    <span className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{feature}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Benefits */}
-                                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-xl p-6">
-                                        <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Benefits:</h4>
-                                        <div className="grid sm:grid-cols-2 gap-3">
-                                            {useCase.benefits.map((benefit, benefitIndex) => (
-                                                <div key={benefitIndex} className="flex items-center space-x-3">
-                                                    <div className="w-5 h-5 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center flex-shrink-0">
-                                                        <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                        </svg>
+                                        {/* Features */}
+                                        <div className="mb-8">
+                                            <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Key Features:</h4>
+                                            <div className="grid sm:grid-cols-2 gap-3">
+                                                {useCase.features.map((feature, featureIndex) => (
+                                                    <div key={featureIndex} className="flex items-start space-x-3">
+                                                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                        <span className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{feature}</span>
                                                     </div>
-                                                    <span className="text-green-800 dark:text-green-300 font-medium text-sm">{benefit}</span>
-                                                </div>
-                                            ))}
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                {/* Image */}
-                                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                                    <div className="relative">
-                                        <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 rounded-2xl overflow-hidden shadow-lg">
-                                            <img 
-                                                src={useCase.image} 
-                                                alt={useCase.title}
-                                                className="w-full h-full object-cover"
-                                                loading="lazy"
-                                            />
+                                        {/* Benefits */}
+                                        <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-xl p-6">
+                                            <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Benefits:</h4>
+                                            <div className="grid sm:grid-cols-2 gap-3">
+                                                {useCase.benefits.map((benefit, benefitIndex) => (
+                                                    <div key={benefitIndex} className="flex items-center space-x-3">
+                                                        <div className="w-5 h-5 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                                            <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                            </svg>
+                                                        </div>
+                                                        <span className="text-green-800 dark:text-green-300 font-medium text-sm">{benefit}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20 rounded-3xl -z-10"></div>
+                                    </div>
+
+                                    {/* Image */}
+                                    <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                                        <div className="relative">
+                                            <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 rounded-2xl overflow-hidden shadow-lg">
+                                                <img 
+                                                    src={useCase.image} 
+                                                    alt={useCase.title}
+                                                    className="w-full h-full object-cover"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20 rounded-3xl -z-10"></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -168,19 +180,22 @@ const OperationsPage: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {operationsPageData.benefits.map((benefit, index) => (
-                            <div key={index} className="text-center p-8 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
-                                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                    <benefit.icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        {operationsPageData.benefits.map((benefit, index) => {
+                            const IconComponent = iconMap[benefit.icon];
+                            return (
+                                <div key={index} className="text-center p-8 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50 rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
+                                    <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                        {IconComponent && <IconComponent className="w-8 h-8 text-blue-600 dark:text-blue-400" />}
+                                    </div>
+                                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        {benefit.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                    {benefit.description}
-                                </p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

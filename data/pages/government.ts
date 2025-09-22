@@ -1,17 +1,18 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const governmentPageData = {
     hero: {
         title: "Modernizing Public Services with WhatsApp Automation",
         subtitle: "Bring e-Governance to every citizen's smartphone. Deliver services, handle grievances, and disseminate information instantly and inclusively.",
     },
+    subCategories: [
+        { id: 'energy-utilities', slug: 'energy-utilities', title: 'Energy & Utilities' },
+        { id: 'government-body', slug: 'government-body', title: 'Government Bodies' },
+        { id: 'ngo-charity', slug: 'ngo-charity', title: 'NGOs & Charities' },
+        { id: 'public-transport', slug: 'public-transport', title: 'Public Transport' },
+        { id: 'waste-management', slug: 'waste-management', title: 'Waste Management' },
+    ],
     sections: [
         {
-            type: 'centeredText',
-            title: "Citizen Services, Simplified",
-            subtitle: `Align with 'Digital India' initiatives by overcoming the traditional barriers of public service delivery. WhatsForm turns complex paperwork and long queues into simple, accessible WhatsApp conversations.`
-        },
-        {
+            id: 'government-body',
             type: 'contentWithImage',
             subtitle: 'DIGITAL SERVICE DELIVERY',
             title: 'Applications and Services in a Simple Chat',
@@ -25,6 +26,7 @@ export const governmentPageData = {
             ]
         },
         {
+            id: 'ngo-charity',
             type: 'contentWithImage',
             subtitle: 'MULTILINGUAL FAQ & HELPLINE',
             title: '24/7 Information, Reduced Workload',
@@ -39,6 +41,7 @@ export const governmentPageData = {
             ]
         },
         {
+            id: 'public-transport',
             type: 'contentWithImage',
             subtitle: 'GRIEVANCE REPORTING & TRACKING',
             title: 'Empowering Citizens, Ensuring Accountability',
@@ -52,6 +55,7 @@ export const governmentPageData = {
             ]
         },
         {
+            id: 'energy-utilities',
             type: 'contentWithImage',
             subtitle: 'PUBLIC HEALTH & OUTREACH',
             title: 'Proactive Campaigns that Reach Everyone',
@@ -66,27 +70,28 @@ export const governmentPageData = {
             ]
         },
         {
+            id: 'waste-management',
             type: 'benefitsGrid',
             title: "Tangible Outcomes for Governance",
             subtitle: "Implementing a WhatsApp-based strategy delivers inclusive, efficient, and transparent public services.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Accessibility",
                     description: "Lower the barrier for citizens to access services and schemes, especially for those less comfortable with web portals."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Improved Efficiency",
                     description: "Automate clerical work, data entry, and routine queries, allowing officials to focus on core responsibilities."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Enhanced Transparency",
                     description: "Provide citizens with real-time status updates and maintain clear audit logs for all interactions."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Higher Trust",
                     description: "A responsive, convenient, and transparent system builds public trust in government services."
                 }

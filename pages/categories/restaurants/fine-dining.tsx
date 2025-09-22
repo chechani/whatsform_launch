@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../../../components/PageBuilder';
-import { BuildingStorefrontIcon, ClockIcon, CurrencyDollarIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 const FineDiningPage: React.FC = () => {
     const pageData = {
@@ -28,22 +27,22 @@ const FineDiningPage: React.FC = () => {
                 title: "Key Benefits for Fine Dining",
                 benefits: [
                     {
-                        icon: BuildingStorefrontIcon,
+                        icon: "BuildingStorefrontIcon",
                         title: "Enhanced Guest Experience",
                         description: "Provide personalized service with automated special occasion reminders and dietary preference tracking."
                     },
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "Efficient Operations",
                         description: "Reduce no-shows with automated reminders and streamline reservation management."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Increased Revenue",
                         description: "Promote wine pairings, special menus, and events through targeted WhatsApp campaigns."
                     },
                     {
-                        icon: UserGroupIcon,
+                        icon: "UserGroupIcon",
                         title: "Guest Retention",
                         description: "Build lasting relationships with personalized follow-ups and exclusive member offers."
                     }

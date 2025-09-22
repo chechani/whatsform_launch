@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { GenericPageHero, CTA, ContentSection, ContentWithImage, BenefitsGrid } from '../../../components/PageBuilder';
-import { TruckIcon, WrenchScrewdriverIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 const CarDealershipPage: React.FC = () => {
     const pageData = {
@@ -28,22 +27,22 @@ const CarDealershipPage: React.FC = () => {
                 title: "Key Benefits for Car Dealerships",
                 benefits: [
                     {
-                        icon: TruckIcon,
+                        icon: "TruckIcon",
                         title: "Higher Conversion Rates",
                         description: "Convert more inquiries into actual sales with timely, personalized WhatsApp communication."
                     },
                     {
-                        icon: WrenchScrewdriverIcon,
+                        icon: "WrenchScrewdriverIcon",
                         title: "Streamlined Service",
                         description: "Automate service appointments, maintenance reminders, and warranty communications."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Increased Revenue",
                         description: "Upsell accessories, extended warranties, and service packages through automated campaigns."
                     },
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "24/7 Availability",
                         description: "Capture leads and provide information around the clock, even when your showroom is closed."
                     }

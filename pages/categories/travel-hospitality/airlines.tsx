@@ -28,22 +28,22 @@ const AirlinesPage: React.FC = () => {
                 title: "Key Benefits for Airlines",
                 benefits: [
                     {
-                        icon: PaperAirplaneIcon,
+                        icon: "PaperAirplaneIcon",
                         title: "Improved Passenger Experience",
                         description: "Keep passengers informed with real-time updates, reducing anxiety and improving overall travel experience."
                     },
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "Operational Efficiency",
                         description: "Automate routine communications and reduce call center volume with self-service WhatsApp interactions."
                     },
                     {
-                        icon: ExclamationTriangleIcon,
+                        icon: "ExclamationTriangleIcon",
                         title: "Crisis Management",
                         description: "Handle flight disruptions, cancellations, and rebooking efficiently through automated WhatsApp workflows."
                     },
                     {
-                        icon: UserGroupIcon,
+                        icon: "UserGroupIcon",
                         title: "24/7 Customer Service",
                         description: "Provide round-the-clock support for passenger inquiries, changes, and assistance requests."
                     }

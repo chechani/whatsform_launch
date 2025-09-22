@@ -1,6 +1,4 @@
 
-import { HeadsetIcon, CurrencyDollarIcon, CubeTransparentIcon, SparklesIcon, CheckCircleIcon, BotIcon, CodeBracketIcon } from '../../icons';
-
 export const smartyAiPageData = {
     hero: {
         title: "Go Beyond Chatbots with Intelligent AI Agents",
@@ -72,22 +70,22 @@ export const smartyAiPageData = {
             subtitle: "Our AI is built on a foundation of powerful, enterprise-grade technologies.",
             benefits: [
                 {
-                    icon: BotIcon,
+                    icon: "BotIcon",
                     title: "Natural Language Understanding",
                     description: "Go beyond keywords. Our AI understands context, intent, and sentiment for more human-like conversations."
                 },
                 {
-                    icon: CodeBracketIcon,
+                    icon: "CodeBracketIcon",
                     title: "Two-Way API Integration",
                     description: "Connect to any of your backend systems to fetch and push data in real-time, making your agents truly powerful."
                 },
                 {
-                    icon: SparklesIcon,
+                    icon: "SparklesIcon",
                     title: "Continuous Learning",
                     description: "Our agents learn from interactions, constantly improving their accuracy and effectiveness over time."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Seamless Human Handoff",
                     description: "Intelligently escalate conversations to your human team with the full chat history and a summary for context."
                 }

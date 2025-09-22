@@ -1,6 +1,4 @@
 
-import { CheckCircleIcon } from '../../icons';
-
 export const calendarPageData = {
     hero: {
         title: "The Calendar Dashboard: Your WhatsApp Event Command Centre",
@@ -72,22 +70,22 @@ export const calendarPageData = {
             subtitle: "Integrating your schedule with your communication platform delivers powerful results.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Productivity",
                     description: "Reduce time spent on manual scheduling and follow-ups, allowing your team to focus on high-value conversations."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Higher Conversion Rates",
                     description: "A structured, timely follow-up process ensures no lead is dropped, moving prospects through the funnel faster."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Improved Customer Experience",
                     description: "Professional, timely communication and reminders build trust and show your customers you value their time."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Total Accountability",
                     description: "With clear assignments and status tracking, you always know who is responsible for the next step."
                 }

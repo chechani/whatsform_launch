@@ -1,10 +1,41 @@
-import { CheckCircleIcon } from '../../icons';
 
 export const bfsiPageData = {
     hero: {
         title: "Smart, Secure, and Seamless Customer Service for BFSI",
         subtitle: "Automate routine queries, streamline applications, and process claims with compliant, AI-powered conversations on WhatsApp.",
     },
+    subCategories: [
+        {
+            id: 'banking',
+            slug: 'banking',
+            title: 'Banking',
+            description: '24/7 personal banking assistant for inquiries and service requests.'
+        },
+        {
+            id: 'insurance',
+            slug: 'insurance',
+            title: 'Insurance',
+            description: 'Interactive application process from inquiry to pre-approval.'
+        },
+        {
+            id: 'investment-wealth-management',
+            slug: 'investment-wealth-management',
+            title: 'Investment & Wealth Management',
+            description: 'Secure and instant client portfolio updates and communication.'
+        },
+        {
+            id: 'accounting-auditing',
+            slug: 'accounting-auditing',
+            title: 'Accounting & Auditing',
+            description: 'Streamline client communication and data collection.'
+        },
+        {
+            id: 'fintech',
+            slug: 'fintech',
+            title: 'FinTech',
+            description: 'Enhance user onboarding and support for your financial products.'
+        }
+    ],
     sections: [
         {
             type: 'centeredText',
@@ -12,6 +43,7 @@ export const bfsiPageData = {
             subtitle: `The BFSI sector demands security, compliance, and convenience. WhatsForm delivers on all fronts, turning complex financial processes into simple, secure, and user-friendly WhatsApp interactions.`
         },
         {
+            id: 'banking',
             type: 'contentWithImage',
             subtitle: 'BANKING FAQS & TRANSACTIONS',
             title: 'Your Customers\' Personal Banking Assistant',
@@ -25,6 +57,7 @@ export const bfsiPageData = {
             ]
         },
         {
+            id: 'insurance',
             type: 'contentWithImage',
             subtitle: 'LOAN & INSURANCE APPLICATIONS',
             title: 'From Inquiry to Pre-Approval in Minutes',
@@ -39,6 +72,7 @@ export const bfsiPageData = {
             ]
         },
         {
+            id: 'claims-and-service',
             type: 'contentWithImage',
             subtitle: 'CLAIMS & SERVICE REQUESTS',
             title: 'Fast, Empathetic Support When It Matters',
@@ -52,6 +86,7 @@ export const bfsiPageData = {
             ]
         },
         {
+            id: 'compliance-and-security',
             type: 'contentWithImage',
             subtitle: 'REGULATORY COMPLIANCE & SECURITY',
             title: 'Built for Trust and Accountability',
@@ -71,22 +106,22 @@ export const bfsiPageData = {
             subtitle: "Adopting an AI-driven WhatsApp strategy delivers significant improvements in efficiency and customer satisfaction.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Improved Customer Experience",
                     description: "Provide instant, 24/7, and convenient service, eliminating call queues and branch visits for routine tasks."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Massive Cost Savings",
                     description: "Dramatically reduce call center volumes by automating the vast majority of common queries and requests."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Lead Conversion",
                     description: "Make loan and policy applications frictionless and interactive, leading to higher completion and conversion rates."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Enhanced Compliance",
                     description: "Maintain meticulous records of all customer interactions to simplify audits and meet regulatory requirements."
                 }

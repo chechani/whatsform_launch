@@ -1,5 +1,3 @@
-import { UserPlusIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowTrendingDownIcon } from '../../icons';
-
 export const marketingPageData = {
     hero: {
         title: "Turn Conversations into Revenue with WhatsApp Marketing",
@@ -15,9 +13,9 @@ export const marketingPageData = {
         {
             type: 'featureList',
             features: [
-                { title: "Automatic lead capture", icon: UserPlusIcon },
-                { title: "Two-way real-time engagement", icon: ChatBubbleOvalLeftEllipsisIcon },
-                { title: "Reduced acquisition costs", icon: ArrowTrendingDownIcon }
+                { title: "Automatic lead capture", icon: "UserPlusIcon" },
+                { title: "Two-way real-time engagement", icon: "ChatBubbleOvalLeftEllipsisIcon" },
+                { title: "Reduced acquisition costs", icon: "ArrowTrendingDownIcon" }
             ]
         },
         {

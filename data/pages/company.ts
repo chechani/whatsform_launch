@@ -1,7 +1,5 @@
 
 
-import { SparklesIcon, UsersIcon, CheckCircleIcon, CubeTransparentIcon } from '../../icons';
-
 export const companyPageData = {
     hero: {
         title: "About WhatsForm",
@@ -27,22 +25,22 @@ export const companyPageData = {
         subtitle: "These principles guide everything we do, from product development to customer support.",
         items: [
             {
-                icon: SparklesIcon,
+                icon: "SparklesIcon",
                 title: "Customer Obsession",
                 description: "We start with the customer and work backwards. We work vigorously to earn and keep customer trust."
             },
             {
-                icon: UsersIcon,
+                icon: "UsersIcon",
                 title: "Ownership & Accountability",
                 description: "We are all owners. We think long-term and don't sacrifice long-term value for short-term results."
             },
             {
-                icon: CheckCircleIcon,
+                icon: "CheckCircleIcon",
                 title: "Bias for Action",
                 description: "Speed matters in business. Many decisions and actions are reversible and do not need extensive study."
             },
             {
-                icon: CubeTransparentIcon,
+                icon: "CubeTransparentIcon",
                 title: "Innovate and Simplify",
                 description: "We are externally aware, look for new ideas from everywhere, and are not limited by 'not invented here'."
             },

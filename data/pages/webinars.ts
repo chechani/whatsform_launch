@@ -1,4 +1,3 @@
-import { CalendarDaysIcon, CurrencyDollarIcon, UsersIcon, PlayCircleIcon, CloseIcon } from '../../icons';
 import { videosPageData } from './videos';
 
 export const webinarsPageData = {

@@ -27,24 +27,53 @@ const RealEstatePage: React.FC<RealEstatePageProps> = ({ navigate }) => {
         <main>
             <GenericPageHero title={realEstatePageData.hero.title} subtitle={realEstatePageData.hero.subtitle} />
              <div className="divide-y divide-slate-200/50 dark:divide-slate-800/50">
-                {realEstatePageData.sections.map((section, index) => (
-                    <SectionWrapper key={index} index={index}>
-                        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-                            {(() => {
-                                switch (section.type) {
-                                    case 'centeredText':
-                                        return <ContentSection title={section.title} subtitle={section.subtitle} />;
-                                    case 'contentWithImage':
-                                        return <ContentWithImage {...section as any} />;
-                                    case 'benefitsGrid':
-                                        return <BenefitsGrid {...section as any} />;
-                                    default:
-                                        return null;
-                                }
-                            })()}
-                        </div>
-                    </SectionWrapper>
-                ))}
+                {realEstatePageData.sections.map((section, index) => {
+                    const subCategory = realEstatePageData.subCategories.find(sc => sc.id === (section as any).id);
+                    return (
+                        <SectionWrapper key={index} index={index}>
+                            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                                {(() => {
+                                    switch (section.type) {
+                                        case 'centeredText':
+                                            return <ContentSection title={section.title} subtitle={section.subtitle} />;
+                                        case 'contentWithImage':
+                                            return (
+                                                <div>
+                                                    <ContentWithImage {...section as any} />
+                                                    {subCategory && (
+                                                        <div className="mt-8 text-center">
+                                                            <Link href={`/real-estate-construction/${subCategory.slug}`} legacyBehavior>
+                                                                <a className="text-green-500 hover:text-green-600 font-semibold">
+                                                                    Learn more &rarr;
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        case 'benefitsGrid':
+                                            return (
+                                                <div>
+                                                    <BenefitsGrid {...section as any} />
+                                                    {subCategory && (
+                                                        <div className="mt-8 text-center">
+                                                            <Link href={`/real-estate-construction/${subCategory.slug}`} legacyBehavior>
+                                                                <a className="text-green-500 hover:text-green-600 font-semibold">
+                                                                    Learn more &rarr;
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        default:
+                                            return null;
+                                    }
+                                })()}
+                            </div>
+                        </SectionWrapper>
+                    )
+                })}
             </div>
 
             <div className="bg-pastel-green dark:bg-green-950/30 py-16 sm:py-20">

@@ -1,17 +1,18 @@
-import { CheckCircleIcon } from '../../icons';
-
 export const realEstatePageData = {
     hero: {
         title: "Close Deals Faster with AI-Powered Real Estate Conversations",
         subtitle: "From instant lead inquiry to automated site visit scheduling, WhatsForm transforms how you capture, nurture, and convert real estate leads on WhatsApp.",
     },
+    subCategories: [
+        { id: 'real-estate-agency', slug: 'real-estate-agency', title: 'Real Estate Agency' },
+        { id: 'construction-company', slug: 'construction-company', title: 'Construction Company' },
+        { id: 'property-management', slug: 'property-management', title: 'Property Management' },
+        { id: 'architecture-planning', slug: 'architecture-planning', title: 'Architecture & Planning' },
+        { id: 'co-working-spaces', slug: 'co-working-spaces', title: 'Co-working Spaces' },
+    ],
     sections: [
         {
-            type: 'centeredText',
-            title: "Engage Buyers the Moment They Show Interest",
-            subtitle: `In real estate, timing is everything. Our platform ensures you never miss an opportunity by engaging prospective buyers with an intelligent, 24/7 AI assistant that provides instant information and captures high-intent leads.`
-        },
-        {
+            id: 'real-estate-agency',
             type: 'contentWithImage',
             subtitle: 'INTERACTIVE PROPERTY INQUIRY',
             title: 'Your AI-Powered Sales Agent',
@@ -25,6 +26,7 @@ export const realEstatePageData = {
             ]
         },
         {
+            id: 'construction-company',
             type: 'contentWithImage',
             subtitle: 'AUTOMATED SITE VISIT SCHEDULING',
             title: 'Book Visits Without the Back-and-Forth',
@@ -39,6 +41,7 @@ export const realEstatePageData = {
             ]
         },
         {
+            id: 'property-management',
             type: 'contentWithImage',
             subtitle: 'DOCUMENT COLLECTION & BOOKING',
             title: 'A Smooth Journey from Interest to Ownership',
@@ -52,27 +55,28 @@ export const realEstatePageData = {
             ]
         },
         {
+            id: 'architecture-planning',
             type: 'benefitsGrid',
             title: "Tangible Outcomes for Your Real Estate Business",
             subtitle: "Implementing an AI-driven WhatsApp strategy delivers a clear competitive advantage.",
             benefits: [
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Faster Lead Response",
                     description: "Engage leads the moment they inquire, dramatically improving your chances of conversion."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Increased Efficiency",
                     description: "Automate scheduling and data collection, allowing your agents to focus on closing deals, not on admin tasks."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Enhanced Buyer Experience",
                     description: "Provide a modern, personalized, and on-demand service that builds trust and impresses clients."
                 },
                 {
-                    icon: CheckCircleIcon,
+                    icon: "CheckCircleIcon",
                     title: "Higher Conversion Rates",
                     description: "A seamless, responsive, and engaging process keeps buyers nurtured and moves them through the sales funnel faster."
                 }

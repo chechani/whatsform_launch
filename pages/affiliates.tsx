@@ -2,6 +2,17 @@ import React from 'react';
 import { GenericPageHero, CTA, ContentSection } from '@/components/PageBuilder';
 import Link from 'next/link';
 import { affiliatesPageData } from '@/data/pages/affiliates';
+import { AcademicCapIcon, BuildingOfficeIcon, MegaphoneIcon, CurrencyDollarIcon, ChartBarIcon, UsersIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+
+const iconMap: { [key: string]: React.FC<{className?: string}> } = {
+    AcademicCapIcon,
+    BuildingOfficeIcon,
+    MegaphoneIcon,
+    CurrencyDollarIcon,
+    ChartBarIcon,
+    UsersIcon,
+    CheckCircleIcon,
+};
 
 const AffiliatesPage: React.FC = () => {
     const { hero, stats, idealAffiliates, benefits, commissionStructure, howItWorks, testimonials, resources, closing } = affiliatesPageData;
@@ -57,34 +68,37 @@ const AffiliatesPage: React.FC = () => {
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
-                        {idealAffiliates.categories.map((category, index) => (
-                            <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                                <div className="flex items-center mb-6">
-                                    <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
-                                        <category.icon className="h-8 w-8 text-green-600 dark:text-green-400" />
+                        {idealAffiliates.categories.map((category, index) => {
+                            const IconComponent = iconMap[category.icon as keyof typeof iconMap];
+                            return (
+                                <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                                    <div className="flex items-center mb-6">
+                                        <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
+                                            {IconComponent && <IconComponent className="h-8 w-8 text-green-600 dark:text-green-400" />}
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                                            {category.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                                        {category.title}
-                                    </h3>
-                                </div>
-                                <p className="text-slate-600 dark:text-slate-300 mb-6">
-                                    {category.description}
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    {category.benefits.map((benefit, idx) => (
-                                        <li key={idx} className="flex items-center text-slate-600 dark:text-slate-300">
-                                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
-                                    <p className="text-green-700 dark:text-green-300 font-semibold text-center">
-                                        {category.earning}
+                                    <p className="text-slate-600 dark:text-slate-300 mb-6">
+                                        {category.description}
                                     </p>
+                                    <ul className="space-y-2 mb-6">
+                                        {category.benefits.map((benefit, idx) => (
+                                            <li key={idx} className="flex items-center text-slate-600 dark:text-slate-300">
+                                                <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                                                {benefit}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
+                                        <p className="text-green-700 dark:text-green-300 font-semibold text-center">
+                                            {category.earning}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -101,19 +115,22 @@ const AffiliatesPage: React.FC = () => {
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {benefits.benefits.map((benefit, index) => (
-                            <div key={index} className="text-center">
-                                <div className="p-4 bg-green-100 dark:bg-green-900 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                                    <benefit.icon className="h-10 w-10 text-green-600 dark:text-green-400" />
+                        {benefits.benefits.map((benefit, index) => {
+                            const IconComponent = iconMap[benefit.icon as keyof typeof iconMap];
+                            return (
+                                <div key={index} className="text-center">
+                                    <div className="p-4 bg-green-100 dark:bg-green-900 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                                        {IconComponent && <IconComponent className="h-10 w-10 text-green-600 dark:text-green-400" />}
+                                    </div>
+                                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-slate-600 dark:text-slate-300">
+                                        {benefit.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-300">
-                                    {benefit.description}
-                                </p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

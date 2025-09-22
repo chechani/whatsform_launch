@@ -28,22 +28,22 @@ const FitnessWellnessPage: React.FC = () => {
                 title: "Key Benefits for Fitness & Wellness",
                 benefits: [
                     {
-                        icon: HeartIcon,
+                        icon: "HeartIcon",
                         title: "Enhanced Member Engagement",
                         description: "Keep members motivated with personalized workout tips, progress celebrations, and wellness coaching through WhatsApp."
                     },
                     {
-                        icon: ClockIcon,
+                        icon: "ClockIcon",
                         title: "Efficient Operations",
                         description: "Automate class bookings, trainer appointments, and facility reservations to reduce administrative overhead."
                     },
                     {
-                        icon: CurrencyDollarIcon,
+                        icon: "CurrencyDollarIcon",
                         title: "Revenue Growth",
                         description: "Promote personal training, supplements, and premium services through targeted campaigns and member insights."
                     },
                     {
-                        icon: UserGroupIcon,
+                        icon: "UserGroupIcon",
                         title: "Community Building",
                         description: "Create fitness challenges, support groups, and member networks that increase retention and referrals."
                     }
@@ -68,31 +68,31 @@ const FitnessWellnessPage: React.FC = () => {
             {
                 title: "Gym & Fitness Center",
                 description: "Automate class bookings, membership management, and workout reminders.",
-                link: "/categories/fitness-wellness/gym-fitness-center",
+                link: "/fitness-wellness/gym-fitness-center",
                 icon: "🏋️"
             },
             {
                 title: "Yoga & Meditation Studio",
                 description: "Handle class scheduling, payment reminders, and wellness tips.",
-                link: "/contact?industry=Fitness%20%26%20Wellness&category=Yoga%20Studio",
+                link: "/fitness-wellness/yoga-meditation-studio",
                 icon: "🧘"
             },
             {
                 title: "Wellness Retreats",
                 description: "Manage bookings, pre-arrival communication, and guest services.",
-                link: "/contact?industry=Fitness%20%26%20Wellness&category=Wellness%20Retreats",
+                link: "/fitness-wellness/wellness-retreats",
                 icon: "🌿"
             },
             {
                 title: "Nutrition & Dietetics",
                 description: "Provide meal planning, appointment scheduling, and progress tracking.",
-                link: "/contact?industry=Fitness%20%26%20Wellness&category=Nutrition",
+                link: "/fitness-wellness/nutrition-dietetics",
                 icon: "🥗"
             },
             {
                 title: "Spa & Salon",
                 description: "Automate appointment bookings, service reminders, and promotional offers.",
-                link: "/contact?industry=Fitness%20%26%20Wellness&category=Spa%20Salon",
+                link: "/fitness-wellness/spa-salon",
                 icon: "💆"
             }
         ],

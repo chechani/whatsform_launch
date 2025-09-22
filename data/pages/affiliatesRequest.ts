@@ -1,4 +1,3 @@
-import { CheckCircleIcon, CurrencyDollarIcon, UsersIcon, ChartBarIcon, AcademicCapIcon, BuildingOfficeIcon, MegaphoneIcon } from '../../icons';
 
 export const affiliatesRequestPageData = {
     hero: {
@@ -11,19 +10,19 @@ export const affiliatesRequestPageData = {
         title: "Perfect for Professionals Like:",
         candidates: [
             {
-                icon: AcademicCapIcon,
+                icon: "AcademicCapIcon",
                 title: "Chartered Accountants",
                 description: "CA firms with multiple clients who need automated communication systems",
                 examples: ["Invoice reminders", "Document collection", "Client follow-ups", "Tax deadline alerts"]
             },
             {
-                icon: BuildingOfficeIcon,
+                icon: "BuildingOfficeIcon",
                 title: "Business Consultants",
                 description: "Advisors helping businesses improve operations and communication",
                 examples: ["Process automation", "Client onboarding", "Customer support", "Lead management"]
             },
             {
-                icon: MegaphoneIcon,
+                icon: "MegaphoneIcon",
                 title: "Digital Marketers",
                 description: "Agencies and freelancers looking to expand service offerings",
                 examples: ["Campaign automation", "Customer segmentation", "Conversion tracking", "Engagement analytics"]
@@ -33,25 +32,25 @@ export const affiliatesRequestPageData = {
 
     benefits: [
         {
-            icon: CurrencyDollarIcon,
+            icon: "CurrencyDollarIcon",
             title: "Competitive Commission Rates",
             description: "Earn 20% commission in the first year and 10% ongoing commission for renewals with no cap on earnings.",
             details: ["20% first year commission", "10% ongoing renewals", "15% for enterprise deals", "Performance bonuses available"]
         },
         {
-            icon: ChartBarIcon,
+            icon: "ChartBarIcon",
             title: "Real-time Analytics",
             description: "Track your performance with detailed analytics dashboard showing clicks, conversions, and earnings.",
             details: ["Live click tracking", "Conversion analytics", "Commission reports", "Performance insights"]
         },
         {
-            icon: UsersIcon,
+            icon: "UsersIcon",
             title: "Marketing Support",
             description: "Get access to marketing materials, banners, email templates, and promotional content.",
             details: ["Custom landing pages", "Email campaigns", "Social media assets", "Product demos"]
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Monthly Payouts",
             description: "Receive guaranteed monthly payouts with multiple payment options including PayPal and bank transfer.",
             details: ["No minimum threshold", "Multiple payment options", "Detailed payment history", "Tax documentation"]

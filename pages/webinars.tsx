@@ -2,6 +2,7 @@ import React from 'react';
 import { GenericPageHero, CTA } from '@/components/PageBuilder';
 import { webinarsPageData } from '@/data/pages/webinars';
 import Link from 'next/link';
+import ClientFormattedDate from '@/components/ClientFormattedDate';
 
 const WebinarsPage: React.FC = () => {
     const upcomingWebinar = webinarsPageData.upcomingWebinar;
@@ -37,7 +38,12 @@ const WebinarsPage: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500 dark:text-slate-400">Date</p>
-                                        <p className="font-semibold text-slate-900 dark:text-white">{upcomingWebinar.date}</p>
+                                        <p className="font-semibold text-slate-900 dark:text-white">
+                                            <ClientFormattedDate 
+                                                dateString={upcomingWebinar.date} 
+                                                options={{ year: 'numeric', month: 'long', day: 'numeric' }} 
+                                            />
+                                        </p>
                                     </div>
                                 </div>
                                 
@@ -187,11 +193,10 @@ const WebinarsPage: React.FC = () => {
                                     </p>
                                     <div className="flex items-center justify-between">
                                         <span className="text-xs text-slate-500 dark:text-slate-400">
-                                            {new Date(video.date).toLocaleDateString('en-US', { 
-                                                year: 'numeric', 
-                                                month: 'long', 
-                                                day: 'numeric' 
-                                            })}
+                                            <ClientFormattedDate 
+                                                dateString={video.date} 
+                                                options={{ year: 'numeric', month: 'long', day: 'numeric' }} 
+                                            />
                                         </span>
                                         <Link 
                                             href={`https://www.youtube.com/watch?v=${video.id}`}

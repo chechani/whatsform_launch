@@ -1,5 +1,3 @@
-import { CheckCircleIcon, OperationsIcon, UsersIcon, CalendarIcon, InboxIcon } from '../../icons';
-
 export const operationsPageData = {
     hero: {
         title: "WhatsForm for Operations",
@@ -21,7 +19,7 @@ export const operationsPageData = {
     useCases: [
         {
             category: "Human Resources",
-            icon: UsersIcon,
+            icon: "UsersIcon",
             title: "Automated HR Workflows",
             description: "Streamline employee lifecycle from onboarding to exit with conversational automation.",
             features: [
@@ -43,7 +41,7 @@ export const operationsPageData = {
         
         {
             category: "Facility Management",
-            icon: OperationsIcon,
+            icon: "OperationsIcon",
             title: "Smart Facility Operations",
             description: "Manage facilities, maintenance, and workplace services through intelligent WhatsApp workflows.",
             features: [
@@ -65,7 +63,7 @@ export const operationsPageData = {
         
         {
             category: "Project Management",
-            icon: CalendarIcon,
+            icon: "CalendarIcon",
             title: "Project Coordination Hub",
             description: "Keep projects on track with automated status updates, milestone tracking, and team coordination.",
             features: [
@@ -87,7 +85,7 @@ export const operationsPageData = {
         
         {
             category: "Quality Assurance",
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Quality Control Automation",
             description: "Ensure consistent quality standards with automated inspections, audits, and compliance tracking.",
             features: [
@@ -109,7 +107,7 @@ export const operationsPageData = {
         
         {
             category: "Supply Chain",
-            icon: InboxIcon,
+            icon: "InboxIcon",
             title: "Supply Chain Coordination",
             description: "Optimize supply chain operations with automated procurement, inventory, and logistics management.",
             features: [
@@ -131,7 +129,7 @@ export const operationsPageData = {
         
         {
             category: "IT Operations",
-            icon: OperationsIcon,
+            icon: "OperationsIcon",
             title: "IT Service Management",
             description: "Streamline IT operations with automated helpdesk, asset management, and service delivery.",
             features: [
@@ -167,32 +165,32 @@ export const operationsPageData = {
 
     benefits: [
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Process Standardization",
             description: "Ensure consistent execution of operational processes across all departments and locations."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Real-time Visibility", 
             description: "Get instant updates on process status, bottlenecks, and performance metrics for better decision making."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Compliance Automation",
             description: "Automate compliance workflows, documentation, and audit trails for regulatory requirements."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Cost Reduction",
             description: "Reduce operational costs through process optimization, reduced manual work, and improved efficiency."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Employee Empowerment",
             description: "Give employees self-service capabilities and reduce dependency on manual approvals and processes."
         },
         {
-            icon: CheckCircleIcon,
+            icon: "CheckCircleIcon",
             title: "Scalable Operations",
             description: "Build operations that can scale with your business growth without proportional increase in overhead."
         }
