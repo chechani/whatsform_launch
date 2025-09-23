@@ -1,7 +1,8 @@
 
 type Plan = {
     name: string;
-    price: string;
+    priceINR: string;
+    priceUSD: string;
     isPopular: boolean;
     features: string[];
     frequency: string;
@@ -11,10 +12,12 @@ type Plan = {
 const quarterlyPlans: Plan[] = [
     {
         name: 'Starter',
-        price: '₹3000',
+        priceINR: '₹3000',
+        priceUSD: '$42',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 5000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'No Document Upload',
             'Form Response: 500 / Month',
@@ -30,10 +33,12 @@ const quarterlyPlans: Plan[] = [
     },
     {
         name: 'Standard',
-        price: '₹5000',
+        priceINR: '₹5000',
+        priceUSD: '$70',
         isPopular: true,
         features: [
             'Messaging + Broadcast: 10,000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'No Document Upload',
             'Form Response: 10,000 / Month',
@@ -49,10 +54,12 @@ const quarterlyPlans: Plan[] = [
     },
     {
         name: 'Premium',
-        price: '₹8000',
+        priceINR: '₹8000',
+        priceUSD: '$112',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 20000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'Includes Document Upload',
             'Form Response: 10,000 / Month',
@@ -68,10 +75,12 @@ const quarterlyPlans: Plan[] = [
     },
     {
         name: 'Enterprise',
-        price: '₹15000',
+        priceINR: '₹15000',
+        priceUSD: '$210',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 30,000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'Includes Document Upload',
             'Form Response: 25000 / Month',
@@ -90,10 +99,12 @@ const quarterlyPlans: Plan[] = [
 const yearlyPlans: Plan[] = [
     {
         name: 'Starter',
-        price: '₹9000',
+        priceINR: '₹9000',
+        priceUSD: '$126',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 5000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'No Document Upload',
             'Form Response: 500 / Month',
@@ -109,10 +120,12 @@ const yearlyPlans: Plan[] = [
     },
     {
         name: 'Standard',
-        price: '₹15000',
+        priceINR: '₹15000',
+        priceUSD: '$210',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 10,000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'No Document Upload',
             'Form Response: 10,000 / Month',
@@ -128,10 +141,12 @@ const yearlyPlans: Plan[] = [
     },
     {
         name: 'Premium',
-        price: '₹24000',
+        priceINR: '₹24000',
+        priceUSD: '$336',
         isPopular: true,
         features: [
             'Messaging + Broadcast: 20000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'Includes Document Upload',
             'Form Response: 10,000 / Month',
@@ -147,10 +162,12 @@ const yearlyPlans: Plan[] = [
     },
     {
         name: 'Enterprise',
-        price: '₹50000',
+        priceINR: '₹50000',
+        priceUSD: '$700',
         isPopular: false,
         features: [
             'Messaging + Broadcast: 30,000 / Month',
+            'Active Flows: 2 (New)',
             'Active WhatsApp Forms',
             'Includes Document Upload',
             'Form Response: 25000 / Month',

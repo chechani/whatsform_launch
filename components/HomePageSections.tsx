@@ -28,7 +28,7 @@ const iconMap: Record<string, React.ComponentType<any>> = {
 };
 import { benefits, useCases, comparisonSectionData } from '../data/homePage';
 
-const cyclingWords = ["Conversational Apps", "Record Management", "App Building", "Smart Data Management", "AI Operations", "Team Collaboration", "Process Automation", "Universal Integration", "Document Storage", "Business Intelligence", "Workflow Orchestration"];
+const cyclingWords = ["WorkFlows", "Forms", "AI Agents", "Business Apps", "Conversational Apps", "Record Management", "App Building", "Smart Data Management", "Team Collaboration", "Process Automation", "Universal Integration", "Document Storage", "Business Intelligence", "Workflow Orchestration"];
 
 const Card: React.FC<{ children: React.ReactNode, className?: string, onClick?: () => void }> = ({ children, className = '', onClick }) => (
     <div 
@@ -45,7 +45,7 @@ export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = (
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
     const videoId = data?.videoId || '20gL7XOlKkQ';
     const videoThumbnail = data?.videoThumbnail || 'https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg';
-    const cyclingWords = data?.cyclingWords || ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
+    const cyclingWords = data?.cyclingWords || ["Forms", "WorkFlows", "AI Agents", "Automation","Business Apps"];
     const heroTitle = data?.title || 'WhatsForm – WhatsApp Is Now Your Business Operating System';
     const heroSubtitle = data?.subtitle || 'Business Revolution';
     const heroDescription = data?.description || "Stop building separate apps. Stop switching between tools. Transform WhatsApp into your complete business headquarters.";

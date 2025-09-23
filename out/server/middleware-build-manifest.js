@@ -25,15 +25,15 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/record-management": [
+    "/education": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/record-management.js"
+      "static/chunks/pages/education.js"
     ],
-    "/whatsform-vs-google-forms": [
+    "/features": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/whatsform-vs-google-forms.js"
+      "static/chunks/pages/features.js"
     ]
   },
   "ampFirstPages": []
