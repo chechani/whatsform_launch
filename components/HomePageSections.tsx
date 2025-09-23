@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon, ArchitectureIcon, NoCodeIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon, CubeTransparentIcon, ChartBarIcon, MegaphoneIcon, CalendarIcon, InboxIcon, UsersIcon, SendMessageIcon, TemplateIcon } from '../icons';
+import { CheckCircleIcon, CodeBracketIcon, SparklesIcon, DeviceIcon, PlayCircleIcon, CloseIcon, WhatsAppIcon, FormsIcon, ArrowRightIcon, ArchitectureIcon, NoCodeIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowsRightLeftIcon, CubeTransparentIcon, ChartBarIcon, MegaphoneIcon, CalendarIcon, InboxIcon, UsersIcon, SendMessageIcon, TemplateIcon, ShieldCheckIcon } from '../icons';
 // Map icon string names to actual icon components
 const iconMap: Record<string, React.ComponentType<any>> = {
     CheckCircleIcon,
@@ -24,13 +24,17 @@ const iconMap: Record<string, React.ComponentType<any>> = {
     UsersIcon,
     SendMessageIcon,
     TemplateIcon,
+    ShieldCheckIcon,
 };
 import { benefits, useCases, comparisonSectionData } from '../data/homePage';
 
-const cyclingWords = ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
+const cyclingWords = ["Conversational Apps", "Record Management", "App Building", "Smart Data Management", "AI Operations", "Team Collaboration", "Process Automation", "Universal Integration", "Document Storage", "Business Intelligence", "Workflow Orchestration"];
 
-const Card: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className = '' }) => (
-    <div className={`bg-white dark:bg-gray-800 p-8 rounded-2xl border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`}>
+const Card: React.FC<{ children: React.ReactNode, className?: string, onClick?: () => void }> = ({ children, className = '', onClick }) => (
+    <div 
+        className={`bg-white dark:bg-gray-800 p-8 rounded-2xl border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${className}`}
+        onClick={onClick}
+    >
         {children}
     </div>
 );
@@ -42,10 +46,10 @@ export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = (
     const videoId = data?.videoId || '20gL7XOlKkQ';
     const videoThumbnail = data?.videoThumbnail || 'https://i.ytimg.com/vi/20gL7XOlKkQ/hqdefault.jpg';
     const cyclingWords = data?.cyclingWords || ["Multi-steps Forms", "WorkFlows", "AI Agents", "Automation"];
-    const heroTitle = data?.title || 'WhatsForm – Revolutionize Your WhatsApp Business Workflows';
-    const heroSubtitle = data?.subtitle || 'Empowering WhatsApp Communication';
-    const heroDescription = data?.description || "95% of businesses still use WhatsApp only for chats or broadcasts. With WhatsForm, turn every message into a structured form, workflow, or AI-driven response.";
-    const heroHighlight = data?.highlight || "No more scattered chats, endless reminders, or missed follow-ups. WhatsForm transforms WhatsApp into your business engine.";
+    const heroTitle = data?.title || 'WhatsForm – WhatsApp Is Now Your Business Operating System';
+    const heroSubtitle = data?.subtitle || 'Business Revolution';
+    const heroDescription = data?.description || "Stop building separate apps. Stop switching between tools. Transform WhatsApp into your complete business headquarters.";
+    const heroHighlight = data?.highlight || "Build apps, manage records, automate workflows – all through conversations.";
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -76,14 +80,7 @@ export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = (
                             </span>
                             <h1 className="font-black text-gray-900 dark:text-white leading-tight tracking-tighter min-h-[8rem] sm:min-h-[10rem] md:min-h-[12rem] flex flex-col justify-start">
                                 <span className={`block text-4xl sm:text-6xl lg:text-7xl transition-opacity duration-300 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}>
-                                    {cyclingWords[index] === "Multi-steps Forms" ? (
-                                        <>
-                                            <span style={{ fontSize: '60%', fontWeight: 700 }}>Multi-steps </span>
-                                            Forms
-                                        </>
-                                    ) : (
-                                        cyclingWords[index]
-                                    )}
+                                    {cyclingWords[index]}
                                 </span>
                                 <div className="mt-2 flex items-center justify-start gap-x-2">
                                     <span className="text-lg sm:text-xl text-slate-600 dark:text-slate-300">Inside</span>
@@ -92,7 +89,7 @@ export const Hero: React.FC<{ data: any; navigate: (path: string) => void }> = (
                                 </div>
                             </h1>
                             <p className="mt-2 text-md font-bold text-yellow-500 dark:text-yellow-300 tracking-wide">
-                                "Game Changing for Customer Engagement"
+                                "The Future of Business Communication"
                             </p>
                             <div className="mt-3 space-y-5 max-w-xl">
                                 <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 content-text">
@@ -334,7 +331,8 @@ export const Testimonials: React.FC<{ testimonials: any[] }> = ({ testimonials }
         <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="text-center mb-16 max-w-4xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Loved by Businesses Big and Small</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Businesses Transformed, Operations Revolutionized</h2>
+                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">From traditional operations to WhatsApp-powered business platforms</p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2">
@@ -433,6 +431,118 @@ export const UspSection: React.FC<{ data?: any; navigate: (path: string) => void
     );
 };
 
+
+export const PlatformCapabilities: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => {
+    const capabilities = [
+        {
+            icon: "ChatBubbleOvalLeftEllipsisIcon",
+            title: "Conversational Apps",
+            description: "Build full applications inside chat conversations. No downloads, no training - just familiar messaging.",
+            path: "/powerful-forms"
+        },
+        {
+            icon: "CubeTransparentIcon",
+            title: "Smart Data Management",
+            description: "Persistent records & databases that grow with every conversation. Turn chats into structured business intelligence.",
+            path: "/record-management"
+        },
+        {
+            icon: "SparklesIcon",
+            title: "AI-Powered Operations",
+            description: "Intelligent automation & AI assistance that handles complex business logic and decision-making 24/7.",
+            path: "/smarty-ai"
+        },
+        {
+            icon: "UsersIcon",
+            title: "Team Collaboration",
+            description: "Shared workspaces & workflows where your entire team collaborates seamlessly within WhatsApp.",
+            path: "/team-inbox"
+        },
+        {
+            icon: "FormsIcon",
+            title: "Document Management",
+            description: "Complete file storage & organization system. Every document, image, and file intelligently organized and searchable.",
+            path: "/document-management"
+        },
+        {
+            icon: "ArrowsRightLeftIcon",
+            title: "Universal Integration",
+            description: "Connect with 200+ business tools. Your WhatsApp conversations sync with your entire business ecosystem.",
+            path: "/developer-docs"
+        },
+        {
+            icon: "ArchitectureIcon",
+            title: "Process Automation",
+            description: "No-code workflow builder for complex business processes. Design, deploy, and scale without technical expertise.",
+            path: "/process-automation"
+        },
+        {
+            icon: "ShieldCheckIcon",
+            title: "Enterprise Security",
+            description: "Audit trails, access control, and compliance features. Enterprise-grade security for business-critical operations.",
+            path: "/enterprise-security"
+        }
+    ];
+
+    return (
+        <section className="py-16 sm:py-24 lg:py-28 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <div className="text-center mb-16 max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
+                        Every Business Function, Now Conversational
+                    </h2>
+                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                        Why force your customers to learn new interfaces when you can bring every business capability to the chat they already love?
+                    </p>
+                    <div className="mt-6 inline-block bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-300 font-semibold px-6 py-2 rounded-full text-lg">
+                        � Trusted by professionals, small businesses, healthcare providers, associations, and organizations worldwide
+                    </div>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {capabilities.map((capability) => (
+                        <Link href={capability.path} key={capability.title} legacyBehavior>
+                            <a className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col group cursor-pointer hover:bg-green-50 dark:hover:bg-green-900/10">
+                                <div className="flex justify-center items-center h-12 w-12 rounded-lg bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 mx-auto group-hover:scale-110 transition-transform">
+                                    {iconMap[capability.icon] && React.createElement(iconMap[capability.icon], { className: "h-6 w-6" })}
+                                </div>
+                                <h3 className="text-lg font-bold text-slate-800 dark:text-white mt-4 text-center group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                                    {capability.title}
+                                </h3>
+                                <p className="mt-2 text-slate-600 dark:text-slate-300 text-center flex-grow text-sm leading-relaxed">
+                                    {capability.description}
+                                </p>
+                                <div className="mt-4 text-center opacity-100 transition-opacity">
+                                    <span className="text-green-600 dark:text-green-400 font-semibold text-sm group-hover:underline">
+                                        Learn More →
+                                    </span>
+                                </div>
+                            </a>
+                        </Link>
+                    ))}
+                </div>
+
+                <div className="mt-16 text-center space-y-4">
+                    <p className="text-xl font-semibold text-slate-800 dark:text-white">
+                        Ready to transform your WhatsApp into a business powerhouse?
+                    </p>
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <Link href="/evaluation" legacyBehavior>
+                            <a className="bg-green-500 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-green-600 transition-all shadow-lg shadow-green-500/25 hover:scale-105">
+                                Transform Your WhatsApp
+                            </a>
+                        </Link>
+                        <Link href="/videos" legacyBehavior>
+                            <a className="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-4 px-8 rounded-lg text-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-600">
+                                See Live Demo
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
 
 export const ComparisonSection: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => (
     <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-gray-900 transition-colors duration-300">

@@ -57,4 +57,5 @@ export const solutionOptions = [
     { title: "Automated Mass Broadcast", description: `Broadcast messages to a large audience without the limitations of personal WhatsApp.`, icon: MegaphoneIcon },
     { title: "Chatbot Workflows", description: `Automate customer interactions using predefined chatbot journeys.`, icon: BotIcon },
     { title: "CRM-ERP Integration", description: `Sync WhatsApp communication with your CRM and ERP to enhance operational efficiency.`, icon: CodeBracketIcon },
+    { title: "Record Management", description: `Organize, store, and retrieve customer records and form responses securely for compliance and efficiency.`, icon: DocumentMinusIcon },
 ];

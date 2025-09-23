@@ -51,10 +51,22 @@ const EvaluationPage: React.FC<EvaluationPageProps> = ({ navigate }) => {
     }, [selections]);
     
     const getScoreFeedback = (s: number) => {
-        if (s < 3) return { message: "Getting Started", description: "You have a huge opportunity to grow by adopting more structured WhatsApp workflows."};
-        if (s < 6) return { message: "On Your Way", description: "You've got the basics down, but automation can unlock significant efficiency for you." };
-        if (s < 8) return { message: "Advanced User", description: "You're using WhatsApp effectively. Let's explore how to perfect your strategy and maximize ROI." };
-        return { message: "Power User", description: "You're a WhatsApp pro! WhatsForm can help you scale your success and integrate even deeper." };
+        if (s < 3) return {
+            message: "Getting Started",
+            description: "You have a huge opportunity to grow by adopting more structured WhatsApp workflows. Consider implementing Record Management to organize and secure your customer data from day one."
+        };
+        if (s < 6) return {
+            message: "On Your Way",
+            description: "You've got the basics down, but automation and Record Management can unlock significant efficiency for you. Start storing and retrieving customer records to streamline your operations."
+        };
+        if (s < 8) return {
+            message: "Advanced User",
+            description: "You're using WhatsApp effectively. Record Management will help you perfect your strategy, ensure compliance, and maximize ROI."
+        };
+        return {
+            message: "Power User",
+            description: "You're a WhatsApp pro! WhatsForm's Record Management can help you scale your success, maintain compliance, and integrate even deeper."
+        };
     }
     
     const feedback = getScoreFeedback(parseFloat(score));

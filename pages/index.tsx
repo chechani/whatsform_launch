@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner, ComparisonSection } from '../components/HomePageSections';
+import { Hero, UspSection as Feature, PowerfulFeatures as SecondaryFeatures, Testimonials, ActionStrip as Banner, ComparisonSection, PlatformCapabilities } from '../components/HomePageSections';
 import { CTA, FAQ } from '../components/PageBuilder';
 import { uniqueFeatures, features, testimonialsData, faq as homePageFaq } from '../data/homePage';
 import type { GetStaticProps } from 'next';
@@ -10,18 +10,17 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             hero: uniqueFeatures,
             feature: {
-                title: "All-in-One WhatsApp Business Suite",
-                intro: "Explore our most popular features for automation, engagement, and growth.",
+                title: "Powerful Features That Drive Results",
+                intro: "Specific tools and capabilities that help you achieve your business goals faster.",
                 features,
             },
-            secondaryFeatures: uniqueFeatures,
             testimonials: testimonialsData,
             faq: homePageFaq,
         },
     };
 };
 
-const HomePage = ({ hero, feature, secondaryFeatures, testimonials, faq }: any) => {
+const HomePage = ({ hero, feature, testimonials, faq }: any) => {
     const navigate = (path: string) => {
         // Navigation logic (if needed)
     };
@@ -29,8 +28,8 @@ const HomePage = ({ hero, feature, secondaryFeatures, testimonials, faq }: any) 
     return (
         <main>
             <Hero data={hero} navigate={navigate} />
+            <PlatformCapabilities navigate={navigate} />
             <Feature data={feature} navigate={navigate} />
-            <SecondaryFeatures data={secondaryFeatures} navigate={navigate} />
             <ComparisonSection navigate={navigate} />
             <Testimonials testimonials={testimonials} />
             <FAQ faqs={faq.categories} />

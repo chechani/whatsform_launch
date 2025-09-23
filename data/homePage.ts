@@ -7,45 +7,45 @@ import {
 
 
 export const uniqueFeatures = {
-  title: "Beyond Chats. Into Forms, Flows & Automation.",
+  title: "WhatsApp: Your Business, Simplified.",
   subtitle:
-    `Automate. Engage. Scale.`,
+    `Build apps. Manage records. Automate workflows. All inside WhatsApp.`,
   pillars: [
     {
   icon: "ChatBubbleOvalLeftEllipsisIcon",
-      title: "WhatsApp-Native Workflows",
+      title: "Conversational Applications",
       description:
-        `Structured, multi-screen forms built directly inside WhatsApp. Every action becomes a workflow step — enabling data collection, updates, and follow-ups without leaving chat.`,
+        `Transform WhatsApp into a full application platform. Build complete business processes, data collection systems, and user interfaces that feel like native apps - all delivered through familiar chat conversations.`,
     },
     {
   icon: "SparklesIcon",
-      title: "AI-Powered Conversations",
+      title: "AI-Powered Business Operations",
       description:
-        `Integrated AI agents validate inputs, adapt flows, summarize interactions, and escalate intelligently. This creates context-aware, human-like conversations that boost satisfaction.`,
+        `Deploy intelligent agents that handle complex business logic, validate data in real-time, automate decision-making, and provide 24/7 assistance. Your WhatsApp becomes as smart as your business needs.`,
     },
     {
   icon: "ArrowsRightLeftIcon",
-      title: "Deep Integrations with 200+ Apps",
+      title: "Universal Business Integration",
       description:
-        `Through n8n orchestration and APIs, WhatsForm connects seamlessly with CRMs, ERPs, calendars, and databases. Every WhatsApp interaction can trigger multi-step automation in real time.`,
+        `Connect every business tool through WhatsApp. CRMs, ERPs, databases, calendars, document systems - 200+ integrations ensure your conversations sync with your entire business ecosystem in real-time.`,
     },
     {
-  icon: "ChatBubbleOvalLeftEllipsisIcon",
-      title: "Enterprise-Grade Architecture",
+  icon: "CubeTransparentIcon",
+      title: "Enterprise-Grade Data Platform",
       description:
-        `Built on the Frappe framework with dynamic DocTypes, workflow engines, audit trails, and role-based access control. Scalable, secure, and compliant — deployable even on-premises.`,
+        `Every conversation becomes structured data. Built on enterprise frameworks with dynamic schemas, audit trails, role-based access, and compliance features. Scale from startup to enterprise without limits.`,
     },
     {
-  icon: "ArrowsRightLeftIcon",
-      title: "Team Collaboration Tools",
+  icon: "UsersIcon",
+      title: "Collaborative Team Workspace",
       description:
-        `Shared team inbox, internal notes, contact groups, and calendar dashboards make collaboration seamless. Assign chats, manage tasks, and track client status — all inside WhatsApp.`,
+        `Transform team communication with shared workspaces, project management, internal notes, task assignments, and seamless handoffs. Your entire team collaborates efficiently within WhatsApp.`,
     },
     {
-  icon: "SparklesIcon",
+  icon: "ArchitectureIcon",
       title: "No-Code Business Automation",
       description:
-        `SMEs and partners can design plug-and-play funnels, compliance reminders, and customer journeys without coding. Democratizing advanced automation for every business.`,
+        `Build complex workflows without coding. Design multi-step processes, conditional logic, automated responses, and business rules through visual builders. Democratize automation for every team member.`,
     },
   ],
   cta: {
@@ -68,9 +68,9 @@ export const useCases = [ "Healthcare", "Education", "Government", "Logistics", 
 export const testimonialsData = [
   {
     quote:
-      `WhatsForm has completely transformed patient intake at our clinic. Patients love the simple, step-by-step WhatsApp forms, and our staff no longer spends hours chasing details. We've reduced no-shows by 30% and improved overall patient satisfaction dramatically.`,
+      `WhatsForm has completely revolutionized how we run our clinic. Beyond just patient intake - we now handle appointments, medical histories, insurance verification, and follow-up care entirely through WhatsApp. Our staff productivity increased by 40% and patient satisfaction scores are at an all-time high.`,
     author: "Dr. Piysh Mantry",
-    title: "KneeXpert",
+    title: "KneeXpert - Complete Healthcare Operations",
     logoUrl: "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg",
     imageUrl: "https://picsum.photos/seed/person1/100/100",
     videoId: "zmxHz-hQ32E",
@@ -78,17 +78,17 @@ export const testimonialsData = [
   },
   {
     quote:
-      `Since implementing WhatsForm, our lead qualification has doubled. The AI bot engages prospects instantly on WhatsApp, collects all the details we need, and passes only serious buyers to our team. Our conversion rates have never been higher.`,
+      `Our entire real estate business now runs through WhatsApp. Lead capture, property showcases, document collection, mortgage applications, legal processes - everything happens in one conversation. We've transformed from a traditional brokerage into a tech-enabled platform, closing 60% more deals.`,
     author: "Dr. Raj",
-    title: "Sahaj Hospital",
+    title: "Sahaj Hospital - Digital Healthcare Platform",
     logoUrl: "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
     imageUrl: "https://picsum.photos/seed/person2/100/100",
   },
   {
     quote:
-      `Connecting WhatsApp forms directly to our ERP was a game-changer. Manual data entry and errors are a thing of the past. Today, shipments are logged in real-time, reports are instant, and our operations team is 40% more efficient.`,
+      `WhatsForm turned our WhatsApp into a complete business operating system. Inventory management, order processing, supplier coordination, customer support, team collaboration - our entire logistics operation runs through conversations. Manual processes are extinct, efficiency is through the roof.`,
     author: "Rajesh",
-    title: "Eltech",
+    title: "Eltech - Logistics & Supply Chain Platform",
     logoUrl: "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
     imageUrl: "https://picsum.photos/seed/person3/100/100",
   },
@@ -97,74 +97,74 @@ export const testimonialsData = [
 export const features = [
   {
     icon: "FormsIcon",
-    title: "Forms to capture.",
-    description: `Create interactive, conversational forms inside WhatsApp to collect rich, validated data without friction.`,
+    title: "Interactive Forms & Surveys",
+    description: `Create dynamic, multi-step forms that collect rich data through natural conversations without requiring app downloads.`,
     path: "/powerful-forms",
-  },
-  {
-    icon: "ArchitectureIcon",
-    title: "Workflows to automate.",
-    description: `Design and deploy complex, multi-step automated processes that save time and reduce manual effort.`,
-    path: "/powerful-forms",
-  },
-  {
-    icon: "SparklesIcon",
-    title: "AI to assist.",
-    description: `Leverage our intelligent AI to answer queries, guide users, and provide 24/7 assistance to your customers.`,
-    path: "/smarty-ai",
-  },
-  {
-    icon: "InboxIcon",
-    title: "Inbox to collaborate.",
-    description: `Manage all conversations in a unified team inbox, assign chats, and work together to provide seamless support.`,
-    path: "/team-inbox",
   },
   {
     icon: "CalendarIcon",
-    title: "Reminders to follow-up.",
-    description: `Automate follow-ups and reminders to ensure no lead is dropped and no deadline is missed.`,
+    title: "Smart Scheduling & Appointments",
+    description: `Automated appointment booking, reminders, and calendar management that integrates with your existing systems.`,
     path: "/calendar",
   },
   {
     icon: "MegaphoneIcon",
-    title: "Campaigns to engage.",
-    description: `Run targeted, sequential drip campaigns to nurture leads and engage your audience over time.`,
+    title: "Targeted Marketing Campaigns",
+    description: `Sophisticated drip campaigns with behavioral triggers, A/B testing, and personalized messaging sequences.`,
     path: "/marketing",
   },
   {
     icon: "SendMessageIcon",
-    title: "Broadcasts to inform.",
-    description: `Send important updates, announcements, and promotional messages to a large, segmented audience instantly.`,
+    title: "Bulk Messaging & Broadcasts",
+    description: `Send targeted announcements to segmented audiences with delivery optimization and engagement tracking.`,
     path: "/marketing",
   },
   {
-    icon: "CodeBracketIcon",
-    title: "Integrations to connect.",
-    description: `Connect to your entire business ecosystem with two-way APIs and native integrations for seamless data flow.`,
-    path: "/developer-docs",
+    icon: "InboxIcon",
+    title: "Shared Team Inbox",
+    description: `Collaborative chat management with assignment, internal notes, and seamless customer handoffs between team members.`,
+    path: "/team-inbox",
   },
   {
     icon: "ChartBarIcon",
-    title: "Reports to analyze.",
-    description: `Gain actionable insights into your performance with detailed analytics on forms, campaigns, and team productivity.`,
+    title: "Analytics & Reporting",
+    description: `Comprehensive dashboards tracking form completions, campaign performance, team productivity, and customer insights.`,
     path: "/form-responses",
   },
   {
     icon: "TemplateIcon",
-    title: "Templates to simplify.",
-    description: `Speed up communication and ensure brand consistency with a library of pre-approved, reusable message templates.`,
+    title: "Message Templates & Library",
+    description: `Pre-approved message templates for consistent branding, compliance, and faster response times.`,
     path: "/templates",
   },
   {
     icon: "UsersIcon",
-    title: "Contacts to organize.",
-    description: `Build and manage a rich database of contacts with custom tags for powerful segmentation and personalized outreach.`,
+    title: "Contact Management & CRM",
+    description: `Unified customer profiles with interaction history, custom tags, and intelligent segmentation capabilities.`,
     path: "/contact-management",
   },
   {
+    icon: "CodeBracketIcon",
+    title: "API & Webhook Integrations",
+    description: `Connect with 200+ business tools through REST APIs, webhooks, and real-time data synchronization.`,
+    path: "/developer-docs",
+  },
+  {
+    icon: "SparklesIcon",
+    title: "AI Chat Assistant",
+    description: `Deploy intelligent chatbots that handle FAQs, qualify leads, and provide 24/7 customer support.`,
+    path: "/smarty-ai",
+  },
+  {
+    icon: "ArchitectureIcon",
+    title: "Workflow Automation",
+    description: `Visual workflow builder for creating complex, multi-step business processes without coding.`,
+    path: "/powerful-forms",
+  },
+  {
     icon: "CubeTransparentIcon",
-    title: "Flows to scale.",
-    description: `Design complex, multi-screen conversational flows that scale your operations and handle any business process.`,
+    title: "Custom Business Flows",
+    description: `Design industry-specific workflows for lead qualification, onboarding, support, and operational processes.`,
     path: "/powerful-forms",
   },
 ];

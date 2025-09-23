@@ -12,6 +12,7 @@ export const headerData = {
         { name: 'Home', path: '/' },
         { name: 'Solutions', isDropdown: true },
         { name: 'Features', path: '/features' },
+        { name: 'Videos', path: '/videos' },
         { name: 'SmartyAI', path: '/smarty-ai' },
         { name: 'Pricing', path: '/pricing' },
     ],
