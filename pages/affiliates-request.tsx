@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GenericPageHero, CTA } from '../components/PageBuilder';
-import { affiliatesRequestPageData } from '../data/pages/affiliatesRequest';
+import { affiliatesRequestPageData } from '../data/pages/affiliatesRequest'; // Ensure this path is correct
 import { AcademicCapIcon, BuildingOfficeIcon, MegaphoneIcon, CurrencyDollarIcon, ChartBarIcon, UsersIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 const iconMap: { [key: string]: React.FC<{className?: string}> } = {
@@ -14,7 +14,27 @@ const iconMap: { [key: string]: React.FC<{className?: string}> } = {
 };
 
 const AffiliatesRequestPage: React.FC = () => {
-    const [formData, setFormData] = useState<Record<string, string | boolean>>({});
+    const personalInfoFields = ["full_name", "email", "phone", "city", "state_region"];
+
+    const getInitialFormData = () => {
+        const initial: Record<string, string | boolean> = {};
+        affiliatesRequestPageData.formFields.sections.forEach(section => {
+            section.fields.forEach(field => {
+                if (field.type === 'select' && field.options && field.options.length > 0) {
+                    // CORRECTED: Use the 'value' of the first option.
+                    // This will be "" for your placeholder options.
+                    initial[field.name] = field.options[0].value; 
+                } else if (field.type === 'checkbox') {
+                    initial[field.name] = false;
+                } else {
+                    initial[field.name] = "";
+                }
+            });
+        });
+        return initial;
+    };
+
+    const [formData, setFormData] = useState<Record<string, string | boolean>>(getInitialFormData());
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -41,27 +61,61 @@ const AffiliatesRequestPage: React.FC = () => {
         setIsSubmitting(true);
         setError(null);
 
+        const missingFields = personalInfoFields.filter((key) => {
+            const value = formData[key];
+            return !value || (typeof value === 'string' && value.trim() === '');
+        });
+
+        if (missingFields.length > 0) {
+            setError('Please fill all required personal information fields.');
+            setIsSubmitting(false);
+            return;
+        }
+
+        const finalPayload = {
+            full_name: formData.full_name as string || '',
+            email: formData.email as string || '',
+            phone: formData.phone as string || '',
+            city: formData.city as string || '',
+            state_region: formData.state_region as string || '',
+            primary_profession: formData.primary_profession as string || '',
+            company_name: formData.company_name as string || '',
+            years_experience: formData.years_experience as string || '', 
+            client_base_size: formData.client_base_size as string || '',
+            website_url: formData.website_url as string || '',
+            linkedin_profile: formData.linkedin_profile as string || '',
+            primary_social_platform: formData.primary_social_platform as string || '',
+            online_following: formData.online_following as string || '',
+            client_types: formData.client_types as string || '',
+            promotion_plan: formData.promotion_plan as string || '',
+            whatsapp_value_proposition: formData.whatsapp_value_proposition as string || '',
+            expected_monthly_referrals: formData.expected_monthly_referrals as string || '',
+            affiliate_experience: formData.affiliate_experience as string || '',
+            referral_source: formData.referral_source as string || '',
+            additional_comments: formData.additional_comments as string || '',
+            terms_agreed: formData.terms_agreed ? 1 : 0
+        };
+
         try {
-            const response = await fetch('https://connect.waflow.in/webhook/675cef03-3a7a-437f-96d1-beb19e2318fd', {
+            const response = await fetch('https://web.waflow.in/api/resource/Affiliate Interest', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    type: 'affiliate_application',
-                    timestamp: new Date().toISOString(),
-                    data: formData
-                })
+                body: JSON.stringify(finalPayload)
             });
 
             if (response.ok) {
                 setIsSubmitted(true);
-                setFormData({});
+                setFormData(getInitialFormData());
             } else {
-                throw new Error('Submission failed');
+                const errorData = await response.json().catch(() => ({ message: 'Could not parse error JSON' }));
+                console.error("API Error Response:", errorData);
+                throw new Error(`Submission failed: ${errorData.message || response.statusText}`);
             }
-        } catch (err) {
-            setError('Failed to submit application. Please try again.');
+        } catch (err: any) {
+            console.error("Fetch API error:", err);
+            setError(`Failed to submit application. Please try again. Error: ${err.message || 'Unknown error'}`);
         } finally {
             setIsSubmitting(false);
         }
@@ -97,7 +151,8 @@ const AffiliatesRequestPage: React.FC = () => {
 
     return (
         <main>
-            <GenericPageHero 
+            {/* ... All your other sections like Hero, IdealCandidates, etc. ... */}
+             <GenericPageHero 
                 title={hero.title} 
                 subtitle={hero.subtitle}
             />
@@ -286,79 +341,84 @@ const AffiliatesRequestPage: React.FC = () => {
                                         {section.title}
                                     </h3>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        {section.fields.map((field, index) => (
-                                            <div key={field.name} className={field.type === 'textarea' || field.type === 'checkbox' ? 'md:col-span-2' : ''}>
-                                                {field.type === 'checkbox' ? (
-                                                    <div className="flex items-start space-x-3">
-                                                        <input
-                                                            type="checkbox"
-                                                            id={field.name}
-                                                            name={field.name}
-                                                            required={field.required}
-                                                            checked={!!formData[field.name]}
-                                                            onChange={handleInputChange}
-                                                            className="mt-1 w-4 h-4 text-green-600 border-slate-300 rounded focus:ring-green-500"
-                                                        />
-                                                        <label 
-                                                            htmlFor={field.name} 
-                                                            className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"
-                                                        >
-                                                            {field.label}
-                                                            {field.required && <span className="text-red-500 ml-1">*</span>}
-                                                        </label>
-                                                    </div>
-                                                ) : (
-                                                    <>
-                                                        <label 
-                                                            htmlFor={field.name} 
-                                                            className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
-                                                        >
-                                                            {field.label}
-                                                            {field.required && <span className="text-red-500 ml-1">*</span>}
-                                                        </label>
-                                                        
-                                                        {field.type === 'select' ? (
-                                                            <select
-                                                                id={field.name}
-                                                                name={field.name}
-                                                                required={field.required}
-                                                                value={formData[field.name] as string || ''}
-                                                                onChange={handleInputChange}
-                                                                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
-                                                            >
-                                                                {field.options?.map((option) => (
-                                                                    <option key={option.value} value={option.value}>
-                                                                        {option.label}
-                                                                    </option>
-                                                                ))}
-                                                            </select>
-                                                        ) : field.type === 'textarea' ? (
-                                                            <textarea
-                                                                id={field.name}
-                                                                name={field.name}
-                                                                required={field.required}
-                                                                rows={4}
-                                                                placeholder={field.placeholder}
-                                                                value={formData[field.name] as string || ''}
-                                                                onChange={handleInputChange}
-                                                                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors resize-vertical"
-                                                            />
-                                                        ) : (
+                                        {section.fields.map((field, index) => {
+                                            const isRequired = personalInfoFields.includes(field.name);
+                                            return (
+                                                <div key={field.name} className={field.type === 'textarea' || field.type === 'checkbox' ? 'md:col-span-2' : ''}>
+                                                    {field.type === 'checkbox' ? (
+                                                        <div className="flex items-start space-x-3">
                                                             <input
-                                                                type={field.type}
+                                                                type="checkbox"
                                                                 id={field.name}
                                                                 name={field.name}
-                                                                required={field.required}
-                                                                placeholder={field.placeholder}
-                                                                value={formData[field.name] as string || ''}
+                                                                required={isRequired}
+                                                                checked={!!formData[field.name]}
                                                                 onChange={handleInputChange}
-                                                                className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                                                className="mt-1 w-4 h-4 text-green-600 border-slate-300 rounded focus:ring-green-500"
                                                             />
-                                                        )}
-                                                    </>
-                                                )}
-                                            </div>
-                                        ))}
+                                                            <label 
+                                                                htmlFor={field.name} 
+                                                                className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"
+                                                            >
+                                                                {field.label}
+                                                                {isRequired && <span className="text-red-500 ml-1">*</span>}
+                                                            </label>
+                                                        </div>
+                                                    ) : (
+                                                        <>
+                                                            <label 
+                                                                htmlFor={field.name}
+                                                                className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+                                                            >
+                                                                {field.label}
+                                                                {isRequired && <span className="text-red-500 ml-1">*</span>}
+                                                            </label>
+                                                            {field.type === 'select' ? (
+                                                                <select
+                                                                    id={field.name}
+                                                                    name={field.name}
+                                                                    required={isRequired}
+                                                                    value={formData[field.name] as string}
+                                                                    onChange={handleInputChange}
+                                                                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                                                >
+                                                                    {field.options?.map((option) => (
+                                                                        <option 
+                                                                            key={option.label} 
+                                                                            value={option.value} // CORRECTED: Use option.value
+                                                                        >
+                                                                            {option.label}
+                                                                        </option>
+                                                                    ))}
+                                                                </select>
+                                                            ) : field.type === 'textarea' ? (
+                                                                <textarea
+                                                                    id={field.name}
+                                                                    name={field.name}
+                                                                    required={isRequired}
+                                                                    rows={4}
+                                                                    placeholder={field.placeholder}
+                                                                    value={formData[field.name] as string}
+                                                                    onChange={handleInputChange}
+                                                                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors resize-vertical"
+                                                                />
+                                                            ) : (
+                                                                <input
+                                                                    type={field.type}
+                                                                    id={field.name}
+                                                                    name={field.name}
+                                                                    required={isRequired}
+                                                                    placeholder={field.placeholder}
+                                                                    value={formData[field.name] as string}
+                                                                    onChange={handleInputChange}
+                                                                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                                                />
+                                                            )}
+                                                        </>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             ))}
@@ -398,4 +458,3 @@ const AffiliatesRequestPage: React.FC = () => {
 export default AffiliatesRequestPage;
 
 export { getStaticProps } from '@/lib/ssr';
-

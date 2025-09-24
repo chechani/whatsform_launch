@@ -10,7 +10,16 @@ const iconMap: { [key: string]: React.FC<{className?: string}> } = {
 };
 
 const PartnersRequestPage: React.FC = () => {
-    const [formData, setFormData] = useState<Record<string, string>>({});
+    // Corrected: Initialize state by dynamically creating keys for all form fields.
+    const getInitialFormData = () => {
+        const initial: Record<string, string> = {};
+        partnersRequestPageData.formFields.fields.forEach(field => {
+            initial[field.name] = "";
+        });
+        return initial;
+    };
+
+    const [formData, setFormData] = useState<Record<string, string>>(getInitialFormData());
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -28,27 +37,52 @@ const PartnersRequestPage: React.FC = () => {
         setIsSubmitting(true);
         setError(null);
 
+        // Added: Simple frontend validation for required fields
+        const requiredFields = partnersRequestPageData.formFields.fields.filter(f => f.required);
+        const missingField = requiredFields.find(field => !formData[field.name]?.trim());
+
+        if (missingField) {
+            setError(`Please fill all required fields. The field "${missingField.label}" is missing.`);
+            setIsSubmitting(false);
+            return;
+        }
+
+        // Build payload. This works now because formData has the correct snake_case keys.
+        const payload = {
+            primary_contact_name: formData.primary_contact_name || '',
+            business_email: formData.business_email || '',
+            phone: formData.phone || '',
+            company_name: formData.company_name || '',
+            company_website: formData.company_website || '',
+            company_size: formData.company_size || '',
+            industry: formData.industry || '',
+            partnership_type: formData.partnership_type || '',
+            whatsapp_crm_integration_experience: formData.whatsapp_crm_integration_experience || '',
+            client_base_size: formData.client_base_size || '',
+            partnership_description: formData.partnership_description || '',
+            partnership_expectations: formData.partnership_expectations || ''
+        };
+
         try {
-            const response = await fetch('https://connect.waflow.in/webhook/675cef03-3a7a-437f-96d1-beb19e2318fd', {
+            const response = await fetch('https://web.waflow.in/api/resource/Partner Interest', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    type: 'partner_application',
-                    timestamp: new Date().toISOString(),
-                    data: formData
-                })
+                body: JSON.stringify(payload)
             });
 
             if (response.ok) {
                 setIsSubmitted(true);
-                setFormData({});
+                setFormData(getInitialFormData()); // Reset form
             } else {
-                throw new Error('Submission failed');
+                // More robust error handling
+                const errorData = await response.json().catch(() => ({ message: 'Could not parse error JSON' }));
+                console.error("API Error Response:", errorData);
+                throw new Error(errorData.message || 'Submission failed with status: ' + response.statusText);
             }
-        } catch (err) {
-            setError('Failed to submit application. Please try again.');
+        } catch (err: any) {
+            setError(`Failed to submit application. Please try again. (${err.message})`);
         } finally {
             setIsSubmitting(false);
         }
@@ -258,4 +292,3 @@ const PartnersRequestPage: React.FC = () => {
 export default PartnersRequestPage;
 
 export { getStaticProps } from '@/lib/ssr';
-

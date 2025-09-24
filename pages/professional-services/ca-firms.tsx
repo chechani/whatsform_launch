@@ -28,6 +28,7 @@ const CAFirmsPage: React.FC = () => {
 
     return (
         <main>
+            <h1 style={{color: 'red', fontWeight: 'bold'}}>DEBUG: CA Firms Main Content</h1>
             <GenericPageHero title={caFirmsPageData.hero.title} subtitle={caFirmsPageData.hero.subtitle} />
             <div className="divide-y divide-slate-200/50 dark:divide-slate-800/50">
                 {caFirmsPageData.sections.map((section, index) => {

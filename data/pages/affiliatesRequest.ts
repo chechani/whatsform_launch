@@ -1,4 +1,3 @@
-
 export const affiliatesRequestPageData = {
     hero: {
         title: "Join WhatsForm Affiliate Program",
@@ -108,7 +107,7 @@ export const affiliatesRequestPageData = {
                 title: "Personal Information",
                 fields: [
                     {
-                        name: "fullName",
+                        name: "full_name", // Corrected from "fullName"
                         label: "Full Name",
                         type: "text",
                         required: true,
@@ -136,7 +135,7 @@ export const affiliatesRequestPageData = {
                         placeholder: "Enter your city"
                     },
                     {
-                        name: "state",
+                        name: "state_region", // Corrected from "state"
                         label: "State/Region",
                         type: "text",
                         required: true,
@@ -148,7 +147,7 @@ export const affiliatesRequestPageData = {
                 title: "Professional Background",
                 fields: [
                     {
-                        name: "profession",
+                        name: "primary_profession", // Corrected from "profession"
                         label: "Primary Profession",
                         type: "select",
                         required: true,
@@ -167,14 +166,14 @@ export const affiliatesRequestPageData = {
                         ]
                     },
                     {
-                        name: "companyName",
+                        name: "company_name", // Corrected from "companyName"
                         label: "Company/Practice Name",
                         type: "text",
                         required: false,
                         placeholder: "Your company or practice name"
                     },
                     {
-                        name: "experience",
+                        name: "years_experience", // Corrected from "experience"
                         label: "Years of Professional Experience",
                         type: "select",
                         required: true,
@@ -187,7 +186,7 @@ export const affiliatesRequestPageData = {
                         ]
                     },
                     {
-                        name: "clientBase",
+                        name: "client_base_size", // Corrected from "clientBase"
                         label: "Current Client/Customer Base Size",
                         type: "select",
                         required: true,
@@ -206,21 +205,21 @@ export const affiliatesRequestPageData = {
                 title: "Online Presence",
                 fields: [
                     {
-                        name: "website",
+                        name: "website_url", // Corrected from "website"
                         label: "Website/Practice URL",
                         type: "url",
                         required: false,
                         placeholder: "https://www.yourwebsite.com"
                     },
                     {
-                        name: "linkedinProfile",
+                        name: "linkedin_profile", // Corrected from "linkedinProfile"
                         label: "LinkedIn Profile",
                         type: "url",
                         required: false,
                         placeholder: "https://linkedin.com/in/yourprofile"
                     },
                     {
-                        name: "socialPlatforms",
+                        name: "primary_social_platform", // Corrected from "socialPlatforms"
                         label: "Primary Social Media Platform",
                         type: "select",
                         required: false,
@@ -236,7 +235,7 @@ export const affiliatesRequestPageData = {
                         ]
                     },
                     {
-                        name: "audienceSize",
+                        name: "online_following", // Corrected from "audienceSize"
                         label: "Total Online Following (if applicable)",
                         type: "select",
                         required: false,
@@ -255,28 +254,28 @@ export const affiliatesRequestPageData = {
                 title: "Affiliate Strategy",
                 fields: [
                     {
-                        name: "clientTypes",
+                        name: "client_types", // Corrected from "clientTypes"
                         label: "Types of Clients/Customers You Work With",
                         type: "textarea",
                         required: true,
                         placeholder: "Describe the types of businesses or clients you work with (e.g., small retailers, restaurants, service businesses, startups, etc.). This helps us understand your target market."
                     },
                     {
-                        name: "promotionStrategy",
+                        name: "promotion_plan", // Corrected from "promotionStrategy"
                         label: "How do you plan to promote WhatsForm?",
                         type: "textarea",
                         required: true,
                         placeholder: "Describe your promotion strategy. Will you recommend it to existing clients, create content, use social media, email marketing, or other methods? Be specific about your approach."
                     },
                     {
-                        name: "whyWhatsApp",
+                        name: "whatsapp_value_proposition", // Corrected from "whyWhatsApp"
                         label: "Why do you think WhatsApp automation is valuable for your clients?",
                         type: "textarea",
                         required: true,
                         placeholder: "Explain why you believe WhatsApp automation would benefit your clients and how it fits with their business needs."
                     },
                     {
-                        name: "expectedReferrals",
+                        name: "expected_monthly_referrals", // Corrected from "expectedReferrals"
                         label: "Expected Monthly Referrals",
                         type: "select",
                         required: true,
@@ -294,7 +293,7 @@ export const affiliatesRequestPageData = {
                 title: "Additional Information",
                 fields: [
                     {
-                        name: "affiliateExperience",
+                        name: "affiliate_experience", // Corrected from "affiliateExperience"
                         label: "Previous Affiliate Marketing Experience",
                         type: "select",
                         required: true,
@@ -307,7 +306,7 @@ export const affiliatesRequestPageData = {
                         ]
                     },
                     {
-                        name: "heardAbout",
+                        name: "referral_source", // Corrected from "heardAbout"
                         label: "How did you hear about our affiliate program?",
                         type: "select",
                         required: false,
@@ -322,14 +321,14 @@ export const affiliatesRequestPageData = {
                         ]
                     },
                     {
-                        name: "additionalInfo",
+                        name: "additional_comments", // Corrected from "additionalInfo"
                         label: "Additional Information or Questions",
                         type: "textarea",
                         required: false,
                         placeholder: "Any additional information you'd like to share, questions about the program, or specific requirements you might have."
                     },
                     {
-                        name: "agreeToTerms",
+                        name: "terms_agreed", // Corrected from "agreeToTerms"
                         label: "I agree to the affiliate program terms and conditions",
                         type: "checkbox",
                         required: true
